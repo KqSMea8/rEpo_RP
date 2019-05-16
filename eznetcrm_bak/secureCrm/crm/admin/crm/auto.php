@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Autocomplete - XML data parsed once</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<style>
+.ui-autocomplete-loading {
+background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+}
+</style>
+<script>
+$(function() {
+function log( message ) {
+$( "<div/>" ).text( message ).prependTo( "#log" );
+$( "#log" ).attr( "scrollTop", 0 );
+}
+$.ajax({
+url: "london.xml",
+dataType: "xml",
+success: function( xmlResponse ) {
+var data = $( "geoname", xmlResponse ).map(function() {
+return {
+value: $( "name", this ).text() + ", " +
+( $.trim( $( "countryName", this ).text() ) || "(unknown country)" ),
+id: $( "geonameId", this ).text()
+};
+}).get();
+$( "#birds" ).autocomplete({
+source: data,
+minLength: 0,
+select: function( event, ui ) {
+log( ui.item ?
+"Selected: " + ui.item.value + ", geonameId: " + ui.item.id :
+"Nothing selected, input was " + this.value );
+}
+});
+}
+});
+});
+</script>
+</head>
+<body>
+<div class="ui-widget">
+<label for="birds">London matches: </label>
+<input id="birds">
+</div>
+<div class="ui-widget" style="margin-top:2em; font-family:Arial">
+Result:
+<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
+</div>
+</body>
+</html>

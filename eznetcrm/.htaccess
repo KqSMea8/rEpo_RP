@@ -1,0 +1,17 @@
+RewriteEngine On
+
+
+
+
+
+
+RewriteRule ^blog/$ blog/index.php
+RewriteRule ^reseller/$ reseller/index.php
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?slug=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?slug=$1
+
+
+
+

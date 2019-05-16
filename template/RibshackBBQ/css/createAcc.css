@@ -1,0 +1,514 @@
+.register_form_user > .form-group label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    max-width: 100%;
+    width: 170px;
+}
+
+.register_form_user > .form-group > input[type="text"], .register_form_user > .form-group > input[type="password"], .register_form_user > .form-group > input[type="email"] {
+    
+     border-color: #dddddd;
+    border-radius: 3px 0 0 3px;
+    border-style: solid;
+    border-width: 2px 1px 1px 2px;
+    color: #888888;
+    font-size: 14px;
+    height: 36px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+
+.row.userInfo select#country_id {
+    width: 35%;
+}
+
+
+.register_form_user > .form-group > .sel-wrap-friont {
+    display: inline-block;
+    width: 50%;
+}
+.register_form_user > div > .sel-wrap-friont > div > input[type="text"]{
+     border-color: #dddddd;
+    border-radius: 3px 0 0 3px;
+    border-style: solid;
+    border-width: 2px 1px 1px 2px;
+    color: #888888;
+    font-size: 14px;
+    height: 36px;
+    margin-bottom: 10px;
+    width: 200px;
+    
+}
+
+.register_form_profile .form-group input[type="text"]{width:100%;}
+
+
+
+.register_form_profile > .block > .fieldset {
+    text-align: center;
+}
+
+.register_form_profile > .block > .fieldset > fieldset > .field > label {
+     width: 250px;
+    
+}
+
+.register_form_profile .form-group {width: 50%;}
+
+.register_form_profile > .block > .fieldset > fieldset > div > .sel-wrap-friont {
+    display: inline-block;
+    
+}
+
+.register_form_profile > .block > .fieldset > fieldset > div > .sel-wrap-friont > select {
+    
+    width: 300px !important;
+}
+
+.register_form_profile > .block > .buttons {
+    /*text-align: center;*/
+}
+
+
+.mid_wraper .right_pen p{color:#fff;}
+ 
+.register_form_profile > .block > .fieldset > fieldset > .field > input[type="text"],.register_form_profile > .block > .fieldset > fieldset > .field > input[type="password"],
+.register_form_profile > .block > .fieldset > fieldset > .field > input[type="email"]
+{
+    
+    width: 300px;
+}
+.register_form_profile {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+.register_form_profile > .block > h2 {
+    text-align: center;
+}
+
+
+glyphicon-chevron-left {
+  
+  background-image:url(../img/icon.png);
+  
+  background-position: center top -134px;
+}
+.glyphicon-chevron-right {
+  
+  background-image:url(../img/icon.png);
+  
+  background-position: center top -97px;
+}
+
+.glyphicon-chevron-left {
+  
+  background-image:url(../img/icon.png);
+  
+  background-position: center top -133px;
+}
+
+.btn.btn-link > img {
+    position: relative;
+    top: -2px;
+}
+/*
+.top-menu li a {
+    background-image: url("../img/icon.png");
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display: inline;
+    float: left;
+    margin-right: 0;
+    text-transform: uppercase;
+	padding:6px 10px 0px 25px;
+}
+*/
+.glyphicon-user{
+     background-image: url("../img/icon.png");
+    background-position: -2px -4px;
+    background-repeat: no-repeat;
+    height: 22px;
+    width: 22px;
+    
+}
+
+.glyphicon-pencil{
+     background-image: url("../img/icon.png");
+    background-position:-2px -57px;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    
+}
+
+.glyphicon-lock{
+     background-image: url("../img/icon.png");
+    background-position: -2px -31px;
+    background-repeat: no-repeat;
+    height: 22px;
+    width: 22px;
+    
+}
+
+
+
+.top-menu li.sign_in a {
+    background-position: -2px -31px;
+}
+
+.top-menu li.account a {
+    background-position: -2px -2px;
+}
+
+.top-menu li.create_acnt a {
+    background-position: 0 -58px;
+}
+
+.register_form_password{
+    
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    
+}
+
+.register_form_password > .block > h2 {
+    text-align: center;
+}
+
+.register_form_password > .block > .fieldset {
+    text-align: center;
+}
+
+.register_form_password > .block > .buttons {
+    text-align: center;
+}
+
+.register_form_password > .block > .fieldset > fieldset > .field > label {
+     width: 170px;
+    
+}
+.register_form_bookaddress {padding-left:20px;
+     background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    
+}
+.register_form_bookaddress > .block > h2{
+    
+    text-align: center;
+}
+
+.register_form_bookaddress > .block > .fieldset {
+    text-align: center;
+}
+
+.register_form_bookaddress > .buttons {
+    /*text-align: center;*/  margin-bottom:20px;
+}
+
+.register_form_bookaddress > .block > .fieldset > fieldset > .field > label {
+     /*width: 170px;*/
+    width: 250px;
+}
+
+.register_form_bookaddress > .block > .fieldset > fieldset > div > .sel-wrap-friont {
+    display: inline-block;
+}
+
+.register_form_bookaddress > .block > .fieldset > fieldset > div > .sel-wrap-friont > select {
+    width: 300px !important;
+    /*width: 220px;*/
+}
+
+.register_form_bookaddress > .block > .fieldset > fieldset > .field > input[type="text"], .register_form_bookaddress > .block > .fieldset > fieldset > .field > input[type="password"], .register_form_bookaddress > .block > .fieldset > fieldset > .field > input[type="email"] {
+    width: 300px;
+}
+
+.register_form_bookaddress > .block > .fieldset > fieldset > .field > label > div {
+     width: 250px;
+    
+}
+
+.register_form_bookaddress > .block > .fieldset > fieldset > .field > .sel-wrap-friont > div > input[type="text"], .register_form_bookaddress > .block > .fieldset > fieldset > .field > .sel-wrap-friont > div > input[type="password"], .register_form_bookaddress > .block > .fieldset > fieldset > .field  > .sel-wrap-friont > div > input[type="email"] {
+    width: 300px;
+}
+
+.register_form_bookaddress > .block > .fieldset > fieldset > #CityBillOther_Div > div {
+    display: inline-block;
+}
+
+.register_form_bookaddress > .block > .fieldset > fieldset > #CityBillOther_Div > div input[type="text"] {
+    width: 300px;
+}
+
+
+.col-50.addresslist {
+    float: right;
+    margin-right: 19px;
+}
+
+.address_heading {
+    display: inline-block;
+    float: left;
+}
+
+.wishlist {
+    
+    background: #e1e1e1 none repeat scroll 0 0;
+}
+
+.wish_head {
+    font-weight: bold;
+    text-align: center;
+}
+
+.wish-field {
+    background: #fff none repeat scroll 0 0;
+}
+
+.wish-field > td {
+    text-align: center;
+    height: 55px;
+
+}
+
+.wishlist_edit td > input[type="text"] {
+   height: auto; 
+}
+
+.register_form_newsletter > .block >  .buttons {
+    text-align: center;
+}
+
+.register_form_newsletter > .block > .fieldset > fieldset > .field {
+    
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 22%;
+}
+
+.email_friend_form > table > tbody > tr > .blackbold {
+    padding-right: 10px;
+}
+
+#emailTo_Friend_div > h3 {
+    text-align: center;
+}
+
+.recommend_products_list > .listing_prod.clearfix > li {
+    margin-right: 12px;
+    border: 1px solid rgb(221, 221, 221); 
+    height: 162px; 
+    float: left; 
+    width: 23%;
+    margin-top: 9px;
+}
+
+.recommend_products_list > .listing_prod.clearfix > li > .img {
+    
+     display: inline-block;
+    float: left;
+    width: 20%;
+    margin-left: 3px;
+    margin-top: 10px;
+}
+
+.recommend_products_list > .listing_prod.clearfix > li > .details {
+    
+    display: inline-block;
+    float: right;
+   margin-top: 10px;
+    width: 38%;
+    
+}
+
+#write_review_div > h3 {
+    text-align: center;
+}
+
+.write_review > table > tbody > tr > .blackbold {
+    padding-left: 4px;
+    padding-right: 12px;
+    vertical-align: top;
+}
+
+.write_review > table > tbody > tr > .blacknormal > input[type="text"]{
+    
+    width: 99%;
+    
+}
+
+#add_ProductWishList_div > h3 {
+    text-align: center;
+}
+
+.list1 {
+    border: 1px solid #ddd;
+    margin-top: 1px;
+}
+
+.wishbutton {
+    text-align: center;
+}
+
+#create_ProductWishList_div > h3 {
+    text-align: center;
+}
+
+#wishListId > table > tbody > tr > .blackbold {
+    padding-right: 10px;
+}
+
+
+#top_currency_id {
+    width: 120px;
+	margin: 0 0 0 -60px;
+}
+
+.currency {
+	display: inline-block;
+	float: left;
+	color: #666666;
+}
+
+.cartbag{
+    
+    display: inline-block;
+}
+
+.cartbag > ul > li {
+     /*width: 200px !important;
+*/} 
+
+.nav.navbar-nav li > ul {
+	margin-left: 14px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.emailto_f {
+    margin-left: 16px;
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+   /* color: #fff !important;*/
+    text-decoration: none;
+}
+
+.container.account div {
+   
+    margin-top: 0px !important;
+}
+.model-dialog > .modal-content > .modal-body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.model-dialog > .modal-content > .modal-body > .register_form_user {
+      height: 450px;
+}
+.model-dialog > .modal-content > .modal-body > .register_form_user > .btn.btn-primary {
+    margin-bottom: 10px;
+}
+.row iframe {
+    width: 77px;
+    height: 21px !important;
+}
+
+.red {
+    color: red;
+}
+
+.container-folio.row {
+    min-height: 300px;
+}
+/*
+.emailWishlist {
+   background-image: url("../img/icon3.png");
+   height: 22px !important;
+    width: 22px !important;
+}
+*/
+
+
+.block.quick_find {
+    float: right;
+    margin-bottom: 5px;
+    margin-right: -40px;
+    width: 25%;
+}
+
+.glyphicon-search{
+	
+	 background-image: url("../img/icon_search.png");
+    background-position: -38px -101px;
+    height: 22px !important;
+    width: 22px !important;
+
+}
+.successMsg{
+	color: #5c9436;
+	 font-weight: bold;
+	}
+.warningMsg{
+	color: #e51f31;
+	 font-weight: bold;
+	}
+.rating-value {
+        display: inline-block;
+        float: left;
+
+        }
+.reviews {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    }
+    
+    .modal-header{
+	background-color: #22547B;
+    }
+.modal-content .modal-header .modal-title {
+    color: #FFFFFF;
+ }
+ .nav.nav-pills.pull-right > li > .dropdown-toggle.text-center {
+    margin-left: 3px !important;
+    margin-top: 11px !important;
+    padding: 2px 10px !important;
+}
+#userprofilelogin{
+    
+    background-color: #286090;
+    position: absolute;
+    z-index: 2147483647;
+}
+#userprofilelogin > li {
+    display: block;
+}
+
+.glyphicon-log {
+    
+    height: 22px;
+    width: 25px;
+}
+
+.footersubmenu {
+    background: #286090 none repeat scroll 0 0 !important;
+    margin: -100px 0 0 80px !important;
+    padding: 10px !important;
+    position: absolute !important;
+    z-index: 999 !important;
+    max-height: 140px !important;
+    overflow-y: auto !important;
+    width: 140px !important;
+    min-height: 26px;
+}
+
+#footersubmenu ul > li > a {
+    color: #fff !important;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: -28px;
+    padding: 10px;
+}
+    

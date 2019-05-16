@@ -1,0 +1,467 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; color: rgb(0, 0, 0); font-size: 14px; font-family: Calibri, sans-serif;">
+<div>
+<div>
+<div>Brian,</div>
+<div><br>
+</div>
+<div>Below is the responses with regard to the source code request. Please advise.</div>
+<div><br>
+</div>
+<div>Best,</div>
+<div><br>
+</div>
+<div>
+<p class="MsoNormal" style="margin: 0in 0in 3pt; font-size: 11pt; line-height: 17px; page-break-after: avoid;">
+<b><span style="font-size: 16pt; line-height: 24px; font-family: Cambria, serif;">Kevin C. Flanigan<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">President/CEO<o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;"><img border="0" width="184" height="36" id="Picture_x0020_1" src="cid:5274A6A1-E068-47B7-A62E-9DAA30BDA8FB" type="image/png"><o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">Marlborough, Ma. 01752<o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">Phone: 508-787-9800 Ext. 111<o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">Email:&nbsp;<a href="mailto:kflanigan@docuserve.com" style="color: purple;">kflanigan@docuserve.com</a><o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">Website:&nbsp;<a href="http://www.docuserve.com/" style="color: purple;">www.docuserve.com</a><o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;"><br>
+</p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;"><b><i>Your Content is Now Secure.</i></b></p>
+</div>
+</div>
+</div>
+<div><br>
+</div>
+<span id="OLK_SRC_BODY_SECTION">
+<div style="font-family:Calibri; font-size:11pt; text-align:left; color:black; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BORDER-TOP: #b5c4df 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 3pt">
+<span style="font-weight:bold">From: </span>Vinayak &lt;<a href="mailto:vinayak@contentraven.com">vinayak@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Tuesday, August 18, 2015 at 4:51 AM<br>
+<span style="font-weight:bold">To: </span>Vasu Ram &lt;<a href="mailto:vasu@contentraven.com">vasu@contentraven.com</a>&gt;, Kevin Flanigan &lt;<a href="mailto:kflanigan@docuserve.com">kflanigan@docuserve.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Re: Source Code<br>
+</div>
+<div><br>
+</div>
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; color: rgb(0, 0, 0); font-size: 14px; font-family: Calibri, sans-serif;">
+<div>Vasu,</div>
+<div><br>
+</div>
+<div>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">
+<span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">Not sure what pre-source code means. The bundle we sent contains everything – Both the binary as well as the raw source code. The zip file will contain two folders as
+ follows.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">
+<span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">&nbsp;</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">
+<span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">Build – This contains all the compiled binaries, jars, exes&nbsp;<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">
+<span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">EclipseProjects – which will contain all the raw source code. There will be 4 projects and all can be imported directly into Eclipse.</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">
+<span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);"><br>
+</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">
+<span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">Thanks</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: 'Times New Roman', serif;">
+<span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">Vinayak</span></p>
+</div>
+<div><br>
+</div>
+<span id="OLK_SRC_BODY_SECTION">
+<div style="font-family:Calibri; font-size:11pt; text-align:left; color:black; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BORDER-TOP: #b5c4df 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 3pt">
+<span style="font-weight:bold">From: </span>Vasu Ram &lt;<a href="mailto:vasu@contentraven.com">vasu@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Tuesday, 18 August 2015 2:30 am<br>
+<span style="font-weight:bold">To: </span>Kevin Flanigan &lt;<a href="mailto:kflanigan@docuserve.com">kflanigan@docuserve.com</a>&gt;<br>
+<span style="font-weight:bold">Cc: </span>Vinayak &lt;<a href="mailto:vinayak@contentraven.com">vinayak@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Re: Source Code<br>
+</div>
+<div><br>
+</div>
+<div dir="ltr">
+<div>Vinayak, can you please confirm? I thought we uploaded the pre-compiled source code and not the compiled one. Please confirm<br>
+<br>
+</div>
+Vasu<br>
+</div>
+<div class="gmail_extra"><br>
+<div class="gmail_quote">On Mon, Aug 17, 2015 at 4:56 PM, Kevin Flanigan <span dir="ltr">
+&lt;<a href="mailto:kflanigan@docuserve.com" target="_blank">kflanigan@docuserve.com</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div style="word-wrap:break-word;color:rgb(0,0,0);font-size:14px;font-family:Calibri,sans-serif">
+<div>
+<div>Vasu,</div>
+<div><br>
+</div>
+<div>Urgent - I just was informed that the source code you sent me is the compiled source code and I need the pre-source code.&nbsp; Can you please upload the pre-source code ASAP.&nbsp; I’m already two weeks late on the banks request to have it validated so I can put
+ in escrow.&nbsp;</div>
+<div><br>
+</div>
+<div>Regards,</div>
+<div><br>
+</div>
+<div>
+<p class="MsoNormal" style="margin:0in 0in 3pt;font-size:11pt;line-height:17px"><b><span style="font-size: 16pt; line-height: 24px; font-family: Cambria, serif;">Kevin C. Flanigan<u></u><u></u></span></b></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">President/CEO<u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><img src="cid:99575A74-869F-4D70-8DC1-DAE540AAF7D8" type="image/png" height="36" border="0" width="184"><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Marlborough, Ma. 01752<u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Phone: <a href="tel:508-787-9800%20Ext.%20111" value="&#43;15087879800" target="_blank">
+508-787-9800 Ext. 111</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Email:&nbsp;<a href="mailto:kflanigan@docuserve.com" style="color:purple" target="_blank">kflanigan@docuserve.com</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Website:&nbsp;<a href="http://www.docuserve.com/" style="color:purple" target="_blank">www.docuserve.com</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><br>
+</p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><b><i>Your Content is Now Secure.</i></b></p>
+</div>
+</div>
+<div><br>
+</div>
+<span>
+<div style="font-family:Calibri;font-size:11pt;text-align:left;color:black;BORDER-BOTTOM:medium none;BORDER-LEFT:medium none;PADDING-BOTTOM:0in;PADDING-LEFT:0in;PADDING-RIGHT:0in;BORDER-TOP:#b5c4df 1pt solid;BORDER-RIGHT:medium none;PADDING-TOP:3pt">
+<span style="font-weight:bold">From: </span>Vasu Ram &lt;<a href="mailto:vasu@contentraven.com" target="_blank">vasu@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Monday, August 17, 2015 at 3:06 PM<br>
+<span style="font-weight:bold">To: </span>Kevin Flanigan &lt;<a href="mailto:kflanigan@docuserve.com" target="_blank">kflanigan@docuserve.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Re: Timetable<br>
+</div>
+<div><br>
+</div>
+<div>
+<div>
+<div dir="ltr">
+<div>
+<div>Kevin,<br>
+<br>
+</div>
+We are working with Nick on term sheet and at the same time working to update the power point to the latest messaging. I will send the presentation next week and we will walk you through it along with the term sheet.<br>
+<br>
+</div>
+Vasu<br>
+</div>
+<div class="gmail_extra"><br>
+<div class="gmail_quote">On Mon, Aug 17, 2015 at 12:10 PM, Kevin Flanigan <span dir="ltr">
+&lt;<a href="mailto:kflanigan@docuserve.com" target="_blank">kflanigan@docuserve.com</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div style="word-wrap:break-word;color:rgb(0,0,0);font-size:14px;font-family:Calibri,sans-serif">
+<div>
+<div>
+<div>Vasu,</div>
+<div><br>
+</div>
+<div>Anything you can do on your side is appreciated.&nbsp;</div>
+<div><br>
+</div>
+<div>Another item: Can you please send me the latest CR pitch deck that was used for the Mass Ventures presentation.&nbsp;</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div>Best,</div>
+<span>
+<div>
+<p class="MsoNormal" style="margin:0in 0in 3pt;font-size:11pt;line-height:17px"><b><span style="font-size: 16pt; line-height: 24px; font-family: Cambria, serif;">Kevin C. Flanigan<u></u><u></u></span></b></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">President/CEO<u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><img src="cid:0D5C48B2-B6C5-4CE5-B074-6BC2D73B97AF" type="image/png" height="36" border="0" width="184"><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Marlborough, Ma. 01752<u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Phone: <a href="tel:508-787-9800%20Ext.%20111" value="&#43;15087879800" target="_blank">
+508-787-9800 Ext. 111</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Email:&nbsp;<a href="mailto:kflanigan@docuserve.com" style="color:purple" target="_blank">kflanigan@docuserve.com</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Website:&nbsp;<a href="http://www.docuserve.com/" style="color:purple" target="_blank">www.docuserve.com</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><br>
+</p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><b><i>Your Content is Now Secure.</i></b></p>
+</div>
+</span></div>
+</div>
+<div><br>
+</div>
+<span>
+<div style="font-family:Calibri;font-size:11pt;text-align:left;color:black;BORDER-BOTTOM:medium none;BORDER-LEFT:medium none;PADDING-BOTTOM:0in;PADDING-LEFT:0in;PADDING-RIGHT:0in;BORDER-TOP:#b5c4df 1pt solid;BORDER-RIGHT:medium none;PADDING-TOP:3pt">
+<span style="font-weight:bold">From: </span>Vasu Ram &lt;<a href="mailto:vasu@contentraven.com" target="_blank">vasu@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Monday, August 17, 2015 at 10:25 AM<br>
+<span style="font-weight:bold">To: </span>Kevin Flanigan &lt;<a href="mailto:kflanigan@docuserve.com" target="_blank">kflanigan@docuserve.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Re: FW: Timetable<br>
+</div>
+<div>
+<div>
+<div><br>
+</div>
+<div>
+<div>
+<div dir="ltr">
+<div>Kevin, we will do our best. Right now, we don't have flexibility on start date but hoping to deliver it earlier once we start development. Vinayak will keep every one updated.<br>
+<br>
+</div>
+Vasu<br>
+</div>
+<div class="gmail_extra"><br>
+<div class="gmail_quote">On Fri, Aug 14, 2015 at 2:24 PM, Kevin Flanigan <span dir="ltr">
+&lt;<a href="mailto:kflanigan@docuserve.com" target="_blank">kflanigan@docuserve.com</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div style="word-wrap:break-word;color:rgb(0,0,0);font-size:14px;font-family:Calibri,sans-serif">
+<div>
+<div>
+<div>Vasu,</div>
+<div><br>
+</div>
+<div>Please let me reiterate the urgency of this matter and it would be greatly appreciated if you had any flexibility to improve on the development schedule.</div>
+<div><br>
+</div>
+<div>Regards,</div>
+<div>&nbsp;&nbsp;</div>
+<div>
+<p class="MsoNormal" style="margin:0in 0in 3pt;font-size:11pt;line-height:17px"><b><span style="font-size: 16pt; line-height: 24px; font-family: Cambria, serif;">Kevin C. Flanigan<u></u><u></u></span></b></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">President/CEO<u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><img src="cid:E7D37ACC-A09E-454E-80BD-58D2E36C97CD" type="image/png" height="36" border="0" width="184"><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Marlborough, Ma. 01752<u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Phone: <a href="tel:508-787-9800%20Ext.%20111" value="&#43;15087879800" target="_blank">
+508-787-9800 Ext. 111</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Email:&nbsp;<a href="mailto:kflanigan@docuserve.com" style="color:purple" target="_blank">kflanigan@docuserve.com</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt">Website:&nbsp;<a href="http://www.docuserve.com/" style="color:purple" target="_blank">www.docuserve.com</a><u></u><u></u></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><br>
+</p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:11pt"><b><i>Your Content is Now Secure.</i></b></p>
+</div>
+</div>
+</div>
+<div><br>
+</div>
+<span>
+<div style="font-family:Calibri;font-size:11pt;text-align:left;color:black;BORDER-BOTTOM:medium none;BORDER-LEFT:medium none;PADDING-BOTTOM:0in;PADDING-LEFT:0in;PADDING-RIGHT:0in;BORDER-TOP:#b5c4df 1pt solid;BORDER-RIGHT:medium none;PADDING-TOP:3pt">
+<span style="font-weight:bold">From: </span>Gerry Nutter &lt;<a href="mailto:gnutter@docuserve.com" target="_blank">gnutter@docuserve.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Friday, August 14, 2015 at 11:05 AM<br>
+<span style="font-weight:bold">To: </span>Vinayak Contentraven &lt;<a href="mailto:vinayak@contentraven.com" target="_blank">vinayak@contentraven.com</a>&gt;, Vasu Ram &lt;<a href="mailto:vasu@contentraven.com" target="_blank">vasu@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Re: Timetable<br>
+</div>
+<div>
+<div>
+<div><br>
+</div>
+<div>
+<div style="word-wrap:break-word;color:rgb(0,0,0);font-size:14px;font-family:Tahoma,sans-serif">
+<div>Vinayak,</div>
+<div><br>
+</div>
+<div>Thank You for this update, as you are aware this is a critical issue for EMC and if there is anyway you can improve on that time frame it will be very much appreciated.</div>
+<div><br>
+</div>
+<div>We will be updating EMC next week and letting them know of your timetable.</div>
+<div><br>
+</div>
+<div>Have a nice weekend</div>
+<div><br>
+</div>
+<div>Gerry</div>
+<div><br>
+</div>
+<span>
+<div style="font-family:Calibri;font-size:11pt;text-align:left;color:black;BORDER-BOTTOM:medium none;BORDER-LEFT:medium none;PADDING-BOTTOM:0in;PADDING-LEFT:0in;PADDING-RIGHT:0in;BORDER-TOP:#b5c4df 1pt solid;BORDER-RIGHT:medium none;PADDING-TOP:3pt">
+<span style="font-weight:bold">From: </span>Vinayak &lt;<a href="mailto:vinayak@contentraven.com" target="_blank">vinayak@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Friday, August 14, 2015 at 10:40 AM<br>
+<span style="font-weight:bold">To: </span>Gerry Nutter &lt;<a href="mailto:gnutter@docuserve.com" target="_blank">gnutter@docuserve.com</a>&gt;, &quot;<a href="mailto:vasu@contentraven.com" target="_blank">vasu@contentraven.com</a>&quot; &lt;<a href="mailto:vasu@contentraven.com" target="_blank">vasu@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Re: Timetable<br>
+</div>
+<div><br>
+</div>
+<blockquote style="BORDER-LEFT:#b5c4df 5 solid;PADDING:0 0 0 5;MARGIN:0 0 0 5">
+<div>
+<div style="word-wrap:break-word;color:rgb(0,0,0);font-size:14px;font-family:Calibri,sans-serif">
+<div>Good Morning Gerry,</div>
+<div><br>
+</div>
+<div>We will start development on 1st September, 2015 and deliver on 28th September, 2015.&nbsp;</div>
+<div><br>
+</div>
+<div>Thanks</div>
+<div>Vinayak</div>
+<div><br>
+</div>
+<span>
+<div style="font-family:Calibri;font-size:11pt;text-align:left;color:black;BORDER-BOTTOM:medium none;BORDER-LEFT:medium none;PADDING-BOTTOM:0in;PADDING-LEFT:0in;PADDING-RIGHT:0in;BORDER-TOP:#b5c4df 1pt solid;BORDER-RIGHT:medium none;PADDING-TOP:3pt">
+<span style="font-weight:bold">From: </span>Gerry Nutter &lt;<a href="mailto:gnutter@docuserve.com" target="_blank">gnutter@docuserve.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Wednesday, 12 August 2015 11:27 pm<br>
+<span style="font-weight:bold">To: </span>Vasu Ram &lt;<a href="mailto:vasu@contentraven.com" target="_blank">vasu@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Cc: </span>Vinayak &lt;<a href="mailto:vinayak@contentraven.com" target="_blank">vinayak@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Re: Timetable<br>
+</div>
+<div><br>
+</div>
+<div>
+<div style="word-wrap:break-word;color:rgb(0,0,0);font-size:14px;font-family:Tahoma,sans-serif">
+<div>Thank YOU!</div>
+<div><br>
+</div>
+<span>
+<div style="font-family:Calibri;font-size:11pt;text-align:left;color:black;BORDER-BOTTOM:medium none;BORDER-LEFT:medium none;PADDING-BOTTOM:0in;PADDING-LEFT:0in;PADDING-RIGHT:0in;BORDER-TOP:#b5c4df 1pt solid;BORDER-RIGHT:medium none;PADDING-TOP:3pt">
+<span style="font-weight:bold">From: </span>&quot;<a href="mailto:vasu@contentraven.com" target="_blank">vasu@contentraven.com</a>&quot; &lt;<a href="mailto:vasu@contentraven.com" target="_blank">vasu@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Wednesday, August 12, 2015 at 1:56 PM<br>
+<span style="font-weight:bold">To: </span>Gerry Nutter &lt;<a href="mailto:gnutter@docuserve.com" target="_blank">gnutter@docuserve.com</a>&gt;<br>
+<span style="font-weight:bold">Cc: </span>Vinayak &lt;<a href="mailto:vinayak@contentraven.com" target="_blank">vinayak@contentraven.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Re: Timetable<br>
+</div>
+<div><br>
+</div>
+<blockquote style="BORDER-LEFT:#b5c4df 5 solid;PADDING:0 0 0 5;MARGIN:0 0 0 5">
+<div>
+<div>
+<div dir="ltr">
+<div>Gerry, vinayak is working on resource availablity and plan. He will send the details by end of this week.<br>
+<br>
+</div>
+Vasu<br>
+</div>
+<div class="gmail_extra"><br>
+<div class="gmail_quote">On Wed, Aug 12, 2015 at 1:55 PM, Gerry Nutter <span dir="ltr">
+&lt;<a href="mailto:gnutter@docuserve.com" target="_blank">gnutter@docuserve.com</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div style="word-wrap:break-word;color:rgb(0,0,0);font-size:14px;font-family:Tahoma,sans-serif">
+<div>Vasu,</div>
+<div><br>
+</div>
+<div>What is the timetable for completion of the new Encryptor and is there anything else you need from us to proceed?</div>
+<div><br>
+</div>
+<div>Thank You</div>
+<span><font color="#888888">
+<div><br>
+</div>
+<div>Gerry</div>
+</font></span></div>
+</blockquote>
+</div>
+<br>
+<br clear="all">
+<br>
+-- <br>
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div>
+<div>Vasu Ram<br>
+</div>
+CTO | Content Raven Inc<br>
+</div>
+105B South Street, Hopkinton, MA<br>
+<a href="tel:508-786-0500" value="&#43;15087860500" target="_blank">508-786-0500</a><br>
+</div>
+<a href="http://www.contentraven.com" target="_blank">www.contentraven.com</a><br>
+</div>
+<div>LinkedIn: <span><a href="https://www.linkedin.com/in/vasuram" target="_blank">https://www.linkedin.com/in/vasuram</a><br>
+</span></div>
+<div><span>Twitter: @vraven360<br>
+</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</span></div>
+</div>
+</span></div>
+</div>
+</blockquote>
+</span></div>
+</div>
+</div>
+</div>
+</span></div>
+</blockquote>
+</div>
+<br>
+<br clear="all">
+<span class="HOEnZb"><font color="#888888"><br>
+-- <br>
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div>
+<div>Vasu Ram<br>
+</div>
+CTO | Content Raven Inc<br>
+</div>
+105B South Street, Hopkinton, MA<br>
+<a href="tel:508-786-0500" value="&#43;15087860500" target="_blank">508-786-0500</a><br>
+</div>
+<a href="http://www.contentraven.com" target="_blank">www.contentraven.com</a><br>
+</div>
+<div>LinkedIn: <span><a href="https://www.linkedin.com/in/vasuram" target="_blank">https://www.linkedin.com/in/vasuram</a><br>
+</span></div>
+<div><span>Twitter: @vraven360<br>
+</span></div>
+</div>
+</div>
+</div>
+</font></span></div>
+<span class="HOEnZb"><font color="#888888"></font></span></div>
+<span class="HOEnZb"><font color="#888888"></font></span></div>
+<span class="HOEnZb"><font color="#888888"></font></span></div>
+<span class="HOEnZb"><font color="#888888"></font></span></div>
+<span class="HOEnZb"><font color="#888888"></font></span></span></div>
+<span class="HOEnZb"><font color="#888888"></font></span></blockquote>
+<span class="HOEnZb"><font color="#888888"></font></span></div>
+<span class="HOEnZb"><font color="#888888"><br>
+<br clear="all">
+<br>
+-- <br>
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div>
+<div>Vasu Ram<br>
+</div>
+CTO | Content Raven Inc<br>
+</div>
+105B South Street, Hopkinton, MA<br>
+<a href="tel:508-786-0500" value="&#43;15087860500" target="_blank">508-786-0500</a><br>
+</div>
+<a href="http://www.contentraven.com" target="_blank">www.contentraven.com</a><br>
+</div>
+<div>LinkedIn: <span><a href="https://www.linkedin.com/in/vasuram" target="_blank">https://www.linkedin.com/in/vasuram</a><br>
+</span></div>
+<div><span>Twitter: @vraven360<br>
+</span></div>
+</div>
+</div>
+</div>
+</font></span></div>
+</div>
+</div>
+</span></div>
+</blockquote>
+</div>
+<br>
+<br clear="all">
+<br>
+-- <br>
+<div class="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div>
+<div>Vasu Ram<br>
+</div>
+CTO | Content Raven Inc<br>
+</div>
+105B South Street, Hopkinton, MA<br>
+508-786-0500<br>
+</div>
+<a href="http://www.contentraven.com" target="_blank">www.contentraven.com</a><br>
+</div>
+<div>LinkedIn: <span><a href="https://www.linkedin.com/in/vasuram" target="_blank">https://www.linkedin.com/in/vasuram</a><br>
+</span></div>
+<div><span>Twitter: @vraven360<br>
+</span></div>
+</div>
+</div>
+</div>
+</div>
+</span></div>
+</div>
+</span>
+</body>
+</html>

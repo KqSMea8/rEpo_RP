@@ -1,0 +1,19 @@
+navigationnalaids@yahoo.com/141-24-02-2016-00190459.zip: Win.Malware.Locky-8140 FOUND
+navigationnalaids@yahoo.com/119-Payment_Advice_Ref_G6100440760.zip: Win.Trojan.Agent-1385862 FOUND
+navigationnalaids@yahoo.com/401-image.zip: Win.Malware.Locky-25322 FOUND
+navigationnalaids@yahoo.com/2306-15069447.doc: Doc.Dropper.Agent-1436170 FOUND
+navigationnalaids@yahoo.com/2331-PS007XX20000584 - Confirmation with Photos.DOC: Doc.Dropper.Agent-1419261 FOUND
+navigationnalaids@yahoo.com/2361-IN45643204.xls: Doc.Dropper.Agent-1400457 FOUND
+navigationnalaids@yahoo.com/29-RG930270888001-SIG.zip: Win.Malware.Locky-9060 FOUND
+navigationnalaids@yahoo.com/280-MX62EDO2016030138977302.zip: Win.Malware.Locky-2322 FOUND
+navigationnalaids@yahoo.com/329-OVERDUE INVOICE.zip: Java.Malware.Agent-1422222 FOUND
+navigationnalaids@yahoo.com/350-2015-25-05_54317.docm: Doc.Dropper.Agent-1422304 FOUND
+navigationnalaids@yahoo.com/349-2015-25-05_07150.docm: Doc.Dropper.Agent-1422749 FOUND
+navigationnalaids@yahoo.com/368-Fax 49 22336303459.docm: Doc.Dropper.Agent-1423251 FOUND
+navigationnalaids@yahoo.com/375-Image 05-26-2016, 97 87 74.zip: Win.Malware.Locky-23708 FOUND
+navigationnalaids@yahoo.com/357-PAYMENT.zip: Java.Malware.Agent-1423613 FOUND
+navigationnalaids@yahoo.com/359-2015-25-05_59178.docm: Doc.Dropper.Agent-1424826 FOUND
+navigationnalaids@yahoo.com/479-shipment.zip: Doc.Dropper.Agent-1434070 FOUND
+navigationnalaids@yahoo.com/8896-5064.doc: Doc.Dropper.Agent-1407497 FOUND
+navigationnalaids@yahoo.com/637-Hotel-Fax-V004X3R8_4983252052512314320.zip: Win.Malware.Locky-3336 FOUND
+navigationnalaids@yahoo.com/681-Document2.zip: Win.Malware.Locky-24902 FOUND

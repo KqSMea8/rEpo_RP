@@ -1,0 +1,16 @@
+<?
+
+class plan extends dbClass
+{
+			
+	 						
+	function getPlan($arg=array()){
+		//extract($arg);
+		echo $sql="SELECT * FROM `plan_elements`";
+		
+		$a= $this->get_results($sql);
+print_r($a);
+	}
+
+}
+?>

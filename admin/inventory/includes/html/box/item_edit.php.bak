@@ -1,0 +1,883 @@
+<div class="e_right_box">
+    <table width="100%"   border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr>
+            <td align="center" valign="top">
+                <table width="100%"  border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td  align="center" valign="middle" >
+
+                            <table width="100%"  border="0" cellpadding="0" cellspacing="0" >
+                                <form name="form1" action=""  method="post"  enctype="multipart/form-data">
+                                   
+                                     <? if (!empty($_SESSION['mess_product'])) {?>
+                                                        <tr>
+                                                        <td  align="center"  class="message"  >
+                                                                <? if(!empty($_SESSION['mess_product'])) {echo $_SESSION['mess_product']; unset($_SESSION['mess_product']); }?>	
+                                                        </td>
+                                                        </tr>
+                                                        <? } ?>
+                                    <tr>
+                                        <td align="center" valign="top" >
+                                            <table width="100%" border="0" cellpadding="3" cellspacing="1"  class="borderall">
+                                                 
+                                                <? if ($_GET["tab"] == "basic") { ?>
+                                               
+       
+                                        <tr>
+                                                 <td colspan="2" align="left" class="head">General </td>
+                                        </tr>
+                                        
+                                         <tr style="display:none33;">
+                                                <td width="31%" align="right"   class="blackbold" >SKU:   </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  name="Sku" id="Sku" readonly="readonly" value="<? echo stripslashes($arryProduct[0]['Sku']); ?>" type="text" class="disabled" maxlength="30" />	 </td>
+                                            </tr>
+                                            
+                                           <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Item Description : <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  type="text" name="description" class="inputbox" id="description" value="<? echo stripslashes($arryProduct[0]['description']); ?>"/>	 </td>
+                                            </tr>
+                                            
+                                              <tr style="display:none;">
+                                                <td width="31%" align="right"   class="blackbold" >Item Serial Number : <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  name="item_serial_number" id="item_serial_number" value="<? echo stripslashes($arryProduct[0]['item_serial_number']); ?>" type="text" class="inputbox"   maxlength="100" />	 </td>
+                                            </tr>
+                                              <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Procurement Method :  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                   <select name="procurement_method" id="procurement_method" class="inputbox">
+												   <option value="">Select Procurement Method</option>
+        <? for($i=0;$i<sizeof($arryProcurement);$i++) {?>
+			<option value="<?=$arryProcurement[$i]['attribute_value']?>" <?  if($arryProcurement[$i]['attribute_value']==$arryProduct[0]['procurement_method']){echo "selected";}?>>
+			<?=$arryProcurement[$i]['attribute_value']?>
+			</option>
+		<? } ?>
+                                                        
+                                                        </select>
+                                                        </td>
+                                            </tr>
+                                             <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Evaluation Type :  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                   <select name="evaluationType" id="evaluationType" class="inputbox">
+                                                        <option value="">Select Evaluation</option>
+           <? for($i=0;$i<sizeof($arryEvaluationType);$i++) {?>
+			<option value="<?=$arryEvaluationType[$i]['attribute_value']?>" <?  if($arryEvaluationType[$i]['attribute_value']==$arryProduct[0]['evaluationType']){echo "selected";}?>>
+			<?=$arryEvaluationType[$i]['attribute_value']?>
+			</option>
+		<? } ?> 
+                                                        </select>
+                                                        </td>
+                                            </tr>
+                                        
+                                          <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Category /SubCategory<span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                 
+                                                    <select name="CategoryID" id="CategoryID" class="inputbox">
+                                                                <option value="">Select Category</option>
+                                                                <?php
+                                                                $objCategory->getCategories(0, 0, $_GET['CatID']);
+                                                                ?>
+                                                            </select>	
+                                                 
+                                                
+                                                </td>
+                                            </tr>
+ <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Item Type :  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                   <select name="itemType" id="itemType" class="inputbox">
+                                                        <option value="">Select Item Type</option>
+            <? for($i=0;$i<sizeof($arryItemType);$i++) {?>
+			<option value="<?=$arryItemType[$i]['attribute_value']?>" <?  if($arryItemType[$i]['attribute_value']==$arryProduct[0]['itemType']){echo "selected";}?>>
+			<?=$arryItemType[$i]['attribute_value']?>
+			</option>
+		<? } ?>   
+                                                        </select>
+                                                        </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Unit Measure:<span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <!--<input  name="UnitMeasure" id="UnitMeasure" value="<? echo stripslashes($arryProduct[0]['UnitMeasure']); ?>" type="text" class="inputbox"   maxlength="100" />-->	
+													
+													
+													 <select name="UnitMeasure" id="UnitMeasure" class="inputbox">
+                                                        <option value="">Select Unit Measure</option>
+            <? for($i=0;$i<sizeof($arryUnit);$i++) {?>
+			<option value="<?=$arryUnit[$i]['attribute_value']?>" <?  if($arryUnit[$i]['attribute_value']==$arryProduct[0]['UnitMeasure']){echo "selected";}?>>
+			<?=$arryUnit[$i]['attribute_value']?>
+			</option>
+		<? } ?>   
+                                                        </select>
+													</td>
+                                            </tr>
+                                            <tr>
+                                                <td  align="right"   class="blackbold">Min Stock Alert Level : </td>
+                                                <td height="30" align="left">
+                                                    <input  name="min_stock_alert_level" id="min_stock_alert_level" value="<? echo stripslashes($arryProduct[0]['min_stock_alert_level']); ?>" type="text" class="inputbox"   maxlength="40" />	</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                             <td  align="right"   class="blackbold">Max Stock Alert Level : </td>
+                                                <td height="30" align="left">
+                                                    <input  name="max_stock_alert_level" id="max_stock_alert_level" value="<? echo stripslashes($arryProduct[0]['max_stock_alert_level']); ?>" type="text" class="inputbox"   maxlength="40" />	</td>
+                                            </tr>
+
+                                             <tr style="display:none;">
+                                                <td  height="30" align="right"  class="blackbold" >Insurance Policy :</td>
+                                                <td   ><input name="insurance_policy" type="text" class="inputbox" id="insurance_policy" value="<? echo $arryProduct[0]['insurance_policy']; ?>"  size="10" maxlength="10"></td>
+                                            </tr>
+                                           <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Purchase Tax Rate :  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                   <select name="purchase_tax_rate" id="purchase_tax_rate" class="inputbox">
+                                                        <option value="">Select Purchase Tax Rate</option>
+                                                        <option value="Never Diminising">Purchase Tax Rate1</option>
+                                                        <option value="Assembled">Purchase Tax Rate2</option>  
+                                                         <option value="Component">Purchase Tax Rate3</option>  
+                                                          </select>
+                                                        </td>
+                                            </tr>
+                                             <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Sale Tax Rate :  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                   <select name="sale_tax_rate" id="sale_tax_rate" class="inputbox">
+                                                        <option value="">Select Sale Tax Rate</option>
+                                                        <option value="Never Diminising">sale Tax Rate1</option>
+                                                        <option value="Assembled">sale Tax Rate2</option>  
+                                                         <option value="Component">sale Tax Rate3</option>  
+                                                          </select>
+                                                        </td>
+                                            </tr>
+                                            
+                                            
+                                            <tr style="display:none;">
+                                                <td  height="70" align="right" valign="top"   class="blackbold"> Product Image </td>
+                                                <td  height="50" align="left" valign="top" >
+
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0"  >
+                                                        <tr>
+                                                            <td width="51%" class="blacknormal" valign="top"><input name="Image" type="file" class="inputbox" id="Image" size="25" onkeypress="javascript: return false;" onkeydown="javascript: return false;" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+                                                                <br>
+<?= $MSG[201] ?>	</td>
+                                                            <td width="49%">
+                                                                <? if ($arryProduct[0]['Image'] != '' && file_exists('../../upload/products/images/' . $arryProduct[0]['Image'])) { ?>
+                                                                    <a  href="Javascript:OpenNewPopUp('../../showimage.php?img=upload/products/images/<? echo $arryProduct[0][Image]; ?>', 150, 100, 'yes' );"><? echo '<img src="../../resizeimage.php?w=100&h=100&img=upload/products/images/' . $arryProduct[0]['Image'] . '" border=0  >'; ?></a>	
+                                                                  <? } ?>	
+                                                            </td>
+                                                        </tr>
+                                                    </table>	</td>
+                                            </tr>
+           <tr style="display:none;">
+                                                <td align="right"   class="blackbold">Status  </td>
+                                                <td height="30" align="left"><span class="blacknormal">
+                                                        <?
+                                                        $ActiveChecked = ' checked';
+                                                        if ($_GET['edit'] > 0) {
+                                                            if ($arryProduct[0]['Status'] == 1) {
+                                                                $ActiveChecked = ' checked';
+                                                                $InActiveChecked = '';
+                                                            }
+                                                            if ($arryProduct[0]['Status'] == 0) {
+                                                                $ActiveChecked = '';
+                                                                $InActiveChecked = ' checked';
+                                                            }
+                                                        }
+                                                        ?>
+                                                        <input type="radio" name="Status" id="Status" value="1" <?= $ActiveChecked ?>>Active&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <input type="radio" name="Status" id="Status" value="0" <?= $InActiveChecked ?>>InActive    </span></td>
+                                            </tr>
+                                        
+                                       
+          
+                                       
+                                                <?php } ?>
+                                                <?php if ($_GET['tab'] == "alterimages") { ?>
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Alternative Images <a class="fancybox" href="#addimage_div" style="float: right;"> Add Alternative Images </a></td>
+                                                    </tr>
+                                                    <?php if(count($MaxProductImageArr) >0){?>
+                                                          <tr>
+                                                               <td colspan="2" class="list-Image">
+                                                                  <ul>
+                                                                      <?php
+                                                                      $irts = 1;
+                                                                      foreach($MaxProductImageArr as $image){
+                                                                           $ImageName = $image['Image'];
+                                                                            $ImageId = $image['Iid'];
+                                                                            if ($ImageName != '' && file_exists('../../upload/products/images/secondary/' . $ImageName)) {
+                                                                            $ImagePath = '../../resizeimage.php?img=upload/products/images/secondary/' . $ImageName . '&w=100&h=100';
+                                                                            $showImage =  '<a data-fancybox-group="gallery" class="fancybox" href="../../upload/products/images/secondary/'.$ImageName.'"><img src="' . $ImagePath . '" border=0 align=left></a><a href="javascript:void();" class="deleteProductImages" alt="'.$_GET['edit']."#".$ImageId.'">'.$delete.'</a>';
+                                                                        }
+                                                                          ?>
+                                                                      <li <?php if($irts%5 == "0"){?> class="last"<?php }?>><?=$showImage;?></li>
+                                                                        <?$irts = $irts+1;}?>  
+                                                                   </ul>
+                                                               </td>
+                                                               </tr>
+                                                               <?php }else{?>
+                                                                <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td class="no_record" colspan="5">No Images Found.</td>
+                                                                       
+                                                                     </tr>
+                                                                     <?php }?>
+                                                               
+                                                      
+                                                       
+                                                    
+                                                   
+                                               
+                                                <?php } ?>
+                                                <? if ($_GET["tab"] == "Price") { ?>
+
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Item Price </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right"  class="blackbold">Average Cost :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="average_cost" id="average_cost" value="<? echo stripslashes($arryProduct[0]['average_cost']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                    </tr> 
+                                                    
+                                                     <tr>
+                                                        <td align="right"  class="blackbold">Last Cost :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="last_cost" id="last_cost" value="<? echo stripslashes($arryProduct[0]['last_cost']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                             
+                                                    </tr> 
+                                                    
+                                                     <tr>
+                                                        <td align="right"  class="blackbold">Purchase Cost  :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="purchase_cost" id="purchase_cost" value="<? echo stripslashes($arryProduct[0]['purchase_cost']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                    </tr> 
+                                                    
+                                                     <tr>
+                                                        <td align="right"  class="blackbold">Sell Price :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="sell_price" id="sell_price" value="<? echo stripslashes($arryProduct[0]['sell_price']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                             
+                                                    </tr> 
+
+                                                   
+                                                  
+                                                <?php } ?>
+                                                 <? if ($_GET["tab"] == "Supplier") { ?>
+
+                                                   <tr> 
+                                                    <td colspan="2" align="left" class="head">Supplier Information</td>
+                                                  </tr>
+
+					<tr>
+							<td align="right" class="blackbold" width="15%"> Supplier ID :<span class="red">*</span> </td>
+							<td align="left" >
+							<input name="SuppCode" type="text" class="disabled" style="width:90px;" id="SuppCode" value="<?php echo stripslashes($arryPurchase[0]['SuppCode']); ?>" maxlength="40" readonly />
+							<a class="fancybox fancybox.iframe" href="../purchasing/SupplierList.php" ><?=$search?></a>
+							</td>
+					</tr>
+
+
+					<tr>
+							<td align="right" class="blackbold" > Company Name :<span class="red">*</span> </td>
+							<td align="left" >
+							<input name="SuppCompany" type="text" class="inputbox" id="SuppCompany" value="<?php echo stripslashes($arryPurchase[0]['SuppCompany']); ?>" maxlength="50" onkeypress="return isCharKey(event);"/> </td>
+					</tr>
+					<tr>
+							<td align="right" class="blackbold" > Contact Name :<span class="red">*</span> </td>
+							<td align="left" >
+							<input name="SuppContact" type="text" class="inputbox" id="SuppContact" value="<?php echo stripslashes($arryPurchase[0]['SuppContact']); ?>" maxlength="30" onkeypress="return isCharKey(event);"/> </td>
+					</tr>
+					
+<tr>
+        <td  align="right"   class="blackbold" > City  :<span class="red">*</span> </td>
+        <td   align="left" >
+<input name="City" type="text" class="inputbox" id="City" value="<?php echo stripslashes($arryPurchase[0]['City']); ?>"  maxlength="30" onkeypress="return isCharKey(event);"/>
+	</td>
+      </tr>
+
+<tr>
+        <td  align="right"   class="blackbold" > State  :<span class="red">*</span> </td>
+        <td   align="left" >
+<input name="State" type="text" class="inputbox" id="State" value="<?php echo stripslashes($arryPurchase[0]['State']); ?>"  maxlength="30" onkeypress="return isCharKey(event);"/>
+	</td>
+      </tr>
+
+<tr>
+        <td  align="right"   class="blackbold" > Country  :<span class="red">*</span> </td>
+        <td   align="left" >
+<input name="Country" type="text" class="inputbox" id="Country" value="<?php echo stripslashes($arryPurchase[0]['Country']); ?>"  maxlength="30" onkeypress="return isCharKey(event);"/>
+	</td>
+      </tr>
+
+<tr>
+        <td  align="right"   class="blackbold" > Zip Code  :<span class="red">*</span> </td>
+        <td   align="left" >
+<input name="ZipCode" type="text" class="inputbox" id="ZipCode" value="<?php echo stripslashes($arryPurchase[0]['ZipCode']); ?>"  maxlength="30" onkeypress="return isAlphaKey(event);"/>
+	</td>
+      </tr>
+
+
+                                                   
+                                                  
+                                                <?php } ?>
+                                                
+                                                  <? if ($_GET["tab"] == "Dimensions") { ?>
+
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Dimensions </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right"  class="blackbold">Pack Size :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="pack_size" id="pack_size" value="<? echo stripslashes($arryProduct[0]['pack_size']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                    </tr> 
+                                                    
+                                                     <tr>
+                                                        <td align="right"  class="blackbold">Weight (kg) :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="weight" id="weight" value="<? echo stripslashes($arryProduct[0]['weight']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                             
+                                                    </tr> 
+                                                    
+                                                     <tr>
+                                                        <td align="right"  class="blackbold">Width (meter)   :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="width" id="width" value="<? echo stripslashes($arryProduct[0]['width']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                    </tr> 
+                                                    
+                                                     <tr>
+                                                        <td align="right"  class="blackbold">Height (meter) :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="height" id="height" value="<? echo stripslashes($arryProduct[0]['height']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                             
+                                                    </tr> 
+                                                    
+                                                     <tr>
+                                                        <td align="right"  class="blackbold">Depth (meter)  :</td>
+                                                        <td height="30" align="left"  class="blacknormal"><input  name="depth" id="depth" value="<? echo stripslashes($arryProduct[0]['depth']); ?>" type="text"  class="inputbox"  size="10" maxlength="10" /> </td>
+                                                             
+                                                    </tr> 
+
+                                                   
+                                                  
+                                                <?php } ?>
+                                                <? if ($_GET["tab"] == "description") { ?>
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Product Description  </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td  align="right" valign="top"   class="blackbold"> Description  </td>
+                                                        <td align="left" valign="top">
+                                                            <Textarea name="Detail" id="Detail" class="inputbox"  ><? echo stripslashes($arryProduct[0]['Detail']); ?></Textarea>
+
+                                                            <script type="text/javascript">
+
+                                                                var editorName = 'Detail';
+
+                                                                var editor = new ew_DHTMLEditor(editorName);
+
+                                                                editor.create = function() {
+                                                                    var sBasePath = '../FCKeditor/';
+                                                                    var oFCKeditor = new FCKeditor(editorName, '410', 200, 'Basic');
+                                                                    oFCKeditor.BasePath = sBasePath;
+                                                                    oFCKeditor.ReplaceTextarea();
+                                                                    this.active = true;
+                                                                }
+                                                                ew_DHTMLEditors[ew_DHTMLEditors.length] = editor;
+
+                                                                ew_CreateEditor(); 
+
+
+                                                            </script>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td  align="right" valign="top"   class="blackbold">Short Description  </td>
+                                                        <td  align="left" valign="top">
+                                                            <Textarea name="ShortDetail" id="ShortDetail" class="inputbox" ><? echo stripslashes($arryProduct[0]['ShortDetail']); ?></Textarea>
+
+
+                                                            <script type="text/javascript">
+
+                                                                var editorName = 'ShortDetail';
+
+                                                                var editor = new ew_DHTMLEditor(editorName);
+
+                                                                editor.create = function() {
+                                                                    var sBasePath = '../FCKeditor/';
+                                                                    var oFCKeditor = new FCKeditor(editorName, '410', 200, 'Basic');
+                                                                    oFCKeditor.BasePath = sBasePath;
+                                                                    oFCKeditor.ReplaceTextarea();
+                                                                    this.active = true;
+                                                                }
+                                                                ew_DHTMLEditors[ew_DHTMLEditors.length] = editor;
+
+                                                                ew_CreateEditor(); 
+
+
+                                                            </script>
+
+
+                                                        </td>
+                                                    </tr> 
+                                                     <?php } ?>
+                                                     <? if ($_GET["tab"] == "seo") { ?>
+
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Seo Properties </td>
+                                                    </tr>
+                                                        <tr>
+                                                            <td align="right"    class="blackbold"> Meta Title </td>
+                                                            <td height="30" align="left"  class="blacknormal">
+                                                                <input  name="MetaTitle" id="MetaTitle" value="<? echo stripslashes($arryProduct[0]['MetaTitle']); ?>" type="text"  class="inputbox"  /> 
+                                                            </td>
+                                                        </tr> 
+                                                        <tr>
+                                                          <td valign="top" align="right" class="blackbold"> Meta Keywords </td>
+                                                          <td valign="top" align="left">
+                                                              <textarea class="inputbox" id="MetaKeyword" name="MetaKeyword"><?=$arryProduct[0]['MetaKeyword'];?></textarea>
+                                                          </td>
+                                                      </tr>
+                                                   <tr>
+                                                   <td valign="top" align="right" class="blackbold"> Meta Description </td>
+                                                 <td valign="top" align="left">
+                                                    <textarea class="inputbox" id="MetaDescription" name="MetaDescription"><?=$arryProduct[0]['MetaDescription'];?></textarea>
+                                                 </td>
+                                                </tr>
+                                                     <tr>
+                                                            <td align="right"    class="blackbold"> Product Url (custom)</td>
+                                                            <td height="30" align="left"  class="blacknormal">
+                                                                <input  name="UrlCustom" id="UrlCustom" value="<? echo stripslashes($arryProduct[0]['UrlCustom']); ?>" type="text"  class="inputbox"  /> 
+                                                            </td>
+                                                        </tr>  
+                                            
+                                                   
+                                                  
+                                                <?php } ?>
+                                                        <? if ($_GET["tab"] == "addattributes") { ?>
+                                             
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Manage Attributes <a class="fancybox" href="#addattribute_div" style="float: right;"> Add New Attribute  </a></td>
+                                                    </tr>
+                                                           <tr>
+                                                               <td colspan="2">
+                                                                <table width="100%" cellspacing="1" cellpadding="3" align="center" id="list_table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="head1">Attribute Name</td>
+                                                                        <td class="head1">Attribute Caption</td>
+                                                                        <td class="head1">Priority</td>
+                                                                        <td class="head1">Active</td>
+                                                                         <td class="head1">Action</td>
+                                                                  </tr>
+                                                                  <?php  if(count($AttributesArr) > 0) {
+                                                                      foreach($AttributesArr as $attribute) {   ?>
+                                                                    <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td><?=$attribute['name'];?></td>
+                                                                        <td><?=$attribute['caption'];?></td>
+                                                                        <td><?=$attribute['priority'];?></td>
+                                                                        <td><?=$attribute['is_active'];?></td>
+                                                                        <td><a href="editProduct.php?edit=<? echo $_GET['edit']; ?>&curP=<?php echo $_GET['curP']; ?>&CatID=<?= $_GET['CatID'] ?>&attID=<?=$attribute['paid'];?>&tab=editattributes"><?= $edit ?></a>  <a href="javascript:void();" class="deleteProductAttribute" alt="<?=$_GET['edit']."#".$attribute['paid']?>"><?= $delete ?></a>	</td></td>
+                                                                    </tr>
+                                                                  <?php   
+                                                                            }
+                                                                      } else { 
+                                                                      ?>
+                                                                   <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td class="no_record" colspan="5">No Attributes Found.</td>
+                                                                       
+                                                                     </tr>
+                                                                    <?php   }   ?>
+		                                               </tbody>
+			                                       </table> 
+                                                            </td>
+                                                           </tr>
+                                                           
+                                                           <tr>
+                                                               <td colspan="2">
+                                                                   <div style="padding: 15px 15px 15px 30px;" class="formItemComment dialog-add-attribute-help">
+                                                    You are allowed to enter an unlimited number of attributes to any product. 
+                                                    Attributes allow you to give your customer's choices for any product. 
+                                                    Examples include size, color, or type. Each new selection must be entered on a new line for it to appear correctly. 
+                                                    If the attribute is a price modifier, you need to tell the system to increase or decrease the price (+ or -) 
+                                                    between parenthesis ( ) at the end of each attribute.You can also modify weight on an attribute by entering the increase or decrease after the price and separated by a comma. 
+                                                    Examples below.<br><br>
+                                                    <table cellspacing="0" cellpadding="0" width="100%" class="attribute-admin-list-table">
+                                                            <tbody>
+                                                                    <tr>
+                                                                            <td>Small(-25,-10)</td>
+                                                                            <td>Decrease price by 25, decrease weight by 10</td>
+                                                                    </tr>
+                                                                     <tr>
+                                                                            <td>Small(+25,+10)</td>
+                                                                            <td>Increase price by 25, Increase weight by 10</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                            <td>X-Large(+10)</td>
+                                                                            <td>Increase price by 10</td>
+                                                                    </tr>
+                                                                     </tbody>
+                                                            </table>
+                                                            </div>
+                                                                   
+                                                                   
+                                                               </td>
+                                                           </tr>
+                                                           
+                                              
+                                                <?php } ?>
+                                                  <?php if ($_GET["tab"] == "editattributes") { ?>
+                                                     <tr>
+                                                                <td colspan="2" align="left" class="head">Edit <? echo stripslashes($productAttribute[0]['name']); ?> Attribute </td>
+                                                           </tr>
+                                                             <tr>
+                                                               <td  colspan="2" > 
+                                                              <table width="100%" border="0" cellpadding="3" cellspacing="1">
+                                                                <tr>
+                                                                    <td align="right"    class="blackbold">Attribute Name <span class="red">*</span></td>
+                                                                    <td height="30" align="left"  class="blacknormal"><input  name="attname" id="attname" value="<? echo stripslashes($productAttribute[0]['name']); ?>" type="text" />  </td>
+                                                                </tr> 
+                                                                <tr>
+                                                                    <td  height="30" align="right"  class="blackbold" >Attribute Caption <span class="red">*</span> </td>
+                                                                    <td><input  name="caption" id="caption" value="<? echo stripslashes($productAttribute[0]['caption']); ?>" type="text" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <td  height="30"  class="blackbold" align="right">Attribute Type  </td>
+                                                                <td>
+                                                                       <select name="attribute_type" class="inputbox" id="attribute_type" style="width:190px;">
+                                                                        <option value="select">Drop-down</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>  
+                                                            <tr>
+                                                               <td  height="30"  class="blackbold" align="right">Is This Attribute Active?  </td>
+                                                               <td><input type="checkbox" name="is_active" id="is_active" value="Yes" <? if ($productAttribute[0]['is_active'] == 'Yes') echo 'checked'; ?>></td>
+                                                           </tr>  
+
+                                                         <tr>
+                                                            <td align="right"    class="blackbold"> Priority  </td>
+                                                            <td height="30" align="left" >
+                                                            <select name="priority" id="priority" class="inputbox" style="width:185px;">
+                                                            <option value="1" <? if ($productAttribute[0]['priority'] == '1') echo 'selected'; ?>>1</option>
+                                                            <option value="2" <? if ($productAttribute[0]['priority'] == '2') echo 'selected'; ?>>2</option>
+                                                            <option value="3" <? if ($productAttribute[0]['priority'] == '3') echo 'selected'; ?>>3</option>
+                                                            <option value="4" <? if ($productAttribute[0]['priority'] == '4') echo 'selected'; ?>>4</option>
+                                                            <option value="5" <? if ($productAttribute[0]['priority'] == '5') echo 'selected'; ?>>5</option>
+                                                            <option value="6" <? if ($productAttribute[0]['priority'] == '6') echo 'selected'; ?>>6</option>
+                                                            <option value="7" <? if ($productAttribute[0]['priority'] == '7') echo 'selected'; ?>>7</option>
+                                                            <option value="8" <? if ($productAttribute[0]['priority'] == '8') echo 'selected'; ?>>8</option>
+                                                            <option value="9" <? if ($productAttribute[0]['priority'] == '9') echo 'selected'; ?>>9</option>
+                                                            <option value="10" <? if ($productAttribute[0]['priority'] == '10') echo 'selected'; ?>>10</option>
+			</select>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td  align="right"   class="blackbold" valign="top">Options <span class="red">*</span></td>
+                                                        <td height="30" align="left">
+                                                         <textarea  name="options" id="options" style="width:100%; height: 115px;"><?=$productAttribute[0]['options'];?></textarea>
+                                                        </td>
+                                                    </tr>
+                                                 </table>
+                                                   </td>
+                                                  </tr>
+                                                  
+                                                  <?php }?>
+                                                     <? if ($_GET["tab"] == "Cost") { ?>
+                                             
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Manage Cost </td>
+                                                    </tr>
+                                                           <tr>
+                                                               <td colspan="2">
+                                                                <table width="100%" cellspacing="1" cellpadding="3" align="center" id="list_table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="head1">Transaction ID</td>
+                                                                        <td class="head1">Transaction Date</td>
+                                                                        <td class="head1">Item Code</td>
+                                                                         <td class="head1">Item Description</td>
+                                                                         <td class="head1">Transaction Type</td>
+                                                                         <td class="head1">Trans Qty</td>
+                                                                         
+                                                                         <td class="head1">Stock On Hand</td>
+                                                                         <td class="head1">Trans Unit cost</td>
+                                                                         <td class="head1">Pre Avg Cost</td>
+                                                                         <td class="head1">Post Avg Cost</td>
+                                                                         
+                                                                  </tr>
+                                                                  <?php  if(count($DiscountArr) > 0) {
+                                                                      foreach($DiscountArr as $discount) {   ?>
+                                                                    <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td><?=$discount['range_min'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=number_format($discount['discount'],2);?></td>
+                                                                        <td><?=$discount['discount_type'];?></td>
+                                                                        <td><?=$discount['is_active'];?></td>
+                                                                        <td><a href="editProduct.php?edit=<? echo $_GET['edit']; ?>&curP=<?php echo $_GET['curP']; ?>&CatID=<?= $_GET['CatID'] ?>&disID=<?=$discount['qd_id'];?>&tab=editDiscount"><?= $edit ?></a>  <a href="javascript:void();" class="deleteProductDiscount" alt="<?=$_GET['edit']."#".$discount['qd_id']?>"><?= $delete ?></a>	</td></td>
+                                                                    </tr>
+                                                                  <?php   
+                                                                            }
+                                                                      } else { 
+                                                                      ?>
+                                                                   <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td class="no_record" colspan="10">No Transaction Found.</td>
+                                                                       
+                                                                     </tr>
+                                                                    <?php   }   ?>
+		                    </tbody>
+			</table> 
+                                                            </td>
+                                                           </tr>
+                                                        
+                                                       
+                                              
+                                                <?php } ?>
+                                                
+                                                
+                                                  <? if ($_GET["tab"] == "Transaction") { ?>
+                                             
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Transaction </td>
+                                                    </tr>
+                                                           <tr>
+                                                               <td colspan="2">
+                                                                <table width="100%" cellspacing="1" cellpadding="3" align="center" id="list_table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="head1">Transaction ID</td>
+                                                                        <td class="head1">Transaction Date</td>
+                                                                        <td class="head1">Warehouse 1</td>
+                                                                         <td class="head1">Warehouse 2</td>
+                                                                         <td class="head1">Transaction Type</td>
+                                                                        <td class="head1">Item Code</td>
+                                                                         <td class="head1">Item Description</td>
+                                                                         <td class="head1">Item Value</td>
+                                                                         <td class="head1">Trans Qty</td>
+                                                                         
+                                                                         
+                                                                         <td class="head1">Running Total</td>
+                                                                         
+                                                                         
+                                                                  </tr>
+                                                                  <?php  if(count($DiscountArr) > 0) {
+                                                                      foreach($DiscountArr as $discount) {   ?>
+                                                                    <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td><?=$discount['range_min'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=number_format($discount['discount'],2);?></td>
+                                                                        <td><?=$discount['discount_type'];?></td>
+                                                                        <td><?=$discount['is_active'];?></td>
+                                                                        <td><a href="editProduct.php?edit=<? echo $_GET['edit']; ?>&curP=<?php echo $_GET['curP']; ?>&CatID=<?= $_GET['CatID'] ?>&disID=<?=$discount['qd_id'];?>&tab=editDiscount"><?= $edit ?></a>  <a href="javascript:void();" class="deleteProductDiscount" alt="<?=$_GET['edit']."#".$discount['qd_id']?>"><?= $delete ?></a>	</td></td>
+                                                                    </tr>
+                                                                  <?php   
+                                                                            }
+                                                                      } else { 
+                                                                      ?>
+                                                                   <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td class="no_record" colspan="10">No Transaction Found.</td>
+                                                                       
+                                                                     </tr>
+                                                                    <?php   }   ?>
+		                    </tbody>
+			</table> 
+                                                            </td>
+                                                           </tr>
+                                                        
+                                                       
+                                              
+                                                <?php } ?>
+                                                  <?php if ($_GET["tab"] == "editDiscount") { ?>
+                                                    <tr>
+                                                                <td colspan="2" align="left" class="head">Edit Discount </td>
+                                                           </tr>
+                                                           
+                                                            <tr>
+                                                               <td  colspan="2" > 
+                                                              <table width="100%" border="0" cellpadding="3" cellspacing="1">
+                                                                <tr>
+                                                                    <td align="right"    class="blackbold">Min Range<span class="red">*</span></td>
+                                                                    <td height="30" align="left"  class="blacknormal"><input  name="range_min" id="range_min"  class="inputbox" onkeyup="keyup(this);" value="<? echo stripslashes($productDiscount[0]['range_min']); ?>" type="text" />  </td>
+                                                                </tr> 
+                                                                <tr>
+                                                                    <td  height="30" align="right"  class="blackbold" >Max Range <span class="red">*</span> </td>
+                                                                    <td><input  name="range_max" id="range_max" onkeyup="keyup(this);"  class="inputbox" value="<? echo stripslashes($productDiscount[0]['range_max']); ?>" type="text" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <td  height="30"  class="blackbold" align="right">Discount <span class="red">*</span> </td>
+                                                                <td>
+                                                                       <input  name="discount" id="discount" onkeyup="keyup(this);"  class="inputbox" value="<? echo stripslashes(number_format($productDiscount[0]['discount'],2)); ?>" type="text" />
+                                                                </td>
+                                                            </tr>  
+                                                              <tr>
+                                                                <td  height="30"  class="blackbold" align="right"> Discount Type <span class="red">*</span> </td>
+                                                                <td>
+                                                                       <select name="discount_type" class="inputbox" id="discount_type" style="width:190px;">
+                                                                        <option>---Select---</option>
+                                                                        <option value="amount" <? if ($productDiscount[0]['discount_type'] == 'amount') echo 'selected'; ?>>amount</option>
+                                                                        <option value="percent" <? if ($productDiscount[0]['discount_type'] == 'percent') echo 'selected'; ?>>percent</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr> 
+                                                            <!-- <tr>
+                                                                <td  height="30"  class="blackbold" align="right"> Customer Type  <span class="red">*</span></td>
+                                                                <td>
+                                                                       <select name="customer_type" class="inputbox" id="customer_type" style="width:190px;">
+                                                                        <option>---Select---</option>
+                                                                        <option value="customer" <? //if ($productDiscount[0]['customer_type'] == 'customer') echo 'selected'; ?>>customer</option>
+                                                                        <option value="wholesale" <? //if ($productDiscount[0]['customer_type'] == 'wholesale') echo 'selected'; ?>>wholesale</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>-->  
+                                                           
+                                                            <tr>
+                                                               <td  height="30"  class="blackbold" align="right">Is This Discount Active?  </td>
+                                                               <td><input type="checkbox" name="is_active" id="is_active" value="Yes" <? if ($productDiscount[0]['is_active'] == 'Yes') echo 'checked'; ?>></td>
+                                                           </tr>  
+
+                                                    
+                                                 </table>
+                                                   </td>
+                                                  </tr>
+                                                  
+                                                  <?php }?>
+                                                   <?php if ($_GET["tab"] == "inventory") { ?>
+                                                    <tr>
+                                                                <td colspan="2" align="left" class="head">Inventory Control </td>
+                                                           </tr>
+                                                           
+                                                            <tr>
+                                                               <td  colspan="2" > 
+                                                                   <?php  
+                                                                      if($arryProduct[0]['InventoryControl'] == "Yes")
+                                                                        $checked_yes = "checked";                                          
+                                                                      else
+                                                                          $checked_no = "checked";
+                                                                       ?>
+                                                              <table width="100%" border="0" cellpadding="3" cellspacing="1">
+                                                                <tr>
+                                                                    <td align="right"   class="blackbold">Inventory enable</td>
+                                                                    <td height="30" align="left" class="blacknormal">
+                                                                        <input type="radio" name="InventoryControl" id="inventory_control_no" value="No" style="vertical-align:sub;" <?=$checked_no;?>>No
+                                                                        <input type="radio" name="InventoryControl" id="inventory_control_yes" value="Yes" style="vertical-align:sub;" <?=$checked_yes;?>>Yes
+                                                                    </td>
+                                                                </tr> 
+                                                                <tr>
+                                                               <td  colspan="2"  style="display:<?php if($arryProduct[0]['InventoryControl'] == "Yes"){?>table-cell<?php } else {?>none<?php }?>;" id="showInventoryControl"> 
+                                                                    <table width="100%" border="0" cellpadding="3" cellspacing="1">
+                                                             <tr>
+                                                                <td  height="30"  class="blackbold" align="right">  If product is out of stock  <span class="red">*</span> </td>
+                                                                <td>
+                                                                       <select name="InventoryRule" class="inputbox" id="inventory_rule">
+                                                                        <option>---Select---</option>
+                                                                       <option  value="OutOfStock" <?php if($arryProduct[0]['InventoryRule'] == "OutOfStock") {echo "selected";}?>>Show "Out of Stock" message</option>
+                                                                       <option value="Hide" <?php if($arryProduct[0]['InventoryRule'] == "Hide") {echo "selected";}?>>Do not display</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr> 
+                                                                <tr>
+                                                                    <td  height="30" align="right"  class="blackbold" > Number of items in inventory  <span class="red">*</span> </td>
+                                                                    <td><input  name="Quantity" id="Quantity" onkeyup="keyup(this);" class="inputbox" value="<? echo stripslashes($arryProduct[0]['Quantity']); ?>" type="text" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td  height="30"  class="blackbold" align="right">Notify me when inventory is equal <br>to or less than  <span class="red">*</span> </td>
+                                                                <td>
+                                                                       <input  name="StockWarning" id="stock_warning" onkeyup="keyup(this);" class="inputbox" value="<? echo stripslashes($arryProduct[0]['StockWarning']); ?>" type="text" />
+                                                                </td>
+                                                            </tr>  
+                                                             </table>
+                                                            </td> 
+                                                          </tr>
+                                                 </table>
+                                                   </td>
+                                                  </tr>
+                                                  
+                                                  <?php }?>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                   
+                                    <tr>
+                                        <td height="54" align="center">
+                                            <br>
+                                            <?
+                                            if ($_GET['edit'] > 0)
+                                            {
+                                                if($_GET['tab'] == "addattributes" || $_GET['tab'] == "editattributes")
+                                                {
+                                                    $ButtonID = 'UpdateAttribute';
+                                                     $ButtonTitle = 'Save'; 
+                                                }
+                                                elseif($_GET['tab'] == "basic")
+                                                {
+                                                    $ButtonID = 'UpdateBasic';
+                                                     $ButtonTitle = 'Update'; 
+                                                }
+                                                elseif($_GET['tab'] == "discount" || $_GET['tab'] == "editDiscount")
+                                                {
+                                                     $ButtonID = 'UpdateDiscount';
+                                                     $ButtonTitle = 'Save'; 
+                                                }
+                                                elseif($_GET['tab'] == "other")
+                                                {
+                                                    $ButtonID = 'UpdateOther';
+                                                     $ButtonTitle = 'Update'; 
+                                                }
+                                                 elseif($_GET['tab'] == "inventory")
+                                                {
+                                                    $ButtonID = 'UpdateInventory';
+                                                     $ButtonTitle = 'Save'; 
+                                                }
+                                                 elseif($_GET['tab'] == "alterimages")
+                                                {
+                                                   
+                                                     $ButtonTitle = 'Save'; 
+                                                }
+                                                else {
+                                                     $ButtonID = 'btn';
+                                                      $ButtonTitle = 'Update'; 
+                                                }
+                                                   
+                                            }
+                                               else
+                                               {
+                                                 $ButtonTitle = 'Submit';
+                                               }
+
+                                            $PostedByID = $arryProduct[0]['PostedByID'];
+                                            if ($PostedByID <= 1)
+                                                $PostedByID = 1;
+
+                                            if (sizeof($arryCategory) <= 0)
+                                                $DisabledButton = 'disabled';
+                                            ?>
+                                             <?php if($_GET['tab'] != "alterimages" && $_GET['tab'] != "addattributes" && $_GET['tab'] != "discount")   { ?>
+                                             <input name="Submit" type="submit" class="button" id="<?=$ButtonID;?>" value=" <?= $ButtonTitle ?> " <?= $DisabledButton ?> />
+                                            <?php }?>
+                                            <input type="hidden" name="ItemID" id="ItemID" value="<? echo $_GET['edit']; ?>" />
+                                            <input type="hidden" name="AttributeId" id="AttributeId" value="<? echo $_GET['attID']; ?>" />
+                                            <input type="hidden" name="DiscountId" id="DiscountId" value="<? echo $_GET['disID']; ?>" />
+                                            <input  name="ProductSku" value="<? echo stripslashes($arryProduct[0]['ProductSku']); ?>" type="hidden"/>
+                                            <input type="hidden" name="MaxProductImage" id="MaxProductImage" value="<? echo $MaxProductImage; ?>" />
+
+                                      
+                                         </td>
+                                    </tr>
+
+                                </form>
+                            </table></td>
+                    </tr>
+                </table></td>
+        </tr>
+    </table>
+</div>
+
+ <?  if($_GET['tab'] == "alterimages"){include("includes/html/box/addimage_form.php");} ?>
+ <?  if($_GET['tab'] == "addattributes"){include("includes/html/box/addattribute_form.php");} ?>
+ <?  if($_GET['tab'] == "discount"){include("includes/html/box/adddiscount_form.php");} ?>

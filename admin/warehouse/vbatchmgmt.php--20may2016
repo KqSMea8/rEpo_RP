@@ -1,0 +1,25 @@
+<?php 	if($_GET['pop']==1) $HideNavigation = 1;
+      	/**************************************************/
+	$ThisPageName = 'viewbatchmgmt.php'; 
+	/**************************************************/
+
+	include_once("../includes/header.php");
+	include_once("language/en_lead.php");
+	require_once($Prefix."classes/warehouse.class.php");
+        require_once($Prefix."classes/sales.quote.order.class.php");
+
+        $Module		=	"Batch Management.php";
+	$objwarehouse	=	new warehouse();
+	$RedirectURL 	= 	"viewbatchmgmt.php?curP=".$_GET['curP'];
+	
+        if(!empty($_GET['view'])) 
+        {
+            $batchArr	=  	$objwarehouse->ListBatches($_GET['view']);
+            $objSale	=	new sale();
+            $EntriesArr	=  	$objSale->ListbatchEntries($_GET['view']);
+        }    
+        
+	require_once("../includes/footer.php"); 	 
+?>
+
+

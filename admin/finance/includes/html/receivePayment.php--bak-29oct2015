@@ -1,0 +1,522 @@
+<script language="JavaScript1.2" type="text/javascript">
+function ResetSearch(){	
+	$("#prv_msg_div").show();
+	$("#frmSrch").hide();
+	$("#preview_div").hide();
+}
+
+$( document ).ready(function() {
+  setTimeout(function() {
+    $('.message').fadeOut('fast');
+}, 5000); 
+}); 
+
+</script>
+<a href="viewSalesPayments.php" class="back">Back</a>
+<div class="had">Receive Payment</div>
+<div class="message" align="center"><? if(!empty($_SESSION['mess_payment'])) {echo $_SESSION['mess_payment']; unset($_SESSION['mess_payment']); }?></div>
+
+ 
+<script language="JavaScript1.2" type="text/javascript">
+function validateForm(frm){
+
+	var ReceivedAmount = frm.ReceivedAmount.value;
+	var TotalPaidAmount = document.getElementById("total_payment").value;
+        var totalOpenBalance = document.getElementById("totalOpenBalance").value;
+        var totalInvoice = 0;
+         totalInvoice = document.getElementById("totalInvoice").value;
+
+    if(frm.ReceivedAmount.value == "" || frm.ReceivedAmount.value == 0)
+    {
+              alert("Please Enter Received Amount.");
+              frm.ReceivedAmount.focus();
+              return false;
+     }
+     
+     if(frm.EntryType.value == "")
+        {
+                alert("Please Select Entry Type.");
+                frm.EntryType.focus();
+                return false;
+        }
+        
+        if(frm.EntryType.value == "GL Account")
+            {
+                
+                if(frm.GLCode.value == "")
+                {
+                    alert("Please Select GL Account.");
+                    frm.GLCode.focus();
+                    return false;
+                }
+            }
+
+    if(frm.PaidTo.value == "")
+      {
+                   alert("Please Select Account.");
+                   frm.PaidTo.focus();
+                   return false;
+       }
+        if(frm.Method.value == "")
+        {
+                alert("Please Select Payment Method.");
+                frm.Method.focus();
+                return false;
+        }
+        
+        if(frm.Method.value == "Check")
+            {
+                
+                if(frm.CheckBankName.value == "")
+                {
+                    alert("Please Enter Bank Name.");
+                    frm.CheckBankName.focus();
+                    return false;
+                }
+                if(frm.CheckFormat.value == "")
+                {
+                    alert("Please Select Check Format.");
+                    frm.CheckFormat.focus();
+                    return false;
+                }
+                
+            }
+        
+        for(var i=1; i <= totalInvoice;i++){
+            var payment_amnt = parseFloat(document.getElementById("payment_amnt_"+i).value);
+            var invoice_amnt = parseFloat(document.getElementById("invoice_amnt_"+i).value);
+            if( payment_amnt > 0 &&  payment_amnt > invoice_amnt){
+                 alert("You Can Receive Only "+document.getElementById("invoice_amnt_"+i).value);
+                 document.getElementById("payment_amnt_"+i).focus();
+		 return false;
+            } 
+        }
+        
+      
+        
+         //CODE FOR PERIOD END SETTING
+        var BackFlag = 0;
+        var PDate = Trim(document.getElementById("Date")).value;
+        var CurrentPeriodDate = Trim(document.getElementById("CurrentPeriodDate")).value;
+        var CurrentPeriodMsg = Trim(document.getElementById("CurrentPeriodMsg")).value;
+        var strBackDate = Trim(document.getElementById("strBackDate")).value;
+        var strSplitBackDate = strBackDate.split(",");
+        var backDateLength = strSplitBackDate.length;
+        
+        var spliPDate = PDate.split("-");
+        var StrspliPDate = spliPDate[0]+"-"+spliPDate[1];
+        
+        
+        for(var bk=0;bk<backDateLength;bk++)
+            {
+                if(strSplitBackDate[bk] == StrspliPDate)
+                    {
+                        BackFlag = 1;
+                        break;
+                    }
+               
+            }
+        
+        
+        var CurrentPeriodDate = Date.parse(CurrentPeriodDate);
+        var PDate = Date.parse(PDate);
+       
+        if(PDate < CurrentPeriodDate && BackFlag == 0) 
+            {
+                alert("Sorry! You Can Not Enter Back Date Entry.\n"+CurrentPeriodMsg+".");
+                document.getElementById("Date").focus();
+		return false;
+            }
+            
+          //END PERIOD SETTING  
+        
+        if(parseFloat(ReceivedAmount) != parseFloat(TotalPaidAmount)){
+              alert("Received Amount and Total Payment Should be Same.");
+              frm.ReceivedAmount.focus();
+              return false;
+
+              }
+                
+        /* if(parseFloat(ReceivedAmount) > parseFloat(totalOpenBalance)){
+		alert("Payment Amount Should be "+totalOpenBalance);
+                frm.ReceivedAmount.focus();
+		return false;
+
+		}
+        else{
+                   ShowHideLoader('1','P');
+           }*/
+
+	ShowHideLoader('1','P');	
+}
+
+
+
+
+
+
+
+
+function ChangeConversionrate(line){
+
+	var ConversionRate = document.getElementById("ConversionRate_"+line).value;
+	var TotalInvoiceAmount=document.getElementById("TotalInvoiceAmountOld_"+line).value;
+	var receivedAmnt=document.getElementById("receivedAmnt_"+line).value;	
+
+
+	var Totalamount=TotalInvoiceAmount*ConversionRate;
+	Totalamount = parseFloat(Totalamount).toFixed(2);
+	document.getElementById("TotalInvoiceAmount_"+line).value=Totalamount;
+
+
+	var Openbalance = Totalamount-receivedAmnt;
+	Openbalance = parseFloat(Openbalance).toFixed(2);
+	document.getElementById("invoice_amnt_"+line).value=Openbalance;
+
+}
+
+
+
+</script>
+
+<?  if (!empty($ErrorMsg)) {   ?>
+<div class="redmsg" align="center"><?=$ErrorMsg?></div>
+<?php } else {?>
+
+<form name="form1" action=""  method="post" onSubmit="return validateForm(this);" enctype="multipart/form-data">
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="borderall">
+	<!--<tr>
+	 <td colspan="2" align="left" class="head">Receive Payment</td>
+	</tr>-->	
+	
+	<tr>
+	 <td align="left" valign="top">
+	 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="height: 153px;">
+	
+	 <tr>
+        <td  align="right"  class="blackbold">Customer : <span class="red">*</span></td>
+        <td  align="left">
+			
+                        <select name="CustomerName" id="CustomerName" class="inputbox" onChange="SetCustomerInvoice(this.value);">
+                            <option value="">---Select---</option>
+                            <?php foreach($arryCustomerList as $values){?>
+                            <option value="<?=$values['custID']?>"><?=$values['CustomerName']?></option>
+                            <?php }?>
+                            
+                        </select>
+			
+		</td>
+     </tr>
+	 <tr>
+        <td align="right"   class="blackbold">Amount Received : <span class="red">*</span></td>
+        <td align="left">
+		  <input name="ReceivedAmount" type="text" class="inputbox" id="ReceivedAmount" style="width: 90px;" maxlength="10" onkeypress="return isDecimalKey(event);" value="" />
+		   <!--<input name="TotalPaidAmount" type="hidden" class="inputbox" id="TotalPaidAmount" value="<?=$remainInvoiceAmount;?>"  />-->
+		</td>
+     </tr>
+   <tr>
+        <td  align="right"  class="blackbold">Entry Type : <span class="red">*</span></td>
+        <td   align="left">
+		
+		
+		   <select name="EntryType" class="inputbox" id="EntryType" onChange="getEntryType(this.value);">
+		  	<option value="">--- Select ---</option>
+                        <option value="Invoice">Invoice</option>
+                        <option value="GL Account">GL Account</option>
+			 
+		</select> 
+		
+		</td>
+     </tr>
+     
+    <tr style="display: none;" id="showGLCode">
+        <td  align="right" class="blackbold">GL Account : <span class="red">*</span></td>
+        <td   align="left">
+<select name="GLCode" class="inputbox" id="GLCode">
+	<option value="">--- Select ---</option>
+	<? for($i=0;$i<sizeof($arryBankAccountList);$i++) {?>
+	<option value="<?=$arryBankAccountList[$i]['BankAccountID']?>">
+	<?=stripslashes($arryBankAccountList[$i]['AccountName']);?>
+	[<?=$arryBankAccountList[$i]['AccountNumber']?>]
+	</option>
+	<? } ?>
+</select> 
+
+
+		</td>
+    </tr>  
+	 <tr>
+        <td  align="right"  class="blackbold">Deposit To : <span class="red">*</span></td>
+        <td   align="left">
+		
+		
+		   <select name="PaidTo" class="inputbox" id="PaidTo">
+		  	<option value="">--- Select ---</option>
+			<? for($i=0;$i<sizeof($arryBankAccount);$i++) {?>
+			 <option value="<?=$arryBankAccount[$i]['BankAccountID']?>" <? if($arryBankAccount[$i]['DefaultAccount']==1) echo 'Selected'; ?>   > 
+			 <?=$arryBankAccount[$i]['AccountName']?> [<?=$arryBankAccount[$i]['AccountNumber']?>]</option>
+				<? } ?>
+		</select> 
+		
+		</td>
+     </tr>
+	<tr>
+        <td  align="right" class="blackbold">Payment Method : <span class="red">*</span></td>
+        <td   align="left">
+		  <select name="Method" class="inputbox" id="Method" onChange="getPaymentMethodName(this.value);">
+		  	<option value="">--- Select ---</option>
+				<? for($i=0;$i<sizeof($arryPaymentMethod);$i++) {?>
+					<option value="<?=$arryPaymentMethod[$i]['attribute_value']?>">
+					<?=$arryPaymentMethod[$i]['attribute_value']?>
+			</option>
+				<? } ?>
+		</select> 
+		</td>
+  </tr>
+   <tr style="display: none;" id="CheckBankName">
+            <td  align="right" class="blackbold">Bank Name : <span class="red">*</span></td>
+            <td  align="left"><input name="CheckBankName" type="text" class="inputbox" id="CheckBankName" value=""  /></td>
+         </tr>
+       <tr style="display: none;" id="CheckFormat">
+        <td  align="right" class="blackbold">Check Format : <span class="red">*</span></td>
+        <td   align="left">
+		  <select name="CheckFormat" class="inputbox" id="CheckFormat">
+                    <option value="">--- Select ---</option>
+                    <option value="Check">Check</option>
+                    <option value="Stub">Stub</option>
+                    <option value="Check Stub">Check Stub</option>	
+		</select> 
+		</td>
+    </tr>  
+   <!--<tr>
+        <td  align="right"   class="blackbold">Difference Amount : </td>
+        <td   align="left">
+		 <div id="DiffAmount">0.00</div>
+		</td>
+     </tr>-->
+	  
+ 
+	</table>
+	 
+	 </td>
+	 <td align="right" valign="top">
+	 <table width="100%" border="0" cellpadding="5" style="height: 153px;"  cellspacing="0">
+	<tr>
+	 <td  align="right" style=" padding-top: 10px; vertical-align: top;" class="blackbold">Payment Date  : <span class="red">*</span></td>
+		<td   align="left" >
+
+			<script type="text/javascript">
+			$(function() {
+			$('#Date').datepicker(
+			{
+				showOn: "both",
+				yearRange: '<?=date("Y")-20?>:<?=date("Y")+10?>', 
+				dateFormat: 'yy-mm-dd',
+				changeMonth: true,
+				changeYear: true
+
+			}
+			);
+			});
+			</script>
+
+		<? 	
+		$arryTime = explode(" ",$Config['TodayDate']);
+		$Date = ($arrySale[0]['Date']>0)?($arrySale[0]['Date']):($arryTime[0]); 
+		?>
+		<input id="Date" name="Date" readonly="" class="datebox" value="<?=$Date?>"  type="text" > 
+                <input type="hidden" name="CurrentPeriodDate"  class="datebox" id="CurrentPeriodDate" value="<?php echo $CurrentPeriodDate;?>">
+                 <input type="hidden" name="CurrentPeriodMsg"  class="datebox" id="CurrentPeriodMsg" value="<?php echo $ARCurrentPeriod;?>">
+                 <input type="hidden" name="strBackDate"  class="datebox" id="strBackDate" value="<?php echo $strBackDate;?>">
+                &nbsp;&nbsp;<span class="red"><?//=$GLCurrentPeriod;?></span>
+
+		</td>
+	</tr>
+	
+	 <tr>
+            <td  align="right" class="blackbold">Reference No : </td>
+            <td  align="left"><input name="ReferenceNo" type="text" class="inputbox" id="ReferenceNo" value=""  /></td>
+         </tr>
+	 <tr>
+            <td valign="top" align="right" class="blackbold">Payment Comment :</td>
+            <td align="left"><textarea id="Comment" class="textarea" type="text" name="Comment"></textarea></td>
+	</tr>
+	</table>
+	 </td>
+	</tr>
+        <tr>
+            <td colspan="2" id="invoiveList"></td>
+        </tr>
+        
+          <tr>
+            <td colspan="2" align="center"><input type="submit" class="button" name="save_payment" id="save_payment" style="display: none;" value="Save Payment"></td>
+        </tr>
+	</table>
+ </form>
+
+<?php }?>
+<script type="text/javascript">
+
+var httpObj = false;
+		try {
+			 httpObj = new XMLHttpRequest();
+		} catch (trymicrosoft) {
+		  try {
+				httpObj = new ActiveXObject("Msxml2.XMLHTTP");
+		  } catch (othermicrosoft) {
+			try {
+			  httpObj = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (failed) {
+			  httpObj = false;
+			}
+	  }
+
+	}
+
+var httpObj2 = false;
+		try {
+			 httpObj2 = new XMLHttpRequest();
+		} catch (trymicrosoft) {
+		  try {
+				httpObj2 = new ActiveXObject("Msxml2.XMLHTTP");
+		  } catch (othermicrosoft) {
+			try {
+			  httpObj2 = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (failed) {
+			  httpObj2 = false;
+			}
+	  }
+
+	}
+
+
+function SetCustomerInvoice(custID){
+
+		ShowHideLoader('1','L');
+		var SendUrl = 'ajax.php?action=getCustomerInvoice&custID='+custID+'&r='+Math.random()+'&select=1'; 
+		httpObj.open("GET", SendUrl, true);
+		//alert(SendUrl);
+		httpObj.onreadystatechange = function StateListRecieve(){
+			if (httpObj.readyState == 4) {
+				
+				document.getElementById("invoiveList").innerHTML  = httpObj.responseText;
+                                if(httpObj.responseText.length > 1500){
+                                    document.getElementById("save_payment").style.display = 'block';
+                                }else{
+                                    document.getElementById("save_payment").style.display = 'none';
+                                }
+				
+                                SetPaymentMethod(custID);
+			}
+		};
+		httpObj.send(null);
+		 
+	}
+        
+     function SetPaymentMethod(custID)
+     {
+		var SendUrl = 'ajax.php?action=getCustomerPaymentMethod&custID='+custID+'&r='+Math.random()+'&select=1'; 
+		httpObj2.open("GET", SendUrl, true);
+		//alert(SendUrl);
+		httpObj2.onreadystatechange = function StateListRecieve(){
+			if (httpObj2.readyState == 4) {
+				
+				document.getElementById("Method").value = httpObj2.responseText;
+                                getPaymentMethodName(httpObj2.responseText);
+                                 ShowHideLoader('');
+			}
+		};
+		httpObj2.send(null);
+        
+     }
+        
+     function SetPayAmnt(){
+         var totalAmt = 0;
+         var totalInvoice = 0;
+          var ReceivedAmount = 0;
+         totalInvoice = document.getElementById("totalInvoice").value;
+          ReceivedAmount = document.getElementById("ReceivedAmount").value;
+        for(var i=1; i <= totalInvoice;i++){
+            if(document.getElementById("payment_amnt_"+i).value > 0){
+                 totalAmt += parseFloat(document.getElementById("payment_amnt_"+i).value);
+                  document.getElementById("invoice_check_"+i).checked = true
+            }else{
+                document.getElementById("payment_amnt_"+i).value = '';
+                 document.getElementById("invoice_check_"+i).checked = false
+            }
+            
+            
+        }
+            if(totalAmt > 0){
+                //document.getElementById("ReceivedAmount").value = totalAmt;
+                document.getElementById("total_payment").value = totalAmt;
+            }else{
+                //document.getElementById("ReceivedAmount").value = '';
+                document.getElementById("total_payment").value = '';
+            }
+     }
+     
+      function SetPayAmntByCheck(line){
+         var totalAmt = 0,totalInvoice = 0,ReceivedAmount = 0,invAmnt = 0,remainInvAmnt = 0;
+          
+         totalInvoice = document.getElementById("totalInvoice").value;
+         ReceivedAmount = document.getElementById("ReceivedAmount").value;
+         
+         for(var i=1; i <= totalInvoice;i++){
+            
+             if(document.getElementById("payment_amnt_"+i).value > 0){
+              invAmnt +=  parseFloat(document.getElementById("payment_amnt_"+i).value);
+             }
+         }
+         
+       remainInvAmnt = parseFloat(ReceivedAmount)-parseFloat(invAmnt);
+
+         
+            if(document.getElementById("invoice_check_"+line).checked){
+                 
+                 if(remainInvAmnt > parseFloat(document.getElementById("invoice_amnt_"+line).value))
+                     {
+                       document.getElementById("payment_amnt_"+line).value =  parseFloat(document.getElementById("invoice_amnt_"+line).value); 
+                     }else{
+                        
+                             document.getElementById("payment_amnt_"+line).value = remainInvAmnt;
+                     }
+                     
+                       
+            }else{
+                document.getElementById("payment_amnt_"+line).value = '';
+            }
+        
+        
+        SetPayAmnt();
+       
+     }
+     
+    function getPaymentMethodName(method){
+
+    if(method == "Check")
+        {
+            document.getElementById("CheckBankName").style.display='';
+            document.getElementById("CheckFormat").style.display='';
+        }else{
+            document.getElementById("CheckBankName").style.display='none';
+            document.getElementById("CheckFormat").style.display='none';
+        }
+     
+ }
+ 
+  function getEntryType(EntryType){
+
+    if(EntryType == "GL Account")
+        {
+            document.getElementById("showGLCode").style.display='';
+            document.getElementById("showGLCode").style.display='';
+        }else{
+            document.getElementById("showGLCode").style.display='none';
+            document.getElementById("showGLCode").style.display='none';
+        }
+     
+ }
+ 
+</script>
+

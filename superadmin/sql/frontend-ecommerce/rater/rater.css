@@ -1,0 +1,90 @@
+
+/* ======= STAR-RATER ======== */
+.star-rating,
+.star-rating a:hover,
+.star-rating a:active,
+.star-rating a:focus,
+.star-rating .current-rating{
+background: url(star.png) left -1000px repeat-x;
+}
+.star-rating{
+position:relative;
+width:125px;
+height:25px;
+overflow:hidden;
+list-style:none;
+margin:0;
+padding:0;
+background-position: left top;
+}
+.star-rating li{
+display: inline;
+}
+.star-rating a,
+.star-rating .current-rating{
+position:absolute;
+top:0;
+left:0;
+text-indent:-1000em;
+height:25px;
+line-height:25px;
+outline:none;
+overflow:hidden;
+border: none;
+}
+.star-rating a:hover,
+.star-rating a:active,
+.star-rating a:focus{
+background-position: left bottom;
+}
+.star-rating .current-rating{
+z-index:1;
+background-position: left center;
+}
+
+.inline-rating{
+display:-moz-inline-block;
+display:-moz-inline-box;
+display: inline-block;
+vertical-align: middle;
+}
+
+.small-star{
+width:50px;
+height:10px;
+}
+.small-star,
+.small-star a:hover,
+.small-star a:active,
+.small-star a:focus,
+.small-star .current-rating{
+background-image: url(star_small.png);
+line-height: 10px;
+height: 10px;
+}
+.e-loader {
+    background: rgba(0, 0, 0, 0) url("ajax-loader.gif") repeat scroll 0 0;
+    float: left;
+    height: 16px;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 16px;
+}
+.loader-near {
+    float: left;
+}
+.payment-option {
+    float: right;
+    width: 50%;
+}
+.all-payment-method {
+    float: left;
+    width: 50%;
+}
+.tab-click {
+    cursor: pointer;
+}
+a.new-registration {
+    margin-left: 14%;
+}
+/* ======= /STAR-RATER ======== */

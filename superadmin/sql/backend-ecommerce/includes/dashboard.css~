@@ -1,0 +1,25 @@
+/*******************  E-commerce Start *****************/
+
+.my-dashboard-nav ul li.products a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll -414px -647px;}
+.my-dashboard-nav ul li.products.active a, .my-dashboard-nav ul li.products a:hover{background-position: -414px -759px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_product a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll -81px -1761px;}
+.my-dashboard-nav ul li.add_product.active a, .my-dashboard-nav ul li.add_product a:hover{background-position: -81px -1873px; color:#d33f3e;}
+.my-dashboard-nav ul li.categories a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll 31px -869px;}
+.my-dashboard-nav ul li.categories.active a, .my-dashboard-nav ul li.categories a:hover{background-position: 31px -981px; color:#d33f3e;}
+.my-dashboard-nav ul li.store_settings a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll -191px -868px;}
+.my-dashboard-nav ul li.store_settings.active a, .my-dashboard-nav ul li.store_settings a:hover{background-position: -191px -980px; color:#d33f3e;}
+.my-dashboard-nav ul li.orders a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll -79px -1093px;}
+.my-dashboard-nav ul li.orders.active a, .my-dashboard-nav ul li.orders a:hover{background-position:-79px -1205px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.customers a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll -302px -1092px;}
+.my-dashboard-nav ul li.customers.active a, .my-dashboard-nav ul li.customers a:hover{background-position:-302px -1204px; color:#d33f3e;}
+.my-dashboard-nav ul li.manufacturers a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll -81px -870px;}
+.my-dashboard-nav ul li.manufacturers.active a, .my-dashboard-nav ul li.manufacturers a:hover{background-position: -81px -982px; color:#d33f3e;}
+.my-dashboard-nav ul li.send_newsletter a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll -302px -869px;}
+.my-dashboard-nav ul li.send_newsletter.active a, .my-dashboard-nav ul li.send_newsletter a:hover{background-position: -302px -981px; color:#d33f3e;}
+.my-dashboard-nav ul li.manage_pages a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll -414px -869px;}
+.my-dashboard-nav ul li.manage_pages.active a, .my-dashboard-nav ul li.manage_pages a:hover{background-position: -414px -981px; color:#d33f3e;}
+.my-dashboard-nav ul li.tax_class a{background: url("../../../images/mydashboard_icons.png") no-repeat scroll 30px -1094px;}
+.my-dashboard-nav ul li.tax_class.active a, .my-dashboard-nav ul li.tax_class a:hover{background-position: 30px -1206px; color:#d33f3e;}
+
+/*******************  E-commerce End *****************/

@@ -1,0 +1,126 @@
+<? if (!empty($_GET['edit'])) { ?>
+
+    <div class="right-search" >
+        <h4> SKU: <?=stripslashes($arryProduct[0]['Sku']) ?><br><br>
+
+	 [ <?=stripslashes($arryProduct[0]['description'])?> ]</h4>
+
+        <div class="right_box">
+            <ul class="rightlink">
+	
+                <li <?= ($_GET['tab'] == "basic") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>basic">Basic Details</a></li>
+
+    	
+    	
+    	
+    	<? if($arryProduct[0]['non_inventory']=='yes'){?>
+    		<?php if($arrySection['binlocation']==1)
+    	{ ?>
+<li <?= ($_GET['tab'] == "binlocation") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>binlocation">Warehouse/Bin </a></li>
+<? }?>
+<? }?>
+	<?php if($arrySection['Alias']==1)
+    	{ ?>
+ <li <?= ($_GET['tab'] == "Alias") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>Alias"> Item Alias</a></li>
+         <? }?>      
+               
+               <?php if($arrySection['Price']==1)
+    	{ ?>
+                <li <?= ($_GET['tab'] == "Price") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>Price">Item Price</a></li>
+ <? }?>
+    	
+    	
+    	
+    	  <?php if($arrySection['Quantity']==1)
+    	{ ?>
+				<li <?= ($_GET['tab'] == "Quantity") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>Quantity">Quantity</a></li>
+              <? }?>
+                <?php if($arrySection['Supplier']==1)
+    	{ ?>
+                <li <?= ($_GET['tab'] == "Supplier") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>Supplier"> Vendor </a></li>
+              <? }?>
+               <?php if($arrySection['Dimensions']==1)
+    	{ ?>
+                <li <?= ($_GET['tab'] == "Dimensions") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>Dimensions"> Dimensions </a></li>
+              <? }?>
+                <?php if($arrySection['alterimages']==1)
+    	{ ?>
+                <li <?= ($_GET['tab'] == "alterimages") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>alterimages"> Alternative Images</a></li>
+<? }?>
+  <?php if($arrySection['Dimensions']==1)
+    	{ ?>
+                <!--li <?= ($_GET['tab'] == "Cost") ? ("class='active'") : (""); ?>><a href="<?= $EditUrl ?>Cost"> Cost</a></li-->
+              <? }?>
+                <?php if($arrySection['Transaction']==1)
+    	{ ?>
+                <li <?= ($_GET['tab'] == "Transaction") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>Transaction">Transaction </a></li>
+		<? }?>
+		 <?php if($arrySection['Required']==1)
+    	{ ?>
+		 <li <?= ($_GET['tab'] == "Required") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>Required">Required Items</a></li>
+<? }?>
+ <?php if($arrySection['Component']==1)
+    	{ ?>
+<li <?= ($_GET['tab'] == "Component") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>Component">Item Setting</a></li>
+<? }?>
+
+    <?php if($Config['TrackVariant']==1 && $arrySection['Variant']==1)
+    	{ ?>	
+<li <?= ($_GET['tab'] == "viewattributes") ? ("class='active'") : (""); ?>><a onclick="return LoaderSearch();" href="<?= $EditUrl ?>viewattributes">Attribute </a></li>
+<?}?>
+            </ul>
+        </div>
+    </div>
+<? } else { ?>
+    <div class="right-search">
+        <h4>
+            <?= stripslashes($arryProduct[0]['Name']) ?>
+        </h4>
+        <div class="right_box">
+            <ul class="rightlink">	
+              <?php if($arrySection['basic']==1)
+    	       { ?>
+                <li <?= ($_GET['tab'] == "basic") ? ("class='active'") : (""); ?>><a href="<?= $EditUrl ?>basic">Basic Details</a></li>
+                <?php } ?>
+                
+                  <?php if($arrySection['Price']==1)
+           	{ ?>
+                <li class="disable">Item Price</li>
+                
+                <?php } ?>
+                
+              <?php if($arrySection['Alias']==1)
+           	{ ?>     
+    <li class="disable"> Item Alias</li>
+     <?php } ?>
+
+  <?php if($arrySection['Quantity']==1)
+    	{ ?>
+				 <li class="disable">Quantity</li>
+				 <?php } ?>
+				 
+				   <?php if($arrySection['Vendor']==1)
+    	{ ?>
+                <li class="disable">Vendor</li>
+                <?php } ?>
+                  <?php if($arrySection['Dimensions']==1)
+    	{ ?>
+                <li class="disable">Dimensions</li>
+                <?php } ?>
+                  <?php if($arrySection['alterimages']==1)
+    	      { ?>
+                <li class="disable">Alternative Images</li>
+                <?php } ?>
+                  <?php if($arrySection['Cost']==1)
+    	{ ?>
+                <li class="disable"> Cost</a></li>
+                <?php } ?>
+                  <?php if($arrySection['Transaction']==1)
+    	{ ?>
+                <li class="disable">Transaction</li>
+                <?php } ?>
+
+            </ul>
+        </div>
+    </div>
+<?php } ?>

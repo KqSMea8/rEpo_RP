@@ -1,0 +1,91 @@
+Sku	Item Description	Track Inventory	Valuation Method	Item Type	Qty on Hand	Status
+
+YIPPY123	maggie45	Yes	LIFO	Kit	5	Active
+NEW TRACK	yify	Yes	FIFO	Kit	0	Active
+MACHINE COOLENT	coffee Machine	Yes	LIFO	Kit	0	Active
+machine cool	machine cool	No			5	Active
+Machines	coffee Machine	No			5	Active
+Machine	Tea Machine	No			5	Active
+PRIVATE CLOUD	PRIVATE CLOUD	No			0	Active
+ASDASF	asfasfas	Yes			0	Active
+TESTING	sdfsdf	Yes			0	Active
+PARWEZ-123	Patanjali Squash 750ml (Orange/Mango/Lemon)	Yes	FIFO	Non Kit	0	Active
+ENTERPRISE	ENTERPRISE	Yes	FIFO	Kit	0	Active
+PROFESSIONAL	PROFESSIONAL	No			0	Active
+STANDARD	STANDARD	No			0	Active
+pkppp	test	Yes			0	Active
+128278-b21	dsfff	Yes	Serialized	Non Kit	0	Active
+test	test	Yes	FIFO	Non Kit	0	Active
+SK00055	aaa	Yes	FIFO	Discontinue	559	InActive
+New Item	New Items	Yes	LIFO	Non Kit	0	Active
+Patanjali-137	Patanjali Squash 750ml (Orange/Mango/Lemon)	Yes	FIFO	Non Kit	110	Active
+Patanjali-62	Patanjali Alove Vera Gel - 150ml	Yes	FIFO	Kit	110	Active
+Patanjali-87	Patanjali Apple Chatney - 500gm	Yes	FIFO	Non Kit	18	Active
+Patanjali-110	Patanjali Biscuits 100 Grams-Aarogya/Marie/Namkeen/Coconut	Yes	FIFO	Non Kit	27	Active
+Patanjali-41	Patanjali Badam Pak -500grams	Yes	Serialized	Non Kit	7	Active
+Patanjali-63	Patanjali Dant Kanti Dental Cream-100 g & 200 g	Yes	FIFO	Kit	7	Active
+Patanjali-101	Patanjali Kesh Kanti Anti Dandruff Shampoo 200ml	Yes	FIFO	Kit	7	Active
+TG0001	Test item	Yes	FIFO	Discontinue	0	InActive
+LMO00765	BP Sound System	Yes	Serialized	Discontinue	9	InActive
+518878-b21	Proc kit	No	FIFO	Discontinue	11	InActive
+Service	Service Charge	Yes		Discontinue	-56	InActive
+slabs	Dual Core 5160	Yes	Serialized	Discontinue	11	InActive
+sl9rt	5160 Dual Core	Yes	Serialized	Discontinue	-41	InActive
+418324-b21	Dual Core 5160	Yes	FIFO		-92	InActive
+ABSPSA	Enclosure, Main, Right Cover - Injection Molded Flame Retardant ABS, Chromed, w/ PSA	Yes	FIFO	Discontinue	4	InActive
+ABSP	Enclosure, Stand, Top - Injection Molded ABS-Acrylic Plastic	Yes	FIFO		-5	InActive
+ABS	Enclosure, Main, Rear - Injection Molded Flame Retardant ABS-Polycarbonate	Yes	FIFO	Discontinue	-18	InActive
+PCB FR4	PCB Techvest Co., Ltd. - Main PCB - 4-Layer - FR4,	Yes	FIFO	Discontinue	34	InActive
+SDP64	SDP64 - Digital Natural Image Engine	Yes	FIFO	Discontinue	-5	InActive
+4LF111X01	S4LF111X01 - DTV MPEG Decoder	Yes	FIFO	Discontinue	-16	InActive
+DNVS227IH262A	DNVS227IH262A - ATSC Tuner	Yes	FIFO	Discontinue	-16	InActive
+STP10 (SVP-LX)	(Trident Microsystems) - STP10 (SVP-LX) - Video Processor	Yes	FIFO	Discontinue	8	InActive
+SIP460A	Hansol LCD - SIP460A - Power Supply	Yes	FIFO	Discontinue	8	InActive
+LTA460HT	Samsung - LTA460HT-LH2 - LCD Display	Yes	FIFO	Discontinue	8	InActive
+LN-T4665F	Samsung LN-T4665F 46 Inch LCD Television_(iSi) 	Yes	FIFO	Discontinue	38	InActive
+Dell001	Dell Inspiration	Yes		Discontinue	10	Active
+GSM00089765	GSM Equipment	Yes	Serialized	Discontinue	41	InActive
+K Series8	KV0.012.09.0.00	Yes	Serialized	Discontinue	101	InActive
+K Series7	KV0.012.07.0.00	Yes	Serialized	Discontinue	66	InActive
+K Series6	KV0.012.01.0.00	Yes	Serialized	Discontinue	59	InActive
+K Series5	KV0.001.21.0.00	Yes	Serialized	Discontinue	53	InActive
+HA Series4	02.019.03.0.00	Yes	Serialized	Discontinue	9	InActive
+HA Series3	02.005.04.0.00	Yes	Serialized	Discontinue	3	InActive
+HA Series2	02.002.10.0.00	Yes	Serialized	Discontinue	3	InActive
+HA Series1	02.001.02.0.00	Yes	Serialized	Discontinue	3	InActive
+SKU0010090	BH_ERERER_89	No	LIFO	Discontinue	0	InActive
+B0001	Biscuit	Yes	Serialized	Discontinue	1	Active
+Hero0001	Passion plus	Yes	LIFO	Discontinue	20	InActive
+T0001	TVS victor	Yes	Serialized	Discontinue	0	InActive
+H001	Hand Free 100 MG	Yes	FIFO	Discontinue	0	InActive
+Wire123	Wire 540 mm	Yes		Discontinue	88	InActive
+Ashar201	Nokia 201			Discontinue	1000	InActive
+G001	Samsung Galaxy S5		FIFO	Discontinue	0	InActive
+Haldiram001	Haldiram Namkeen	No	FIFO	Discontinue	10	InActive
+BBXCR	Supporting Materials	Yes	FIFO	Discontinue	-14	InActive
+WiFi	WiFi/BT/GS- 802.3 Bluetooth 2.1	No	FIFO	Discontinue	-7	InActive
+TouchScreen	Touch Screen/Cover Glass	No	FIFO	Discontinue	-7	InActive
+Processor	Apple A5 Processor	No	FIFO	Discontinue	5	InActive
+Display	4.5 Inch Display	No	FIFO	Discontinue	5	InActive
+Camera	5MP Camera with Flesh+VGA	No	FIFO	Discontinue	5	InActive
+Bettary	Battery 1420 MAH	No	FIFO	Discontinue	-2	InActive
+IPhone	16 GB I phone 5	Yes	Serialized	Discontinue	-3	InActive
+P001	Parle G	No	Serialized	Discontinue	0	InActive
+RE001	Royal Enfield		FIFO	Discontinue	2	InActive
+SA005	Samsung Galaxy Y Plus S5303	No	Serialized	Discontinue	0	InActive
+Note2N	Samsung Galaxy Star S5282	Yes	Serialized	Discontinue	3	InActive
+Hard Disk	500 GB Hard Disk	No	FIFO	Discontinue	25	InActive
+Ram	4 GB Ram	No	LIFO	Discontinue	25	InActive
+Mother Board	Intel chip set	No	LIFO	Discontinue	21	InActive
+CPU	Duel core Processor	Yes	LIFO	Discontinue	0	InActive
+MX002	Micromax canvas fun A83(Black)	No	Serialized	Discontinue	6	InActive
+MX001	Micromax Canvas Turbo A250	No	LIFO	Discontinue	2	InActive
+DL001	Dell Inspiron 15 R	No	LIFO	Discontinue	1	InActive
+LA001	HP Pavilion 15 xdno	No	FIFO	Discontinue	1	InActive
+N002	Nokia Lumia 520 Black	No	FIFO	Discontinue	1	InActive
+SA004	Samsung Star Dues Pro	Yes	LIFO	Discontinue	12	InActive
+SA003	Samsung Glaxy Y Plus 54666	No	LIFO	Discontinue	0	InActive
+SO001	Sony Xperia ZR	No	LIFO	Discontinue	0	InActive
+SA002	Samsung Glaxy Note 2	No	LIFO	Finished Good	0	InActive
+SA001	Samsung Glaxy X4	Yes	FIFO	Discontinue	0	InActive
+N001	Nokia Lumia 7210	No	FIFO	Discontinue	17	InActive

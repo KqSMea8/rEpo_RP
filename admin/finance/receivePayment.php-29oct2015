@@ -1,0 +1,144 @@
+<?php 
+	//$HideNavigation = 1;
+	/**************************************************/
+	$ThisPageName = 'viewSalesPayments.php';$EditPage = 1;
+	/**************************************************/
+	include_once("../includes/header.php");
+	require_once($Prefix."classes/finance.account.class.php");
+        require_once($Prefix."classes/finance.class.php");
+        require_once($Prefix."classes/sales.quote.order.class.php");
+        require_once($Prefix."classes/finance.report.class.php");
+	
+	 
+        $objReport = new report();
+        
+	$ModuleName = "Sales";
+        $objCommon = new common();
+        $objBankAccount=new BankAccount();
+        $objSale = new sale();
+
+	$RedirectURL = "receivePayment.php";
+        
+        //Get customer list
+         $arryCustomerList=$objBankAccount->getCustomerList($_GET);
+         
+        //end
+         
+         
+         //GET FISCAL YEAR
+         
+         $FiscalYearStartDate = $objCommon->getSettingVariable('FiscalYearStartDate');
+         $FiscalYearEndDate = $objCommon->getSettingVariable('FiscalYearEndDate');
+         $AccountReceivable = $objCommon->getSettingVariable('AccountReceivable');
+
+        //GET CURRENT PERIOD
+         $ARCurrentPeriod =  $objReport->getCurrentPeriod('AR');
+         $currentDate = date('Y-m-d');
+         $CurrentPeriodDate = $objReport->getCurrentPeriodDate('AR');
+         
+         //GET BACK OPEN MONTH
+         $arryBackMonth = $objReport->getBackOpenMonth('AR');
+         
+         $strBackDate = '';
+         for($i=0;$i<count($arryBackMonth);$i++)
+         {
+            
+             $strBackDate .= $arryBackMonth[$i]['PeriodYear'].'-'.$arryBackMonth[$i]['PeriodMonth'].',';
+         }
+        
+        $strBackDate = rtrim($strBackDate,",");
+       
+         //end
+         
+         //Get Bank Account
+         
+         $arryBankAccount=$objBankAccount->getBankAccountForReceivePayment();
+         $arryPaymentMethod = $objCommon->GetAttribValue('PaymentMethod','');
+         
+         
+         if ($_POST) {
+
+				$_POST['AccountReceivable'] =  $AccountReceivable;
+
+				/******************************/
+					CleanPost();
+				/******************************/
+                                   $CustCode = $objCommon->getCustomerCode($_POST['CustomerName']);	
+			           $_POST['CustCode'] = $CustCode;	     
+                                        //echo "<pre>";
+                                        //print_r($_POST);
+                                        //exit;
+			if(!empty($_POST['savePaymentInfo'])) {
+
+
+				/*if(empty($_POST['PaidTo']) || empty($_POST['Method']) || empty($_POST['ReceivedAmount']) || ($_POST['ReceivedAmount'] == '0') || ($_POST['ReceivedAmount'] != $_POST['total_payment'])
+                                        || ($_POST['ReceivedAmount'] > $_POST['totalOpenBalance'])) {*/
+
+				if(empty($_POST['PaidTo']) || empty($_POST['Method']) || empty($_POST['ReceivedAmount']) || ($_POST['ReceivedAmount'] == '0') || ($_POST['ReceivedAmount'] != $_POST['total_payment'])
+                                       ) {
+					$_SESSION['mess_payment'] = ERROR_IN_PAY_INVOICE;
+					header("Location:".$RedirectURL);
+					exit;
+				}else{		
+
+					//$incomeID = $objBankAccount->addIncomeInformation($_POST);
+					//$objBankAccount->sendSalesPaymentEmail($_POST);
+                                        $objBankAccount->addPaymentInformation($_POST);
+                                        
+                                        
+                                          //update invoice,order status
+                                            $paidAmnt=0;$paidOrderAmnt=0;$InvoiceAmount=0;$TotalOrderedAmount=0;
+                                                for($i=1;$i<=$_POST['totalInvoice'];$i++){
+                                                    
+                                               if($_POST['invoice_check_'.$i] == 'on' && $_POST['payment_amnt_'.$i] > 0){     
+                                                    
+                                                   $paidAmnt = $objBankAccount->GetSalesTotalPaymentAmntForInvoice($_POST['InvoiceID_'.$i]);
+                                                                
+                                                   $paidOrderAmnt = $objBankAccount->GetSalesTotalPaymentAmntForOrder($_POST['SaleID_'.$i]);
+                                                    
+                                                   
+                                                   $InvoiceAmount  = $_POST['TotalInvoiceAmount_'.$i];
+                                                   $TotalOrderedAmount  = $_POST['TotalAmount_'.$i];
+                                                  // echo "=>".$paidAmnt;exit;
+                                                   if(intval($paidAmnt) > 0){
+                                                             $objSale->updateInvoiceStatus($_POST['OrderID_'.$i],1);
+                                                           }
+                                                   if(intval($paidAmnt) >= intval($InvoiceAmount)){
+                                                              $objSale->updateInvoiceStatus($_POST['OrderID_'.$i],2);
+                                                           }
+
+                                                   if(intval($paidOrderAmnt) >= intval($TotalOrderedAmount)){
+
+                                                              $objSale->updateOrderStatus($_POST['SaleID_'.$i]);
+                                                           }
+                                                }
+                                                
+                                            }    
+                                        //end
+                                        
+                                        
+					$_SESSION['mess_payment'] = ADD_PAYMENT_INFORMATION;
+					header("Location:".$RedirectURL);
+					exit;
+
+				}
+                                
+                               
+			 } 
+		}	
+                
+                
+        if(empty($AccountReceivable)){
+		$ErrorMsg  = SELECT_GL_AR;
+	}else  if ($FiscalYearStartDate == "" && $FiscalYearEndDate == "") {
+		$ErrorMsg  = SETUP_FISCAL_YEAR;
+	}  
+ 
+	$Config['NormalAccount']=1;
+        $arryBankAccountList = $objBankAccount->getBankAccountWithAccountType();
+	unset($Config['NormalAccount']);
+
+	require_once("../includes/footer.php"); 	
+?>
+
+

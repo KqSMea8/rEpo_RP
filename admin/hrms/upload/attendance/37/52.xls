@@ -1,0 +1,46 @@
+<table  width="100%" align="center" cellpadding="3" cellspacing="1" id="list_table" >
+		<tr align="left"  >
+			<td width="10%"  class="head1">Date</td>
+			<td width="8%" class="head1">Reference</td>
+			<td class="head1">Name</td>
+			<td width="15%" class="head1">Category</td>
+			<td width="11%" class="head1" align="right">Beginning Balance</td>
+			<td width="8%" class="head1" align="right">Debit</td>
+			<td width="8%"  class="head1" align="right">Credit</td>
+			<td width="8%"  class="head1" align="right">Net Change</td>
+			<td width="10%"  class="head1" align="right">Ending Balance</td>
+			<td width="5%"   class="head1 head1_action">Action</td>
+	       </tr><tr class="row1">
+				<td>8 May, 2017</td>
+				<td>INV1862</td> 
+				<td> Spectrolab, Inc.</td> 
+				<td>Customer Invoice</td>
+				<td align="right"><strong>85.00</strong></td>
+				<td align="right">30.00</td>
+				<td align="right"></td>
+				<td align="right"></td>
+				<td align="right"><strong>115.00</strong></td> 
+				<td align="center"  class="head1_inner"></td> 
+			</tr><tr class="row2">
+				<td>8 Jun, 2017</td>
+				<td>JN0002181</td> 
+				<td></td> 
+				<td>Journal Entry</td>
+				<td align="right"><strong></strong></td>
+				<td align="right">40.00</td>
+				<td align="right"></td>
+				<td align="right"></td>
+				<td align="right"><strong>155.00</strong></td> 
+				<td align="center"  class="head1_inner"></td> 
+			</tr><tr> 
+	<td colspan="4" align="right" >
+	<strong>Report Total : </strong>
+	</td>
+	<td align="right"><strong>85.00</strong></td>
+	<td align="right"><strong>70.00</strong></td>
+	<td align="right"><strong>0.00</strong></td>
+	<td align="right"><strong>70.00</strong></td>
+	<td align="right"><strong>155.00</strong></td>
+	<td ></td>
+</tr> 
+	</table>

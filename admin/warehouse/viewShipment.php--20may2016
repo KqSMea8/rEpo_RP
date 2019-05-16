@@ -1,0 +1,29 @@
+<?php 
+	include_once("../includes/header.php");
+	require_once($Prefix."classes/warehouse.shipment.class.php");
+	include_once("includes/FieldArray.php");
+	$objShipment = new shipment();
+
+	$RedirectURL = "viewShipment.php";
+	$ModuleName = "Shipment";
+	if(!empty($_GET['so'])){
+		$MainModuleName = "Shipment for SO Number : ".$_GET['SaleID'];
+		$RedirectURL = "viewShipment.php?so=".$_GET['SaleID'];
+	}
+
+	/******Get Shipment Records***********/	
+	$Config['RecordsPerPage'] = $RecordsPerPage;
+	$arryShipment=$objShipment->ListShipment($_GET);
+	/**********Count Records**************/	
+	$Config['GetNumRecords'] = 1;
+        $arryCount=$objShipment->ListShipment($_GET);
+	$num=$arryCount[0]['NumCount'];	
+	$pagerLink=$objPager->getPaging($num,$RecordsPerPage,$_GET['curP']);	
+	/*************************************/	
+
+  	//$ErrorMSG = UNDER_CONSTRUCTION; // Disable Temporarly
+
+	require_once("../includes/footer.php"); 	
+?>
+
+

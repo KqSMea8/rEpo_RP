@@ -1,0 +1,329 @@
+<?php
+
+include ('includes/function.php');
+//include ('function.php');
+$slug = 'home';
+if (!empty($_GET['slug']))
+    $slug = $_GET['slug'];
+$datah = homePageContent($slug);
+//print_r($datah);
+if (empty($datah['id'])) {
+    //echo '404';
+    header("location: 404-error");
+    exit;
+}
+
+$mData = getHeaderMenu('header');//print_r($mData);die('dfytfvjvghgfvhgfdtdcgfdcgfccd');
+$footerMenuData = getFooterMenu('footer');
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html style="" class="js js no-touch csstransforms csstransitions" lang="en-US">
+    <head profile="http://www.w3.org/1999/xhtml/vocab">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+        <link href="https://plus.google.com/+EznetcrmSoftware/posts" rel="publisher" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" >
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="msvalidate.01" content="E9AA281C2F6B2D1413B23EE21902C81B" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="<?php echo stripslashes($datah['Title']); ?>" content="">
+        <meta name="keywords" content="<?php echo stripslashes($datah['MetaKeywords']); ?>">
+        <meta name="description" content="<?php echo stripslashes($datah['MetaDescription']); ?>">
+
+        <title><?php echo stripslashes($datah['MetaTitle']); ?></title>
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.once.js"></script>
+        <script type="text/javascript" src="js/drupal.js"></script>
+        <script type="text/javascript" src="js/admin_devel.js"></script>
+        <script type="text/javascript" src="js/pre_payment.js"></script>
+        <script type="text/javascript" src="js/scroll_to_top.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/responsive_menus_simple.js"></script>
+        <script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
+        <script type="text/javascript" src="js/sfsmallscreen.js"></script>
+        <script type="text/javascript" src="js/supposition.js"></script>
+        <script type="text/javascript" src="js/superfish.js"></script>
+        <script type="text/javascript" src="js/supersubs.js"></script>
+        <script type="text/javascript" src="js/superfish(1).js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+
+
+        <link href="css/css" rel="stylesheet" type="text/css">
+        <link href="css/css(1)" rel="stylesheet" type="text/css">
+        <link href="css/better_messages.css" rel="stylesheet" type="text/css">
+        <link href="css/better_messages_admin.css" rel="stylesheet" type="text/css">
+        <link href="css/ckeditor.css" rel="stylesheet" type="text/css">
+        <link href="css/colors.css" rel="stylesheet" type="text/css">
+        <link href="css/ctools.css" rel="stylesheet" type="text/css">
+        <link href="css/field.css" rel="stylesheet" type="text/css">
+        <link href="css/flexslider.css" rel="stylesheet" type="text/css">
+        <link href="css/flexslider_img.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery.validate.css" rel="stylesheet" type="text/css">
+        <link href="css/layout.css" rel="stylesheet" type="text/css">
+        <link href="css/logintoboggan.css" rel="stylesheet" type="text/css">
+        <link href="css/node.css" rel="stylesheet" type="text/css">
+
+        <link href="css/print.css" rel="stylesheet" type="text/css">
+        <link href="css/responsive_menus_simple.css" rel="stylesheet" type="text/css">
+        <link href="css/scroll_to_top.css" rel="stylesheet" type="text/css">
+        <link href="css/search.css" rel="stylesheet" type="text/css">
+        <link href="css/simplenews.css" rel="stylesheet" type="text/css">
+        
+        <link href="css/superfish.css" rel="stylesheet" type="text/css">
+        <link href="css/system.base.css" rel="stylesheet" type="text/css">
+        <link href="css/system.menus.css?<?php echo time(); ?>" rel="stylesheet" type="text/css">
+        <link href="css/system.messages.css" rel="stylesheet" type="text/css">
+        <link href="css/system.theme.css" rel="stylesheet" type="text/css">
+        <link href="css/user.css" rel="stylesheet" type="text/css">
+        <link href="css/views.css" rel="stylesheet" type="text/css">
+        
+        <!--responsive css start-->
+        <link href="css/responsive_media_queries.css" rel="stylesheet" type="text/css">
+        <link href="css/responsive-9-styles.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css?<?php echo time();?>" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+       <!-- <script type="text/javascript" src="js/responsive_menu.js"></script>
+        <script type="text/javascript" src="js/responsive-menu-9-script.js"></script>-->
+        <!--responsive css start-->
+
+        <script type="text/javascript" src="js/flexslider.load.js"></script>
+
+        <script type="text/javascript" src="js/clientside_validation.ie8.js"></script>
+        <script type="text/javascript" src="js/clientside_validation_html5.js"></script>
+        <script type="text/javascript" src="js/clientside_validation.js"></script>
+
+
+        <script language="javascript" src="<?= $Prefix ?>includes/validate.js"></script>
+        <script language="javascript" src="<?= $Prefix ?>includes/global.js"></script>
+        <script language="javascript" src="<?= $Prefix ?>includes/ajax.js"></script>
+        <!--<script language="javascript" src="<?= $Prefix ?>includes/tooltip.js"></script>-->
+
+        <script type="text/javascript" src="<?= $Prefix ?>fancybox/lib/jquery-1.10.1.min.js"></script>
+
+
+        <script language="javascript1.2" type="text/javascript">
+
+            function ShowHideLoader(opt, DivID) {
+
+            }
+        </script>
+
+        <script type="application/ld+json"> /*
+            {
+            "@context": "http://schema.org",
+            "@type": "eZnetCRM",
+            "url": "<?= $Config['Url'] ?>",
+            "logo": "<?= $Config['Url'] ?>img/eZnetLogo.png"
+            }*/
+        </script>
+
+        <script type="application/ld+json"> /*
+            { "@context" : "http://schema.org",
+            "@type" : "eZnetCRM",
+            "url" : "<?= $Config['Url'] ?>",
+            "contactPoint" : [
+            { "@type" : "ContactPoint",
+            "telephone" : "+407-544-3201",
+            "contactType" : "customer service"
+            } ] }*/
+        </script>
+
+        <script type="application/ld+json"> /*
+            { "@context" : "http://schema.org",
+            "@type" : "eZnetCRM",
+            "name" : "Online CRM for Business",
+            "url" : "<?= $Config['Url'] ?>",
+            "sameAs" : [ "https://www.facebook.com/pages/eZnetCRM/1499005770386551?fref=ts",
+            "https://twitter.com/eZnetCRM",
+            "https://plus.google.com/+EznetcrmSoftware/posts"] 
+            }
+            */
+        </script>
+        
+        <script type="text/javascript">
+			jQuery(document).ready(function() {
+				jQuery(window).scroll(function(){
+					var scroll=jQuery(window).scrollTop();
+					if(scroll>=1){
+						jQuery("header").addClass("fixed");
+					}
+					else{
+						jQuery("header").removeClass("fixed");
+					}
+				});
+				jQuery("button.navbar-toggle").click(function(){
+					jQuery(".navigation").toggleClass("active");	
+				});
+			});
+		</script>
+
+
+        <?php //include_once('includes/googleAnalytics.php'); ?>
+
+</head>
+<body >
+
+<!--div id="wrapper">
+
+    <!--div id="mainContainer">
+
+        <!--header id="headerArea">
+
+            <!--div class="wrap clearfix">
+
+                <!--div class="logo">
+                    <a href="<?php echo $Config['Url'] ?>ezneterp" title="Home" rel="home" alt="eZnet ERP"  title="eZnet ERP"
+                       id="logo"> <img src="img/logo.png" alt="eZnet ERP" title="eZnet ERP"> </a>
+                </div>
+                <?php //include('includes/user_menu.php'); ?>
+                <nav class="menuArea">
+                    <div class="region region-main-menu">
+                        <div id="block-superfish-1" class="block block-superfish">
+
+
+                            <div class="content" id="cssmenu">
+                                <ul id="superfish-1"
+                                    class="menu sf-menu sf-main-menu sf-horizontal sf-style-none sf-total-items-5 sf-parent-items-0 sf-single-items-5 superfish-processed sf-js-enabled sf-shadow">
+                                        <?php
+                                        $bannerDt = showBanner();
+                                        //echo $Config['Url'];die('dsdssdsfdsfdsf');
+                                        foreach ($mData as $meData) {
+
+                                            $UrlCustom = ($meData['UrlCustom'] == 'home') ? ($Config['Url'].'ezneterp/') : ($meData['UrlCustom']);
+                                            ?>
+
+
+                                        <li id="menu-218-1"
+                                            class=" middle even sf-item-2 sf-depth-1 sf-no-children <?php if ($_GET['slug'] == $meData['UrlCustom']) {echo 'active-trail first odd sf-item-1 sf-depth-1 sf-no-children'; } ?>">
+                                            <a href="<?php echo $UrlCustom; ?>" class="sf-depth-1"><?php echo stripslashes($meData['Title']); ?> </a>
+
+                                            <?php
+                                            if ($meData['id'] > 0) {
+                                                $sql_submenu = "SELECT * FROM erp_sub_menu WHERE parent_id = '" . $meData['id'] . "'";
+                                                $res_submenu = mysql_query($sql_submenu);
+
+                                                if (mysql_num_rows($res_submenu) > 0) {
+                                                    ?>
+                                                    <ul id="sub_menu">
+                                                        <?php
+                                                        while ($menu2 = mysql_fetch_array($res_submenu)) {
+                                                            ?>
+                                                            <li><a href="<?php echo $menu2['menu_slug']; ?>"><?php echo stripslashes($menu2['menu_name']); ?></a></li>
+                                                        <?php } ?>
+                                                    </ul>
+                                            <?php }} ?>
+                                        </li>
+                                        <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header-->
+
+<div id="main-werp">
+	<header>
+    	<div class="header-area">
+            <div class="top-header">
+                <div class="werp">
+                <!--div class="cont-left">EMAIL ID:  <a href="mailto:support@ezneterp.com">support@ezneterp.com</a>
+                </div-->
+                    <div class="cont-right">
+                        <nav class="login">
+                            <!--a href="#">LOGIN</a-->
+                                <?php include('includes/user_menu.php'); ?>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header">
+                <div class="werp navi">
+                    <div class="logo">
+                            <a href="<?php echo $Config['Url'] ?>ezneterp" title="Home" rel="home" alt="eZnet ERP"  title="eZnet ERP"
+                               id="logo"> <img src="img/logo.png" alt="eZnet ERP" title="eZnet ERP"> </a>
+                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                            </div>
+                    
+                            <div class="header-nav">
+                                <div class="navigation" style="display:block">
+                                 <ul>
+                                     <?php
+                                     $bannerDt = showBanner();
+                                     //echo $Config['Url'];die('dsdssdsfdsfdsf');
+                                     foreach ($mData as $meData) {
+        
+                                         $UrlCustom = ($meData['UrlCustom'] == 'home') ? ($Config['Url'] . 'ezneterp/') : ($meData['UrlCustom']);
+                                         ?>
+        
+        
+                                         <li id="menu-218-1"
+                                             class=" middle even sf-item-2 sf-depth-1 sf-no-children <?php if ($_GET['slug'] == $meData['UrlCustom']) {
+                                         echo 'active-trail first odd sf-item-1 sf-depth-1 sf-no-children';
+                                     } ?>">
+                                             <a href="<?php echo $UrlCustom; ?>" class="sf-depth-1"><?php echo stripslashes($meData['Title']); ?> </a>
+        
+                                             <?php
+                                             if ($meData['id'] > 0) {
+                                                 $sql_submenu = "SELECT * FROM erp_sub_menu WHERE parent_id = '" . $meData['id'] . "'";
+                                                 $res_submenu = mysql_query($sql_submenu);
+        
+                                                 if (mysql_num_rows($res_submenu) > 0) {
+                                                     ?>
+                                                     <ul id="sub_menu">
+                                                         <?php
+                                                         while ($menu2 = mysql_fetch_array($res_submenu)) {
+                                                             ?>
+                                                             <li><a href="<?php echo $menu2['menu_slug']; ?>"><?php echo stripslashes($menu2['menu_name']); ?></a></li>
+                                                     <?php } ?>
+                                                     </ul>
+                                             <?php }
+                                         } ?>
+                                         </li>
+        <?php } ?>
+                                         <li><a href="#"><img src="img/ecomm.png" /></a></li>
+                                    <!--li class="active"><a href="#">HOME</a></li>
+                                    <li><a href="#">ABOUT EZNET ERP</a></li>
+                                    <li><a href="#">INDUSTRIES</a></li>
+                                    <li><a href="#">ERP RESOURCES</a></li>
+                                    <li><a href="#">PRICING & SIGNUP</a></li>
+                                    <li><a href="#"><img src="img/ecomm.png" /></a></li-->
+                                  </ul>
+                            </div>
+                                <div class="box">
+                            <form>
+                                <input style="background-color:#fff;" type="search" id="search" placeholder="Search product...." />
+                                <input type="submit" id="button" value="send" /></form>
+                            </div>  
+                            
+                </div>
+             </div>
+             </div>
+        </div>     
+    </header>     
+     
+     
+    <?php /*?><div class="main-content">
+        <div class="werp">
+        <div class="banner">
+            <?php $bannerDt = showBanner();?>
+            <!--img src="img/banner.png" />
+            <div class="text"><h2>CLOUD BASED ERP SYSTEM</h2><p>Cloud ERP IS Enterprise Resource Planning software
+    that is hosted in a plamform over the internet.</p>
+                <span><a href="#">Get Started</a></span>
+            </div-->
+        </div>
+    
+    </div>
+    </div><?php */?>

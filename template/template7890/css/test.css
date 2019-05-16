@@ -1,0 +1,276 @@
+.container-fluid.mainheader {
+	background-color: #FFFFFF;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.container .pull-right .top-menu {
+	margin-bottom: 7px;
+	margin-right: 5px;
+	margin-top: 7px;
+}
+.pull-right .top-menu li {
+	display: inline-block;
+	margin-right: 5px;
+	color: #1C7C4F;
+}
+.top-menu li a {
+	display: inline;
+	/*float: left;*/
+	margin-right: 0px;
+	color: #1C7C4F;
+	text-transform: uppercase;
+}
+.top-menu li a:hover {
+	color: #2AB574;
+	text-decoration: none;
+}
+.navbar navbar-default {
+	margin-top: 20px;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+	margin-top: -1px;
+	padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+	display: flex !important;
+}
+.btn-group .btn {
+	border-radius: 0;
+	margin-left: -1px;
+	padding-top: 8px;
+}
+.btn-group .btn:last-child {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding-top: 8px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+	margin-left: 0;
+	margin-right: 0;
+}
+.form-group .form-control:last-child {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+#adv-search {
+	width: 255px;
+	margin: 0 -8px;
+}
+.dropdown.dropdown-lg {
+	position: static !important;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+	min-width: 255px;
+}
+}
+#top_currency_id {
+	width: 120px;
+}
+.currency {
+	display: inline-block;
+	float: left;
+}
+.footer h3 {
+	border-bottom: 1px solid #1c3146;
+	color: #1C7C4F;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 27px;
+	padding: 40px 0 10px;
+	text-transform: uppercase;
+}
+.footer ul {
+	font-size: 13px;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 15px;
+	color: #2AB574;
+}
+.newsLatterBox .btn {
+	border: medium none;
+	border-radius: 3px;
+	display: inline-block;
+	height: 40px;
+	padding: 0px;
+	width: 100%;
+	color: #FFF;
+}
+.btn-discover, .btn-site, .newsLatterBox .btn {
+	background-repeat: repeat;
+	background-position: 0% 0%;
+	background-image: none;
+	background-color: #2AB574;
+	background-attachment: scroll;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+	border-color: #DDD;
+	border-radius: 3px 0px 0px 3px;
+	border-style: solid;
+	border-width: 2px 1px 1px 2px;
+	color: #888;
+	font-size: 14px;
+	margin-bottom: 10px;
+	height: 36px;
+	width: 263px;
+}
+.btn btn-link {
+	margin-left: -6px;
+	margin-top: -17px;
+}
+.modal-content .modal-header .close {
+	/*color: #FFFFFF;*/
+	text-align: center;
+	text-transform: uppercase;
+	font-size: large;
+}
+.modal-content .modal-header .modal-title {
+	text-align: center;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-size: large;
+}
+#mySignin {
+	min-width: 100px;
+	width: 450px;
+	margin: 50px auto 0 auto;
+}
+#createaccount {
+	width: 450px;
+	margin: 50px auto 0 auto;
+}
+.btn-link {
+	margin: -10px;
+}
+.social-icon {
+	width: 200px;
+	float: right;
+	margin-bottom: 5px;
+	margin-top: 3px;
+}
+.social-icon > ul {
+	width: 100%;
+	height: 38px;
+	margin-left: -20px;
+	list-style: none;
+}
+.social-icon li {
+	float: left;
+	margin-right: 2px;
+	width: 38px;
+	height: auto;
+}
+.google-plus > a {
+	background: url("/img/googleplus.png") no-repeat;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+}
+.facebook > a {
+	background: url("/img/facebook.png") no-repeat;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+}
+.instagram > a {
+	background: url("/img/instagram.png") no-repeat;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+}
+.xing > a {
+	background: url("/img/xing.png") no-repeat;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+}
+.youtube > a {
+	background: url("/img/youtube.png") no-repeat;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+}
+.linkedin > a {
+	background: url("/img/linkedin.png") no-repeat;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+}
+.pinterest > a {
+	background: url("/img/pinterest.png") no-repeat;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+}
+.twitter > a {
+	background: url("/img/twitter.png") no-repeat;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+}
+/* ============Footer Mega Menu ============= */
+.mega-menu {
+	padding: 10px 0px ! important;
+	width: 440px;
+	margin: -125px 0px 0px 100px !important;
+}
+.mega-menu li {
+	display: inline-block;
+	float: left;
+	font-size: 0.74rem;
+	padding: 7px 0px;
+}
+.mega-menu li.mega-menu-column {
+	margin-right: 45px;
+	padding: 3px 0 3px 7px;
+	width: 80px;
+}
+
+/* Disable Toggle style
+********************************/  
+
+/* Dropdown Toggle on style */
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+}
+/* Toggle off style */
+.navbar .nav li.dropdown.open.active > .dropdown-toggle,  .navbar .nav > li.dropdown > a:focus {
+	background: inherit;
+}
+/* Toggle hover */
+.navbar .nav li.dropdown > .dropdown-toggle:hover,  .navbar .nav li.dropdown.open > .dropdown-toggle:hover {
+	color: #1C7C4F;
+}
+/* Toggle caret*/
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+ border-bottom-color:none;
+ border-top-color:none;
+}
+/* Toggle caret hover */
+.navbar .nav li.dropdown > a:hover .caret,  .navbar .nav li.dropdown > a:focus .caret {
+	border-bottom-color: #333;
+	border-top-color: #333;
+}
+/* Toggle caret active */
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,  .navbar .nav li.dropdown.active > .dropdown-toggle .caret,  .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+	border-bottom-color: #333;
+	border-top-color: #333;
+}
+/* Hover style
+********************************/ 
+.navbar .nav > li > a, .mega-menu a {
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	/* -webkit-transform: translate3d(0, 0, 0); Webkit Hardware Acceleration*/ 
+	-webkit-backface-visibility: hidden; /* Safari Flicker Fix #2 */
+	-webkit-transform: translateZ(0);
+	font-size: 13px;
+}

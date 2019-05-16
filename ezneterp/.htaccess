@@ -1,0 +1,18 @@
+RewriteEngine On
+
+
+
+RewriteRule ^erp/$ erp/index.php
+RewriteRule ^blog/$ blog/index.php
+RewriteRule ^reseller/$ reseller/index.php
+RewriteRule ^phpmyadmin/$ phpmyadmin/index.php
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?slug=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?slug=$1
+
+
+ErrorDocument 404 /errordocs/error404.htm
+
+
+
+

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap - Prebuilt Layout</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/test.css" rel="stylesheet">
+<link href="css/mega-menu.css" rel="stylesheet" type="text/css">
+<link href="css/createAcc.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/allura:n4:default.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container-fluid mainheader">
+	<div class="container">
+	<div class="row top-nav">
+    	<div class="col-md-5">
+        <a class="navbar-brand" href="index.html"><img src="img/CRMecommer_logo.png" alt="logo" width="116" height="60"></a>
+        </div>
+        
+        <div class="col-md-7">
+        	<div class="pull-right">
+        <ul class="top-menu">
+          <!--<li><a href="account.html" role="button" class="btn btn-link"><span class="glyphicon glyphicon-lock"></span> My Account</a></li> -->
+          <li><a href="#mySignin" role="button" class="btn btn-link" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> Sign In</a></li>
+          <li><a href="#createaccount" role="button" class="btn btn-link" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span> Create Account</a></li>
+          
+        </ul>
+      </div>
+        </div>
+    </div>
+    </div>
+
+
+<nav class="navbar navbar-default">
+	<div class="container">
+    <div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		
+	</div>
+	
+	
+	<div class="collapse navbar-collapse js-navbar-collapse">
+		<ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+			<li class="dropdown mega-dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">All Products <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+				
+				<ul class="dropdown-menu mega-dropdown-menu row">
+					<li class="col-sm-10">
+						<ul>
+							<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Dresses</li>
+							<li><a href="#">Unique Features</a></li>
+							<li><a href="#">Image Responsive</a></li>
+							<li><a href="#">Auto Carousel</a></li>
+							<li><a href="#">Newsletter Form</a></li>
+							<li><a href="#">Four columns</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Tops</li>
+							<li><a href="#">Good Typography</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Dresses</li>
+							<li><a href="#">Unique Features</a></li>
+							<li><a href="#">Image Responsive</a></li>
+							<li><a href="#">Auto Carousel</a></li>
+							<li><a href="#">Newsletter Form</a></li>
+							<li><a href="#">Four columns</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Tops</li>
+							<li><a href="#">Good Typography</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Jackets</li>
+							<li><a href="#">Easy to customize</a></li>
+							<li><a href="#">Glyphicons</a></li>
+							<li><a href="#">Pull Right Elements</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Pants</li>
+							<li><a href="#">Coloured Headers</a></li>
+							<li><a href="#">Primary Buttons & Default</a></li>
+							<li><a href="#">Calls to action</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Accessories</li>
+							<li><a href="#">Default Navbar</a></li>
+							<li><a href="#">Lovely Fonts</a></li>
+							<li><a href="#">Responsive Dropdown </a></li>							
+							<li class="divider"></li>
+                            <li class="dropdown-header">Newsletter</li>
+                            <form class="form" role="form">
+                              <div class="form-group">
+                                <label class="sr-only" for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">                                                              
+                              </div>
+                              <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                            </form>                                                       
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		</li>
+        <li><a href="category.html">Man's</a></li>
+        <li><a href="category.html">Woman's</a></li>
+        <li><a href="category.html">Kids</a></li>
+        <li><a href="category.html">New Arrivals</a></li>
+        </ul>
+        
+       
+        <!--Start Shopping Cart BTN -->
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 pull-right" style="z-index:1020 !important">
+        
+            <ul class="nav nav-pills pull-right" style="width:100%;">
+              <li class="dropdown active" style="width:100%;"> <a class="dropdown-toggle text-center" data-toggle="dropdown" href="#" style="width:100%;"> <i class="icon-shopping-cart"></i> Shopping Cart: $0.00 <i class="icon-caret-down"></i> </a>
+                <ul class="dropdown-menu list-group pull-right dropdown-cart">
+                  <li> <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading"><i class="icon-shopping-cart"></i> CART HEADING</h4>
+                    <p class="list-group-item-text">Your Cart is empty </p>
+                    </a> <a href="#" class="list-group-item"> <span class="badge"><i class="icon-chevron-right"></i></span> Product title here </a> <a href="#" class="list-group-item"> <span class="badge"><i class="icon-chevron-right"></i></span> Product title here </a> <a href="#" class="list-group-item"> <span class="badge badge-danger">$14</span> Product title here </a> <a href="#" class="list-group-item"> <span class="badge">$14</span> Product title here Product </a> <a class="btn btn-success navbar-btn" style="margin:5px; color:#fff;" >Proceed to checkout</a> </li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--End Shopping Cart BTN -->
+          
+          <!--Currency Starts -->
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 pull-right">
+        <form>
+                                                    <ul>                          
+                                                        <div class="sel-wrap-friont">
+                                                            <select name="top_currency_id" class="currency" id="top_currency_id" onchange="Javascript:ChangeCurrency();">
+                                                                                                                                <option value="14">Albanian Lek</option>
+                                                                                                                                <option value="2">Algerian Dinar</option>
+                                                                                                                                <option value="17">Angolan Kwanza</option>
+                                                                                                                                <option value="18">Argentine Peso</option>
+                                                                                                                                <option value="15">Armenian Dram</option>
+                                                                                                                                <option value="19">Aruban Florin</option>
+                                                                                                                                <option value="6">Australia Dollar</option>
+                                                                                                                                <option value="20">Azerbaijani Manat</option>
+                                                                                                                                <option value="31">Bahamian Dollar</option>
+                                                                                                                                <option value="25">Bahraini Dinar</option>
+                                                                                                                                <option value="23">Bangladeshi Taka</option>
+                                                                                                                                <option value="22">Barbadian Dollar</option>
+                                                                                                                                <option value="35">Belarusian Ruble</option>
+                                                                                                                                <option value="36">Belize Dollar</option>
+                                                                                                                                <option value="27">Bermudan Dollar</option>
+                                                                                                                                <option value="33">Bhutanese Ngultrum</option>
+                                                                                                                                <option value="32">Bitcoin</option>
+                                                                                                                                <option value="29">Bolivian Boliviano</option>
+                                                                                                                                <option value="21">Bosnia-Herzegovina Convertible Mark</option>
+                                                                                                                                <option value="34">Botswanan Pula</option>
+                                                                                                                                <option value="30">Brazilian Real</option>
+                                                                                                                                <option value="28">Brunei Dollar</option>
+                                                                                                                                <option value="24">Bulgarian Lev</option>
+                                                                                                                                <option value="26">Burundian Franc</option>
+                                                                                                                                <option value="84">Cambodian Riel</option>
+                                                                                                                                <option value="37">Canadian Dollar</option>
+                                                                                                                                <option value="47">Cape Verdean Escudo</option>
+                                                                                                                                <option value="89">Cayman Islands Dollar</option>
+                                                                                                                                <option value="167">CFA Franc BCEAO</option>
+                                                                                                                                <option value="164">CFA Franc BEAC</option>
+                                                                                                                                <option value="168">CFP Franc</option>
+                                                                                                                                <option value="41">Chilean Peso</option>
+                                                                                                                                <option value="40">Chilean Unit of Account</option>
+                                                                                                                                <option value="43">Chinese Yuan</option>
+                                                                                                                                <option value="42">CNH</option>
+                                                                                                                                <option value="44">Colombian Peso</option>
+                                                                                                                                <option value="85">Comorian Franc</option>
+                                                                                                                                <option value="38">Congolese Franc</option>
+                                                                                                                                <option value="45">Costa Rican Colón</option>
+                                                                                                                                <option value="69">Croatian Kuna</option>
+                                                                                                                                <option value="46">Cuban Peso</option>
+                                                                                                                                <option value="48">Czech Republic Koruna</option>
+                                                                                                                                <option value="51">Danish Krone</option>
+                                                                                                                                <option value="50">Djiboutian Franc</option>
+                                                                                                                                <option value="52">Dominican Peso</option>
+                                                                                                                                <option value="165">East Caribbean Dollar</option>
+                                                                                                                                <option value="53">Egyptian Pound</option>
+                                                                                                                                <option value="54">Eritrean Nakfa</option>
+                                                                                                                                <option value="55">Ethiopian Birr</option>
+                                                                                                                                <option value="8">Euro</option>
+                                                                                                                                <option value="58">Falkland Islands Pound</option>
+                                                                                                                                <option value="57">Fijian Dollar</option>
+                                                                                                                                <option value="56">Finnish Markka</option>
+                                                                                                                                <option value="59">French Franc</option>
+                                                                                                                                <option value="63">Gambian Dalasi</option>
+                                                                                                                                <option value="60">Georgian Lari</option>
+                                                                                                                                <option value="49">German Mark</option>
+                                                                                                                                <option value="61">Ghanaian Cedi</option>
+                                                                                                                                <option value="62">Gibraltar Pound</option>
+                                                                                                                                <option value="65">Guatemalan Quetzal</option>
+                                                                                                                                <option value="64">Guinean Franc</option>
+                                                                                                                                <option value="66">Guyanaese Dollar</option>
+                                                                                                                                <option value="70">Haitian Gourde</option>
+                                                                                                                                <option value="68">Honduran Lempira</option>
+                                                                                                                                <option value="67">Hong Kong Dollar</option>
+                                                                                                                                <option value="71">Hungarian Forint</option>
+                                                                                                                                <option value="77">Icelandic Króna</option>
+                                                                                                                                <option value="12">Indian Rupee</option>
+                                                                                                                                <option value="72">Indonesian Rupiah</option>
+                                                                                                                                <option value="76">Iranian Rial</option>
+                                                                                                                                <option value="75">Iraqi Dinar</option>
+                                                                                                                                <option value="73">Irish Pound</option>
+                                                                                                                                <option value="74">Israeli New Sheqel</option>
+                                                                                                                                <option value="78">Italian Lira</option>
+                                                                                                                                <option value="79">Jamaican Dollar</option>
+                                                                                                                                <option value="81">Japanese Yen</option>
+                                                                                                                                <option value="80">Jordanian Dinar</option>
+                                                                                                                                <option value="90">Kazakhstani Tenge</option>
+                                                                                                                                <option value="82">Kenyan Shilling</option>
+                                                                                                                                <option value="88">Kuwaiti Dinar</option>
+                                                                                                                                <option value="83">Kyrgystani Som</option>
+                                                                                                                                <option value="91">Laotian Kip</option>
+                                                                                                                                <option value="97">Latvian Lats</option>
+                                                                                                                                <option value="92">Lebanese Pound</option>
+                                                                                                                                <option value="95">Lesotho Loti</option>
+                                                                                                                                <option value="94">Liberian Dollar</option>
+                                                                                                                                <option value="98">Libyan Dinar</option>
+                                                                                                                                <option value="96">Lithuanian Litas</option>
+                                                                                                                                <option value="105">Macanese Pataca</option>
+                                                                                                                                <option value="102">Macedonian Denar</option>
+                                                                                                                                <option value="101">Malagasy Ariary</option>
+                                                                                                                                <option value="109">Malawian Kwacha</option>
+                                                                                                                                <option value="111">Malaysian Ringgit</option>
+                                                                                                                                <option value="108">Maldivian Rufiyaa</option>
+                                                                                                                                <option value="106">Mauritanian Ouguiya</option>
+                                                                                                                                <option value="107">Mauritian Rupee</option>
+                                                                                                                                <option value="110">Mexican Peso</option>
+                                                                                                                                <option value="100">Moldovan Leu</option>
+                                                                                                                                <option value="104">Mongolian Tugrik</option>
+                                                                                                                                <option value="99">Moroccan Dirham</option>
+                                                                                                                                <option value="112">Mozambican Metical</option>
+                                                                                                                                <option value="103">Myanmar Kyat</option>
+                                                                                                                                <option value="113">Namibian Dollar</option>
+                                                                                                                                <option value="117">Nepalese Rupee</option>
+                                                                                                                                <option value="16">Netherlands Antillean Guilder</option>
+                                                                                                                                <option value="154">New Taiwan Dollar</option>
+                                                                                                                                <option value="118">New Zealand Dollar</option>
+                                                                                                                                <option value="115">Nicaraguan Córdoba</option>
+                                                                                                                                <option value="114">Nigerian Naira</option>
+                                                                                                                                <option value="86">North Korean Won</option>
+                                                                                                                                <option value="116">Norwegian Krone</option>
+                                                                                                                                <option value="119">Omani Rial</option>
+                                                                                                                                <option value="125">Pakistani Rupee</option>
+                                                                                                                                <option value="120">Panamanian Balboa</option>
+                                                                                                                                <option value="122">Papua New Guinean Kina</option>
+                                                                                                                                <option value="127">Paraguayan Guarani</option>
+                                                                                                                                <option value="121">Peruvian Nuevo Sol</option>
+                                                                                                                                <option value="123">Philippine Peso</option>
+                                                                                                                                <option value="124">PKG</option>
+                                                                                                                                <option value="126">Polish Zloty</option>
+                                                                                                                                <option value="10">Pound</option>
+                                                                                                                                <option value="128">Qatari Rial</option>
+                                                                                                                                <option value="129">Romanian Leu</option>
+                                                                                                                                <option value="131">Russian Ruble</option>
+                                                                                                                                <option value="132">Rwandan Franc</option>
+                                                                                                                                <option value="144">Salvadoran Colón</option>
+                                                                                                                                <option value="163">Samoan Tala</option>
+                                                                                                                                <option value="133">Saudi Riyal</option>
+                                                                                                                                <option value="143">São Tomé &amp; Príncipe Dobra</option>
+                                                                                                                                <option value="130">Serbian Dinar</option>
+                                                                                                                                <option value="135">Seychellois Rupee</option>
+                                                                                                                                <option value="140">Sierra Leonean Leone</option>
+                                                                                                                                <option value="138">Singapore Dollar</option>
+                                                                                                                                <option value="134">Solomon Islands Dollar</option>
+                                                                                                                                <option value="141">Somali Shilling</option>
+                                                                                                                                <option value="11">South African Rand</option>
+                                                                                                                                <option value="87">South Korean Won</option>
+                                                                                                                                <option value="166">Special Drawing Rights</option>
+                                                                                                                                <option value="93">Sri Lankan Rupee</option>
+                                                                                                                                <option value="139">St. Helena Pound</option>
+                                                                                                                                <option value="136">Sudanese Pound</option>
+                                                                                                                                <option value="142">Surinamese Dollar</option>
+                                                                                                                                <option value="146">Swazi Lilangeni</option>
+                                                                                                                                <option value="137">Swedish Krona</option>
+                                                                                                                                <option value="39">Swiss Franc</option>
+                                                                                                                                <option value="145">Syrian Pound</option>
+                                                                                                                                <option value="148">Tajikistani Somoni</option>
+                                                                                                                                <option value="155">Tanzanian Shilling</option>
+                                                                                                                                <option value="147">Thai Baht</option>
+                                                                                                                                <option value="151">Tongan Pa'anga</option>
+                                                                                                                                <option value="153">Trinidad &amp; Tobago Dollar</option>
+                                                                                                                                <option value="150">Tunisian Dinar</option>
+                                                                                                                                <option value="152">Turkish Lira</option>
+                                                                                                                                <option value="149">Turkmenistani Manat</option>
+                                                                                                                                <option value="157">Ugandan Shilling</option>
+                                                                                                                                <option value="156">Ukrainian Hryvnia</option>
+                                                                                                                                <option value="13">United Arab Emirates Dirham</option>
+                                                                                                                                <option value="158">Uruguayan Peso</option>
+                                                                                                                                <option value="9" selected="">US Dollar</option>
+                                                                                                                                <option value="159">Uzbekistan Som</option>
+                                                                                                                                <option value="162">Vanuatu Vatu</option>
+                                                                                                                                <option value="160">Venezuelan BolÃ­var</option>
+                                                                                                                                <option value="161">Vietnamese Dong</option>
+                                                                                                                                <option value="169">Yemeni Rial</option>
+                                                                                                                                <option value="170">Zambian Kwacha</option>
+                                                                                                                                <option value="171">Zambian Kwacha</option>
+                                                                                                                                <option value="172">Zimbabwean Dollar</option>
+                                                                                                                            </select>	
+                                                            <input name="CurrActionUrl" id="CurrActionUrl" value="products.php?c=MKB&amp;cat=5&amp;" type="hidden">
+                                                        </div>
+                                                        
+                                                    </ul>
+                                                </form>  
+        </div>
+        <!--Currency Ends -->
+          
+        </div>
+        <!--Start Search BTN -->
+		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 pull-right">
+            <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Search" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                    <label for="filter">Filter by</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>Search By Price</option>
+                                        <option value="1">Low to High Price</option>
+                                        <option value="2">High to Low Price</option>
+                                        <option value="3">Top rated</option>
+                                        <option value="4">Most Relevant</option>
+                                    </select>
+                                  </div>
+                                  
+                                </form>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <!--End of Search BTN -->
+	</div><!-- /.nav-collapse -->
+</nav>
+</div>
+<!--main container -->
+
+<div class="container account">
+  <div class="row">
+    <div class="col-lg-9 col-md-9 col-sm-7">
+      <h1 class="section-title-inner"><span><i class="fa fa-lock"></i> Authentication</span></h1>
+      <div class="row userInfo">
+        <div class="col-xs-12 col-sm-6">
+          <h2 class="block-title-2"> Create an account </h2>
+          <form role="form" class="regForm">
+            <div class="form-group">
+              <label >Name</label>
+              <input title="Please enter your username (at least 3 characters)" type="text" class="form-control"  placeholder="Enter name" required minlength="3" >
+            </div>
+            <div class="form-group">
+              <label >Email address</label>
+              <input title="Please enter valid email" type="email" class="form-control"  placeholder="Enter email" required >
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input required minlength="5" title="Please enter your password, between 5 and 12 characters" type="password" class="form-control"  placeholder="Password">
+            </div>
+            <div class="error"> </div>
+            <button type="submit" class="btn   btn-primary"><i class="fa fa-user"></i> Create an account</button>
+          </form>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h2 class="block-title-2"><span>Already registered?</span></h2>
+          <form role="form" class="logForm">
+            <div class="form-group">
+              <label>Email address</label>
+              <input type="email" class="form-control"  placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control"  placeholder="Password">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="checkbox">
+                Remember me </label>
+            </div>
+            <div class="form-group">
+              <p><a title="Recover your forgotten password" href="forgot-password.html">Forgot your password? </a></p>
+            </div>
+            <a class="btn btn-primary" href="account.html"><i class="fa fa-sign-in"></i> Sign In</a>
+          </form>
+        </div>
+      </div>
+      <!--/row end--> 
+      
+    </div>
+    <div class="col-lg-6 col-sm-5 col-md-9"> </div>
+  </div>
+  <!--/row-->
+  
+  <div style="clear:both"></div>
+</div>
+<!-- /container -->
+<div class="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3  col-md-3 col-sm-4 col-xs-6">
+        <h3> Support </h3>
+        <ul>
+          <li class="supportLi">
+            <p> Need assistance with any order</p>
+            <h4> <a class="inline" href="callto:+8801680531352"> <strong> <i class="fa fa-phone"> </i> 1800 1234567890 </strong> </a> </h4>
+            <h4> <a class="inline" href="mailto:help@tshopweb.com"> <i class="fa fa-envelope-o"> </i> help@marketblues.com </a> </h4>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+        <h3> Shop </h3>
+        <ul>
+          <li> <a href="index.html"> Home </a> </li>
+          <li> <a href="category.html"> Books </a> </li>
+          <li> <a href="#woman"> Womans </a> </li>
+          <li> <a href="#man">Mans </a> </li>
+          <li> <a href="category.html">New Arrival </a></li>
+          <li><button type="button" class="btn btn-link" data-toggle="collapse" data-target="#menuaccordion">More...</button></li>
+          <div id="menuaccordion" class="collapse">
+          <li><a href="#">Product One</a></li>
+          <li><a href="#">Product One</a></li>
+          <li><a href="#">Product One</a></li>
+        <li><a href="#">Product One</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+        <h3> Information </h3>
+        <ul>
+          <li> <a href="product-details.html"> Payment </a> </li>
+          <li> <a href="product-details-style2.html"> Saved Card </a> </li>
+          <li> <a href="cart.html"> Shipping </a> </li>
+          <li> <a href="about-us.html"> Cancellation &amp; Return </a> </li>
+          <li> <a href="about-us-2.html"> FAQs </a> </li>
+          <li> <a href="contact-us.html"> Report Infringement </a> </li>
+        </ul>
+      </div>
+      <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+        <h3> My Account </h3>
+        <ul>
+          <li> <a href="account-1.html"> Account Login </a> </li>
+          <li> <a href="account.html"> My Account </a> </li>
+          <li> <a href="my-address.html"> My Address </a> </li>
+          <li> <a href="wishlist.html"> Wisth list </a> </li>
+          <li> <a href="order-list.html"> Order list </a> </li>
+        </ul>
+      </div>
+      <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+        <h3> Stay in touch </h3>
+        <ul>
+          <li>
+            <div class="input-append newsLatterBox text-center">
+              <input type="text" class="full text-center"  placeholder="Email ">
+              <button class="btn  bg-gray" type="button"> Subscribe <i class="fa fa-long-arrow-right"> </i> </button>
+            </div>
+          </li>
+        </ul>
+        <ul class="social">
+          <li> <a href="http://facebook.com/"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>
+          <li> <a href="http://twitter.com/"> <i class="fa fa-twitter"> &nbsp; </i> </a> </li>
+          <li> <a href="https://plus.google.com/"> <i class="fa fa-google-plus"> &nbsp; </i> </a> </li>
+          <li> <a href="http://youtube.com/"> <i class="fa fa-pinterest"> &nbsp; </i> </a> </li>
+          <li> <a href="http://youtube.com/"> <i class="fa fa-youtube"> &nbsp; </i> </a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--/.row--> 
+  </div>
+  <!--/.container--> 
+</div>
+<!--/.footer-->
+
+<div class="footer-bottom">
+  <div class="container">
+    <p class="pull-left"> &copy; EZNetCRM 2015. All right reserved. </p>
+    <div class="pull-right paymentMethodImg"> <img src="img/master_card.png" alt="img" width="49" height="30" class="pull-right" > <img src="img/paypal.png" alt="img" width="49" height="30" class="pull-right" > <img src="img/american_express_card.png" alt="img" width="49" height="30" class="pull-right" > <img src="img/discover_network_card.png" alt="img" width="49"  height="30" class="pull-right" > </div>
+  </div>
+</div>
+<!--/.footer-bottom-->
+
+<div class="modal fade hide" id="modalAds" role="dialog" >
+  <div class="modal-dialog  modal-bg-1">
+    <div class="modal-body-content"> <a class="close" data-dismiss="modal">×</a>
+      <div class="modal-body">
+        <div class="col-lg-6 col-sm-8 col-xs-8">
+          <h3>enter your <br>
+            email to  receive</h3>
+          <p class="discountLg">10% OFF </p>
+          <p>We invite you to subscribe to our newsletter and receive 10% discount. </p>
+          <div class="clearfx">
+            <form id="newsletter" class="newsletter">
+              <input type="text" id="subscribe" name="s" placeholder="Enter email">
+              <button class="subscribe-btn">Subscribe</button>
+            </form>
+          </div>
+          <p> <a href="category.html" class="link shoplink"> SHOP NOW <i class="fa fa-caret-right"> </i> </a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end footer --> 
+<!--=================Sing In Model ===============-->
+<div class="modal fade" id="mySignin">
+  <div class="model-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> Sing In </h4>
+      </div>
+      <!-- end header modal -->
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                  Remember me </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary pull-right">Sign in</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--end body modal -->
+    </div>
+    <!-- end content -->
+  </div>
+  <!-- end dialog -->
+</div>
+<!--end mySignin -->
+<!---=================Sing In Model Ends=============== --!
+ 
+<!--=================Sing In Model ===============-->
+<div class="modal fade" id="createaccount">
+  <div class="model-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> Create Account </h4>
+      </div>
+      <!-- end header modal -->
+      <div class="modal-body">
+        <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputusername3" class="col-sm-2 control-label">User</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputusername3" placeholder="User Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                  Remember me </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary pull-right">Register</button>
+            </div>
+          </div>
+          <p class="text-center">Already member?<a href="#signin">Sing In</a></p>
+        </form>
+      </div>
+      <!--end body modal -->
+    </div>
+    <!-- end content -->
+  </div>
+  <!-- end dialog -->
+</div>
+<!--end mySignin -->
+<!---=================Create Account Model Ends=============== --!
+<!-- jQuery library --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+
+<!-- Latest compiled JavaScript --> 
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

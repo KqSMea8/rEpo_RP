@@ -1,0 +1,15 @@
+http://66.55.11.23/webservices/getAttribute.php?c=pankaj.kumar@vstacks.in
+Param :
+attr = 'SalesStage'
+
+
+
+http://66.55.11.23/webservices/appConvertLead.php?c=pankaj.kumar@vstacks.in
+Param :
+LeadID
+OpportunityName
+CloseDate
+SalesStage
+
+http://66.55.11.23/webservices/getCustomerADDDoc.php?c=pankaj.kumar@vstacks.in
+http://66.55.11.23/webservices/getCustomerGroup.php?c=pankaj.kumar@vstacks.in

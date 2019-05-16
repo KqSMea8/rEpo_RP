@@ -1,0 +1,129 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+}
+
+a{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-decoration:none;
+	color:#606060;
+}
+
+a:hover{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-decoration: underline;
+	color:#606060;
+}
+.topbg {
+	background-image: url(../store_images/topbg.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	text-align: center;
+	vertical-align: middle;
+	height: 32px;
+}
+.toptable{
+	margin:auto;
+	width:1002px;
+	border:0px;
+}
+.search_top{
+	width: 191px;
+}
+.toplink{
+	font-family:tahoma, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#ffffff;
+	text-decoration:none;
+	margin-left:10px;
+	margin-right:10px;
+	text-transform:uppercase;
+}
+.toplink:hover{
+	font-family:tahoma, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#98bbd5;
+	text-decoration:none;
+	margin-left:10px;
+	margin-right:10px;
+	text-transform:uppercase;
+}
+.RedMessage {
+	font-family:Tahoma;
+	font-size:18px;
+	color:#ff0000;
+	text-decoration:none;
+	font-weight:normal;
+	padding-top:100px;
+	text-align:center;
+}
+
+.red12 {
+	font-family:Tahoma;
+	font-size:13px;
+	color:#ff0000;
+	text-decoration:none;
+	font-weight:normal;
+	padding-top:80px;
+	text-align:center;
+	padding-bottom:80px;
+}
+
+
+.imgborder_prd{
+	border:1px solid #afc18f;
+}
+
+
+
+
+
+.orangestar {
+	display:block;
+	height: 18px;
+	background: url('../store_images/orange.png') top left repeat-x;		
+	float:left;
+	text-align:left;
+}
+
+.whitestar {
+	display:block;
+	height: 18px;
+	background: url('../store_images/white.png') top left repeat-x;		
+}
+
+
+.generaltxt_inner ul{
+	padding:0 0 0 20px;
+	margin:0 0 0 0px;
+
+}
+.generaltxt_inner ul li{
+	padding:0 0 0 0px;
+	margin:0 0 0 0px;
+	list-style-type: disc;
+
+}
+
+
+.generaltxt_inner ol{
+	padding:0 0 0 20px;
+	margin:0 0 0 0px;
+
+}
+.generaltxt_inner ol li{
+	padding:0 0 0 0px;
+	margin:0 0 0 0px;
+	list-style-type: decimal;
+
+}

@@ -1,0 +1,17 @@
+/********************  Finance Start ********************/
+.my-dashboard-nav ul li a{background:url("../../images/mydashboard_icons.png") no-repeat 0 0;}
+
+.my-dashboard-nav ul li.report a {
+   background-position:-303px -1538px;
+}
+.my-dashboard-nav ul li.report a:hover {
+   background-position:-303px -1650px;
+}
+
+.my-dashboard-nav ul li.vendor a {
+  background-position:-414px -1315px;
+}
+.my-dashboard-nav ul li.vendor a:hover {
+  background-position:-414px -1427px;
+}
+/********************  End ********************/

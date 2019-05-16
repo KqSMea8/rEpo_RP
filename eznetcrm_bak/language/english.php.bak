@@ -1,0 +1,38 @@
+<?php	
+
+define("COMPANY_ADDED","Company has been added successfully.");
+define("COMPANY_UPDATED","Company has been updated successfully.");
+define("COMPANY_REMOVED","Company has been removed successfully.");
+define("COMPANY_STATUS_CHANGED","Company Status has been changed successfully.");
+
+
+define("COMPANY_PROFILE_UPDATED","Company details has been updated successfully.");
+define("ACCOUNT_UPDATED","Account details has been updated successfully.");
+define("PERMISSION_UPDATED","Permission details has been updated successfully.");
+define("CURRENCY_UPDATED","Currency has been updated successfully.");
+define("DATETIME_UPDATED","DateTime settings has been updated successfully.");
+
+
+
+define("ENTER_EMAIL","Please Enter Email Address.");
+define("ENTER_PASSWORD","Please Enter Password.");
+define("EMAIL_ALREADY_REGISTERED","This Email is already registred.");
+define("DISPLAY_ALREADY_REGISTERED"," Display Name is already registred.");
+
+define("INVALID_EMAIL_PASSWORD","Invalid Email/Password.");
+
+define("PROCESSING","Processing.....");
+define("PLEASE_WAIT","Please Wait.....");
+
+define("VALID_EMAIL","Please Enter Valid Email Address.");
+
+define("SETTING_UPDATED","Global Settings have been updated successfully.");
+
+define("LOADER_MSG_L","Please wait.....<br>Loading data from server.");
+define("LOADER_MSG_F","Please wait.....<br>Searching data from server.");
+define("LOADER_MSG_S","Please wait.....<br>Saving data.....");
+define("LOADER_MSG_P","Please wait.....<br>Processing.......");
+
+
+
+?>

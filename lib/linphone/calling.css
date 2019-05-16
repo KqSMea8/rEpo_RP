@@ -1,0 +1,228 @@
+
+.ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+
+
+/*
+.ui-dialog-titlebar-close{
+left: 389px;
+}
+*/
+
+
+.lable {
+    display: inline-block;
+    width: 96px;
+	font-size: 11px;
+    font-weight: normal;
+	 vertical-align: top;
+}
+
+.cannect_call{
+	margin-bottom:6px;
+}
+
+.ui-widget-header {
+    
+	/*background-color: #406697 !important;
+	background-image:none !important;
+    color: #fff !important;*/
+    font-weight: bold;
+    height: 25px !important;
+	margin-left:-3px;
+	margin-top:-4px;
+	width:100%;
+	border-radius:0;
+}
+
+.ui-widget-content {
+    background-color: #efefef !important;
+    border: 1px solid #999;
+    color: #222222;
+	background-image:none !important;
+}
+.statusC {
+    font-size: 11px;
+    font-weight: normal;
+}
+.fontbox{
+    font-size: 11px !important;
+    font-weight: normal !important;
+
+}
+.fontbox1{
+    font-size: 11px !important;
+    font-weight: normal !important;
+	border:1px solid #88cbd3;
+}
+
+.col {
+    vertical-align: top;
+}
+.button {
+    background: none repeat scroll 0 0 #d40503;
+    border: 0 solid #094989;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px !important;
+    font-weight: bold;
+    height: 21px !important;
+    padding: 1px 6px 3px;
+}
+
+
+.call_icon{
+ margin-top: 6px;
+ display:none;
+ background: url("/erp/admin/images/Call_16.png") no-repeat scroll 0 0 transparent;
+ display:none;
+ background-size: 14px 14px;
+}
+.phone_img{
+display: inline-block;
+width: 16px;
+width: 16px;
+}
+.comment_section{
+margin-left:10px;
+}
+
+.button-3{
+  text-align: center;
+}
+
+.button-3 li{
+	
+    display: inline-block;
+    height: 26px;
+  
+    max-width: 200px;
+    padding-top: 5px;
+    width: 54px;
+	border:1px solid #999;
+	margin-left:-5px;
+}
+.last{
+  clear: left;
+}
+.first{
+  clear: right;
+}
+#numberDisplay input {
+    border: 1px solid #88cbd3;
+    font-family: "Helvetica Neue";
+    font-size: 1em;
+    font-weight: 100;
+    height: 12px;
+    margin-bottom: 1%;
+    margin-left: 2px;
+    margin-top: 17px;
+    padding: 0.5em 0;
+    text-align: center;
+    width: 93%;
+}
+
+#actions .call.ready{
+  background: rgba(0, 255, 0, 0.2);
+}
+#actions .call.ready:hover{
+  background: rgba(0, 255, 0, 0.4);
+}
+#actions .skip.ready{
+  background: rgba(0, 255, 0, 0.2);
+}
+#actions .skip.ready:hover{
+  background: rgba(0, 255, 0, 0.4);
+}
+#actions .clear.ready{
+  background: rgba(255, 0, 0, 0.2);
+}
+#actions .clear.ready:hover{
+  background: rgba(255, 0, 0, 0.4);
+}
+#actions .deactive{
+  opacity: .2;
+}
+
+#dialpad,
+#actions,
+#numberDisplay{
+  max-width: 180px;
+  margin: 0 auto;
+}
+#dialpad.deactive{
+  opacity: .2;
+}
+#dialpad.deactive li:hover,
+#actions li.deactive:hover{
+  background: #eee;
+}
+#dialpad li{
+  font-weight: bold;
+  
+  width: 30%;
+}
+#dialpad li:hover{
+  background: none repeat scroll 0 0 rgba(0, 255, 0, 0.4);
+}
+#actions li{
+  background: #efefef;
+  opacity: .8;
+}
+#actions li.call.active{
+  background: rgba(0, 255, 0, 0.2);
+}
+#actions li.hangup{
+  background: rgba(255, 125, 0, 0.2);
+}
+#actions li.hangup:hover{
+  background: rgba(255, 125, 0, 0.4);
+}
+#actions li:hover{
+  background: #ccc;
+}
+
+.callform{
+	
+	width: 100% !important; margin-left: -12px !important; height: 235px !important;
+}
+#incomingcall_form{
+	
+	width: 100% !important;
+	
+}
+.header_tab{
+	width: 100%; 
+	background-color: rgb(247, 247, 247); 
+	height: 40px; 
+	margin-top: -5px; 
+	margin-left: -1px;
+	margin-bottom: 5px;
+}
+
+.header_tab > span {
+    border-bottom: 1px solid;
+    border-color: #dddddd;
+    border-style: solid;
+    display: block;
+    float: left;
+    height: 30px;
+    width: 12%;
+	padding-top:9px;
+	text-align:center;
+}
+.header_tab > span img
+{
+	cursor: pointer; width: 24px; 
+}
+.active-call-tab {
+    border-color: #dddddd !important;
+    border-radius: 5px 5px 0 0;
+    border-style: solid solid none !important;
+    border-width: 1px 1px medium !important;
+}
+.extra {
+    width: 27% !important;
+}

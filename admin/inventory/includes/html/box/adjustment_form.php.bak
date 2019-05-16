@@ -1,0 +1,193 @@
+
+<script type="text/javascript" src="multiSelect/jquery.tokeninput.js"></script>
+
+    <link rel="stylesheet" href="multiSelect/token-input.css" type="text/css" />
+    <link rel="stylesheet" href="multiSelect/token-input-facebook.css" type="text/css" />
+
+<div class="e_right_box">
+<table width="100%"   border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr>
+        <td  align="center" valign="top">
+            <table width="100%"   border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td  align="center" valign="middle" >     
+                        <table width="100%"  border="0" cellpadding="0" cellspacing="0" >
+                            <form name="form1" id="productBasicInfoForm" action=""  method="post"  enctype="multipart/form-data">
+                                <tr>
+                                    <td align="center" valign="top" >
+                                        <table width="100%" border="0" cellpadding="3" cellspacing="1"  class="borderall">
+       
+                                        <tr>
+                                                 <td colspan="2" align="left" class="head">Adjustment </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                                <td width="31%" align="right"   class="blackbold" > Warehouse Location:  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  name="warehouse" id="warehouse" value="" type="text" class="inputbox"  maxlength="30" />	
+													 <input  name="WID" id="WID" value="" type="hidden" class="inputbox"  maxlength="30" />	
+													<a class="fancybox fancybox.iframe" href="../warehouse/warehouseList.php" ><?=$search?></a></td>
+                                            </tr>
+                                        
+                                         <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Adjustment Reason:  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  name="adjustment_reason" id="Sku" value="<? echo stripslashes($arryProduct[0]['Sku']); ?>" type="text" class="inputbox"  maxlength="30" />	 </td>
+                                            </tr>
+                                            
+                                            
+                                            
+                                            <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Item Sku : <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  type="text" name="Sku" class="inputbox" id="sku" value="<? echo stripslashes($arryProduct[0]['description']); ?>"/>	
+													 <input  type="text" name="item_id" class="inputbox" id="item_id" value="<? echo stripslashes($arryProduct[0]['description']); ?>"/>
+													  <input  type="text" name="description" class="inputbox" id="description" value="<? echo stripslashes($arryProduct[0]['description']); ?>"/>
+													   <input  type="text" name="qty" class="inputbox" id="qty" value="<? echo stripslashes($arryProduct[0]['description']); ?>"/>
+													    <input  type="text" name="on_hand_qty" class="inputbox" id="on_hand_qty" value="<? echo stripslashes($arryProduct[0]['description']); ?>"/>
+														 <input  type="text" name="price" class="inputbox" id="price" value="<? echo stripslashes($arryProduct[0]['description']); ?>"/>
+													
+													<a class="fancybox fancybox.iframe" href="ItemList.php" ><?=$search?></a>
+		<script type="text/javascript">
+        $(document).ready(function() {
+            $("#demo-input-facebook-theme").tokenInput("ajax.php&action=WarehouseInfo&WID=q_string", {
+                theme: "facebook",
+			    
+				preventDuplicates: true,
+				prePopulate: <?=$json_response2?>,
+				
+			propertyToSearch: "WID"
+              
+
+				
+            });
+        });
+        </script>
+													
+													</td>
+                                            </tr>
+                                              <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Quantity :  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  name="quantity" id="quantity" value="<? echo stripslashes($arryProduct[0]['Sku']); ?>" type="text" class="inputbox"  maxlength="30" />	 </td>
+                                            </tr>
+                                              <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Value :  <span class="red">*</span> </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  name="value" id="value" value="<? echo stripslashes($arryProduct[0]['Sku']); ?>" type="text" class="inputbox"  maxlength="30" />	 </td>
+                                            </tr>
+                                              <tr>
+                                                <td width="31%" align="right"   class="blackbold" >Availability  :   </td>
+                                                <td width="69%" height="30" align="left">
+                                                    <input  name="availability" id="availability" value="<? echo stripslashes($arryProduct[0]['Sku']); ?>" type="text" class="inputbox"  maxlength="30" />	 </td>
+                                            </tr>
+                                             
+                                             
+                                        
+                                        
+                                            <tr><td  colspan="2"height="54" align="center">
+                                        <br>
+                                        <?php
+                                        if ($_GET['edit'] > 0)
+                                            $ButtonTitle = 'Update'; else
+                                            $ButtonTitle1 = 'Add';
+											$ButtonTitle2 = 'Stock Adjust';
+											$ButtonTitle3 = 'View All';
+
+                                        $PostedByID = $arryProduct[0]['PostedByID'];
+                                        if ($PostedByID <= 1)
+                                            $PostedByID = 1;
+
+                                        if (sizeof($arryCategory) <= 0)
+                                            $DisabledButton = 'disabled';
+                                        ?>
+                                        <input name="Submit" type="submit" class="button" id="SubmitButton" value=" <?= $ButtonTitle2 ?> " <?= $DisabledButton ?> />
+                                         <input name="Submit" type="submit" class="button" id="SubmitButton" value=" <?= $ButtonTitle1 ?> " <?= $DisabledButton ?> />
+                                          <input name="Submit" type="submit" class="button" id="SubmitButton" value=" <?= $ButtonTitle3 ?> " <?= $DisabledButton ?> />
+                                        </td>
+                                        </tr>
+                                            
+                                         
+                                        
+                                        
+                                             
+                                                    <tr>
+                                                        <td colspan="2" align="left" class="head">Transaction </td>
+                                                    </tr>
+                                                           <tr>
+                                                               <td colspan="2">
+                                                                <table width="100%" cellspacing="1" cellpadding="3" align="center" id="list_table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="head1">Transaction ID</td>
+                                                                        <td class="head1">Transaction Date</td>
+                                                                        <td class="head1">Warehouse 1</td>
+                                                                         <td class="head1">Warehouse 2</td>
+                                                                         <td class="head1">Transaction Type</td>
+                                                                        <td class="head1">Item Code</td>
+                                                                         <td class="head1">Item Description</td>
+                                                                         <td class="head1">Item Value</td>
+                                                                         <td class="head1">Trans Qty</td>
+                                                                         
+                                                                         
+                                                                         <td class="head1">Running Total</td>
+                                                                         
+                                                                         
+                                                                  </tr>
+                                                                  <?php  if(count($DiscountArr) > 0) {
+                                                                      foreach($DiscountArr as $discount) {   ?>
+                                                                    <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td><?=$discount['range_min'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=$discount['range_max'];?></td>
+                                                                        <td><?=number_format($discount['discount'],2);?></td>
+                                                                        <td><?=$discount['discount_type'];?></td>
+                                                                        <td><?=$discount['is_active'];?></td>
+                                                                        <td><a href="editProduct.php?edit=<? echo $_GET['edit']; ?>&curP=<?php echo $_GET['curP']; ?>&CatID=<?= $_GET['CatID'] ?>&disID=<?=$discount['qd_id'];?>&tab=editDiscount"><?= $edit ?></a>  <a href="javascript:void();" class="deleteProductDiscount" alt="<?=$_GET['edit']."#".$discount['qd_id']?>"><?= $delete ?></a>	</td></td>
+                                                                    </tr>
+                                                                  <?php   
+                                                                            }
+                                                                      } else { 
+                                                                      ?>
+                                                                   <tr valign="middle" bgcolor="#ffffff" align="left">
+                                                                        <td class="no_record" colspan="10">No Transaction Found.</td>
+                                                                       
+                                                                     </tr>
+                                                                    <?php   }   ?>
+          
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr><td height="54" align="center">
+                                        <br>
+                                        <?php
+                                        if ($_GET['edit'] > 0)
+                                            $ButtonTitle = 'Update'; else
+                                            $ButtonTitle = 'Submit';
+
+                                        $PostedByID = $arryProduct[0]['PostedByID'];
+                                        if ($PostedByID <= 1)
+                                            $PostedByID = 1;
+
+                                        if (sizeof($arryCategory) <= 0)
+                                            $DisabledButton = 'disabled';
+                                        ?>
+                                        <!--<input name="Submit" type="submit" class="button" id="SubmitButton" value=" <?= $ButtonTitle ?> " <?= $DisabledButton ?> />-->
+                                        <input type="hidden" name="ItemID" id="ItemID" value="<? echo $_GET['edit']; ?>" />
+                                        <input type="hidden" name="MaxProductImage" id="MaxProductImage" value="<? echo $MaxProductImage; ?>" />
+                                        <input type="hidden" name="OldStatus" id="OldStatus" value="<?= $arryProduct[0]['Status'] ?>" >
+                                        <input  type="hidden" name="NumLanguages" id="NumLanguages" value="<?= $NumLanguages ?>" />
+                                       <!-- <input type="reset" name="Reset" value="Reset" class="button" /></td>-->
+                                </tr>
+
+                            </form>
+                        </table>
+                    </td>
+                </tr>
+            </table></td>
+    </tr>
+ </table>
+</div>

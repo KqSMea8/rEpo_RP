@@ -1,0 +1,252 @@
+<?php	
+
+define("ENTER_EMAIL", "Please Enter Email Address.");
+define("ENTER_PASSWORD", "Please Enter Password.");
+define("ENTER_OLD_PASSWORD", "Please Enter Old Password.");
+define("ENTER_NEW_PASSWORD", "Please Enter New Password.");
+define("ENTER_CONFIRM_PASSWORD", "Please Enter Confirm Password.");
+define("CONFIRM_PASSWORD_NOT_MATCH", "Confirm Password do not match.");
+define("WRONG_OLD_PASSWORD", "Wrong Old Password.");
+
+define("ERROR_INACTIVE_ADMIN","Sorry, the company admin section you have requested<br>is currently not active.");
+define("ERROR_INACTIVE_PAGE","Sorry, the page you have requested is currently not active.");
+define("ERROR_NO_DB","Sorry, database does not exist for this company. Please contact the administrator.");
+
+define("INVALID_EMAIL_PASSWORD","Invalid Email/Password.");
+define("CLICK_TO_CONTINUE", "Click to Continue");
+define('PAYMENT_DECLINED','Your payment has been declined. Please try again.');
+
+define("PROCESSING","Processing.....");
+
+define("SELECT_LOCATION","Select Location");
+
+define("VALID_EMAIL","Please Enter Valid Email Address.");
+
+define("PASSWORD_CHANGED","Your password has been changed successfully.");
+define("PASSWORD_NOT_UPDATED","Password Not Updated.");
+
+define("FILE_NOT_UPLOADED","Error: File Not Uploaded !!");
+/***************************************/
+
+define('HOME_MSG','Welcome to ERP STORE');
+define('HOME_MSG2','Welcome Guest! <br />Would you like to <a href="login.php">log yourself in?</a> Or would you prefer to <a href="register.php">create an account?</a>');
+define('FEATURED_PRODUCTS','Featured Products');
+define('CATEGORIES','Categories');
+
+/*************************************PRODUCT VARIABLES STARTED*****************************************/
+
+define('NO_PRODUCT_FOUND','No Products found for this category !');
+define('NO_FEATURED_PRODUCT_FOUND','No Featured Products found!');
+define('PRODUCT_SKU','Product Sku');
+define('MANUFACTURER','Manufacturer');
+define('WEIGHT','Weight');
+define('QUANTITY','Quantity');
+define('EMAIL_TO_FRIEND','Email to a Friend');
+define('WEIGHT_UNIT','lbs');
+define('REVIEWS','Reviews');
+define('DESCRIPTION','Description');
+define('RECOMMENDED_PRODUCT','Recommended Products');
+define('YOUR_NAME','Your Name');
+define('YOUR_EMAIL','Your Email Address');
+define('YOUR_FRIEND_NAME','Your Friend\'s Name');
+define('YOUR_FRIEND_EMAIL','Your Friend\'s Email');
+define('ADVANCE_PRODUCTS_SEARCH',' Advanced Product Search');
+define('ENTER_KEYWORD_ITEM','Enter Product Keyword');
+
+define('WRITE_REVIEW','Write a review');
+define('TITLE','Title');
+define('REVIEW','Review');
+define('RATING','Rating');
+define('SEND','Send');
+define('REVIEW_THANK','Thank you for your review.');
+define('CLICK_TO_ZOOM','Click to zoom');
+define('TO_WRITE_REVIEW','to write the review.');
+define('ORR','or');
+define('BUY','Buy');
+define('GET_AN_ADDITIONAL','and get an additional');
+define('OFF','Off');
+define('SENT_FRIEND_EMAIL', 'Your product has been sent successfully on your friend\'s email');
+/*************************************PRODUCT VARIABLES ENDED*************************************************************/
+
+/*******************************CART VARIABLES STARTED**************************************************/
+  define('YOUR_CART','Your Cart');
+  define('PRICE','Price');
+  define('TOTAL','Total');
+  define('DISCOUNT','Discount');
+  define('COUPON_DISCOUNT','Coupon Discount');
+  define('ENTER_COUPON_CODE','Enter Coupon Code');
+  
+  define('SUB_TOTAL','Sub Total');
+  define('CART_EMPTY','Your shopping cart is empty!');
+  define('CART_UPDATED','You have modified your shopping cart!');
+  define('WRONG_PROMO','The promo code you entered is not valid, expired or not eligible for this order.');
+  define('VALID_PROMO','Your coupon discount has been applied!');
+  define('PROCEED_TO_CHECKOUT','Proceed to Checkout');
+  define('ADD_TO_CART','Add to Cart');
+ 
+/*******************************CART VARIABLES ENDED**************************************************/
+
+  /*******************************LOGIN/REGISTER/ACCOUNT VARIABLES STARTED**************************************************/
+  define('REGISTER','Register');
+  define('CONTACT_INFORMATION','Contact Information');
+  define('FIRST_NAME','First Name');
+  define('LAST_NAME','Last Name');
+  define('COMPANY_NAME','Company Name');
+  define('ADDRESS_LINE1','Address Line1');
+  define('ADDRESS_LINE2','Address Line2');
+  define('COUNTRY','Country');
+  define('STATE','State');
+  define('OTHER_STATE','Other State');
+  define('CITY','City');
+  define('OTHER_CITY','Other City');
+  define('ZIP_CODE','ZIP / Postal Code');
+  define('PHONE_NUMBER','Phone Number');
+  define('ACCOUNT_INFORMATION','Account Information');
+  define('EMAIL_ADDRESS','Email Address');
+  define('PASSWORD','Password');
+  define('CONFIRM_PASSWORD','Confirm Password');
+  
+  define('LOGIN','Login');
+  define('EXISTING_USERS','Existing Users');
+  define('TO_LOGIN_MSG','To login, please enter your username and password.');
+  define('REMBER_LOGIN','Remember your login information?');
+  define('LOST_PASSWORD','Lost your password? <a href="forgot.php">Click here</a> to reset it.');
+  define('NEW_USERS','New Users');
+  define('NOT_REGISTERED','If you are not registered, please click the Register button below.');
+  define('GUEST_CHECKOUT','Guest Checkout');
+  define('GUEST_CHECKOUT_MSG','Checkout quickly without registering. Click the link below to begin the checkout process.');
+  define('START_GUEST_CHECKOUT','<a href="checkout.php?user=guest">Start Guest Checkout</a>');
+  
+  
+  define('INVALID_LOGIN','Username or password is incorrect');
+  define('LOG_OFF_SUCCESSFULLY','You have been logged out successfully.');
+  define('LOG_OUT','Logout');
+  define('FORGOT','Forgot');
+  define('RESET_PASSWORD_SUCCESSFULLY','Your password have been reset successfully. and new password has been sent to your e-mail address.');
+  define('RESET_ERROR','Can not find specified username and email address in database.');
+  define('PROFILE_UPDATED','Your account has been successfully updated.');
+  define('ACCOUNT_CREATED_SUCCESS','Congratulations! Your new account has been successfully created!');
+  define('MY_ACCOUNT_INFO','My Account Information');
+  define('YOUR_PERSONAL_DETAILS','Your Personal Details');
+  define('ACCOUNT_MSG','Please fill out this form completely. All information provided will only be used by us to contact you regarding your order(s).');
+  define('CHANGE_PASSWORD','Change Password');
+  define('YOUR_PASSWORD','Your Password');
+  define('PASSWORD_UPDATED','Your password has been successfully updated.');
+  
+  define('PAYMENT_N_SHIPPING_INFO','Payment & Shipping Information');
+  define('PAYMENT_METHOD','Payment Method');
+  define('SHIPPING_METHOD','Shipping Method');
+  define('FREE_SHIPPING','Free Shipping');
+  define('COMPLETE_AT','Completed At');
+  define('CUSTOM_SHIPPING','Custom Shipping');
+   
+          
+/*******************************LOGIN/REGISTER VARIABLES ENDED**************************************************/
+          
+       
+   /*******************************WISHLIST VARIABLES STARTED**************************************************/
+    define('ADD_TO_WISHLIST','Add to Wishlist');
+    define('CREATE_WISHLIST','Create Wishlist');
+    define('WISHLIST_NAME','Wishlist Name');
+    define('SAVE_WISHLIST','Save Wishlist');
+    define('WISHLIST_REMOVE','Wishlist deleted successfully.');
+    define('WISHLIST_PRODUCT_REMOVE','Wishlist product deleted successfully.');
+    define('WISHLIST_UPDATE','Wishlist updated successfully.');
+    define('WISHLIST_EMAIL','Your wishlist has been sent on your register email address successfully.');
+    define('ADD_WISHLIST_PRODUCT_MSG','You have added product to your <a href="myWishlist.php?action=manage_wishlist">wish list!</a>'); 
+   
+    /*******************************WISHLIST VARIABLES ENDED**************************************************/  
+     
+     
+     /***********************************SHIPPING VARIABLES STARTED***************************************************/
+            define('SAVE_SHIPPINGADDRESS','Address added successfully.');
+            define('EDIT_SHIPPINGADDRESS','Address updated successfully.');
+            define('DELETE_SHIPPINGADDRESS','Address deleted successfully.');
+            define('MY_ADDRESS_BOOK','My Address Book');
+            define('SHIPPING_NOTICE','Please select shipping address you want to edit or delete');
+            define('PRIMARY','Primary');
+            define('ADDRESS','Address');
+ 
+            define('DELETE_ADDRESS','Delete Address');
+            define('NO_SHIPPING_MSG','No shipping address defined yet. Please enter shipping address below. New address will be set as your primary shipping address.');
+            define('ENTER_NEW_SHIPPING','Enter new shipping address');
+            define('ADDRESS_TYPE','Address Type');
+            define('NAME','Name');
+            define('MAKE_PRIMARY','Make this address primary');
+            define('SAVE','Save');
+            define('SHIPPING_ADDRESS_EDITING','Shipping Address Editing');
+            
+             /***********************************SHIPPING VARIABLES ENDED***************************************************/
+            
+         /**************************************CHECKOUT VARIABLES STARTED************************************************************************/  
+            
+            define('CHECKOUT','Checkout');
+            define('BILLING_ADDRESS','Billing Address');
+            define('SHIPPING_ADDRESS','Shipping Address');
+            define('DELIVERY_DATE','Delivery Date');
+            define('ENTER_NEW_ADDRESS','Enter New Recipient Address');
+            define('ADD_THIS_NEW_ADDRESS','Add this new address to your address book');
+            define('CONTINUE_WITH_ORDER','Continue With Order');
+            define('TOTAL_CHARGE','Total Charge');
+            define('EDIT_CART','Edit Cart');
+            define('PLEASE_SELECT_PAYMENT','Please Select Payment Method');
+            define('EDIT_ADDRESS','Edit Address');
+            define('SHIPPING_CHARGE','Shipping Charge');
+            define('TAX_CHARGE','Tax Charge');
+            define('PURCHASE','Purchase');
+            define('COMPLETED_ORDER','Completed Order');
+            define('THANK_YOU_ORDER_MSG','Thank you for ordering from Our Store.');
+            define('GO_TO_HOME_PAGE','Go to home page');
+            
+            define('MY_ORDERS','My Orders');
+            define('ORDER_ID','Order ID');
+            define('ORDER_STATUS','Order Status');
+            define('ORDER_DATE','Order Date');
+            define('CURRENT_TOTAL','Current Total');
+            define('ORDER_PLACED','Orders placed on the site');
+            define('NO_ORDER_FOUND','NO Order Found!');
+            
+            define('MY_ORDER','My Order');
+            define('BILLING_N_SHIPPING','Billing &amp; Shipping Data');
+            define('EMAIL','Email');
+            define('PHONE','Phone');
+            define('PRODUCT_ID','Product ID');
+            define('ORDER_CONTENT','Order Content');
+            define('OPTIONS','Options');
+            define('CART_REORDER','You have successfully added the products from your order history to your cart!');
+              
+            
+        /*******************CHECKOUT VARIABLES ENDED**************************************************/  
+            
+        define("LOADER_MSG_L","Please wait.....<br>Loading data from server.");
+        define("LOADER_MSG_F","Please wait.....<br>Searching data from server.");
+        define("LOADER_MSG_S","Please wait.....<br>Saving data.....");
+        define("LOADER_MSG_P","Please wait.....<br>Processing data.....");
+        define("LOADER_MSG_A","Please wait.....<br>Product Adding.....");
+        
+        /*****************************NEWSletter VARIABLES************************************************/
+        
+        define("SUBSCRIBER","Signup For Our Newsletter");
+        define("SUBSCRIBER_MSG","Email address you have provided to us has been successfully added to our newsletter subscribers list.");
+        define("NOT_SUBSCRIBER_MSG","Please subscriber to our newsletter list.");
+        define('NEWSLETTER_MSG','Your newsletter subscription has been successfully updated!');
+        define('NEWSLETTER_SUBSCRIPTION','Newsletter Subscription');
+        define('SUBSCRIBE','Subscribe');
+        
+        /**********************************END NEWSLETTER VARIABLES***************************************************************/
+        
+          /*******For Template by karishma **********/
+	define("ADD_TEMPLATE_SUCCESS","Template uploded successfully.");
+	define("ADD_TEMPLATE_ALREADY_EXIT","Template already exit");
+	define("ADD_TEMPLATE_ONLY_ZIP","The file you are trying to upload is not a .zip file. Please try again.");
+	define("ADD_TEMPLATE_FAIL","There was a problem with the upload. Please try again.");
+	define("UPDATE_TEMPLATE_SUCCESS","Template updated successfully.");
+	/*******End Template by karishma **********/
+
+// Custom Report by Rajan 28 oct//
+define('CR_DEL_ERROR',"Report has been deleted successfully.");
+define('CR_SAVE_ERROR',"Report has been created successfully.");
+define('CR_UPDATE_ERROR',"Report has been updated successfully.");
+//End//
+        
+?>

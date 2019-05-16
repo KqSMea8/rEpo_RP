@@ -1,0 +1,119 @@
+/*
+Back to top button 
+*/
+#back-top {
+	position: fixed;
+	bottom: 5px;
+	margin-right: 2%;
+	z-index:499;
+	/*IE6 hack */
+		 _position: absolute;
+		 _top:expression(documentElement.scrollTop+body.scrollTop);
+		 _margin-top: 500px;
+
+}
+body { 
+	/*IE6 hack*/
+}
+#back-top a,  #back-top-prev a{
+	width: 50px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #bbb;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	
+}
+#back-top a:hover, #back-top-prev a:hover {
+	color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span#button , #back-top-prev span#button-prev{
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin-bottom: 0px;
+	background-color: #ddd; 
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	background-image: url('../images/up-arrow.png') ;
+	opacity:0.8;
+	filter:alpha(opacity = 80);
+	/* rounded corners */
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover span#button, #back-top-prev a:hover span#button-prev {
+	opacity:1;
+	filter:alpha(opacity = 100);
+}
+
+#back-top span#button {
+    background-color: #cccccc;
+}
+#back-top span#button:hover {
+    background-color: #777777;
+    opacity: 1;
+}
+span#link {
+    display: none;
+}
+
+#edit-scroll-to-top-preview{
+float:right;
+width:100%;
+}
+
+
+#back-top {
+    right: 0px;
+}
+
+#back-top span#buttonback , #back-top-prev span#buttonback-prev{
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin-bottom: 0px;
+	background-color: #ddd; 
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	background-image: url('../images/arrowleft.png') ;
+	opacity:0.8;
+	filter:alpha(opacity = 80);
+	/* rounded corners */
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	position:relative;
+        right:60px;
+	float:right;
+
+}
+#back-top a:hover span#buttonback, #back-top-prev a:hover span#buttonback-prev {
+	opacity:1;
+	filter:alpha(opacity = 100);
+}
+
+#back-top span#buttonback {
+    background-color: #cccccc;
+}
+#back-top span#buttonback:hover {
+    background-color: #777777;
+    opacity: 1;
+}

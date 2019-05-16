@@ -1,0 +1,30 @@
+#header-container{
+	display:none;
+}
+#main_menu{
+	display:none;
+}
+#sub_menu{
+	display:none;
+}
+#search_table{
+	display:none;
+}
+#print_export{
+	display:none;
+}
+.addlink{
+	display:none;
+}
+#td_pager{
+	display:none;
+}
+.head1_action{
+	display:none;
+}
+.head1_inner{
+	display:none;
+}
+.search_button{
+	display:none;
+}

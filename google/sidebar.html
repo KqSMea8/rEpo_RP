@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Google Maps</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAPDUET0Qt7p2VcSk6JNU1sBRRwPhutbWBmyj82Go_H6JlE7EvFBSKFFFHFePAwvib9UM0geoA3Pgafw" type="text/javascript"></script>
+  </head>
+  <body onunload="GUnload()">
+
+
+    <!-- you can use tables or divs for the overall layout -->
+    <table border=1>
+      <tr>
+        <td>
+           <div id="map" style="width: 550px; height: 450px"></div>
+        </td>
+        <td width = 150 valign="top" style="text-decoration: underline; color: #4444ff;">
+           <div id="side_bar"></div>
+        </td>
+      </tr>
+    </table>
+    <a href="http://www.econym.demon.co.uk/googlemaps/basic2.htm">Back to the tutorial page</a>
+
+
+    <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b> 
+      However, it seems JavaScript is either disabled or not supported by your browser. 
+      To view Google Maps, enable JavaScript by changing your browser options, and then 
+      try again.
+    </noscript>
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    if (GBrowserIsCompatible()) {
+      
+      // this variable will collect the html which will eventually be placed in the side_bar
+      var side_bar_html = "";
+    
+      // arrays to hold copies of the markers and html used by the side_bar
+      // because the function closure trick doesnt work there
+      var gmarkers = [];
+      var i = 0;
+
+
+      // A function to create the marker and set up the event window
+      function createMarker(point,name,html) {
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(html);
+        });
+        // save the info we need to use later for the side_bar
+        gmarkers[i] = marker;
+        // add a line to the side_bar html
+        side_bar_html += '<a href="javascript:myclick(' + i + ')">' + name + '</a><br>';
+        i++;
+        return marker;
+      }
+
+
+      // This function picks up the click and opens the corresponding info window
+      function myclick(i) {
+        GEvent.trigger(gmarkers[i], "click");
+      }
+
+
+      // create the map
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng( 43.907787,-79.359741), 8);
+
+      // add the points    
+      var point = new GLatLng(43.65654,-79.90138);
+      var marker = createMarker(point,"This place","Some stuff to display in the<br>First Info Window")
+      map.addOverlay(marker);
+
+      var point = new GLatLng(43.91892,-78.89231);
+      var marker = createMarker(point,"That place","Some stuff to display in the<br>Second Info Window")
+      map.addOverlay(marker);
+
+      var point = new GLatLng(43.82589,-78.89231);
+      var marker = createMarker(point,"The other place","Some stuff to display in the<br>Third Info Window")
+      map.addOverlay(marker);
+                       
+                       
+      // put the assembled side_bar_html contents into the side_bar div
+      document.getElementById("side_bar").innerHTML = side_bar_html;
+      
+    }
+
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    // This Javascript is based on code provided by the
+    // Blackpool Community Church Javascript Team
+    // http://www.commchurch.freeserve.co.uk/   
+    // http://www.econym.demon.co.uk/googlemaps/
+
+    //]]>
+    </script>
+  </body>
+
+</html>
+
+
+
+

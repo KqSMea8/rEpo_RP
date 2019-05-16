@@ -1,0 +1,178 @@
+<!--
+ Linphone Web - Web plugin of Linphone an audio/video SIP phone
+ Copyright (c) 2013 Belledonne Communications
+ All rights reserved.
+-->
+
+<html>
+<head>
+    <style type="text/css">
+	.lable {
+    display: inline-block;
+    width: 96px;
+}
+.lable {
+    display: inline-block;
+    width: 96px;
+}
+    </style>
+    
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/JavaScript">
+    
+    	/* return the core object */
+        function getCore(){
+            return document.getElementById('core');
+        }
+        
+        /* Registration */
+        function registration(username,password,server){
+        	var core = getCore();
+        	
+        	/*create proxy config*/        	
+			var proxy = core.newProxyConfig();
+			
+			/*create authentication structure from identity*/
+			var authinfo = core.newAuthInfo(username, null,password,null,null);
+			/*add authentication info to LinphoneCore*/
+			core.addAuthInfo(authinfo);
+			
+			/*configure proxy entries*/
+			proxy.identity = 'sip:' + username + '@' + server; /*set identity with user name and domain*/
+			proxy.serverAddr = 'sip:' + server; /* we assume domain = proxy server address*/
+			proxy.registerEnabled = 3600; /*activate registration for this proxy config*/
+			core.addProxyConfig(proxy); /*add proxy config to linphone core*/
+			core.defaultProxy = proxy; /*set to default proxy*/
+        }
+        
+        /* Basic call */
+        function call(addressStr){
+        	var core = getCore();
+        	
+        	/*Create a new address with the paramaters*/
+			var address = core.newAddress(addressStr);
+			if(address !== null) {
+				/* Start the call with the contact address*/
+				core.inviteAddress(address);
+				console.log("Call: " + address.asString());
+			}
+        }
+	        
+		function loadCore(){
+			var core = getCore();
+			core.init();
+				
+	        /* Add callback for registration and call state */
+	        addEvent(core,"callStateChanged",onCallStateChanged);
+	        addEvent(core,"registrationStateChanged",onRegistrationStateChanged);
+	           
+	        /* Display logs information in the console */
+	        core.logHandler = function(level, message) {
+	           	window.console.log(message);
+	        }
+	        
+	        /* Start main loop for receiving notifications and doing background linphonecore work */
+	        core.iterateEnabled = true;
+		}
+	        
+		/* Callback that display call states */
+		function onCallStateChanged(event, call, state, message){
+		   
+			updateStatus('statusC',message);
+             if(message=="Incoming call"){
+			 play_single_sound();
+			 }else{
+			 stop_single_sound();
+			 }
+			console.log(message);
+		}
+		function onRegistrationStateChanged(event, proxy, state, message){
+		    
+			if(message=="Registration successful"){
+               updateStatus('statusR','Connected successful'); 
+             }else{
+               updateStatus('statusR',message);
+             }			 
+			
+        	console.log(message);
+        }
+        
+        /* Handler function */
+        function onRegistration(form1){
+			registration(document.form1.username.value,document.form1.password.value,document.form1.address.value);
+		}
+		
+		function onCall(form2){
+		     var server = document.form1.address.value;
+			 var call_num = document.form2.address.value;
+			 
+			 if(call_num==""){
+			     alert("Please enter number");
+				 return false;
+			 
+			 }
+			 
+			 if(server==""){
+			   //  alert("Please enter server address");
+				// return false;
+			 }
+		     var phoneNum ="sip:"+document.form2.address.value+"@"+server;
+			 call(phoneNum);
+			 core.setPlayLevel(100);
+		     core.getPlayLevel(100);
+	
+		}
+		
+		function onCallEnd(form2){
+			var core = getCore();
+			if(core.currentCall){
+        	 core.terminateCall(core.currentCall);
+			 updateStatus('statusC', 'Call Terminate');
+			
+			}
+		}
+	
+	function play_single_sound() {
+		document.getElementById('audiotag1').play();
+	}
+	
+	
+	function stop_single_sound(){
+	   document.getElementById('audiotag1').pause();
+	}
+	
+	function onCurrentCall(){
+	
+	     if(core.currentCall){
+	      core.acceptCall(core.currentCall);
+		  core.setPlayLevel(100);
+		  core.getPlayLevel(100);
+	     }
+	}
+
+    </script>
+    
+</head>
+<body>
+	<object id="core" type="application/x-linphone-web" width="0" height="0">
+	 	<param name="onload" value='loadCore'>
+	</object>
+	
+	<audio id="audiotag1" src="humtum-plt4o1qm-7874-7884.mp3" preload="auto"></audio>
+	<form name="form1">
+		<div><span class="lable">Username</span> <span class="col" style="">: </span><input style="margin-left: 1px;" id="username" type="text" value="" /></div>
+		<div><span class="lable">Password</span> <span class="col">:</span> <input id="password" type="password" value=""/></div>
+		<div><span class="lable">Server</span> <span class="col">:</span> <input id="address" type="text" value="" /></div>
+		<input type="button" OnClick="onRegistration(form1)" value="Connect">
+		<div><span class="lable"> Status</span> <span class="col">:</span> <span id="statusR">No Connection</span></div>
+	</form>
+	
+	<form class ="form" name="form2">
+		<div><span class="lable">Call</span><span class="col">:</span> <input id="address" type="text" value="" /></div>
+		<input type="button" OnClick="onCall(form2)" value="Call">
+		<input type="button" OnClick="onCurrentCall()" value="Accept">
+		<input type="button" OnClick="onCallEnd(form2)" value="Hangup">
+		<div><span class="lable"> Status</span> <span class="col">:</span> <span id="statusC">No call</span></div>
+	</form>
+</body>
+</html>

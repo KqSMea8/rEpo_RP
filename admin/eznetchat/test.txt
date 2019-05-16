@@ -1,0 +1,35 @@
+Array
+(
+    [key] => dfgdfg
+    [pid] => 2
+    [latitude] => 123452
+    [longitude] => 5156165
+    [form_responce] => [{"id":1,"val":"bzhs"},{"id":2,"val":"brbrbrh"},{"id":3,"val":"yeyfh"},{"id":4,"val":"dhrh"},{"id":5,"val":"rhrh"},{"id":6,"val":"dbr"},{"id":7,"val":"dbrb"},{"id":8,"val":"vdgddbd"},{"id":9,"val":"dhdh"},{"id":10,"val":"sbdn"},{"id":11,"val":"dhd"}]     [mediadata] => [{"path":"\/storage\/emulated\/0\/GSEProject\/1534352829619.jpg","caption":"Image Caption","type":"image"},{"path":"\/storage\/emulated\/0\/GSEProject\/1534352843550.jpg","caption":"Image Caption","type":"image"}]
+)
+Array
+(
+    [ip] => 182.73.26.18
+    [companycode] => VSTACKzRp1HFaIxQ
+    [url] => http://localhost/test/testchat/
+    [ticket_code] => U1Pis6CZs4LI
+    [ticket_detail] => {"text*701":"Ravi","text*528":"Solanki","email*578":"test@gmail.com","number*826":"8010695859","textarea*474":"tessadfsdfbdsf"}
+)
+Array
+(
+)
+Array
+(
+    [ip] => 10.129.102.101
+    [companycode] => VSTACKzRp1HFaIxQ
+    [url] => https://www.virtualstacks.com/
+    [ticket_code] => 3qXuF0xCLYbc
+    [ticket_detail] => {"text*701":"mahir","text*528":"abdi","email*578":"mahir@mkbtechnology.com","number*826":"","textarea*474":""}
+)
+Array
+(
+    [ip] => 10.129.102.101
+    [companycode] => VSTACKzRp1HFaIxQ
+    [url] => https://www.virtualstacks.com/
+    [ticket_code] => uwZnqOkaBfvy
+    [ticket_detail] => {"text*701":"f","text*528":"f","email*578":"345345345@aol.com","number*826":"","textarea*474":""}
+)

@@ -1,0 +1,118 @@
+
+ul.menu {
+    border: medium none;
+    list-style: none outside none;
+    text-align: left;
+}
+ul.menu li {
+    margin: 0 0 0 0.5em;
+}
+ul li.expanded {
+    
+    list-style-type: circle;
+}
+ul li.collapsed {
+    
+    list-style-type: disc;
+}
+ul li.leaf {
+    
+    list-style-type: square;
+}
+li.expanded, li.collapsed, li.leaf {
+    margin: 0;
+    padding: 0.2em 0.5em 0 0;
+}
+li a.active {
+    color: #000;
+}
+td.menu-disabled {
+    background: none repeat scroll 0 0 #ccc;
+}
+ul.inline, ul.links.inline {
+    display: inline;
+    padding-left: 0;
+}
+ul.inline li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 0.5em;
+}
+.breadcrumb {
+    padding-bottom: 0.5em;
+}
+ul.primary {
+    border-bottom: 1px solid #bbb;
+    border-collapse: collapse;
+    height: auto;
+    line-height: normal;
+    list-style: none outside none;
+    margin: 5px;
+    padding: 0 0 0 1em;
+    white-space: nowrap;
+}
+ul.primary li {
+    display: inline;
+}
+ul.primary li a {
+    background-color: #30a7b7;
+    border-color: #1f8b9a;
+    border-style: solid solid none;
+    border-width: 1px;
+    color: #fff;
+    display: inline-block;
+    height: auto;
+    margin-right: 0.5em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+ul.primary li.active a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #bbb #bbb #fff;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #0060aa;
+}
+ul.primary li a:hover {
+    background-color: #3cb2c2;
+    border-color: #3cb2c2 #3cb2c2 #eee;
+}
+ul.secondary {
+    border-bottom: 1px solid #bbb;
+    margin: 5px;
+    padding: 0.5em 1em;
+}
+ul.secondary li {
+    border-right: 1px solid #ccc;
+    display: inline;
+    padding: 0 1em;
+}
+ul.secondary a {
+    padding: 0;
+    text-decoration: none;
+}
+ul.secondary a.active {
+    border-bottom: 4px solid #999;
+}
+ul.tabs.primary {
+    height: 39px;
+}
+ul.tabs.primary li {
+    float: left; background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+
+    padding-left: 0 !important; line-height:21px !important;
+}
+.tabs ul.primary li.active a:hover {
+    border-color: #bbb !important;
+}
+
+#user-login label,  #user-register-form label{    left: 10px;top: 12px;   color: #333; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight:300}
+#user-login  input.form-submit, #user-register-form  input.form-submit{ font-size: 15px;}
+#user-pass label{ padding-bottom:4px;}
+
+

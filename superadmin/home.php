@@ -1,0 +1,10 @@
+<?php 
+	require_once("includes/header.php");
+	if(!empty($_GET['prID'])){
+		if(!empty($FirstLink)){		
+			header("location:".$FirstLink);
+			exit;
+		}
+	}
+	require_once("includes/footer.php"); 
+?>

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Google Maps</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAPDUET0Qt7p2VcSk6JNU1sBRRwPhutbWBmyj82Go_H6JlE7EvFBSKFFFHFePAwvib9UM0geoA3Pgafw" type="text/javascript"></script>
+
+    <!-- ============== create a style for the tooltip ============ -->
+    <style type="text/css">
+      .tooltip {
+        background-color:#ffffff;
+        font-weight:bold;
+        border:2px #006699 solid;
+      }
+    </style>
+
+
+  </head>
+  <body onunload="GUnload()">
+
+
+    <!-- you can use tables or divs for the overall layout -->
+    <table border=1>
+      <tr>
+        <td>
+           <div id="map" style="width: 550px; height: 450px"></div>
+        </td>
+        <td width = 150 valign="top" style="text-decoration: underline; color: #4444ff;">
+           <div id="side_bar"></div>
+        </td>
+      </tr>
+    </table>
+    <a href="http://www.econym.demon.co.uk/googlemaps/tooltips2.htm">Back to the tutorial page</a>
+
+
+    <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b> 
+      However, it seems JavaScript is either disabled or not supported by your browser. 
+      To view Google Maps, enable JavaScript by changing your browser options, and then 
+      try again.
+    </noscript>
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    if (GBrowserIsCompatible()) {
+      var side_bar_html = "";
+      var gmarkers = [];
+      var htmls = [];
+      var i = 0;
+
+
+      // A function to create the marker and set up the event window
+      function createMarker(point,name,html) {
+        var marker = new GMarker(point);
+        // === store the name so that the tooltip function can use it ===
+        marker.tooltip = '<div class="tooltip">'+name+'</div>';
+        GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(html);
+        });
+        gmarkers[i] = marker;
+        htmls[i] = html;
+        side_bar_html += '<a href="javascript:myclick(' + i + ')" onmouseover="mymouseover('+i+')" onmouseout="mymouseout()">' + name + '</a><br>';
+        i++;
+        map.addOverlay(marker);
+
+        //  ======  The new marker "mouseover" and "mouseout" listeners  ======
+        GEvent.addListener(marker,"mouseover", function() {
+          showTooltip(marker);
+        });        
+        GEvent.addListener(marker,"mouseout", function() {
+		tooltip.style.visibility="hidden"
+        });        
+      }
+
+      // ====== This function displays the tooltip ======
+      // it can be called from an icon mousover or a side_bar mouseover
+      function showTooltip(marker) {
+      	tooltip.innerHTML = marker.tooltip;
+	var point=map.getCurrentMapType().getProjection().fromLatLngToPixel(map.getBounds().getSouthWest(),map.getZoom());
+	var offset=map.getCurrentMapType().getProjection().fromLatLngToPixel(marker.getPoint(),map.getZoom());
+	var anchor=marker.getIcon().iconAnchor;
+	var width=marker.getIcon().iconSize.width;
+	var pos = new GControlPosition(G_ANCHOR_BOTTOM_LEFT, new GSize(offset.x - point.x - anchor.x + width,- offset.y + point.y +anchor.y)); 
+	pos.apply(tooltip);
+	tooltip.style.visibility="visible";
+      }
+
+      // ===== This function is invoked when the mouse goes over an entry in the side_bar =====
+      // It launches the tooltip on the icon      
+      function mymouseover(i) {
+        showTooltip(gmarkers[i])
+      }
+      // ===== This function is invoked when the mouse leaves an entry in the side_bar =====
+      // It hides the tooltip      
+      function mymouseout() {
+	tooltip.style.visibility="hidden";
+      }
+
+      // This function picks up the side_bar click and opens the corresponding info window
+      function myclick(i) {
+        gmarkers[i].openInfoWindowHtml(htmls[i]);
+      }
+
+
+      // create the map
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(43.907787,-79.359741), 9);
+
+      // ====== set up marker mouseover tooltip div ======
+      var tooltip = document.createElement("div");
+      document.getElementById("map").appendChild(tooltip);
+      tooltip.style.visibility="hidden";
+
+
+      // Read the data from example.xml
+      var request = GXmlHttp.create();
+      request.open("GET", "http://www.econym.demon.co.uk/googlemaps/examples/example.xml", true);
+      request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+          var xmlDoc = request.responseXML;
+          // obtain the array of markers and loop through it
+          var markers = xmlDoc.documentElement.getElementsByTagName("marker");
+          
+          for (var i = 0; i < markers.length; i++) {
+            // obtain the attribues of each marker
+            var lat = parseFloat(markers[i].getAttribute("lat"));
+            var lng = parseFloat(markers[i].getAttribute("lng"));
+            var point = new GLatLng(lat,lng);
+            var html = markers[i].getAttribute("html");
+            var label = markers[i].getAttribute("label");
+            // create the marker
+            var marker = createMarker(point,label,html);
+          }
+          // put the assembled side_bar_html contents into the side_bar div
+          document.getElementById("side_bar").innerHTML = side_bar_html;
+        }
+      }
+      request.send(null);
+    }
+
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    // This Javascript is based on code provided by the
+    // Blackpool Community Church Javascript Team
+    // http://www.commchurch.freeserve.co.uk/   
+    // http://www.econym.demon.co.uk/googlemaps/
+
+    //]]>
+    </script>
+  </body>
+
+</html>
+
+
+
+

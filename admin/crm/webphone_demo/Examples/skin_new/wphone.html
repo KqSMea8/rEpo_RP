@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+
+
+<!--  This file contains the source code of the skin. To add or remove any elements of the skin, you have to edit this file.
+This skin is built as a single-page application.
+
+Each page starts with a <div id="page_[PAGE_NAME]" class="all_app_pages" data-role="page"> element, containing attribute: data-role="page"
+The content of the page can be found in <div> element with attribute: class="ui-content"
+
+The skin API can be found in file: wphone.js
+-->
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>_Webphone</title>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+<!-- Themes -->
+    <link rel="stylesheet" href="css/themes/wphone_1.2.css" />
+    <!-- instead of:
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+    -->
+
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.2.css" />
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />  -->
+    <link rel="stylesheet" href="css/mizulayout.css" />
+
+    <script src="wphone.js"></script>
+    
+</head>
+<body>
+<div class="app" id="phone_app_main_container">
+<!-- Settings Page -->
+<div id="page_settings" class="all_app_pages" data-role="page">
+    <div id="settings_header" data-role="header" data-theme="b">
+        <div id="js_not_enabled_settings">JavaScript must be enabled for this application to run!</div>
+        <script type="text/javascript">document.getElementById('js_not_enabled_settings').style.display = 'none';</script>
+        <div id="settings_additional_header">
+            <div class="additional_header_left">
+                <button id="btn_back_settings" class="btn_header_back ui-btn"><span>&LT;</span>&nbsp;_Settings</button>
+                <span id="app_name_settings"></span>
+            </div>
+            <div id="settings_page_title" class="additional_header_middle">_Settings</div>
+            <div class="additional_header_right">
+            <!--<input type="button" value="Menu" id="btn_settings_menu" data-theme="b" data-icon="bars" data-iconpos="notext" 
+onClick="MenuSettingsOnClick()"/>-->
+
+                <a href="#settings_menu" id="btn_settings_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="settings_menu" class="options_menu" data-role="popup">
+                    <ul id="settings_menu_ul" data-role="listview" data-inset="true" data-icon="false">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+        <!--<div class="page_title" id="settings_page_title">Login_</div>-->
+    </div>
+    
+    <div id="page_settings_content" role="main" class="ui-content" data-theme="b" data-content-theme="b">
+        <!--<input type="button" value="Delete all Cookies" onclick="var success = file_public.DeleteAllCookies(); if (success) {alert('Success');}else{alert('Failed');}" />-->
+        <ul id="settings_list" data-role="listview" data-theme="b" data-divider-theme="b" data-inset="true" data-filter="true" data-filter-placeholder="Search Settings">
+            <!--<li data-icon="carat-d"><a href="javascript:void(0)" class="noshadow"><div class="sett_text"><span class="sett_display_name">Username</span><br><span class="sett_comment">Sip account username Sip account username Sip account username</span></div></a></li>
+            <li data-icon="false"><a href="javascript:void(0)" class="noshadow"><div class="sett_text"><span class="sett_display_name">Password</span><br><span class="sett_comment">Sip account password Sip account password Sip account password</span></div><div class="sett_image"><img src="images\checkbox_true.png" /></div></a></li>
+            
+            <li id="settings_footer"><button id="btn_cancel" class="ui-btn ui-btn-corner-all ui-btn-b noshadow">Cancel_</button><button id="btn_login" class="ui-btn ui-btn-corner-all ui-btn-b noshadow">Login_</button></li>-->
+        </ul>
+<!--        
+        <input type="button" value="Set" onclick="SaveFile('somekey', document.getElementById('username_field').value, function(val){alert(val);} );" />
+        <input type="button" value="Get" onclick="ReadFile('somekey', function(val){alert('## '+val);} );" />
+        <input type="button" value="Delete" onclick="DeleteFile('somekey', function(val){alert(val);} );" />
+
+        <input name="" id="cookiename" type="text"/>
+        <input name="" value="Write Cookie" type="button" onclick="WriteCookie('testcookie', document.getElementById('cookiename').value, 1);"/>
+        <input name="" value="Read Cookie" type="button" onclick="alert(ReadCookie('testcookie'));"/>
+        <input name="" value="Delete Cookie" type="button" onclick="DeleteCookie('testcookie');"/>
+    -->    
+        <!--<a href="#page_dialpad" id="btn_login" class="ui-btn" data-theme="b" onClick="Mizuapp.StartPhoneAndRegister();">Login</a>-->
+    </div>
+</div>
+        <!--<div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>-->
+<!-- END Settings Page -->
+
+
+<!-- Dialpad Page -->
+<!--<div data-role="page" id="page_dialpad" data-add-back-btn="true">-->
+<div id="page_dialpad" class="all_app_pages" data-role="page" data-theme="b">
+    <div id="dialpad_header" data-role="header">
+        <div id="dialpad_additional_header">
+            <div class="additional_header_left" id="dialpad_additional_header_left">
+                <span id="app_name_dialpad"></span>
+            </div>
+            <div id="dialpad_title" class="additional_header_middle">_Dial pad</div><div class="notification" id="dialpad_notification"></div>
+            <div class="additional_header_right" id="dialpad_additional_header_right">
+                <a href="#dialpad_menu" id="btn_dialpad_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="dialpad_menu" class="options_menu" data-role="popup">
+                    <ul id="dialpad_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+        <!--			<div class="brandname" class="ui-field-contain" style="border:0;">
+        <span class="brandname_left">Mizu</span>
+        <span class="brandname_right">Dialer</span>
+        </div>
+        -->
+        <div class="status_container">
+            <div class="status" id="status_dialpad">&nbsp;</div>
+            <div class="curr_user" id="curr_user_dialpad">&nbsp;</div>
+        </div>
+        <div class="clear_float"><!--//--></div>
+        <div class="navigation_bar" data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a id="nav_dp_dialpad" data-transition="slide" data-icon="" class="ui-btn-active ui-state-persist"><img src="images/tab_dialpad.png" alt="dialpad" /></a></li>
+                <li><a id="nav_dp_contacts" data-transition="slide" data-icon=""><img src="images/tab_contacts.png" alt="contacts" /></a></li>
+                <li><a id="nav_dp_callhistory" data-transition="slide" data-icon=""><img src="images/tab_callog.png" alt="call history" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="page_dialpad_content" role="main" class="ui-content">
+        <!--<div id="phone_number_container" class="ui-field-contain" data-theme="b">-->
+   
+        <div class="ui-grid-a" id="phone_number_container">
+            <div class="ui-block-a"><input name="" id="phone_number" placeholder="Phone Nr or SIP uri_" value="" type="text" class="ui-input-text" /></div>
+            <div class="ui-block-b"><button id="btn_backspace" class="ui-btn-a noshadow" ><img src="images/btn_backspace_txt.png" alt="backspace" /></button></div>
+        </div>
+        
+        
+        <!--
+        <div id="phone_number_container">
+            <div id="phone_number_div">
+                <input name="" id="phone_number" placeholder="Phone Nr or SIP uri_" value="" type="text" class="ui-input-text" />
+            </div>
+            <div id="btn_backspace_div">
+                <a href="#" id="btn_backspace" class="ui-btn" onClick="Mizulayout.BtnValue('backspace');" ><img src="images/btn_backspace_txt.png" /></a>
+            </div>
+        </div>
+-->
+        <div class="clear_float"><!--//--></div>
+        <div class="separator_color_bg"><!--//--></div>
+
+        <!-- <div class="ui-grid-b ui-body-a" id="dialpad_btn_grid"> -->
+<!--
+        <div class="ui-grid-b" id="dialpad_btn_grid">
+            <div class="ui-block-a"><button id="btn_dp_1" class="ui-btn" ><span>1</span></button></div>
+            <div class="ui-block-b"><button id="btn_dp_2" class="ui-btn" ><span>2</span></button></div>
+            <div class="ui-block-c"><button id="btn_dp_3" class="ui-btn" ><span>3</span></button></div>
+
+            <div class="ui-block-a"><button id="btn_dp_4" class="ui-btn" ><span>4</span></button></div>
+            <div class="ui-block-b"><button id="btn_dp_5" class="ui-btn" ><span>5</span></button></div>
+            <div class="ui-block-c"><button id="btn_dp_6" class="ui-btn" ><span>6</span></button></div>
+
+            <div class="ui-block-a"><button id="btn_dp_7" class="ui-btn" ><span>7</span></button></div>
+            <div class="ui-block-b"><button id="btn_dp_8" class="ui-btn" ><span>8</span></button></div>
+            <div class="ui-block-c"><button id="btn_dp_9" class="ui-btn" ><span>9</span></button></div>
+
+            <div class="ui-block-a"><button id="btn_dp_ast" class="ui-btn" ><span>*</span></button></div>
+            <div class="ui-block-b"><button id="btn_dp_0" class="ui-btn" ><span>0</span></button></div>
+            <div class="ui-block-c"><button id="btn_dp_diez" class="ui-btn" ><span>#</span></button></div>
+        </div>
+        -->
+
+        <div class="ui-grid-b" id="dialpad_btn_grid">
+            <div class="ui-block-a"><button id="btn_dp_1" class="ui-btn noshadow" ><span class="number">1</span><span class="smalltext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+            <div class="ui-block-b"><button id="btn_dp_2" class="ui-btn noshadow" ><span class="number">2</span><span class="smalltext">ABC</span></button></div>
+            <div class="ui-block-c"><button id="btn_dp_3" class="ui-btn noshadow" ><span class="number">3</span><span class="smalltext">DEF&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+
+            <div class="ui-block-a"><button id="btn_dp_4" class="ui-btn noshadow" ><span class="number">4</span><span class="smalltext">GHI&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+            <div class="ui-block-b"><button id="btn_dp_5" class="ui-btn noshadow" ><span class="number">5</span><span class="smalltext">JKL&nbsp;</span></button></div>
+            <div class="ui-block-c"><button id="btn_dp_6" class="ui-btn noshadow" ><span class="number">6</span><span class="smalltext">MNO&nbsp;&nbsp;</span></button></div>
+
+            <div class="ui-block-a"><button id="btn_dp_7" class="ui-btn noshadow" ><span class="number">7</span><span class="smalltext">PQRS</span></button></div>
+            <div class="ui-block-b"><button id="btn_dp_8" class="ui-btn noshadow" ><span class="number">8</span><span class="smalltext">TUV</span></button></div>
+            <div class="ui-block-c"><button id="btn_dp_9" class="ui-btn noshadow" ><span class="number">9</span><span class="smalltext">WXYZ</span></button></div>
+
+            <div class="ui-block-a"><button id="btn_dp_ast" class="ui-btn noshadow" ><span class="number">&lowast;</span><span class="smalltext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+            <div class="ui-block-b"><button id="btn_dp_0" class="ui-btn noshadow" ><span class="number">0</span><span class="smalltext">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+            <div class="ui-block-c"><button id="btn_dp_diez" class="ui-btn noshadow" ><span class="number">#</span><span class="smalltext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+            
+            <audio id="dtmfsound0"><source src="raw/DTMF0.ogg" type="audio/ogg"><source src="raw/DTMF0.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound1"><source src="raw/DTMF1.ogg" type="audio/ogg"><source src="raw/DTMF1.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound2"><source src="raw/DTMF2.ogg" type="audio/ogg"><source src="raw/DTMF2.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound3"><source src="raw/DTMF3.ogg" type="audio/ogg"><source src="raw/DTMF3.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound4"><source src="raw/DTMF4.ogg" type="audio/ogg"><source src="raw/DTMF4.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound5"><source src="raw/DTMF5.ogg" type="audio/ogg"><source src="raw/DTMF5.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound6"><source src="raw/DTMF6.ogg" type="audio/ogg"><source src="raw/DTMF6.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound7"><source src="raw/DTMF7.ogg" type="audio/ogg"><source src="raw/DTMF7.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound8"><source src="raw/DTMF8.ogg" type="audio/ogg"><source src="raw/DTMF8.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsound9"><source src="raw/DTMF9.ogg" type="audio/ogg"><source src="raw/DTMF9.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsoundy"><source src="raw/DTMFdiez.ogg" type="audio/ogg"><source src="raw/DTMFdiez.mp3" type="audio/mpeg"></audio>
+            <audio id="dtmfsoundx"><source src="raw/DTMFx.ogg" type="audio/ogg"><source src="raw/DTMFx.mp3" type="audio/mpeg"></audio>
+        </div>
+
+
+        <div class="separator_color_bg"><!--//--></div>
+
+        <div class="ui-grid-b" id="dialpad_call_grid">
+            <div class="ui-block-a" id="btn_voicemail"><button class="ui-btn noshadow"><img src="images/btn_voicemail_txt.png" alt="voicemail" /></button></div>
+            <div class="ui-block-b" id="btn_call"><button class="ui-btn noshadow ui-btn-c"><img src="images/btn_call_txt.png" alt="call" /></button></div>
+            <div class="ui-block-c" id="btn_message"><button class="ui-btn noshadow"><img src="images/icon_message.png" alt="message" /></button></div>
+        </div>
+        <!--<a href="#page_call" class="ui-btn" data-theme="b"><img src="images/btn_call_txt.png" /></a>-->
+
+        <!--
+        <div class="ui-grid-b" id="dialpad_call_grid">
+            <div class="ui-block-a"><a href="#" id="btn_dp_voicemail" class="ui-btn ui-btn-a"><img src="images/btn_voicemail_txt.png" /></a></div>
+            <div class="ui-block-b"><button data-theme="a" onClick="Mizulayout.Call();"><img src="images/btn_call_txt.png" /></button></div>
+            <div class="ui-block-c"><a href="#" id="btn_dp_msg" class="ui-btn ui-btn-a"><img src="images/icon_message.png" /></a></div>
+        </div>
+        -->
+    </div>
+</div>
+<!-- END Dialpad Page -->
+
+
+<!-- ContactsList Page -->
+<div id="page_contactslist" class="all_app_pages" data-role="page">
+    <div id="contactslist_header" data-role="header" data-theme="b">
+        <div id="contactslist_additional_header">
+            <div class="additional_header_left" id="contactslist_additional_header_left">
+                <!--<img src="images/icon_medium.png" alt="icon" />--><span id="app_name_contactslist"></span>
+            </div>
+            <div id="ctlist_title" class="additional_header_middle">_Contacts</div><div class="notification" id="contactslist_notification"></div>
+            <div class="additional_header_right" id="contactslist_additional_header_right">
+                <a href="#contactslist_menu" id="btn_contactslist_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="contactslist_menu" class="options_menu" data-role="popup">
+                    <ul id="contactslist_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+        <div class="status_container">
+            <div class="status" id="status_contactslist">&nbsp;</div>
+            <div class="curr_user" id="curr_user_contactslist">&nbsp;</div>
+        </div>
+        <div class="navigation_bar" data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a id="nav_ct_dialpad" data-transition="slide" data-direction="reverse" data-icon=""><img src="images/tab_dialpad.png" alt="dialpad" /></a></li>
+                <li><a id="nav_ct_contacts" data-transition="slide" data-icon="" class="ui-btn-active ui-state-persist"><img src="images/tab_contacts.png" alt="contacts" /></a></li>
+                <li><a id="nav_ct_callhistory" data-transition="slide" data-icon=""><img src="images/tab_callog.png" alt="call history" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <div role="main" class="ui-content" id="page_contactslist_content" data-theme="b" data-content-theme="b">
+        <ul id="contactslist_list" data-role="listview" data-theme="b" data-divider-theme="b" data-inset="true" data-filter="true" data-filter-placeholder="Search Contacts" data-icon="false" data-autodividers="true">
+            <!--<li id="contact_0"><a href="javascript:void(0)" data-transition="slide">Ambrus Akos</a></li>-->
+        </ul>
+    </div>
+</div>
+<!-- END ContactsList Page -->
+
+
+<!-- ContactDetails Page -->
+<div id="page_contactdetails" class="all_app_pages" data-role="page">
+    <div id="contactdetails_header" data-role="header" data-theme="b">
+        <div id="contactdetails_additional_header">
+            <div class="additional_header_left">
+                <a id="ctdetails_btnback" class="btn_header_back ui-btn" data-rel="back"><span>&LT;</span>&nbsp;_All Contacts</a>
+            </div>
+            <div id="contactdetails_title" class="additional_header_middle">_Info</div>
+            <div class="additional_header_right">
+                <a href="#contactdetails_menu" id="btn_contactdetails_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="contactdetails_menu" class="options_menu" data-role="popup">
+                    <ul id="contactdetails_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+    </div>
+    <div id="page_contactdetails_content" role="main" class="ui-content"  data-theme="b" data-content-theme="b">
+       <!-- <div id="contact_name"><p>Ambrus Akos_</p></div>
+        
+        <div id="entry_1" class="cd_container">
+            <div class="cd_call">
+            	<div class="cd_data">
+                    <div class="cd_type">Call home_</div>
+                    <div class="cd_number">40724335358_</div>
+                </div>
+                <div class="cd_icon">
+                    <img src="images/icon_call.png" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="entry_2" class="cd_container">
+            <div class="cd_call">
+            	<div class="cd_data">
+                    <div class="cd_type">Send message_</div>
+                    <div class="cd_number">40724335358_</div>
+                </div>
+                <div class="cd_icon">
+                    <img src="images/icon_message.png" />
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="entry_2" class="cd_container">
+            <div class="cd_call">
+            	<div class="cd_data">
+                    <div class="cd_type">Call work_</div>
+                    <div class="cd_number">123456789_</div>
+                </div>
+                <div class="cd_call_icon">
+                    <img src="images/icon_call.png" />
+                </div>
+            </div>
+            <div class="cd_msg">
+            	<div class="cd_msg_icon">
+                    <img src="images/icon_message.png" />
+                </div>
+            </div>
+        </div>-->
+        
+    </div>
+</div>
+<!-- END ContactDetails Page -->
+
+
+<!-- CallHistoryList Page -->
+<div id="page_callhistorylist" class="all_app_pages" data-role="page">
+    <div id="callhistorylist_header" data-role="header" data-theme="b">
+        <div id="callhistorylist_additional_header">
+            <div class="additional_header_left" id="callhistorylist_additional_header_left">
+                <!--<img src="images/icon_medium.png" alt="icon" />--><span id="app_name_callhistorylist"></span>
+            </div>
+            <div id="chlist_title" class="additional_header_middle">_Call history</div><div class="notification" id="callhistorylist_notification"></div>
+            <div class="additional_header_right" id="callhistorylist_additional_header_right">
+                <a href="#callhistorylist_menu" id="btn_callhistorylist_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="callhistorylist_menu" class="options_menu" data-role="popup">
+                    <ul id="callhistorylist_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+        <div class="status_container">
+            <div class="status" id="status_callhistorylist">&nbsp;</div>
+            <div class="curr_user" id="curr_user_callhistorylist">&nbsp;</div>
+        </div>
+        <div class="navigation_bar" data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a id="nav_ch_dialpad" data-transition="slide" data-direction="reverse" data-icon=""><img src="images/tab_dialpad.png" alt="dialpad" /></a></li>
+                <li><a id="nav_ch_contacts" data-transition="slide" data-direction="reverse" data-icon=""><img src="images/tab_contacts.png" alt="contacts" /></a></li>
+                <li><a id="nav_ch_callhistory" data-transition="slide" data-icon="" class="ui-btn-active ui-state-persist"><img src="images/tab_callog.png" alt="call history" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <div role="main" class="ui-content" id="page_callhistorylist_content" data-theme="b" data-content-theme="b">
+        <ul id="callhistorylist_list" data-role="listview" data-theme="b" data-divider-theme="b" data-inset="true" data-icon="false">
+            <!--<li id="ch_item_0" data-theme="b"><a href="javascript:void(0)" class="ch_anchor" data-transition="slide">
+        	<div class="item_container">
+                    <div class="ch_type">
+                        <img src="images/icon_call_outgoing.png" />
+                    </div>
+                    <div class="ch_data">
+                	<div class="ch_name">Ambrus Akos</div>
+                        <div class="ch_number">40724335358</div>
+                        <div class="ch_duration">Duration: 02:45</div>
+                    </div>
+                    <div class="ch_date">Aug, 26 2013 10:55</div>
+		</div>
+            </a></li>-->
+        </ul>
+    </div>
+</div>
+<!-- END CallHistoryList Page -->
+
+
+<!-- CallhistoryDetails Page -->
+<div id="page_callhistorydetails" class="all_app_pages" data-role="page">
+    <div id="callhistorydetails_header" data-role="header" data-theme="b">
+        <div id="callhistorydetails_additional_header">
+            <div class="additional_header_left">
+                <a id="chdetails_btnback" class="btn_header_back ui-btn" data-rel="back"><span>&LT;</span>&nbsp;_Call history</a>
+            </div>
+            <div id="callhistorydetails_title" class="additional_header_middle">_Info</div>
+            <div class="additional_header_right">
+                <a href="#callhistorydetails_menu" id="btn_callhistorydetails_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="callhistorydetails_menu" class="options_menu" data-role="popup">
+                    <ul id="callhistorydetails_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+    </div>
+    <div id="page_callhistorydetails_content" role="main" class="ui-content" data-theme="b" data-content-theme="b">
+        <div id="ch_contact_name">Ambrus Akos</div>
+        
+        <div id="ch_entry" class="ch_container">
+            <div id="ch_call_entry" class="ch_call">
+            	<div class="ch_data">
+                    <div class="ch_type">Outgoing call</div>
+                    <div class="ch_number">40724335358</div>
+                </div>
+                <div class="ch_call_icon">
+                    <img src="images/icon_call.png" alt="call" />
+                </div>
+            </div>
+            <div id="ch_msg_entry" class="ch_msg">
+            	<div class="ch_msg_icon">
+                    <img src="images/icon_message.png" alt="message" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CallhistoryDetails Page -->
+
+
+<!-- Call Page -->
+<div id="page_call" class="all_app_pages" data-role="page" data-theme="b">
+    <div id="call_header" data-role="header">
+        <div id="call_additional_header">
+            <div class="additional_header_left">
+                <span id="app_name_call"></span>
+            </div>
+            <div class="additional_header_right">
+                <a href="#call_menu" id="btn_call_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-inline="true" data-transition="slidedown">Menu</a>
+
+                <div id="call_menu" class="options_menu" data-role="popup" data-theme="a">
+                    <ul data-role="listview" id="call_menu_ul" data-inset="true" data-theme="a" data-icon="false">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>-->
+                        <!--<li><a href="#">Settings</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+        <!--			<div class="brandname" class="ui-field-contain" style="border:0;">
+        <span class="brandname_left">Mizu</span>
+        <span class="brandname_right">Dialer</span>
+        </div>
+        -->
+        <div class="status_container">
+            <div id="calledcaller">&nbsp;</div>
+            <div id="call_duration">&nbsp;</div>
+            <div id="status_call">&nbsp;</div>
+        </div>
+        <div class="clear_float"><!--//--></div>
+    </div>
+    <div id="page_call_content" role="main" class="ui-content">
+        <div id="audiodevice_container"  style="display: none;"><button id="btn_audiodevice" class="ui-btn noshadow ui-btn-inline ui-corner-all">Audio devices_</button></div>
+        <div id="volumecontrols" style="display: none;">
+            <div class="volume_labels">Volume in:</div>
+            <div class="volume_sliders"><input name="volumein" id="volumein" data-highlight="true" data-mini="true" min="0" max="100" value="50" type="range"></div>
+            <div style="float: left; width: 90%; clear: both;"><!--//--></div>
+            <div class="volume_labels">Volume out:</div>
+            <div class="volume_sliders"><input name="volumeout" id="volumeout" data-highlight="true" data-mini="true" min="0" max="100" value="50" type="range"></div>
+        </div>
+    	<div id="contact_image">
+            <img src="images/default_contact_img.png" alt="contact image" />
+        </div>
+        
+        <div class="clear_float"><!--//--></div>
+        
+        <div id="numpad">
+            <div id="numpad_number_container">
+                <span id="numpad_number"></span>
+            </div>
+    
+            <div class="separator_color_bg"><!--//--></div>
+            
+            <div class="ui-grid-b" id="numpad_btn_grid">
+                <div class="ui-block-a"><button id="numpad_btn_dp_1" class="ui-btn noshadow" ><span class="number">1</span><span class="smalltext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+                <div class="ui-block-b"><button id="numpad_btn_dp_2" class="ui-btn noshadow" ><span class="number">2</span><span class="smalltext">ABC</span></button></div>
+                <div class="ui-block-c"><button id="numpad_btn_dp_3" class="ui-btn noshadow" ><span class="number">3</span><span class="smalltext">DEF&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+
+                <div class="ui-block-a"><button id="numpad_btn_dp_4" class="ui-btn noshadow" ><span class="number">4</span><span class="smalltext">GHI&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+                <div class="ui-block-b"><button id="numpad_btn_dp_5" class="ui-btn noshadow" ><span class="number">5</span><span class="smalltext">JKL&nbsp;</span></button></div>
+                <div class="ui-block-c"><button id="numpad_btn_dp_6" class="ui-btn noshadow" ><span class="number">6</span><span class="smalltext">MNO&nbsp;&nbsp;</span></button></div>
+
+                <div class="ui-block-a"><button id="numpad_btn_dp_7" class="ui-btn noshadow" ><span class="number">7</span><span class="smalltext">PQRS</span></button></div>
+                <div class="ui-block-b"><button id="numpad_btn_dp_8" class="ui-btn noshadow" ><span class="number">8</span><span class="smalltext">TUV</span></button></div>
+                <div class="ui-block-c"><button id="numpad_btn_dp_9" class="ui-btn noshadow" ><span class="number">9</span><span class="smalltext">WXYZ</span></button></div>
+
+                <div class="ui-block-a"><button id="numpad_btn_dp_ast" class="ui-btn noshadow" ><span class="number">&lowast;</span><span class="smalltext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+                <div class="ui-block-b"><button id="numpad_btn_dp_0" class="ui-btn noshadow" ><span class="number">0</span><span class="smalltext">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+                <div class="ui-block-c"><button id="numpad_btn_dp_diez" class="ui-btn noshadow" ><span class="number">#</span><span class="smalltext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></div>
+            </div>
+            
+            
+            <!--
+            <div class="ui-grid-b" id="numpad_btn_grid">
+                <div class="ui-block-a"><input type="button" value="1" data-theme="b" onClick="Mizulayout.BtnValueNumpad('1');" /></div>
+                <div class="ui-block-b"><input type="button" value="2" data-theme="b" onClick="Mizulayout.BtnValueNumpad('2');" /></div>
+                <div class="ui-block-c"><input type="button" value="3" data-theme="b" onClick="Mizulayout.BtnValueNumpad('3');" /></div>
+                
+                <div class="ui-block-a"><input type="button" value="4" data-theme="b" onClick="Mizulayout.BtnValueNumpad('4');" /></div>
+                <div class="ui-block-b"><input type="button" value="5" data-theme="b" onClick="Mizulayout.BtnValueNumpad('5');" /></div>
+                <div class="ui-block-c"><input type="button" value="6" data-theme="b" onClick="Mizulayout.BtnValueNumpad('6');" /></div>
+                
+                <div class="ui-block-a"><input type="button" value="7" data-theme="b" onClick="Mizulayout.BtnValueNumpad('7');" /></div>
+                <div class="ui-block-b"><input type="button" value="8" data-theme="b" onClick="Mizulayout.BtnValueNumpad('8');" /></div>
+                <div class="ui-block-c"><input type="button" value="9" data-theme="b" onClick="Mizulayout.BtnValueNumpad('9');" /></div>
+                
+                <div class="ui-block-a"><input type="button" value="*" data-theme="b" onClick="Mizulayout.BtnValueNumpad('*');" /></div>
+                <div class="ui-block-b"><input type="button" value="0" data-theme="b" onClick="Mizulayout.BtnValueNumpad('0');" /></div>
+                <div class="ui-block-c"><input type="button" value="#" data-theme="b" onClick="Mizulayout.BtnValueNumpad('#');" /></div>
+            </div>-->
+            <div class="separator_color_bg"><!--//--></div>
+        </div>
+        
+        <div class="clear_float"><!--//--></div>
+        <div class="ui-grid-b" id="acceptreject_layout">
+            <div class="ui-block-a"><button data-theme="b" id="btn_accept" class="noshadow"><img src="images/btn_call_txt.png" alt="accept" /></button></div>
+            <!--<div class="ui-block-b"><button data-theme="b" class="noshadow" onClick="Mizulayout.Ignore();"><img src="images/btn_ignore_txt.png" /></button></div>-->
+            <div class="ui-block-c"><button data-theme="b" id="btn_reject" class="noshadow"><img src="images/btn_hangup_txt.png" alt="reject" /></button></div>
+        </div>
+        
+        <div class="clear_float"><!--//--></div>
+        
+        <div id="hangup_layout">
+            <button data-theme="d" class="noshadow" id="btn_hangup"><img id="btn_hangup_img" src="images/btn_hangup_txt.png" alt="hangup" /></button>
+        </div>
+        
+        <div class="separator_color_bg"><!--//--></div>
+        
+        <!--<div id="callfunctions_layout">
+            <div class="callfunc_btn_container">
+                <button class="ui-btn callfunc_btn noshadow" data-theme="b" id="btn_[REPLACESTR]">
+                    <img src="images/btn_[REPLACESTR]_txt.png" />
+                    <span class="callfunc_status" id="[REPLACESTR]_status" >&nbsp;</span>
+                </button>
+            </div>
+        </div>-->
+        <div id="callfunctions_layout"></div>
+    </div>
+</div>
+<!-- END Call Page -->
+
+<!-- AddEditContact Page -->
+<div id="page_addeditcontact" class="all_app_pages" data-role="page">
+    <div id="addeditcontact_header" data-role="header" data-theme="b">
+        <div id="addeditcontact_additional_header">
+            <div class="additional_header_left">
+                <!--<a href="#" class="btn_header_back ui-btn" data-rel="back" data-inline="true" data-transition="slidedown" data-theme="b" data-icon=""><img src="images/btn_back_txt.png" /></a><a href="#" target="_blank" class="homepage_link"><img src="images/icon_medium.png" alt="icon" /><span id="app_name_contactdetails"></span></a>-->
+                <a id="addeditct_btnback" class="btn_header_back ui-btn" data-rel="back"><span>&LT;</span>&nbsp;_Back</a>
+            </div>
+
+            <div id="addeditct_title" class="additional_header_middle">_Contact</div>
+            
+            <div class="additional_header_right">
+                <a href="#addeditcontact_menu" id="btn_addeditcontact_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="addeditcontact_menu" class="options_menu" data-role="popup">
+                    <ul id="addeditcontact_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+    </div>
+    <div id="page_addeditcontact_content" role="main" class="ui-content"  data-theme="b" data-content-theme="b">
+        <div id="aec_name_section">
+            <div class="aec_label" id="aec_label_name">Name_</div>
+            <input type="text" id="aec_firstname" name="aec_firstname" data-theme="a" placeholder="First name_" />
+            <input type="text" id="aec_lastname" name="aec_lastname" data-theme="a" placeholder="Last name_" />
+            <div class="separator_line_thick"><!--//--></div>
+            <div id="aec_add_section">
+                <div class="aec_label" id="aec_label_phone">Phone_</div>
+                <div id="aec_add"><button id="btn_add_aec" class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-plus ui-btn-icon-notext">Add</button></div>
+            </div>
+        </div>
+        <div id="aec_number_fields">
+            <div id="aec_entry_0" style="display: none;" class="aec_numbers"><button id="btn_type_aec_0" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_0" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_0" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_1" style="display: none;" class="aec_numbers"><button id="btn_type_aec_1" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_1" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_1" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_2" style="display: none;" class="aec_numbers"><button id="btn_type_aec_2" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_2" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_2" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_3" style="display: none;" class="aec_numbers"><button id="btn_type_aec_3" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_3" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_3" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_4" style="display: none;" class="aec_numbers"><button id="btn_type_aec_4" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_4" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_4" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_5" style="display: none;" class="aec_numbers"><button id="btn_type_aec_5" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_5" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_5" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_6" style="display: none;" class="aec_numbers"><button id="btn_type_aec_6" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_6" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_6" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_7" style="display: none;" class="aec_numbers"><button id="btn_type_aec_7" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_7" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_7" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_8" style="display: none;" class="aec_numbers"><button id="btn_type_aec_8" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_8" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_8" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_9" style="display: none;" class="aec_numbers"><button id="btn_type_aec_9" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_9" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_9" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_10" style="display: none;" class="aec_numbers"><button id="btn_type_aec_10" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_10" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_10" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_11" style="display: none;" class="aec_numbers"><button id="btn_type_aec_11" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_11" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_11" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_12" style="display: none;" class="aec_numbers"><button id="btn_type_aec_12" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_12" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_12" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_13" style="display: none;" class="aec_numbers"><button id="btn_type_aec_13" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_13" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_13" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_14" style="display: none;" class="aec_numbers"><button id="btn_type_aec_14" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_14" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_14" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_15" style="display: none;" class="aec_numbers"><button id="btn_type_aec_15" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_15" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_15" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_16" style="display: none;" class="aec_numbers"><button id="btn_type_aec_16" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_16" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_16" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_17" style="display: none;" class="aec_numbers"><button id="btn_type_aec_17" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_17" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_17" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_18" style="display: none;" class="aec_numbers"><button id="btn_type_aec_18" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_18" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_18" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+            <div id="aec_entry_19" style="display: none;" class="aec_numbers"><button id="btn_type_aec_19" class="aec_phonetype ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b noshadow">Mobile_</button><input id="number_aec_19" type="text" name="number" data-theme="a"/><div id="btn_minus_aec_19" class="minus_btn"><button class="noshadow ui-btn-inline ui-btn ui-btn-corner-all ui-btn-b ui-icon-minus ui-btn-icon-notext">Remove</button></div></div>
+        </div>
+        <div id="aec_footer" data-role="footer" data-theme="b" data-position="fixed">
+            <div class="separator_line_thick"><!--//--></div>
+            <button id="btn_save_aec" class="ui-btn ui-btn-corner-all ui-btn-b noshadow">Save_</button>
+            <button id="btn_revert_aec" class="ui-btn ui-btn-corner-all ui-btn-b noshadow">Revert_</button>
+        </div>
+    </div>
+</div>
+<!-- END AddEditContact Page -->
+
+<!-- MessageList Page -->
+<div id="page_messagelist" class="all_app_pages" data-role="page">
+    <div id="messagelist_header" data-role="header" data-theme="b">
+        <div id="messagelist_additional_header">
+            <div id="messagelist_additional_header_left" class="additional_header_left">
+                <a id="msglist_btnback" class="btn_header_back ui-btn" data-rel="back"><span>&LT;</span>&nbsp;_Back</a>
+            </div>
+            <div id="msglist_title" class="additional_header_middle">_Mesages</div><div class="notification" id="messagelist_notification"></div>
+            <div class="additional_header_right" id="messagelist_additional_header_right">
+                <a href="#messagelist_menu" id="btn_messagelist_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="messagelist_menu" class="options_menu" data-role="popup">
+                    <ul id="messagelist_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+    </div>
+    <div role="main" class="ui-content" id="page_messagelist_content" data-theme="b" data-content-theme="b">
+        <div id="btn_newmessage_container"><button id="btn_newmessage" class="ui-btn ui-btn-corner-all ui-btn-b noshadow">New message_</button></div>
+        <ul id="messagelist_list" data-role="listview" data-theme="b" data-inset="true" data-icon="false">
+            <!--<li id="msgitem_0"><a href="javascript:void(0)" class="msg_anchor" data-transition="slide">
+                <div class="msg_item_container">
+                    <div class="msg_name">Ambrus Akos - <span id="msgitemnumber_0">40724335358</span><span class="ui-li-count">2</span></div>
+                    <div id="msgtype_0" class="msg_type">SMS</div>
+		</div>
+            </a></li>-->
+        </ul>
+    </div>
+</div>
+<!-- END MessageList Page -->
+
+<!-- Message Page -->
+<div id="page_message" class="all_app_pages" data-role="page">
+    <div id="message_header" data-role="header" data-theme="b">
+        <div id="message_additional_header">
+            <div class="additional_header_left">
+                <a id="msg_btnback" class="btn_header_back ui-btn" data-rel="back"><span>&LT;</span>&nbsp;_Back</a>
+            </div>
+            <div id="msg_title" class="additional_header_middle">_Message</div>
+            <div class="additional_header_right">
+                <a href="#message_menu" id="btn_message_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="message_menu" class="options_menu" data-role="popup">
+                    <ul id="message_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+    </div>
+    <div role="main" class="ui-content" id="page_message_content" data-theme="b" data-content-theme="b">
+        <div id="msgpick_container" style="display: none;">
+            <input type="text" id="msgpick_input" name="number" data-theme="a"/>
+            <button id="btn_msgpick" class="ui-btn ui-btn-corner-all ui-btn-b noshadow"><img src="images/btn_add_contact_txt.png" alt="add contact"></button>
+            <div id="msg_spacer">&nbsp;</div>
+        </div>
+        <div id="msg_list">
+            <!--<b>Me:</b><p>Hello, how are you? Hello, how are you? Hello, how are you? Hello, how are you? Hello, how are you today?</p><p class="date">Jun 05, 2014 11:59</p>-->
+        </div>
+        <div id="msg_textarea_container">
+            <div class="separator_line_thick"><!--//--></div>
+            <div id="msg_gradient">&nbsp;</div>
+            <div id="msg_textarea_left">
+                <textarea id="msg_textarea" class="noshadow" name="msg_textarea" data-theme="a" placeholder="Compose"></textarea>
+                <!--<input type="text" id="msg_textarea" name="msg_textarea" data-theme="a" placeholder="Compose"/>-->
+            </div>
+            <div id="msg_textarea_right">
+                <span id="msg_charcount">0</span>
+                <button id="btn_msgsend" class="ui-btn ui-btn-corner-all ui-btn-b noshadow"><img src="images/icon_message.png" alt="message"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Message Page -->
+
+<!-- Internal Browser -->
+<div id="page_internalbrowser" class="all_app_pages" data-role="page">
+    <div id="internalbrowser_header" data-role="header" data-theme="b">
+        <div id="internalbrowser_additional_header">
+            <div class="additional_header_left">
+                <a id="internalbrowser_btnback" class="btn_header_back ui-btn" data-rel="back"><span>&LT;</span>&nbsp;_Back</a>
+            </div>
+            <div id="internalbrowser_title" class="additional_header_middle"></div>
+            <div class="additional_header_right">
+                <a href="#internalbrowser_menu" id="btn_internalbrowser_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="internalbrowser_menu" class="options_menu" data-role="popup">
+                    <ul id="internalbrowser_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+    </div>
+    <div role="main" class="ui-content" id="page_internalbrowser_content" data-theme="b" data-content-theme="b">
+    </div>
+</div>
+<!-- END Internal Browser -->
+
+<!-- Logview -->
+<div id="page_logview" class="all_app_pages" data-role="page">
+    <div id="logview_header" data-role="header" data-theme="b">
+        <div id="logview_additional_header">
+            <div class="additional_header_left">
+                <a id="logview_btnback" class="btn_header_back ui-btn" data-rel="back"><span>&LT;</span>&nbsp;_Back</a>
+            </div>
+            <div id="logview_title" class="additional_header_middle"></div>
+            <div class="additional_header_right">
+                <a href="#logview_menu" id="btn_logview_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="logview_menu" class="options_menu" data-role="popup">
+                    <ul id="logview_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+    </div>
+    <div role="main" class="ui-content" id="page_logview_content" data-theme="b" data-content-theme="b">
+        <div id="sendtosupport_container">
+            <button id="btn_loghelp" class="ui-btn ui-btn-corner-all ui-btn-b noshadow"><img src="images/icon_help_mark.png"></button>
+            <a href="#" id="support_selectall" >_Select all</a>
+            <a href="mailto:support@mizu-voip.com" target="_top" id="sendtosupport">_Send to support</a>
+        </div>
+        <!--<div id="log_text"></div>-->
+        <textarea id="log_text" class="noshadow" name="msg_textarea" data-theme="a" readonly="readonly"></textarea>
+    </div>
+</div>
+<!-- END Logview -->
+
+<!-- Newuser -->
+<div id="page_newuser" class="all_app_pages" data-role="page">
+    <div id="newuser_header" data-role="header" data-theme="b">
+        <div id="newuser_additional_header">
+            <div class="additional_header_left">
+                <a id="newuser_btnback" class="btn_header_back ui-btn" data-rel="back"><span>&LT;</span>&nbsp;_Back</a>
+            </div>
+            <div id="newuser_title" class="additional_header_middle"></div>
+            <div class="additional_header_right">
+                <a href="#newuser_menu" id="btn_newuser_menu" data-rel="popup" class="btn_toolbar_menu ui-btn ui-icon-bars ui-btn-icon-notext" data-transition="slidedown">Menu</a>
+
+                <div id="newuser_menu" class="options_menu" data-role="popup">
+                    <ul id="newuser_menu_ul" data-role="listview" data-inset="true" data-icon="false" data-theme="a">
+                        <!--<li data-role="divider" data-theme="b">Choose an action</li>
+                        <li id="akos"><a href="#" id="menuitem_test">View details</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="separator_line_thick"><!--//--></div>
+        </div>
+    </div>
+    <div role="main" class="ui-content" id="page_newuser_content" data-theme="b" data-content-theme="b">
+        <form>
+            <div id="nu_username_container" style="display: none;">
+                <span id="label_nu_username">*_Username</span>
+                <input name="nu_username" id="nu_username" value="" type="text">
+            </div>
+            <div id="nu_password_container" style="display: none;">
+                <span id="label_nu_password">*_Password</span>
+                <input name="nu_password" id="nu_password" value="" type="text">
+            </div>
+            <div id="nu_email_container" style="display: none;">
+                <span id="label_nu_email">*_Email address</span>
+                <input name="nu_email" id="nu_email" value="" type="text">
+            </div>
+            <div id="nu_fullname_container" style="display: none;">
+                <span id="label_nu_fullname">*_Full name</span>
+                <input name="nu_fullname" id="nu_fullname" value="" type="text">
+            </div>
+            <div id="nu_phone_container" style="display: none;">
+                <span id="label_nu_phone">*_Phone</span>
+                <input name="nu_phone" id="nu_phone" value="" type="text">
+            </div>
+            <div id="nu_address_container" style="display: none;">
+                <span id="label_nu_address">*_Address</span>
+                <input name="nu_address" id="nu_address" value="" type="text">
+            </div>
+        </form>
+    </div>
+    <div id="newuser_footer" data-role="footer" data-theme="b" data-position="fixed">
+        <div class="separator_line_thick"><!--//--></div>
+        <button id="btn_create_newuser" class="ui-btn ui-btn-corner-all ui-btn-b noshadow">Create_</button>
+        <button id="btn_cancel_newuser" class="ui-btn ui-btn-corner-all ui-btn-b noshadow">Cancel_</button>
+    </div>
+</div>
+<!-- END Newuser -->
+
+</div>
+
+<!--
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+	app.initialize();
+</script>-->
+<div id="EXTERNREQUESTELEM" style="display: none;"></div>
+</body>
+</html>

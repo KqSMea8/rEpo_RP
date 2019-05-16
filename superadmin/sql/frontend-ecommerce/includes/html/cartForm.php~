@@ -1,0 +1,25 @@
+<div class="main-container">
+  <div class="mid_wraper clearfix">
+    <div class="full_layout">
+      <div class="cart_page checkout payment">
+        <h1><?=COMPLETED_ORDER?></h1>
+        <div class="layout-zone-content layout-zone clearfix "id="content">
+          <div class="page-completed wrap ">            
+            <form  name="myauthorizes" id="myauthorizes"  method="post" action="processPayment.php" >
+		<table>
+<tr><td>Card Number</td><td><input type="text" name="card_num"  /></td></tr>
+<tr><td>Amount</td><td><input type="text" name="amount_num"  /></td></tr>
+<tr><td>Expire Date</td><td><input type="text" name="exp_date"  /></td></tr>
+<tr><td>Expire Date</td><td><input type="submit" value="Submit" /></td></tr>
+</table>
+	 
+	</form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

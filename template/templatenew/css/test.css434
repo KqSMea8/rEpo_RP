@@ -1,0 +1,147 @@
+.container-fluid.mainheader {
+	background-color: #1C3146;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.container .pull-right .top-menu {
+	margin-bottom: 10px;
+	margin-right: 10px;
+        margin-top: 10px;
+}
+.pull-right .top-menu li {
+	display: inline-block;
+	margin-right: 10px;
+        color:#fff;
+
+}
+.top-menu li a {
+	display: inline;
+	/*float: left;*/
+	margin-right: 0px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+.top-menu li a:hover{
+	color: #BC572A;
+	text-decoration: none;
+}
+.navbar navbar-default{
+	margin-top: 20px;	
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 7px 23px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+	width: 179px;
+	margin: 0 -8px;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 245px;
+    }
+}
+#top_currency_id {
+    width: 120px;
+}
+
+.currency {
+    display: inline-block;
+    float: left;
+}
+.footer h3{
+	border-bottom: 1px solid #1c3146;
+	color:#1c3146;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 27px;
+	padding: 40px 0 10px;
+	text-transform: uppercase;	
+}
+.footer ul{
+	font-size: 13px;
+	list-style-type:none;
+	margin-left: 0;
+	padding-left:0;
+	margin-top: 15px;
+	color:#7F8C8D;
+}
+.newsLatterBox .btn{
+border: medium none;
+border-radius: 3px;
+display: inline-block;
+height: 40px;
+padding: 0px;
+width: 100%;
+color: #FFF;	
+}
+.btn-discover, .btn-site, .newsLatterBox .btn{
+	background: #1C3146 none repeat scroll 0% 0%;
+}
+input[type="text"], input[type="password"], input[type="email"]{
+border-color: #DDD;
+border-radius: 3px 0px 0px 3px;
+border-style: solid;
+border-width: 2px 1px 1px 2px;
+color: #888;
+font-size: 14px;
+margin-bottom: 10px;
+height: 36px;
+width: 263px;	
+}
+.btn btn-link{
+	margin-left: -6px;
+	margin-top: -17px;
+}
+.modal-content .modal-header .close {
+	/*color: #FFFFFF;*/
+	text-align: center;
+	text-transform: uppercase;
+	font-size: large;
+}
+.modal-content .modal-header .modal-title {
+	text-align: center;
+	color: #FFFFFF;
+	
+	text-transform: uppercase;
+	font-size: large;
+}
+#mySignin{
+	min-width: 100px;
+	width: 450px;
+	margin: 50px auto 0 auto;	
+}
+#createaccount{
+	width: 450px;
+	margin: 50px auto 0 auto;	
+}
+.btn-link {
+    margin: -10px;
+}

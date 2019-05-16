@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Google Maps</title>
+    <!-- script> var _mStreetMapAlt="Title 1";var _mSatelliteMapAlt="Title 2";var _mHybridMapAlt="Title 3";</script -->
+    
+    
+    <script src="http://www.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAPDUET0Qt7p2VcSk6JNU1sBRRwPhutbWBmyj82Go_H6JlE7EvFBSKFFFHFePAwvib9UM0geoA3Pgafw" type="text/javascript"></script>
+  </head>
+  <body onunload="GUnload()">
+
+    <div id="map" style="width: 600px; height: 500px"></div>
+    <input type="button" value="MAX" onclick="map.getInfoWindow().maximize();">
+    <input type="button" value="MIN" onclick="map.getInfoWindow().restore();">
+    <br>
+
+  
+    <a href="http://www.econym.demon.co.uk/googlemaps/maxurl.htm">Back to the tutorial page</a>
+    
+
+
+    <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b> 
+      However, it seems JavaScript is either disabled or not supported by your browser. 
+      To view Google Maps, enable JavaScript by changing your browser options, and then 
+      try again.
+    </noscript>
+ 
+
+    <script type="text/javascript">
+    //<![CDATA[
+    
+    if (GBrowserIsCompatible()) { 
+
+      _mFlags = {}
+
+      function createMarker(point,html,infoUrl) {
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(html, {maxUrl:infoUrl});
+        });
+        return marker;
+      }
+      
+      
+      // Display the map, with some controls and set the initial location 
+      var map = new GMap(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(43.907787,-79.359741),9);
+      
+      var point = new GLatLng(43.65654,-79.90138);
+      var marker = createMarker(point,'Try clicking on the maximise icon<br> of this info window.', "marker1.htm");
+      map.addOverlay(marker);
+
+      var point = new GLatLng(43.91892,-78.89231);
+      var marker = createMarker(point,'For full details,<br>click on the maximise icon of this info window.', "marker2.htm");
+      map.addOverlay(marker);
+      
+      GEvent.trigger(marker,"click");
+      
+    }
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    // This Javascript is based on code provided by the
+    // Blackpool Community Church Javascript Team
+    // http://www.commchurch.freeserve.co.uk/   
+    // http://www.econym.demon.co.uk/googlemaps/
+
+    //]]>
+    </script>
+  </body>
+
+</html>
+
+
+
+

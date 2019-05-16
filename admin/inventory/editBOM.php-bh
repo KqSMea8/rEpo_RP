@@ -1,0 +1,199 @@
+<?php /**************************************************/
+	$ThisPageName = 'viewBOM.php'; 
+      /**************************************************/
+	
+	// require_once("phpuploader/include_phpuploader.php");
+	require_once("../includes/header.php");
+	require_once($Prefix."classes/bom.class.php");
+	require_once($Prefix."classes/region.class.php");
+	require_once($Prefix."classes/inv.class.php");
+	require_once($Prefix."classes/inv_tax.class.php");
+	require_once($Prefix."classes/warehouse.class.php");
+	require_once($Prefix."classes/item.class.php");
+	require_once($Prefix . "classes/inv.condition.class.php");
+	
+	$objCondition = new condition();
+	$objCommon=new common();
+	$objWarehouse=new warehouse();
+	$objTax = new tax();
+	$objItems = new items();
+
+
+	(!$_GET['curP'])?($_GET['curP']=1):(""); // current page number
+	$objRegion=new region();
+        $RedirectURL = "viewBOM.php?curP=".$_GET['curP']."";
+	$ModuleName  = "BOM";
+	$objBom=new bom();        
+        //$EditUrl = "editBOM.php?edit=".$_GET["edit"]."&curP=".$_GET["curP"]."&tab=";"; 
+        $EditUrl = "editBOM.php?edit=" . $_GET["edit"] . "&curP=" . $_GET["curP"] . "&tab=";
+	if ($_GET["tab"] != "") {
+	    if ($_GET["tab"] == "editattributes")
+		$tabUrl = "addattributes";
+	    elseif ($_GET["tab"] == "editDiscount")
+		$tabUrl = "discount";
+	    else
+		$tabUrl = $_GET["tab"];
+	}
+
+	$ActionUrl = $RedirectURL;        
+
+
+
+	/*********  Multiple Actions To Perform **********/
+        
+	    if(!empty($_GET['multiple_action_id'])){
+	 	 $multiple_action_id = rtrim($_GET['multiple_action_id'],",");
+                 $RedirectURLPage = "viewItem.php?curP=".$_GET['curP']."&CatID=".$_GET['dCatID'];
+                 
+		switch($_GET['multipleAction']){
+			case 'delete':
+				                  $objBom->RemoveMultipleItem($multiple_action_id,0);
+					$_SESSION['mess_bom'] = 'Adjustment '.ADJ_REMOVED;
+					break;
+			case 'active':
+					$objBom->MultipleItemStatus($multiple_action_id,1);
+					$_SESSION['mess_bom'] = 'Adjustment '.ACTIVATED;
+					break;
+			case 'inactive':
+					$objBom->MultipleItemStatus($multiple_action_id,0);
+					$_SESSION['mess_bom'] = 'Adjustment '.INACTIVATED;
+					break;				
+		}
+		header("location: ".$RedirectURLPage);
+		
+	 }
+	
+	/*********  End Multiple Actions **********/
+	
+	 if($_GET['del_id'] && !empty($_GET['del_id'])){
+		
+		$objBom->RemoveBOM($_GET['del_id']);
+                $_SESSION['mess_bom'] = 'BOM'.ADJ_REMOVED;
+		header("location: ".$RedirectURL);
+	 }
+
+	
+	 if(!empty($_GET['bc'])&&!empty($_GET['bom_Sku'])){
+		 $arryBOMSelect = $objBom->ListBOM($_GET['bc'],'','','','');
+
+		 $arryItem = $objItems->checkItemSku($_GET['bom_Sku']);
+
+
+		$arryBOM[0]['Sku'] = $arryItem[0]['Sku'];
+		$arryBOM[0]['description'] = $arryItem[0]['description'];
+		$arryBOM[0]['item_id'] = $arryItem[0]['ItemID'];
+		$arryBOM[0]['on_hand_qty'] = $arryItem[0]['qty_on_hand'];
+		$arryBOM[0]['bill_option'] = $arryBOMSelect[0]['bill_option'];
+                 
+		$bomID   = $arryBOMSelect[0]['bomID'];	
+		if($bomID>0){
+			$arryBomItem = $objBom->GetBOMStock($bomID,'');
+			$NumLine = sizeof($arryBomItem);
+		}else{
+			$ErrorMSG = $NotExist;
+		}
+             $_GET['optionID'] = $_GET['option_code'];
+	
+		$arryOption = $objBom->ListOptionBill($_GET);
+
+
+                    $num2=$objBom->numRows();
+
+			if($_GET['option_del_id'] && !empty($_GET['option_del_id'])){
+				$objBom->RemoveOptionBOM($_GET['option_del_id']);
+				$_SESSION['mess_bom'] = OPTION_REMOVED;
+				$RedURL ="editBOM.php?edit=".$_GET['edit']."&curP=".$_GET['curP']."&tab=".$_GET['tab'];
+				header("location: ".$RedURL);
+				exit;
+			}
+
+
+	}
+
+                
+                if(!empty($_GET['edit'])){
+		 $arryBOM = $objBom->ListBOM($_GET['edit'],'','','','');
+                 
+		$bomID   = $arryBOM[0]['bomID'];	
+		if($bomID>0){
+			$arryBomItem = $objBom->GetBOMStock($bomID,'');
+
+		$NumLine = sizeof($arryBomItem);
+		}else{
+			$ErrorMSG = $NotExist;
+		}
+	
+		$arryOption = $objBom->ListOptionBill($_GET);
+                    $num2=$objBom->numRows();
+
+			if($_GET['option_del_id'] && !empty($_GET['option_del_id'])){
+				$objBom->RemoveOptionBOM($_GET['option_del_id']);
+				$_SESSION['mess_bom'] = OPTION_REMOVED;
+				$RedURL ="editBOM.php?edit=".$_GET['edit']."&curP=".$_GET['curP']."&tab=".$_GET['tab'];
+				header("location: ".$RedURL);
+				exit;
+			}
+
+
+	}
+	     if($arryBOM[0]['bill_option'] =='Yes' ){
+			$display1 = "style='display:block;'";
+		        $display2 = "style='display:none;'";
+		}else{
+			$display1 = "style='display:none;'";
+		        $display2 = "style='display:block;'";
+		}	
+	 
+		if($_GET['tab']=='Option_Bill' && ($arryBOM[0]['bill_option'] =='No' || $arryBOM[0]['bill_option'] =='')){
+		$EditRedirectURL = "editBOM.php?edit=".$_GET['edit']."&curP=1&tab=bill_Information";
+			    header("Location:" . $EditRedirectURL);
+		exit;
+		}
+		
+
+	if ($_POST) {
+
+
+
+		if (!empty($_POST['bomID'])) {
+		 $bom_id = $_POST['bomID'];
+		
+				$objBom->UpdateBom($_POST);
+				$objBom->AddUpdateBOMItem($bom_id,'',$_POST); 
+				$_SESSION['mess_bom'] = 'BOM'.ADJ_UPDATED;
+			
+
+		}else {	 
+		     $BOM_ID = $objBom->AddBOM($_POST);
+#echo $BOM_ID."++++++++++++++";exit;
+		if($BOM_ID >0){
+		     $objBom->AddUpdateBOMItem($BOM_ID ,'',$_POST);
+		} 
+		     $_SESSION['mess_bom'] = 'BOM'.ADJ_ADDED;
+
+		}
+
+
+		if ($_POST['bill_option']=="Yes") {
+			$EditRedirectURL = "editBOM.php?edit=" . $bom_id . "&curP=1&tab=bill_Information";
+			header("Location:" . $EditRedirectURL);
+			exit;
+			
+		} else {
+			header("Location:" . $ActionUrl);
+			exit;
+		}
+
+
+	}
+
+$ConditionDrop  =$objCondition-> GetConditionDropValue('');
+	$arryReason = $objCommon->GetCrmAttribute('AdjReason','');
+        $arryWarehouse=$objWarehouse->ListWarehouse('',$_GET['key'],'','',1);
+	$arrySaleTax = $objTax->GetTaxRate(1);
+	$arryPurchaseTax = $objTax->GetTaxRate('2');
+        if(empty($NumLine)) $NumLine = 1;
+	
+	require_once("../includes/footer.php"); 
+	
+?>

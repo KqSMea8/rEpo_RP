@@ -1,0 +1,53 @@
+<?
+//phpinfo(); exit;
+
+$full_address = 'sector-63, Noida, India';
+
+$full_address = '201301, Uttar Pradesh, India';
+
+
+$url = "http://maps.google.com/maps/geo";
+
+$url .= strpos($url, '?')!==false ? '&' : '?';
+$url .= 'q='.urlencode(preg_replace('#\r|\n#', ' ',$full_address))."&output=csv";
+echo "<br>";
+
+$cinit = curl_init();
+curl_setopt($cinit, CURLOPT_URL, $url);
+curl_setopt($cinit, CURLOPT_HEADER,0);
+curl_setopt($cinit, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
+curl_setopt($cinit, CURLOPT_RETURNTRANSFER, 1);
+$response = curl_exec($cinit);
+/*if (!is_string($response) || empty($response)) {
+	return $this;
+}*/
+
+/*echo '<pre>';
+print_r($response);exit;
+*/
+$result = explode(',', $response);
+$lati = $result[2];
+$longi = $result[3];
+
+echo $lati.', '.$longi;
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <body>
+  
+<iframe width="600" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<?=$full_address?>&amp;aq=&amp;sll=<?=$lati?>,<?=$longi?>&amp;sspn=0.082475,0.132351&amp;ie=UTF8&amp;hq=<?=$full_address?>&amp;hnear=&amp;ll=<?=$lati?>,<?=$longi?>&amp;spn=0.081388,0.099336&amp;output=embed"></iframe><br />
+
+<!--<small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=<?=$full_address?>&amp;aq=&amp;sll=<?=$lati?>,<?=$longi?>&amp;sspn=0.082475,0.132351&amp;ie=UTF8&amp;hq=<?=$full_address?>&amp;hnear=&amp;ll=<?=$lati?>,<?=$longi?>&amp;spn=0.081388,0.099336" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+-->
+
+ </body>
+</html>

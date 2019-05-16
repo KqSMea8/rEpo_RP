@@ -1,0 +1,43 @@
+RewriteEngine on
+
+#IndexIgnore *
+Options -Indexes
+
+RewriteBase /erp/
+#RewriteBase /
+
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+#RewriteRule ^phpinfo.html$ phpinfo.php
+#RewriteRule ^(.*)/admin/(.*) admin/$2?c=$1 [QSA,L]
+
+
+
+
+RewriteRule ^(.*)/(.*) $2?c=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-/_]+).html$ page.php?url=$1 [QSA,L]
+
+
+
+#RewriteRule ^(cron/(.*)\.php) - [F,L,NC]
+
+
+
+
+
+#ErrorDocument 404 /errordocs/error404.htm
+
+#RewriteRule ^microsite/([0-9]+)/([A-Za-z0-9_]+)/ home.php?Cmp=$1
+
+
+
+<IfModule mod_php5.c>
+php_value max_execution_time 900
+php_value post_max_size 5000M
+php_value max_input_vars 10000
+</IfModule>
+
+
+

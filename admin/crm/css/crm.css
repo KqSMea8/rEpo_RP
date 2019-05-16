@@ -1,0 +1,47 @@
+
+input, textarea, select{background: none repeat scroll 0 0 #FFFFFF;
+border: 1px solid #DAE1E8;
+border-radius: 2px 2px 2px 2px;
+color: #73787C;
+font-size: 12px;
+padding: 4px;}
+input[type="checkbox"], input[type="radio"]{ width:auto;}
+.crmTable {
+  border: 1px solid #DADADA;
+}.dvInnerHeader {
+  background: url("images/inner.gif") repeat-x scroll center bottom #DDDCDD;
+  border-color: #DEDEDE;
+  border-style: solid;
+  border-width: 1px;
+  color: #000000;
+  padding: 8px;
+}.dvInnerHeader {
+  color: #000000;
+}.lvtCol {
+  background: url("images/level2Bg.gif") repeat-x scroll center bottom #FFFFFF;
+  border-color: #FFFFFF #FFFFFF #FFFFFF #DDDDDD;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  font-weight: bold;
+}.lineOnTop {
+  border-top: 1px solid #999999;
+}.crmTableRow {
+  border-bottom: 1px dotted #DADADA;
+  border-right: 1px dotted #DADADA;
+}
+.discountUI{
+background-color: #FFFFFF;
+    border: 3px solid #CCCCCC;
+    display: none;
+    padding: 5px;
+    position: absolute;
+    width: 250px;
+}
+
+
+
+.small {
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}

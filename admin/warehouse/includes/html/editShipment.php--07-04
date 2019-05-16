@@ -1,0 +1,394 @@
+
+<input name="shippingZipCodeFdx" type="hidden" id="shippingZipCodeFdx" value="<?php echo stripslashes($arrySale[0]['ShippingZipCode']);?>" />
+
+<!--for api data start from here-->
+<input name="ShippingCompanyTo" type="hidden" id="ShippingCompanyTo" value="<?php echo stripslashes($arrySale[0]['ShippingCompany']);?>" />
+<input name="ShippingCountryTo" type="hidden" id="ShippingCountryTo" value="<?php echo stripslashes($arrySale[0]['ShippingCountry']);?>" />
+<input name="ShippingAddressTo" type="hidden" id="ShippingAddressTo" value="<?php echo stripslashes($arrySale[0]['ShippingAddress']);?>" />
+<input name="ShippingCityTo" type="hidden" id="ShippingCityTo" value="<?php echo stripslashes($arrySale[0]['ShippingCity']);?>" />
+<input name="ShippingStateTo" type="hidden" id="ShippingStateTo" value="<?php echo stripslashes($arrySale[0]['ShippingState']);?>" />
+<input name="ShippingMobileTo" type="hidden" id="ShippingMobileTo" value="<?php echo stripslashes($arrySale[0]['ShippingMobile']);?>" />
+<input name="ShippingFaxTo" type="hidden" id="ShippingFaxTo" value="<?php echo stripslashes($arrySale[0]['ShippingFax']);?>" />
+<input name="ShippingNameTo" type="hidden" id="ShippingNameTo" value="<?php echo stripslashes($arrySale[0]['ShippingName']);?>" />
+
+<a href="<?=$RedirectURL?>" class="back">Back</a>
+<div class="had">
+<?=$MainModuleName?>  <span>&raquo; <?=$ModuleName?></span>
+</div>
+<? if (!empty($errMsg)) {?>
+    <div align="center"  class="red"><?=$errMsg?></div>
+ <? } 
+  
+
+if(!empty($ErrorMSG)){
+	echo '<div class="message" align="center">'.$ErrorMSG.'</div>';
+}else{
+#include("includes/html/box/po_recieve.php");
+
+?>
+
+<script language="JavaScript1.2" type="text/javascript">
+function validateForm(frm){
+
+
+	var NumLine = parseInt($("#NumLine").val());
+
+		
+	var ModuleField = '<?=$ModuleID?>';
+	//alert(ModuleField);return false;
+	//var ModuleVal = Trim(document.getElementById(ModuleField)).value;
+//alert(ModuleVal);return false;
+	var OrderID = Trim(document.getElementById("OrderID")).value;
+//alert(OrderID);return false;
+	/*if(ModuleVal!=''){
+		if(!ValidateMandRange(document.getElementById(ModuleField), "<?=$ModuleIDTitle?>",3,20)){
+			return false;
+		}
+	}
+	
+	if(ModuleVal!='' && OrderID!=''){
+		var Url = "isRecordExists.php?"+ModuleField+"="+escape(ModuleVal)+"&editID="+OrderID;
+		SendExistRequest(Url,ModuleField, "<?=$ModuleIDTitle?>");
+		return false;	
+	}*/
+
+var totalSum = 0;var remainQty=0;var inQty=0;
+		for(var i=1;i<=NumLine;i++){
+		
+				/*if(!ValidateMandNumField2(document.getElementById("qty"+i), "Quantity",1,999999)){
+					return false;
+				}*/
+				 
+				 remainQty = document.getElementById("remainQty"+i).value;
+
+//alert(remainQty ); return false;
+				 inQty = document.getElementById("qty"+i).value;
+				 totalSum += inQty;
+				if(parseInt(remainQty) < parseInt(inQty))
+				 {
+					//alert("Return Qty Should be Less Than Or Equal To Invoice Qty.");
+					alert("Ship qauntity must be be less than or equal to "+remainQty+" for this item.");
+					document.getElementById("qty"+i).focus();
+					return false;
+				 }
+					
+				if(!ValidateMandDecimalField(document.getElementById("price"+i), "Unit Price")){
+					return false;
+				}
+				
+
+			
+		}
+		//alert(totalSum);return false;
+  	    totalSum = parseInt(totalSum, 10);
+		if(totalSum == 0)
+		{
+		  alert("Ship qty should not be blank.");
+		  document.getElementById("qty1").focus();
+		  return false;
+		}else{
+			ShowHideLoader('1','S');
+			return true;	
+		}
+	
+
+	
+		
+}
+function FreightVal(){
+	//alert('hello this is a testing');
+
+    var loading = $("#loading");
+
+    var BCountryCode = "<?php echo $BcounrtyCd[0]['code'];?>";
+    var BZipCode = "<?php echo $arrySale[0]['ZipCode'];?>";
+
+    
+    var CustomerCurrency = "<?php echo $arrySale[0]['CustomerCurrency'];?>";
+    
+    var SCountry = "<?php echo $ScountryCd[0]['code'];?>";
+    var SZipCode = "<?php echo $arrySale[0]['ShippingZipCode'];?>";
+
+	var height = $("#height").val();
+	var width = $("#width").val();
+	var action = $("#apiVal").val();
+	
+	var dataString = 'BCountryCode='+ BCountryCode + '&BZipCode=' + BZipCode + '&CustomerCurrency=' + CustomerCurrency + '&SCountry='+SCountry+ '&SZipCode='+ SZipCode + '&height=' + height + '&width='+ width + '&action='+ action;
+
+	loading.show();
+	$.ajax({
+		 type:"POST",
+		url: "api.ajax.php",
+		data: dataString,
+		cache: false,
+		success: function(html) {
+		
+		//alert(html);
+		loading.hide();
+		if(html!=''){
+		$("#Freight").val(html);
+		}else{
+			alert('No value get!');
+		}
+	}
+		});
+	
+}
+
+</script>
+
+
+<script language="JavaScript">
+
+function openFB(url) {
+var wcode = document.getElementById("WarehouseCode").value;
+if(url=='Fedex')
+{
+str='fedex.php?sp='+url+'&wcode='+wcode;	
+}
+else if(url=='UPS')
+{
+	str='ups.php?sp='+url+'&wcode='+wcode;
+}
+else if(url=='DHL')
+{
+	//alert('DHL Api In Process');exit;
+
+       str='dhl.php?sp='+url+'&wcode='+wcode;
+}
+
+else if(url=='USPS')
+{
+	//alert('USPS Api In Process');exit;
+
+       str='usps.php?sp='+url+'&wcode='+wcode;
+}
+
+
+ $.fancybox({
+ 'href' :str,
+ 'type' : 'iframe',
+ 'width': '700',
+ 'height': '700'
+ });
+}
+
+</script>
+
+
+<form name="form1" action=""  method="post" onSubmit="return validateForm(this);" enctype="multipart/form-data">
+
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+	 <td align="left">
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="borderall">	 
+ <tr>
+	 <td colspan="4" align="left" class="head">Shipment Information</td>
+</tr>
+ <tr>
+	<td  align="right"   class="blackbold" valign="top" width="20%"> Shipment No# : </td>
+	<td align="left" width="30%" valign="top">
+	<?php if(!empty($_GET['ship'])){?>
+	 <?=$arrySale[0]['ShippedID'];?>
+	<?php } else {?>
+	<input name="ShippedID" type="text" class="datebox" id="ShippedID" value=""  maxlength="20" onKeyPress="Javascript:ClearAvail('MsgSpan_ModuleID');return isAlphaKey(event);" onBlur="Javascript:CheckAvailField('MsgSpan_ModuleID','ShippedID','<?=$_GET['edit']?>');" onMouseover="ddrivetip('<?=BLANK_ASSIGN_AUTO?>', 220,'')"; onMouseout="hideddrivetip()"/>
+	<div id="MsgSpan_ModuleID"></div>
+	<?php }?>
+	</td>
+  
+        <td  align="right"   class="blackbold" width="20%">Shipment Date  :</td>
+        <td   align="left" >
+	<?php if(!empty($_GET['ship'])){
+	$arryTime = explode(" ",$Config['TodayDate']);
+	$ShippedDate = ($arrySale[0]['ShippedDate']>0)?($arrySale[0]['ShippedDate']):($arryTime[0]); 
+	echo $ShippedDate;
+	?>
+	
+	<?php } else {?>
+		<script type="text/javascript">
+		$(function() {
+			$('#ShippedDate').datepicker(
+				{
+				showOn: "both",
+				yearRange: '<?=date("Y")-20?>:<?=date("Y")+10?>', 
+				dateFormat: 'yy-mm-dd',
+				changeMonth: true,
+				changeYear: true
+
+				}
+			);
+		});
+</script>
+
+<? 	
+$arryTime = explode(" ",$Config['TodayDate']);
+$ShippedDate = ($arrySale[0]['ShippedDate']>0)?($arrySale[0]['ShippedDate']):($arryTime[0]); 
+?>
+<input id="ShippedDate" name="ShippedDate" readonly="" class="datebox" value="<?=$ShippedDate?>"  type="text" > 
+<?php }?>
+
+</td>
+      </tr>
+ 
+	<tr>
+				<td align="right" class="blackbold">Status :</td>
+				<td align="left"><select name="ShipStatus" id="ShipStatus"
+					class="inputbox">
+					<option value="Picked"
+					<?=($arryShip[0]['ShipmentStatus'] == 'Picked')?("selected"):("")?>>Picked</option>
+					<option value="Packed"
+					<?=($arryShip[0]['ShipmentStatus'] == 'Packed')?("selected"):("")?>>Packed</option>
+					<option value="Shipped"
+					<?=($arryShip[0]['ShipmentStatus'] == 'Shipped')?("selected"):("")?>>Shipped</option>
+				</select></td>
+
+				<td align="right" class="blackbold">Comments :</td>
+				<td align="left"><input name="ShipmentComment" type="text"
+					class="inputbox" id="ShipmentComment"
+					value="<?php echo stripslashes($arryShip[0]['ShipComment']); ?>"
+					maxlength="100" /></td>
+			</tr>
+			<tr>
+				<td align="right" class="blackbold">Ship From :</td>
+				<td align="left"><input name="WarehouseCode" type="text"
+					class="disabled" style="width: 90px;" id="WarehouseCode"
+					value="<?php echo stripslashes($arryShip[0]['WarehouseCode']); ?>"
+					maxlength="40" readonly /> <a class="fancybox fancybox.iframe"
+					href="wList.php"><?=$search?></a></td>
+			</tr>
+			<tr>
+				<td align="right" class="blackbold">Ship From(Warehouse) :</td>
+				<td align="left"><input name="WarehouseName" type="text"
+					class="disabled" id="WarehouseName"
+					value="<?php echo stripslashes($arryShip[0]['WarehouseName']); ?>"
+					maxlength="50" onkeypress="return isCharKey(event);" readonly /> <input
+					name="WID" type="hidden" class="inputbox" id="WID"
+					value="<?php echo stripslashes($arryShip[0]['WID']); ?>"></td>
+
+
+				<td align="right" class="blackbold">Shipping Carrier:</td>
+
+				<td align="left"><select class="inputbox" name="chooseItem"
+					id="chooseItem"
+					onchange="var goURL=document.getElementById('chooseItem').options[document.getElementById('chooseItem').selectedIndex].value;openFB(goURL);">
+					<option value="">--select--</option>
+					<option value="Fedex">Fedex</option>
+					<option value="USPS">USPS</option>
+					<option value="UPS">UPS</option>
+					<option value="DHL">DHL</option>
+				</select></td>
+
+			</tr>
+	<?php if(!empty($_GET['ship'])){?>
+		<tr>
+			<td align="right"></td>
+			<td align="left"> 
+			<input type="hidden" name="shipID" id="shipID" value="<?=$arryShip[0]['ShipmentID']?>" readonly />
+			<input name="Submit" type="submit" class="button" id="SubmitButton" value="Save">
+			
+			</td>
+		</tr>
+	<?php }?>
+
+</table>
+
+	 </td>
+</tr>
+<tr>
+	 <td align="left"><? include("includes/html/box/return_order_view.php");?></td>
+</tr>
+<tr>
+    <td>
+
+	<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" >
+		<tr>
+			<td align="left" valign="top" width="50%" class="borderpo"><? include("includes/html/box/sale_order_billto_view.php");?></td>
+			<td width="1%"></td>
+			<td align="left" valign="top" class="borderpo"><? include("../sales/includes/html/box/sale_order_shipto_view.php");?></td>
+		</tr>
+	</table>
+
+</td>
+</tr>
+
+
+<tr>
+	 <td align="right">
+<?php
+$Currency = (!empty($arrySale[0]['CustomerCurrency']))?($arrySale[0]['CustomerCurrency']):($Config['Currency']); 
+echo $CurrencyInfo = str_replace("[Currency]",$Currency,CURRENCY_INFO);
+?>	 
+	 </td>
+</tr>
+
+
+   <tr>
+    <td  align="center" valign="top" >
+	
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="borderall">
+
+
+
+<tr>
+	 <td  align="left" class="head" >Shipment Items
+	 <div style="float:right"><a class="fancybox fancybox.iframe" href="../sales/vSalesQuoteOrder.php?module=Order&pop=1&so=<?=$SaleID?>" ><?=VIEW_ORDER_DETAIL?></a></div>
+
+<script language="JavaScript1.2" type="text/javascript">
+
+$(document).ready(function() {
+		$(".fancybox").fancybox({
+			'width'         : 900
+		 });
+
+});
+
+</script>
+
+
+
+	 </td>
+</tr>
+
+<tr>
+	<td align="left">
+	<? if($HideSubmit!=1){ ?>	
+	<?php include("includes/html/box/so_item_shipment.php");?>
+	<?php } else {?>
+	<?php include("includes/html/box/so_item_shipment_view.php");?>
+	<?php }?>
+	</td>
+</tr>
+
+</table>	
+    
+	
+	</td>
+   </tr>
+
+  
+
+	<tr>
+	<td  align="center">
+
+		<? if($HideSubmit!=1){ ?>	
+		<input name="Submit" type="submit" class="button" id="SubmitButton" value="Process"  />
+		<? } ?>
+		<?php if(empty($_GET['ship'])){?>
+		<input type="hidden" name="ShippedOrderID" id="ShippedOrderID" value="<?=$_GET['edit']?>" readonly />
+		<?php }?>
+		<input type="hidden" name="OrderID" id="OrderID" value="<?=$_GET['edit']?>" readonly />
+		
+
+	</td>
+	</tr>
+  
+</table>
+
+ </form>
+
+<? } ?>
+
+
+

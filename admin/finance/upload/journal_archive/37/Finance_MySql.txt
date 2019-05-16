@@ -1,0 +1,36 @@
+﻿ALTER TABLE `f_account_type` ADD `OrderBy` INT( 11 ) NOT NULL AFTER `CreatedDate` 
+
+ALTER TABLE `f_archive_account_type` ADD `OrderBy` INT( 11 ) NOT NULL AFTER `CreatedDate` 
+
+ALTER TABLE `f_bank_account` ADD `OrderBy` INT( 11 ) NOT NULL AFTER `Status`
+
+ALTER TABLE `f_archive_bank_account` ADD `OrderBy` INT( 11 ) NOT NULL AFTER `Status`  
+
+
+ALTER TABLE `f_other_expense` CHANGE `ExpenseType` `ExpenseTypeID` INT( 11 ) UNSIGNED NOT NULL 
+
+ALTER TABLE `f_archive_other_expense` CHANGE `ExpenseType` `ExpenseTypeID` INT( 11 ) UNSIGNED NOT NULL 
+
+ALTER TABLE `f_other_income` CHANGE `IncomeType` `IncomeTypeID` INT( 11 ) UNSIGNED NOT NULL 
+
+ALTER TABLE `f_archive_other_income` CHANGE `IncomeType` `IncomeTypeID` INT( 11 ) UNSIGNED NOT NULL 
+
+ALTER TABLE `f_payments` ADD `Flag` TINYINT( 2 ) NOT NULL AFTER `UpdatedDate` 
+
+ALTER TABLE `f_archive_payments` ADD `Flag` TINYINT( 2 ) NOT NULL AFTER `UpdatedDate` 
+
+
+
+ALTER TABLE `f_other_income` ADD `Flag` TINYINT( 2 ) NOT NULL AFTER `UpdatedDate` 
+
+ALTER TABLE `f_archive_other_income` ADD `Flag` TINYINT( 2 ) NOT NULL AFTER `UpdatedDate` 
+
+ALTER TABLE `f_other_expense` ADD `Flag` TINYINT( 2 ) NOT NULL AFTER `UpdatedDate` 
+ALTER TABLE `f_archive_other_expense` ADD `Flag` TINYINT( 2 ) NOT NULL AFTER `UpdatedDate` ﻿
+
+
+
+28 - AUGUST
+
+
+UPDATE `erp_parwez`.`admin_modules` SET `Module` = 'Journal Entry' WHERE `admin_modules`.`ModuleID` =804;

@@ -1,0 +1,1534 @@
+@media (min-width:320px)and (max-width:479px){
+	
+    
+
+}
+@media (min-width:480px)and (max-width:640px){
+    
+	
+}
+@media all and (min-width:320px)and (max-width:640px){
+	
+}
+@media (min-width:769px) and (max-width:1024px) { /* Ipad lanscape mode STYLES GO HERE */
+
+      #main_blog .blog_content_main{
+    
+      width:88.6%;
+   
+   }
+ 
+
+    .boxListing ul li p {
+  
+  line-height: 20px !important;
+    }
+    #headerArea .userlink {
+  
+  margin-right: 6px !important;
+}
+    #headerArea .menuArea ul li a {
+        
+        font-size: 14px !important;
+    }
+    #headerArea .menuArea ul {
+    /*float: none !important;*/
+    margin-right: 3px !important;
+}
+#headerArea .logo {
+    float: left;
+    padding-top: 24px;
+    width: 195px !important;
+}
+#headerArea .menuArea {
+    float: right ;
+    font-style: normal;
+    margin: 0 auto;
+    padding-top: 42px ;
+}
+#headerArea .menuArea ul li {
+    margin-left: 10px;
+}
+#headerArea .logo + ul {
+    
+    right: 25px;
+    
+}
+#headerArea .menuArea {
+  
+    padding-top: 46px !important;
+  width: 100% !important;
+  float: none !important;
+  
+}
+#footer .followUs {
+    /*float: none !important;
+    width: 100% !important;
+    margin-left: 284px;*/
+    float: left;
+    padding-left: 15px;
+    
+    width: 48% !important;
+}
+#footer .quickLinks {
+    
+    width: 100%;
+    display: none;
+}
+#footer .newsLetter {
+    
+}
+.try-for-free{
+    margin: 0 !important;
+}
+#webform-client-form-70 .form-item label {
+  width: 187px !important;
+}
+/*start css for crm-features*/
+.accessible{height: auto !important;
+    width: 100%;}
+.head-crm-features{
+    float: none !important;
+    width: 100% !important;   
+}
+.desc{
+   float: none !important;
+    width: 100% !important; 
+}
+.cloud-content {
+    
+   height: auto !important; 
+}
+.Cloud-based{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Crm-Marketing {
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%; 
+}
+.Task-Marketing {
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Inventory-Management{
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Reporting{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.quote{
+   height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Manage-Leads{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Document-Management
+{
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+
+.features-img-left > img {
+    width: 100% !important;
+    height: auto!important;
+    margin: 0 !important;
+}
+.features-img-rigth > img {
+    width: 100% !important;
+    height: auto!important;
+    margin: 0 !important;
+}
+.try-for-free{
+    margin: 0 !important;
+}
+/*end css for crm-features*/
+.migrate-css-eznet-submit{  
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100% !important;
+    }
+.migrate-css-eznet-submit > a {
+    margin: 0 !important;
+}
+.form-text {
+    text-align: center !important;
+    width: 100% !important;
+}
+.hd-cl{width: 50% !important;}
+.email{width: 50% !important;}
+
+/*quote*/
+#webform-client-form-37 input[type="text"], #webform-client-form-37 input[type="email"] {
+    width: 60% !important;
+}
+#webform-client-form-37 .form-item label {
+    text-align: left !important;
+    width: 30% !important;
+}
+/*quote*/
+/*contact*/
+#webform-client-form-70 .form-item label {
+    text-align: center !important;
+    width: 20% !important;
+}
+#webform-client-form-70 input[type="text"], #webform-client-form-70 input[type="email"] {
+    width: 70% !important;
+}
+#webform-client-form-70 textarea {
+    width: 70% !important;
+}
+#webform-client-form-70 input.form-submit {
+    margin: 0 !important;
+}
+.form-item.webform-component.webform-component-textfield {
+    text-align: center !important;
+}
+/*contact*/
+/*plan-details*/
+.CompareWrap {
+    overflow-x: scroll !important;
+}
+.compareleftinfo1 {
+    width: 1200px !important;
+}
+.heading-cl {
+    width: 292px !important;
+}
+#leftPart #content .feature-list-compare > li {
+    float: left;
+    width: 285px !important;
+}
+/*plan-details*/
+.paymenthistory {
+    float: left !important;
+    overflow-x: scroll !important;
+    width: 100% !important;
+}
+.paymenthistory table {
+    width: 1200px !important;
+}
+}
+/* @media (min-width:768px) and (max-width:1024px){landscape phones */
+
+@media only screen 
+and (max-width : 768px){
+	/*.navigation ul li a{ font-size: 0.75em;}*/
+        
+        #headerArea .userlink {
+            
+   
+    float: none !important;
+    position: absolute !important;
+    right: 62px !important;
+    top: 69px !important;
+        }
+        
+.top-cont { 
+    display: none !important;   
+}
+	#headerArea .menuArea {
+                            float: none !important;
+                            font-style: normal;
+                            margin: 0 auto;
+                            width: 100%  !important;
+                            padding-top: 50px !important;
+                        }
+                        
+
+#footer .followUs {
+    /*float: none !important;
+    width: 100% !important;
+    margin-left: 284px;*/
+    float: left;
+    padding-left: 15px;
+    
+    width: 48% !important;
+}
+#footer .quickLinks {
+    
+    width: 100%;
+    display: none;
+}
+#footer .newsLetter {
+    float: left;
+    width: 50%;
+}
+#footer .simplenews-subscribe input[type="text"] {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #dfdfdf;
+    color: #a7a7a7;
+    float: left;
+    font-size: 13px;
+    
+    padding: 12px 0 11px 10px;
+    width: 75% !important;
+}
+#footer {
+    
+    margin-top: 0;
+    
+    
+}
+.boxListing ul li h3 {
+  
+  padding: 47px 0 0px 0;
+  
+  font-size: 24px;
+}
+.boxListing ul li p {
+  
+  line-height: 20px;
+  
+}
+
+/*start css for crm-resorses portate view**/
+.left-panel {
+    float: none !important;
+    width: 100% !important;
+}
+.rigth-panel {
+    float: none !important;
+    width: 100% !important;
+}
+.migrate-img {
+    text-align: center;
+    float: none !important;
+    height: auto !important;
+    width: 100% !important;
+}
+.migrate-cont {
+    float: none !important;
+    height: auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+.features-img {
+   text-align: center;
+   float: none !important;
+    height: auto !important;
+    width: 100% !important;
+}
+.features-cont{
+    float: none !important;
+    height: auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+.explore-img {
+    text-align: center;
+    float: none !important;
+    height: auto !important;
+    width: 100% !important;
+}
+.explore-cont{
+    float: none !important;
+    height: auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+.guide-img {
+    text-align: center;
+    float: none !important;
+    height: auto !important;
+    width: 100% !important;
+}
+.guide-cont{
+    float: none !important;
+    height: auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+/*end css for crm resorces poetate view*/
+
+/*start css for prices*/
+.planWrap .plan {
+    margin-bottom: 12px !important;
+    
+    width: 46% !important;
+}
+.get-quote {
+    margin-bottom: 20px !important;}
+/*end css for prices*/
+/*start contacts-us css for portate view*/
+#webform-client-form-70 {
+    margin-top: 60px !important;
+    
+    width: 100% !important;
+}
+#webform-client-form-70 .form-item label {
+    
+    text-align: center !important;
+    width: 20% !important;
+}
+#webform-client-form-70 input[type="text"], #webform-client-form-70 input[type="email"] {
+    
+    width: 70% !important;
+}
+#webform-client-form-70 textarea {
+    
+    width: 70% !important;
+}
+#webform-client-form-70 input.form-submit {
+    margin: 0 !important;
+    
+}
+/*end contacts-us css for portate view*/
+/*start css for crm-features*/
+.accessible{height: auto !important;
+    width: 100%;}
+.head-crm-features{
+    float: none !important;
+    width: 100% !important;   
+}
+.desc{
+   float: none !important;
+    width: 100% !important; 
+}
+.cloud-content {
+    
+   height: auto !important; 
+}
+.Cloud-based{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Crm-Marketing {
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%; 
+}
+.Task-Marketing {
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Inventory-Management{
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Reporting{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.quote{
+   height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Manage-Leads{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Document-Management
+{
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+
+.features-img-left > img {
+    width: 100% !important;
+    height: auto!important;
+    margin: 0 !important;
+}
+.features-img-rigth > img {
+    width: 100% !important;
+    height: auto!important;
+    margin: 0 !important;
+}
+.try-for-free{
+    margin: 0 !important;
+}
+/*end css for crm-features*/
+/*start css for price quote*/
+    #webform-client-form-37 {
+    margin: 0 !important;
+    width: 100% !important;
+}
+#webform-client-form-37 .form-item label {
+   
+    text-align: left !important;
+    width: 30% !important;
+}
+#webform-client-form-37 input[type="text"], #webform-client-form-37 input[type="email"] {
+    
+    width: 60% !important;
+}
+#webform-client-form-37 select {
+    width: 60% !important;
+    
+}
+#webform-client-form-37 textarea {
+    width: 60% !important;
+    
+}
+#webform-component-phone-no-contactus > div {
+    text-align: center !important;
+    width: 100% !important;
+}
+#webform-client-form-37 input.form-submit {
+    margin: 0 !important;
+}
+.migrate-css-eznet-submit{  
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100% !important;
+    }
+.migrate-css-eznet-submit > a {
+    margin: 0 !important;
+}
+    /*end css for price quote*/
+.form-text {
+    text-align: center !important;
+    width: 100% !important;
+}
+/*start css for user-guid page*/
+   .user-guide-leftsec{
+       width: 100% !important; 
+       float: none !important;
+   }
+   .user-guide-rigthsec {
+       width: 100% !important; 
+       float: none !important;
+   }
+   .user-guid-img{
+       width: 20%; float: left; height: auto !important;
+   }
+   .user-guid-desc{
+       width: 80%; float: right; height: auto !important; padding-right: 45px;
+   }
+/*end css for user-guid page*/
+.billing_payments_crm_rigth {
+    float: right;
+    height: auto !important;
+    margin-bottom: 10% !important;
+    width: 20%;
+}
+.billing_payments_crm_left {
+    float: left;
+    height: auto !important;
+    margin-bottom: 5% !important;
+    width: 75%;
+}
+.administrative_settings_rigth {
+    float: right;
+    height: 580px;
+    width: 74% !important;
+}
+.special_offers{
+    text-align: center;
+}
+.special_offers iframe{
+    width:100% !important; 
+    height:100px;
+}
+.thk{
+    width:100% !important;float:none !important;
+}
+.ps {
+    border: 1px solid #d7d7d7;
+    float: none !important;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+.hd-cl{
+    
+    color: #828282;font-size: 16px;padding: 5px 0 0;text-align:center;width:100% !important;float:none !important;
+}
+.email{
+    width:100% !important;text-align:center;float:none !important;
+}
+#pre-payment-calculation-form{
+    
+    width: 100% !important;
+}
+#pre-payment-calculation-form .form-item label {
+    float: left !important;
+    width: 30% !important;
+    
+}
+#pre-payment-calculation-form select {
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    float: rigth !important;
+    padding: 8px 0 8px 10px;
+    
+    width: 65% !important;
+}
+#pre-payment-calculation-form input.form-submit {
+    display: block !important;
+    margin-bottom: 12px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0 !important;
+}
+/*plan-details*/
+#leftPart #content .feature-list-compare > li {
+    float: left;
+    width: 285px !important;
+}
+.compareleftinfo1 {
+    
+    width: 1200px !important;
+}
+
+.heading-cl {
+    
+    width: 292px !important;
+}
+
+.CompareWrap {
+    overflow-x: scroll !important;
+}
+/*plan-details*/
+/*contact page*/
+.form-item.webform-component.webform-component-textfield {
+    text-align: center !important;
+}
+/*contact-page*/
+.paymenthistory {
+    float: left !important;
+    overflow-x: scroll !important;
+    width: 100% !important;
+}
+.paymenthistory table {
+    width: 1200px !important;
+}
+}
+
+@media all and (min-width:320px)and (max-width:767px){
+
+     /* add css in 05 may*/
+
+   #primary {
+     margin-left: 0;
+     padding: 0 15px;
+     width: 100%;
+    }
+
+   #secondary {
+     float: left;
+     padding: 0 15px;
+     width: 100%;
+   }
+  
+
+ 
+    /*start css for price quote*/
+    #webform-client-form-37 {
+    margin: 0 !important;
+    width: 100% !important;
+}
+#webform-client-form-37 .form-item label {
+    color: #6f6f6f;
+    float: none !important;
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 0 !important;
+    margin-top: 14px;
+    text-align: center !important;
+    width: 100% !important;
+}
+#webform-client-form-37 input[type="text"], #webform-client-form-37 input[type="email"] {
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    
+    padding: 8px 0 8px 10px;
+    text-align: center !important;
+    width: 100% !important;
+}
+#webform-client-form-37 select {
+    width: 100% !important;
+    text-align: center !important;
+}
+#webform-client-form-37 textarea {
+    width: 100% !important;
+    text-align: center !important;
+}
+#webform-component-phone-no-contactus > div {
+    text-align: center !important;
+    width: 100% !important;
+}
+#webform-client-form-37 input.form-submit {
+    margin: 0 !important;
+}
+    /*end css for price quote*/
+    #cssmenu ul {
+    background-color: #fff !important;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 999 !important;
+  }
+  
+    
+    /*start css for Banner responsive*/
+    .slides img {
+    height: 200px !important;
+    width:100% !important;
+}
+
+.top-cont {
+    
+    display: none !important;
+    
+}
+    /*end css for banner responsive*/
+    
+    .userlink {
+    
+    text-align: center;
+}
+
+.wrap.clearfix.respfooter {
+    margin: 0 auto;
+    width: 100% !important;
+}
+#headerArea .logo {
+                   float: none;
+                   /*margin-left: 32px;*/
+                   text-align: center;
+                   padding-top: 10px;
+                   margin-bottom: 15px;
+                   width: 100% !important;
+               }
+               
+               
+#footer {
+    margin-top: 0;
+    min-width: 50% !important;
+    text-align: center;
+}
+
+.social-icon {
+    
+}
+.followus {
+    
+    margin-top: -24px;
+}
+                        
+#headerArea .logo + ul {
+    float: none;
+    position: unset !important;
+    position: static !important;
+    left: 10px;
+    top: 10px;
+}
+#headerArea .logo + ul li {
+    float: none;
+    padding: 0 0 7px !important;
+    padding-bottom: 7px;
+}
+#headerArea .userlink{
+    float: none !important;
+    position: unset !important;
+    position: static !important;
+    left: 0 !important;
+    
+    
+}
+   #headerArea .userlink .login {   
+    padding: 0 0 0 1px !important;
+    
+   }
+                        
+                        
+                        
+#headerArea .menuArea {
+                        float: left !important;
+                        display: inline-block;
+                        
+                        font-style: normal;
+                        margin: 0 auto;
+                        padding-top: 0 !important;
+                    }
+                                            
+#footer .followUs {
+                        float: none;
+                        width: 100% !important;
+                        margin-left: 6px;
+                    }
+#footer .quickLinks {
+                       float: none;
+                       width: 100%;
+                       display: none;
+                   }
+#footer .newsLetter {
+float: none;
+width: 100% !important;
+
+}
+.Subscribe {
+    
+    margin-top: -17px;
+}
+                                                            
+#footer .simplenews-subscribe input[type="text"] {
+
+                                    width: 97% !important;
+                                }
+.menu.footmenu {
+    display: none;
+}
+.html.front.not-logged-in.no-sidebars.page-node.page-node-.page-node-14.node-type-page.responsive-menus-load-processed > p {
+    display: none !important;
+}
+
+.footp {
+    
+}
+.region-footer-secondcolumn {
+    border-bottom: medium none !important;
+    
+}
+h1 {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+#footer .region {
+    
+    margin-bottom: 12px !important;
+}
+.watchVideo h2 {
+    font-size: 25px;
+}
+.chooseUs h2 {
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 18px;
+    text-align: center;
+}
+.boxListing ul li {
+    float: none !important;
+    height: 231px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100% !important;
+}
+.Branding {
+     float: none !important;
+    width: 100% !important;
+}
+.management {
+    
+    /*float: none !important;*/
+    width: 100% !important;
+}
+.Creativeideas{
+    
+    float: none !important;
+    width: 100% !important;
+}
+.social-icon {
+    margin-bottom: 25px;
+    
+}
+
+.social-icon > span {
+    padding-right: 10px;
+}
+.boxListing ul li p {
+    
+    line-height: 20px;
+}
+/*start mobile css for crm-resouces page*/
+.left-panel {
+    float: none !important;
+    width: 100% !important;
+}
+.rigth-panel {
+    float: none !important;
+    width: 100% !important;
+}
+.migrate-img {
+    text-align: center;
+    float: none !important;
+    /*height: auto !important;*/
+    height: 100px !important;
+    width: 100% !important;
+}
+.migrate-cont {
+    float: none !important;
+    height: 200px !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+.features-img {
+   text-align: center;
+   float: none !important;
+    height: 100px !important;
+    width: 100% !important;
+}
+.features-cont{
+    float: none !important;
+    height: 200px !important;
+    padding: 0 !important;
+    width: 100% !important;
+    
+}
+.explore-img {
+    text-align: center;
+    float: none !important;
+    height: 100px !important;
+    width: 100% !important;
+}
+.explore-cont{
+    float: none !important;
+    height: 200px !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+.guide-img {
+    text-align: center;
+    float: none !important;
+    height: 100px !important;
+    width: 100% !important;
+}
+.guide-cont{
+    float: none !important;
+    height: 200px !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+/*end mobile css for crm-resouces page*/
+/*start prices page css*/
+
+.planWrap .plan {
+    border: 1px solid #d7d7d7;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 25px 0 30px;
+    text-align: center;
+    margin-bottom: 12px !important;
+    width: 100% !important;
+    
+}
+/*end prices page css*/
+
+/*start css for contact-us pages*/
+#webform-client-form-70 {
+    margin-top: 60px !important;
+    text-align: center !important;
+    width: 100% !important; 
+}
+#webform-client-form-70 .form-item label {
+    color: #6f6f6f;
+    float: none;
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 0 !important;
+    margin-top: 14px;
+    text-align: center !important;
+    width: 100% !important;
+}
+#webform-client-form-70 input[type="text"], #webform-client-form-70 input[type="email"] {
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    float: none;
+    margin: 0 auto !important;
+    padding: 8px 0 8px 10px;
+    text-align: center;
+    width: 90% !important;
+}
+#webform-client-form-70 textarea {
+    width: 90% !important;
+    float: none !important;
+}
+.form-textarea-wrapper textarea {
+    
+    display: inline-block !important;
+    
+    text-align: center !important;
+}
+#webform-client-form-70 input.form-submit {
+    margin: 0 !important;
+    text-align: center !important;
+}
+/*end css for contact-us pages*/
+
+/*table-magrate*/
+.migrate-crmtbl > table {
+    width: 1000px !important;
+}
+.migrate-crmtbl {
+    overflow-x: scroll;
+}
+/*end table-migrate*/
+.migrate-css-eznet-submit{  
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100% !important;
+    }
+.migrate-css-eznet-submit > a {
+    margin: 0 !important;
+}
+/*start css for crm-features*/
+.accessible{height: auto !important;
+    width: 100%;}
+.head-crm-features{
+    float: none !important;
+    width: 100% !important;   
+}
+.desc{
+   float: none !important;
+    width: 100% !important; 
+}
+.cloud-content {
+    
+   height: auto !important; 
+}
+.Cloud-based{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Crm-Marketing {
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%; 
+}
+.Task-Marketing {
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Inventory-Management{
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Reporting{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.quote{
+   height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Manage-Leads{
+    background-color: #fff !important;
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Document-Management
+{
+    height: auto !important;
+    padding: 25px 10px;
+    width: 100%;
+}
+.features-img-left{
+    float: left;
+    width: 20%;
+}
+.features-cont-rigth{
+    float: right;
+    width: 80%;
+    }
+.features-img-rigth{
+    float: left !important;
+    width: 20%;
+}
+.features-cont-left{
+    float: right !important;
+    width: 80%;
+    }
+.features-img-left > img {
+    width: 100% !important;
+    height: auto!important;
+    margin: 0 !important;
+}
+.features-img-rigth > img {
+    width: 100% !important;
+    height: auto!important;
+    margin: 0 !important;
+}
+.try-for-free{
+    margin: 0 !important;
+}
+/*end css for crm-features*/
+ul.primary {
+    border:none !important;
+}
+#leftPart #content ul li {
+     width: 100% !important;
+}
+#user-login label, #user-register-form label {
+    text-align: center !important;
+    
+    width: 100% !important;
+}
+/*input[type="text"], input[type="email"], textarea, select input[type="password"]*/
+input[type="text"], input[type="email"], textarea, input[type="password"] {
+    text-align: center !important;
+    font-size: 11px !important;
+    
+    width: 100% !important;
+}
+.field-item.even input {
+    width: 50% !important;
+}
+.form-actions.form-wrapper {
+    text-align: center;
+    width: 100% !important;
+}
+/*start css for user-guid page*/
+   .user-guide-leftsec{
+       width: 100% !important; 
+       float: none !important;
+   }
+   .user-guide-rigthsec {
+       width: 100% !important; 
+       float: none !important;
+   }
+   .user-guid-img{
+       width: 100% !important; float: none !important; height: 100px !important;text-align: center !important;
+   }
+   .user-guid-desc{
+       width: 100% !important; float: none !important;  height: 350px !important; padding-right: 45px;margin-top: 15px !important;
+   }
+/*end css for user-guid page*/
+
+.billing_payments_crm_left{
+    width: 60% !important; float: left; height: auto !important;
+}
+.billing_payments_crm_rigth {
+    width: 40% !important; float: right; height: auto !important;
+}
+.administrative_settings_left{
+    width: 100% !important; float: none !important; height: auto !important;
+}
+.administrative_settings_rigth{
+    
+    width: 100% !important; float: none !important; height: auto !important;
+}
+/**end css for 320*480*/
+.special_offers{
+    text-align: center;
+}
+.special_offers iframe{
+    width:100% !important; 
+    height:100px;
+}
+.thk{
+    width:100% !important;float:none !important;
+}
+.ps {
+    border: 1px solid #d7d7d7;
+    float: none !important;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+.hd-cl{
+    
+    color: #828282;font-size: 16px;padding: 5px 0 0;text-align:center;width:100% !important;float:none !important;
+}
+.email{
+    width:100% !important;text-align:center;float:none !important;
+}
+#pre-payment-calculation-form{
+    
+    width: 100% !important;
+}
+#pre-payment-calculation-form .form-item label {
+    float: none !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+#pre-payment-calculation-form select {
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    float: none !important;
+    padding: 8px 0 8px 10px;
+    text-align: center !important;
+    width: 100% !important;
+}
+#pre-payment-calculation-form input.form-submit {
+    margin: 0 !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+/*plan-details*/
+#leftPart #content .feature-list-compare > li {
+    float: left;
+    width: 285px !important;
+}
+.compareleftinfo1 {
+    
+    width: 1200px !important;
+}
+
+.heading-cl {
+    
+    width: 292px !important;
+}
+
+.CompareWrap {
+    overflow-x: scroll !important;
+}
+/*plan-details*/
+#back-top {
+    
+    display: none !important;}
+
+.explore-tbl {
+    width: 100%;
+    overflow-x: scroll !important;
+}
+
+
+.paymenthistory {
+    float: left !important;
+    overflow-x: scroll !important;
+    width: 100% !important;
+}
+.paymenthistory table {
+    width: 1200px !important;
+}
+.cmp-info-rght {
+    float: none !important;
+    width: 100% !important;
+}
+.payinfo-lft {
+    float: none !important;
+    width: 100% !important;
+}
+#payment-form input.form-submit {
+    margin: 0 !important;
+}
+#payment-form {
+    text-align: center !important;
+}
+
+.Checkout table {
+    width: 1200px !important;
+}
+
+.Checkout {
+    overflow-x: scroll !important;
+    width: 100% !important;
+}
+
+.migrate_chart img {
+    width: 100% !important;
+}
+
+/*start for rigth corner menu*/
+.userlink > i {
+    display: block !important;
+    line-height: 1 !important;
+    padding-top: 4px !important;
+    
+}
+.userlink > i > .login {
+     padding: 0 !important;
+}
+.user_overview {
+    height: 25px !important;
+    
+}
+.user_overview_cont {
+    height: 270px !important;}
+/*end for rigth corner menu*/
+.has-sub{
+    display: block !important;
+}
+#headerArea .menuArea ul {
+    overflow-y: scroll !important;
+   
+}
+.open{
+    margin-top: -32px !important;
+    z-index: 499 !important;
+    position: absolute !important;
+    top: 76px !important;
+}
+.open li{
+    z-index: 499 !important;
+}
+#primary_nav_wrap {
+    display: none !important;
+}
+/**end css for 320*480*/
+}
+
+/*start for main web css*/
+.Branding {
+     float: left;
+    width: 48%;
+}
+.management {
+    float: right;
+    width: 48%;
+}
+.Creativeideas{
+    float: right;
+    width: 48%;
+}
+
+.social-icon > span {
+    padding-right: 7px;
+}
+.social-icon {
+    margin-bottom: 25px;
+    
+}
+#headerArea .menuArea {
+  width: 846px;
+  float: right;
+  padding-top: 46px;
+  font-style: normal;
+  margin: 0 auto;
+}
+.left-panel {
+    float: left;
+    width: 50%;
+}
+.rigth-panel {
+    float: right;
+    width: 50%;
+}
+.migrate-img {
+    float: left;
+    height: 200px;
+    width: 20%;
+}
+.migrate-cont {
+    float: right;
+    height: 200px;
+    padding-right: 45px;
+    width: 80%;
+}
+.features-img {
+   float: left;
+    height: 250px;
+    width: 20%;
+    margin-bottom: 15px !important;
+}
+.features-cont{
+    float: right;
+    height: 250px;
+    padding-right: 45px;
+    width: 80%;
+}
+.explore-img {
+    float: left;
+    height: 200px;
+    width: 20%;
+}
+.explore-cont{
+    float: right;
+    height: 200px;
+    padding-right: 45px;
+    width: 80%;
+}
+.guide-img {
+    float: left;
+    height: 250px;
+    width: 20%;
+}
+.guide-cont{
+    float: right;
+    height: 250px;
+    padding-right: 45px;
+    width: 80%;
+}
+
+/*start css for crm-features*/
+.accessible{height: 280px;
+    width: 100%;}
+.head-crm-features{
+    float: left;
+    width: 20%;   
+}
+.desc{
+   float: right;
+    width: 80%; 
+}
+.cloud-content {
+    
+   height: 270px;
+    width: 100%; 
+}
+.Cloud-based{
+    background-color: #f6f6f6;
+    height: 250px;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Crm-Marketing {
+    height: 220px;
+    padding: 25px 10px;
+    width: 100%; 
+}
+.Task-Marketing {
+    background-color: #f6f6f6;
+    height: 210px;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Inventory-Management{
+     height: 220px;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Reporting{
+    background-color: #f6f6f6;
+    height: 210px;
+    padding: 25px 10px;
+    width: 100%;
+}
+.quote{
+    height: 220px;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Manage-Leads{
+    background-color: #f6f6f6;
+    height: 240px;
+    padding: 25px 10px;
+    width: 100%;
+}
+.Document-Management
+{
+    height: 200px;
+    padding: 25px 10px;
+    width: 100%;
+}
+.features-img-left{
+    float: left;
+    width: 20%;
+}
+.features-cont-rigth{
+    float: right;
+    width: 80%;
+    }
+.features-img-rigth{
+    float: right;
+    width: 20%;
+}
+.features-cont-left{
+    float: left;
+    width: 80%;
+    }
+.try-for-free{
+     background: #fe8b62; 
+     border-radius: 3px; 
+     color:#fff !important;
+     font-weight: 600; 
+     font-size: 18px; 
+     text-align: center; 
+     text-decoration: none;
+     padding: 11px 15px; 
+    /* margin-left: 500px;*/
+     cursor: pointer;  
+    }
+   #headerArea .userlink{float: right;
+    position: absolute;
+    right: 0;
+    top: 10px;}
+   #headerArea .userlink .login {   
+    
+    padding: 0 0 0 12px;
+   }
+   /*start css for user-guid page*/
+   .user-guide-leftsec{
+       width: 50%; 
+       float: left;
+   }
+   .user-guide-rigthsec {
+       width: 50%; 
+       float: right;
+   }
+   .user-guid-img{
+       width: 20%; float: left; height: 200px;
+   }
+   .user-guid-desc{
+       width: 80%; float: right; height: 200px; padding-right: 45px;
+   }
+/*end css for user-guid page*/
+/*end css for crm-features*/
+
+.billing_payments_crm_left{
+    width: 75%; float: left; height: 120px;
+}
+.billing_payments_crm_rigth {
+    width: 20%; float: right; height: 120px;
+}
+.administrative_settings_left{
+    width: 25%; float: left; height: 580px;
+}
+.administrative_settings_rigth{
+    
+    width: 75%; float: right; height: 580px;
+}
+.special_offers{
+    text-align: center;
+}
+.special_offers iframe{
+    width:405px; 
+    height:100px;
+}
+.thk{
+    width:50%;float:left;
+}
+.hd-cl{
+    
+    color: #828282;font-size: 16px;padding: 5px 0 0;text-align:center;width:271px;float:left;
+}
+.email{
+    width:240px;text-align:center;float:right;
+}
+.tryNow {
+    font-size: 20px;
+}
+.explore-tbl {
+    width: 100%
+}
+.user_overview {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.user_overview_cont{
+    width: 100%;
+    margin-bottom: 50px;
+}
+/*End for main web css*/

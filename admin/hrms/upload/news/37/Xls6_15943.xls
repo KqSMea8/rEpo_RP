@@ -1,0 +1,708 @@
+<table width="100%" align="center" cellpadding="3" cellspacing="1" id="myTable" >
+		<tr align="left" class="RowFirst"><td class="head1 " style="min-width:150px;max-width:150px;">Employee Number</td><td class="head1 " style="min-width:150px;max-width:150px;">Job Title</td><td class="head1 " style="min-width:150px;max-width:150px;">Department</td><td class="head1 ColFirst" style="min-width:150px;max-width:150px;left:501px;">Employee Name</td><td class="head1" nowrap >Exempt</td><td class="head1">03/20/2015 </td><td class="head1">03/21/2015 </td><td class="head1">03/22/2015 </td><td class="head1">03/23/2015 </td><td class="head1 red" colspan="2" align="center" nowrap><strong>Week 1</strong></td><td class="head1">03/24/2015 </td><td class="head1">03/25/2015 </td><td class="head1">03/26/2015 </td><td class="head1">03/27/2015 </td><td class="head1">03/28/2015 </td><td class="head1">03/29/2015 </td><td class="head1">03/30/2015 </td><td class="head1 red" colspan="2" align="center" nowrap><strong>Week 2</strong></td><td class="head1">03/31/2015 </td><td class="head1">04/01/2015 </td><td class="head1">04/02/2015 </td><td class="head1">04/03/2015 </td><td class="head1">04/04/2015 </td><td class="head1">04/05/2015 </td><td class="head1">04/06/2015 </td><td class="head1 red" colspan="2" align="center" nowrap><strong>Week 3</strong></td><td class="head1">04/07/2015 </td><td class="head1">04/08/2015 </td><td class="head1">04/09/2015 </td><td class="head1">04/10/2015 </td></tr><tr align="left" ><td class="head1" colspan="5"> </td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1" nowrap align="center" ><strong>Total Dur.<strong></td><td class="head1" nowrap align="center" ><strong>Total OT<strong></td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1" nowrap align="center" ><strong>Total Dur.<strong></td><td class="head1" nowrap align="center" ><strong>Total OT<strong></td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1" nowrap align="center" ><strong>Total Dur.<strong></td><td class="head1" nowrap align="center" ><strong>Total OT<strong></td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td><td class="head1">
+			 <table style="margin:0" width="600" cellpadding="0" cellspacing="1"   >
+				<tr align="left" ><td width="90" >IN</td>
+						<td width="90" >OUT</td>
+						<td  width="90">LO</td>
+						<td width="90">LI</td>
+						<td width="90" >SO</td>
+						<td  width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90" >SO</td>
+						<td width="90">SI</td><td width="90">Dur.</td></tr>
+			  </table>
+			</td></tr><tr align="left" class="oddbg"><td ><strong>1110000</strong></td><td >Project Manager</td><td >HR</td><td ><strong>Inam Abdi</strong></td><td nowrap>Yes</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> </tr><tr align="left" class="evenbg"><td ><strong>EMP00041</strong></td><td >Software Engineer</td><td >Marketting</td><td ><strong>mahir abdi</strong></td><td nowrap>No</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> </tr><tr align="left" class="oddbg"><td ><strong>EMP00043</strong></td><td >Sr. Software Engineer</td><td >Marketting</td><td ><strong>Parwez Khan</strong></td><td nowrap>No</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td class="head1" align="center">00:00</td><td class="head1" nowrap align="center">00:00</td><td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> <td><table width="100%" align="center" cellpadding="0" cellspacing="1" id="punchTable" >
+			<tr align="left"><td width="45" height="20"></td>
+			<td width="45"></td><td width="45" ></td>						
+			<td width="45" ></td>
+			<td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" ></td> 
+			<td width="45" ></td><td width="45" height="15"></td></tr></table></td> </tr></td>
+  	</tr>
+  </table>

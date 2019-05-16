@@ -1,0 +1,295 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,800);
+.menu-box {
+    position: fixed;
+    top: 0px;
+    left: -200px;
+    background: none repeat scroll 0 0 #34495e;
+    height: 100%;
+    padding: 10px 10px 10px 0px;
+    width: 210px;
+    float: left;
+    box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset;
+	-moz-box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset; 
+	-webkit-box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset; 
+    box-sizing: border-box;
+    -webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+    border-left: 8px solid rgb(41, 58, 76);
+	font-family: 'Raleway', sans-serif;
+    z-index: 99;
+}
+.menu-box.active {
+	left:0px;	
+}
+.menu-box .menu-area {
+    overflow-y: auto;
+    height: 100%;
+}
+div#menu a.toggle {
+    background: #34495E;
+    color: #eee;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    right: -50px;
+    top: 0px;
+    box-shadow: 5px 0px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 5px 0px 0px rgba(0,0,0,0.1); 
+	-webkit-box-shadow: 5px 0px 0px rgba(0,0,0,0.1); 
+}
+div#menu a.toggle i {
+    font-size: 26px;
+    line-height: 50px;
+    display: inline-block;
+	position :relative;
+	-webkit-animation: linear mymove 3s infinite; /* Chrome, Safari, Opera */ 
+    animation: linear mymove 3s infinite;
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes mymove {
+    0%   { transform:rotate(0deg);}
+    100% { transform:rotate(360deg);}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    0%   { transform:rotate(0deg);}
+    100% { transform:rotate(360deg);}
+}
+
+.menu-box h3{
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 10px 0px 10px 0px;
+    letter-spacing: 1px;
+    font-weight: 700;
+	position:relative;
+    padding: 0px 15px;
+}
+.menu-box h3 i {
+    display: inline-block;
+    margin-right: 10px;
+    text-shadow: none;
+    font-size: 16px;
+}
+div#menu .menu-area > ul > li{ 
+	color: #ecf0f1;
+    display: block;
+    line-height: 34px;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    transition: color 0.5s;
+    font-size: 13px;
+	text-transform:capitalize;
+    padding: 0px 15px;
+}
+div#menu .drag {
+    color: #ecf0f1;
+    display: block;
+    line-height: 34px;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    transition: color 0.5s;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 0px 15px;
+	cursor:pointer;
+}
+div#menu .drag:hover, div#menu .menu-area > ul > li:hover {
+    color: #fff;
+    background: #1f2e3c;
+}
+
+
+.menu-box .menu-area::-webkit-scrollbar { width: 5px; height: 10px;}
+.menu-box .menu-area::-webkit-scrollbar-button {  background-color: #fff; height:0 }
+.menu-box .menu-area::-webkit-scrollbar-track {  background-color: #fff;}
+.menu-box .menu-area::-webkit-scrollbar-track-piece { background-color: #666;}
+.menu-box .menu-area::-webkit-scrollbar-thumb { height: 0px; background-color: #fff; border-radius: 0px;}
+.menu-box .menu-area::-webkit-scrollbar-corner { background-color: #fff;}
+.menu-box .menu-area::-webkit-resizer { background-color: #fff;}
+
+.backend-area .container {
+    width: 100%;
+    margin: auto;
+    max-width: 1170px;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+.sidebar-box {
+    float: left;
+    width: 240px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px #000;
+	-moz-box-shadow: 0px 1px 4px #000; 
+	-webkit-box-shadow: 0px 1px 4px #000; 
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.09);
+}
+.backend-area {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    clear: both;
+    padding: 20px 0px;
+}
+div#PageLayout {
+    width: calc(100% - 240px);
+    float: left;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.sidebar-box .had {
+    border-bottom: 1px solid #106DB2;
+    border-bottom-style: dashed;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    padding: 0px 0px 8px;
+    text-transform: uppercase;
+}
+div#buttondiv input[type="button"] {
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    border: 0px solid #094989;
+    background: #d40503;
+    cursor: pointer;
+    padding: 1px 6px 3px 6px;
+    height: 27px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+	margin:10px 0px;
+}
+
+#droppable > .drag {
+    border: 1px solid #CCC;
+    padding: 10px;
+    margin: 0px 10px 10px 0px;
+    border-radius: 4px;
+    background: #F2F2F2;
+	position:relative;
+}
+div#droppable {
+    padding: 20px 15px;
+    border: 0px solid #D33E3D;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px #000;
+	-moz-box-shadow: 0px 1px 4px #000; 
+	-webkit-box-shadow: 0px 1px 4px #000; 
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.09);
+}
+#droppable > .drag > span{ display:none;}
+#droppable > .drag > span:first-of-type {
+    text-transform: uppercase;
+    display: block;
+    border: 0px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 4px 4px 0px 0px;
+    background: #D33E3D;
+    color: #fff;
+    margin: -11px -11px 0px;
+}
+#droppable > .drag > span:last-of-type {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    z-index: 9;
+    display: inline-block;
+}
+#droppable > .drag > span:last-of-type a.xicon.delete {
+    position: relative;
+    margin: 0px;
+    line-height: 18px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid #D33E3D;
+    display: inline-block;
+	background: #fff;
+}
+.editor-heading{
+	padding: 10px;
+    border: 0px solid #D33E3D;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px #000;
+	-moz-box-shadow: 0px 1px 4px #000; 
+	-webkit-box-shadow: 0px 1px 4px #000; 
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.09);
+    margin: 0px 0px 20px 0px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+}
+div#buttondiv {
+    clear: both;
+}
+.right-box {
+    float: right;
+}
+.editor-page-layout {
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px #000;
+	-moz-box-shadow: 0px 1px 4px #000; 
+	-webkit-box-shadow: 0px 1px 4px #000; 
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.09);
+    margin: 0px 0px 20px 0px;
+}
+.layout-field {
+    margin: 0px 0px 15px 0px;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+    border-bottom-style: dashed;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.53);
+	-moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.53); 
+	-webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.53); 
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.09);
+}
+.layout-field #layout {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    top: 2px;
+    cursor: pointer;
+}
+.css-area {
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px #000;
+	-moz-box-shadow: 0px 1px 4px #000; 
+	-webkit-box-shadow: 0px 1px 4px #000; 
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.09);
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.editor-textarea {
+    width: 100%;
+    min-height: 360px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 15px 15px;
+    box-sizing: border-box;
+    border-radius: 0px;
+}

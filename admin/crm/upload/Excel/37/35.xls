@@ -1,0 +1,11 @@
+Shipment Date	Shipment Number	Invoice Number	SO Number	Sales Person	Customer	Amount	Currency	Status
+
+28 Jun, 2016	12345		SO00026182		Advanced Systems c/o XCC Logistics	2540.00	USD	Packed
+27 Jun, 2016	SHIP00026269		SO4778967	Aggarwal QA	 Hal R. Collums.	0.00	USD	Picked
+25 Jun, 2016	SHIP00026221	INV1347	SO00026185		Alexey M. Schegolev	318.00	USD	Shipped
+25 Jun, 2016	SHIP00026215	INV1346	SO477894		 KEPLER S.A.	10.00	DZD	Shipped
+25 Jun, 2016	SHIP00026209	INV1345	SO00026185		Alexey M. Schegolev	219.30	USD	Shipped
+24 Jun, 2016	SHIP00026203		SO00026185		Alexey M. Schegolev	219.30	USD	Picked
+23 Jun, 2016	SHIP00026110	INV1341	SO00026101		Nick Childs	551.25	USD	Shipped
+21 Jun, 2016	SHIP00026056	INV1331	SO477891		 La Palma ANAHEIM MorphoTrak, LLC.	100.00	EUR	Shipped
+21 Jun, 2016	SHIP00026047	INV1330	SO477890		 E. Schoen c/o Novix Network Speciali	1000.00	DZD	Shipped

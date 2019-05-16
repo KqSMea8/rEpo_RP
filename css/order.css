@@ -1,0 +1,103 @@
+body {
+	margin: 0px;
+	background:url(../images/pagebg.jpg) left top repeat-x #f3f2f2;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+}
+
+.generaltxt_inner{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#353535;
+	text-align:justify;
+	text-decoration:none;
+	font-weight:normal;
+}
+
+.heading {
+	font-family:Arial;
+	font-size: 18px;
+	font-weight: bold;
+	color: #41AE2F;
+	text-decoration: none;
+	text-align: left;
+	height:40px;
+	text-transform:uppercase;
+}	
+.redbig{
+	font-weight: bold;
+	font-size:12px;
+	color:#bd1a1d;
+}
+.heading2 {
+	font-family:Arial;
+	font-size: 48px;
+	font-weight:bold;
+	color:#41AE2F;
+	text-align:left;
+	text-decoration:none;
+}
+
+.blacktxt {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#3F3F3F;
+	text-decoration:none;
+}
+
+.blacktxt a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration:none;
+	color:#333333;
+}
+
+.blacktxt a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration:none;
+	color:#5C8E06;
+}
+
+.skytxt {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#295C9F;
+	text-decoration:none;
+}
+
+.skytxt a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#295C9F;
+	text-decoration:none;
+}
+
+.skytxt a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#295C9F;
+	text-decoration:underline;
+}
+.graybox{
+	background-color:#f7f7f7;
+	border:1px solid #e9e9e9;
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	height:20px;
+	line-height:20px;
+	text-align:left;
+	text-decoration:none;
+	padding-left:5px;
+	font-weight:bold;
+}
+.generaltxt_header_bold{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#3f3f3f;
+	text-align:left;
+	text-decoration:none;
+	font-weight:bold;
+}

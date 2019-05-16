@@ -1,0 +1,37 @@
+.blackbold {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+	padding-left:20px;
+}
+.blacknormal{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	padding-left:20px;
+}
+.tablenormal{
+	background-color:#FFFFFF;
+	width:727px;
+}
+.divnormal{
+	padding-left:20px;
+}
+a.normallink{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+a.normallink:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: underline;
+}
+

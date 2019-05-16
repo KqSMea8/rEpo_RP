@@ -1,0 +1,66 @@
+/********************  Employee Start ********************/
+.my-dashboard-nav ul li.employee a{background: url("../../images/mydashboard_icons.png") no-repeat -75px -1981px;}
+.my-dashboard-nav ul li.employee.active a, .my-dashboard-nav ul li.employee a:hover{background-position:-75px -2093px;color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_employee a{background: url("../../images/mydashboard_icons.png") no-repeat 30px -1981px;}
+.my-dashboard-nav ul li.add_employee.active a, .my-dashboard-nav ul li.add_employee a:hover{background-position:29px -2094px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.manage_leave a{background: url("../../images/mydashboard_icons.png") no-repeat -189px 23px;}
+.my-dashboard-nav ul li.manage_leave.active a, .my-dashboard-nav ul li.manage_leave a:hover{background-position: -189px -89px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.assign_leave a{background: url("../../images/mydashboard_icons.png") no-repeat -300px 23px;}
+.my-dashboard-nav ul li.assign_leave.active a, .my-dashboard-nav ul li.assign_leave a:hover{background-position: -300px -89px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.vacancies a{background: url("../../images/mydashboard_icons.png") no-repeat 30px -1538px;}
+.my-dashboard-nav ul li.vacancies.active a, .my-dashboard-nav ul li.vacancies a:hover{background-position: 30px -1650px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_vacancy a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -80px -1538px;}
+.my-dashboard-nav ul li.add_vacancy.active a, .my-dashboard-nav ul li.add_vacancy a:hover{background-position: -80px -1650px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.candidates a{background: url("../../images/mydashboard_icons.png") no-repeat -414px -1315px;}
+.my-dashboard-nav ul li.candidates.active a, .my-dashboard-nav ul li.candidates a:hover{background-position: -414px -1427px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_candidate a{background: url("../../images/mydashboard_icons.png") no-repeat -303px -1316px;}
+.my-dashboard-nav ul li.add_candidate.active a, .my-dashboard-nav ul li.add_candidate a:hover{background-position: -303px -1428px; color:#d33f3e;}
+.my-dashboard-nav ul li.timesheet a{background: url("../../images/mydashboard_icons.png") no-repeat -77px 22px;}
+.my-dashboard-nav ul li.timesheet.active a, .my-dashboard-nav ul li.timesheet a:hover{background-position: -77px -90px; color:#d33f3e;}
+.my-dashboard-nav ul li.attendance a{background: url("../../images/mydashboard_icons.png") no-repeat -187px -1985px;}
+.my-dashboard-nav ul li.attendance.active a, .my-dashboard-nav ul li.attendance a:hover{background-position: -189px -2097px; color:#d33f3e;}
+.my-dashboard-nav ul li.payroll a{background: url("../../images/mydashboard_icons.png") no-repeat -414px -1092px;}
+.my-dashboard-nav ul li.payroll.active a, .my-dashboard-nav ul li.payroll a:hover{background-position: -414px -1204px; color:#d33f3e;}
+.my-dashboard-nav ul li.generate_salary a{background: url("../../images/mydashboard_icons.png") no-repeat 30px -646px;}
+.my-dashboard-nav ul li.generate_salary.active a, .my-dashboard-nav ul li.generate_salary a:hover{background-position: 30px -758px; color:#d33f3e;}
+.my-dashboard-nav ul li.kra a{background: url("../../images/mydashboard_icons.png") no-repeat -410px -1759px;}
+.my-dashboard-nav ul li.kra.active a, .my-dashboard-nav ul li.kra a:hover{background-position: -410px -1871px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.review a{background: url("../../images/mydashboard_icons.png") no-repeat -80px -1316px;}
+.my-dashboard-nav ul li.review.active a, .my-dashboard-nav ul li.review a:hover{background-position: -80px -1428px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.training a{background: url("../../images/mydashboard_icons.png") no-repeat -302px -645px;}
+.my-dashboard-nav ul li.training.active a, .my-dashboard-nav ul li.training a:hover{background-position: -302px -757px; color:#d33f3e;}
+.my-dashboard-nav ul li.report a{background: url("../../images/mydashboard_icons.png") no-repeat -303px -1538px;}
+.my-dashboard-nav ul li.report.active a, .my-dashboard-nav ul li.report a:hover{background-position: -303px -1650px; color:#d33f3e;}
+.my-dashboard-nav ul li.directory a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -193px -1538px;}
+.my-dashboard-nav ul li.directory.active a, .my-dashboard-nav ul li.directory a:hover{background-position: -193px -1650px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.apply_for_leave a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -300px 23px;}
+.my-dashboard-nav ul li.apply_for_leave.active a, .my-dashboard-nav ul li.apply_for_leave a:hover{background-position: -300px -89px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_timesheet a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -77px 22px;}
+.my-dashboard-nav ul li.my_timesheet.active a, .my-dashboard-nav ul li.my_timesheet a:hover{background-position: -77px -90px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_attendance a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -187px -1985px;}
+.my-dashboard-nav ul li.my_attendance.active a, .my-dashboard-nav ul li.my_attendance a:hover{background-position:  -189px -2097px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_leaves a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -189px 23px;}
+.my-dashboard-nav ul li.my_leaves.active a, .my-dashboard-nav ul li.my_leaves a:hover{background-position: -189px -89px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_profile a{background: url("../../images/mydashboard_icons.png") no-repeat scroll 29px -1317px;}
+.my-dashboard-nav ul li.my_profile.active a, .my-dashboard-nav ul li.my_profile a:hover{background-position: 29px -1429px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_declaration a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -192px -1319px;}
+.my-dashboard-nav ul li.my_declaration.active a, .my-dashboard-nav ul li.my_declaration a:hover{background-position: -192px -1431px; color:#d33f3e;}
+.my-dashboard-nav ul li.holidays a{background: url("../../images/mydashboard_icons.png") no-repeat scroll 29px 22px;}
+.my-dashboard-nav ul li.holidays.active a, .my-dashboard-nav ul li.holidays a:hover{background-position: 29px -90px; color:#d33f3e;}
+.my-dashboard-nav ul li.punch_inout a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -416px -1539px;}
+.my-dashboard-nav ul li.punch_inout.active a, .my-dashboard-nav ul li.punch_inout a:hover{background-position: -416px -1651px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.pin_punch a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -410px -1759px;}
+.my-dashboard-nav ul li.pin_punch.active a, .my-dashboard-nav ul li.pin_punch a:hover{background-position: -410px -1871px; color:#d33f3e;}
+
+
+/********************  Employee End ********************/

@@ -1,0 +1,18 @@
+<?php
+
+require_once(_ROOT."/lib/mailchamp/src/Mailchimp.php");
+$MailChimp = new MailChimp('c5085810ebeb6dd716f087ee1b7da949-us10');
+require_once($Prefix."classes/massmail.class.php");
+$massmail = new massmail();
+
+$MailchimSetting = $massmail->GetMailchimSetting();
+if(count($MailchimSetting)==0){
+	header("location:mailchimp.php");
+	exit();
+}
+
+$cmpId =  'a61d996a4a';
+$groupIdP = '24181';
+$group_Name = 'CRM-Group';
+
+?>

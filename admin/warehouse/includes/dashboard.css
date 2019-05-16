@@ -1,0 +1,76 @@
+/********************  Purchasing Start ********************/
+.my-dashboard-nav ul li a{background:url("../../images/mydashboard_icons.png") no-repeat 0 0;}
+.my-dashboard-nav ul li.warehouse a {
+  background-position:-410px -1757px;
+}
+.my-dashboard-nav ul li.warehouse a:hover {
+  background-position:-410px -1869px;
+   color:#d33f3e;
+}
+.my-dashboard-nav ul li.bin a {
+   background-position:-79px -1091px;
+}
+.my-dashboard-nav ul li.bin a:hover {
+   background-position:-79px -1203px;
+    color:#d33f3e;
+}
+.my-dashboard-nav ul li.outbound_so a {
+   background-position:-81px -647px;
+}
+.my-dashboard-nav ul li.outbound_so a:hover {
+   background-position:-81px -759px;
+    color:#d33f3e;
+}
+.my-dashboard-nav ul li.ship_transfer_order a {
+   background-position:-192px -647px;
+}
+.my-dashboard-nav ul li.ship_transfer_order a:hover {
+   background-position:-192px -759px;
+    color:#d33f3e;
+}
+.my-dashboard-nav ul li.assemble_order a {
+   background-position:-81px -870px;
+}
+.my-dashboard-nav ul li.assemble_order a:hover {
+   background-position:-81px -982px;
+    color:#d33f3e;
+}
+.my-dashboard-nav ul li.pick__put_qty a {
+   background-position:-191px -867px;
+}
+.my-dashboard-nav ul li.pick__put_qty a:hover {
+   background-position:-191px -979px;
+    color:#d33f3e;
+}
+.my-dashboard-nav ul li.cargo  a {
+   background-position:-81px -422px;
+}
+.my-dashboard-nav ul li.cargo  a:hover {
+   background-position:-81px -534px;
+    color:#d33f3e;
+}
+.my-dashboard-nav ul li.ship_sales_order a {
+   background-position:-302px -867px;
+}
+.my-dashboard-nav ul li.ship_sales_order a:hover {
+   background-position:-302px -979px;
+    color:#d33f3e;
+}
+.my-dashboard-nav ul li.receive_po a {
+   background-position:-300px 22px;
+}
+.my-dashboard-nav ul li.receive_po a:hover {
+   background-position:-300px -90px;
+    color:#d33f3e;
+}
+.my-dashboard-nav ul li.stock_transfer a {
+   background-position:-189px 22px;
+}
+.my-dashboard-nav ul li.stock_transfer a:hover {
+   background-position:-189px -90px;
+    color:#d33f3e;
+}
+
+ 
+
+/********************  End ********************/

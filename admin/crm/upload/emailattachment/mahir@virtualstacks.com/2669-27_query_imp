@@ -1,0 +1,53 @@
+f-100009072662730
+t-451317212
+l-6mrKnWI4ya
+G-118093149132154650957
+UPDATE `s_address_book` SET FacebookID = '' WHERE AddID =268
+
+SELECT `AddID` , `CustID` , `AddType` , `PrimaryContact` , `CrmContact` , `FirstName` , `LastName` , `FullName` , `Company` , `Address` , `city_id` , `state_id` , `OtherState` , `OtherCity` , `ZipCode` , `country_id` , `CountryName` , `StateName` , `CityName` , `Mobile` , `Landline` , `Fax` , `Email` , `PersonalEmail` , `twitter` , `facebook` , `linkedin` , `CreatedDate` , `UpdatedDate` , `AdminID` , `AdminType` , `CreatedBy` , `Title` , `Department` , `LeadSource` , `AssignTo` , `Reference` , `DoNotCall` , `NotifyOwner` , `EmailOptOut` , `Image` , `Description` , `IpAddress` , `Status` , `RigisterType` , `RigisterTypeID` , `FacebookID` , `TwitterID` , `LinkedinID` , `GoogleID` , `FacebookInfo` , `TwitterInfo` , `LinkedinInfo` , `ref_id` , `NickName`
+FROM `s_address_book`
+WHERE `AddID` =268
+LIMIT 0 , 30
+
+#cssmenu #menu-button:after {
+    background: none repeat scroll 0 0 #000000;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    width: 18px;
+}
+
+#cssmenu #menu-button {
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    padding: 22px;
+    text-transform: uppercase;
+}
+
+#cssmenu #menu-button:after {
+    background: none repeat scroll 0 0 #000000;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    width: 18px;
+}
+
+#cssmenu #menu-button:before {
+    border-bottom: 3px solid #000000;
+    border-top: 3px solid #000000;
+    content: "";
+    display: block;
+    height: 11px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    width: 18px;
+}

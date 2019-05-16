@@ -1,0 +1,172 @@
+<?php $FancyBox=1;
+ /**************************************************/
+    $ThisPageName = 'viewLead.php'; $EditPage = 1;
+    /**************************************************/
+   
+	  require_once("../includes/header.php");
+        require_once($Prefix."classes/lead.class.php");
+        require_once($Prefix."classes/region.class.php");
+		require_once($Prefix."classes/employee.class.php");
+		require_once($Prefix."classes/crm.class.php");
+	
+	
+	$ModuleName = "Lead";
+	$RedirectURL = "viewLead.php?curP=".$_GET['curP']."&module=".$_GET["module"];
+	if(empty($_GET['tab'])) $_GET['tab']="Summary";
+
+	$EditUrl = "editLead.php?edit=".$_GET["edit"]."&curP=".$_GET["curP"]."&module=".$_GET["module"]."&tab="; 
+	
+
+
+	$objLead=new lead();
+	$objRegion=new region();
+	$objEmployee=new employee();
+	$objCommon=new common();
+	
+	/*********  Multiple Actions To Perform **********/
+	 if(!empty($_GET['multiple_action_id'])){
+	 	$multiple_action_id = rtrim($_GET['multiple_action_id'],",");
+		
+		$mulArray = explode(",",$multiple_action_id);
+	
+		switch($_GET['multipleAction']){
+			case 'delete':
+					foreach($mulArray as $del_id){
+						$objLead->RemoveLead($del_id);
+					}
+					$_SESSION['mess_lead'] = LEAD_REMOVE;
+					break;
+			case 'active':
+					$objLead->MultipleLeadStatus($multiple_action_id,1);
+					$_SESSION['mess_lead'] = LEAD_REMOVE;
+					break;
+			case 'inactive':
+					$objLead->MultipleLeadStatus($multiple_action_id,0);
+					$_SESSION['mess_lead'] = LEAD_REMOVE;
+					break;				
+		}
+		header("location: ".$RedirectURL);
+		exit;
+		
+	 }
+	
+	/************************  End Multiple Actions ***************/	
+	
+	
+
+	 if($_GET['del_id'] && !empty($_GET['del_id'])){
+		$_SESSION['mess_lead'] = LEAD_REMOVE;
+		$objLead->RemoveLead($_REQUEST['del_id']);
+		header("Location:".$RedirectURL);
+	}
+	
+
+	 if($_GET['active_id'] && !empty($_GET['active_id'])){
+		$_SESSION['mess_lead'] = LEAD_STATUS;
+		$objLead->changeLeadStatus($_REQUEST['active_id']);
+		header("Location:".$RedirectURL);
+	}
+	
+	/***************************************************************/
+	
+	 if ($_POST) {
+			 
+				if (!empty($_POST['leadID'])) {
+					$ImageId = $_POST['leadID'];
+					
+					/***************************/
+					switch($_GET['tab']){
+						case 'Lead':
+							$objLead->UpdateLead($_POST);
+							$_SESSION['mess_lead'] = LEAD_UPDATED;
+							header("Location:".$RedirectURL);
+							exit;
+							break;
+						
+						
+					}
+					/***************************/
+				} else {	
+					//if($objLead->isEmailExists($_POST['Email'],'')){
+						//$_SESSION['mess_lead'] = $MSG[105];
+					//}else{	
+						$ImageId = $objLead->AddLead($_POST); 
+						$_SESSION['mess_lead'] = LEAD_ADDED;
+						if(!empty($ImageId)){
+
+							$objLead->UpdateCreater($_POST,"c_lead","leadID",$ImageId);
+
+						}
+					//}
+				}
+				
+				$_POST['leadID'] = $ImageId;
+
+				
+				if (!empty($_GET['edit'])) {
+					header("Location:".$ActionUrl);
+					exit;
+				}else{
+					header("Location:".$RedirectURL);
+					exit;
+				}
+
+
+				
+			
+		}
+		
+
+	if (!empty($_GET['edit'])) {
+		$arryLead = $objLead->GetLead($_GET['edit'],'');
+        $arryLeadDetail=$objLead->GetLeadDetail($_GET['edit'],'');
+
+		$leadID   = $_REQUEST['edit'];			
+	}
+				
+	if($arryLead[0]['Status'] != ''){
+		$LeadStatus = $arryLead[0]['Status'];
+	}else{
+		$LeadStatus = 1;
+	}				
+		
+	
+    $arryDepartment = $objConfigure->GetDepartment();
+	$arryEmployee = $objEmployee->GetEmployeeBrief('');
+	$arryLeadStatus = $objCommon->GetCrmAttribute('LeadStatus','');
+	$arryLeadSource = $objCommon->GetCrmAttribute('LeadSource','');
+	$arryIndustry = $objCommon->GetCrmAttribute('LeadIndustry','');
+	$arrySalesStage = $objCommon->GetCrmAttribute('SalesStage','');
+
+  /*******Connecting to main database********/
+$Config['DbName'] = $Config['DbMain'];
+$objConfig->dbName = $Config['DbName'];
+$objConfig->connect();
+/*******************************************/
+if($arryLead[0]['country_id']>0){
+$arryCountryName = $objRegion->GetCountryName($arryLead[0]['country_id']);
+$CountryName = stripslashes($arryCountryName[0]["name"]);
+}
+
+if(!empty($arryLead[0]['state_id'])) {
+$arryState = $objRegion->getStateName($arryLead[0]['state_id']);
+$StateName = stripslashes($arryState[0]["name"]);
+}else if(!empty($arryLead[0]['OtherState'])){
+$StateName = stripslashes($arryLead[0]['OtherState']);
+}
+
+if(!empty($arryLead[0]['city_id'])) {
+$arryCity = $objRegion->getCityName($arryLead[0]['city_id']);
+$CityName = stripslashes($arryCity[0]["name"]);
+}else if(!empty($arryLead[0]['OtherCity'])){
+$CityName = stripslashes($arryEmployee[0]['OtherCity']);
+}
+
+/*******************************************/
+
+	//$arryCountry = $objRegion->getCountry('','');
+
+	require_once("../includes/footer.php"); 
+?>
+
+

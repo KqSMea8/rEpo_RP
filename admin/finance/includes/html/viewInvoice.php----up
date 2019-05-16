@@ -1,0 +1,447 @@
+<script language="JavaScript1.2" type="text/javascript">
+    function ValidateSearch() {
+        ShowHideLoader('1');
+        document.getElementById("prv_msg_div").style.display = 'block';
+        document.getElementById("preview_div").style.display = 'none';
+    }
+
+ $(function() {
+        $("#Post_to_GL").click(function(e) {
+
+            var number_of_checked_checkbox = $(".posttogl:checked").length;
+            if (number_of_checked_checkbox == 0) {
+                alert("Please select atleast one invoice.");
+                return false;
+            } else {
+		 ShowHideLoader('1','P');
+                return true;
+            }
+
+        });
+    })
+
+
+function ChangePostToGlDate() {	
+    	
+	var CountCheck = document.getElementById("CountCheck").value;
+
+	var orderno="";	var j=0;	
+	for(var i=1; i<=CountCheck; i++){
+		if(window.parent.document.getElementById("posttogl"+i).checked){
+			j++;
+			var posttogl =window.parent.document.getElementById("posttogl"+i).value;
+			orderno+=posttogl+',';
+		}
+	}
+
+	if(j>0){
+		if((document.getElementById("gldaterow").style.display == 'none')){ 
+			document.getElementById("gldaterow").style.display = '' ;	
+		}
+        }else{
+		document.getElementById("gldaterow").style.display = 'none';  	
+	}
+    	
+    }
+
+
+    function filterLead(id)
+    {
+        location.href = "viewInvoice.php?customview=" + id;
+        LoaderSearch();
+    }
+
+function SelectCheck(MainID,ToSelect)
+{	
+	var flag,i;
+	var Num = document.getElementById("CountCheck").value;
+	if(document.getElementById(MainID).checked){
+		flag = true;
+	}else{
+		flag = false;
+	}
+	
+	for(i=1; i<=Num; i++){
+		document.getElementById(ToSelect+i).checked=flag;
+	}
+	ChangePostToGlDate();
+}
+
+
+ /*function by sachin**/
+    function makepdffile(url) {
+        $.ajax({
+            url: url,
+        });
+    }
+    /*function by sachin**/
+
+</script>
+
+<div class="had"><?= $MainModuleName ?></div>
+<div class="message" align="center"><?php
+        if (!empty($_SESSION['mess_Sale'])) {
+            echo $_SESSION['mess_Sale'];
+            unset($_SESSION['mess_Sale']);
+        }
+        ?><? if (!empty($_SESSION['mess_Invoice'])) {
+    echo $_SESSION['mess_Invoice'];
+    unset($_SESSION['mess_Invoice']);
+} ?></div>
+<TABLE WIDTH="100%"   BORDER=0 align="center" CELLPADDING=0 CELLSPACING=0 >
+  <form action="" method="post" name="form1">
+    <tr>
+        <td align="right" valign="top">
+ <a  class="add" href="editInvoiceEntry.php">Invoice Entry</a>
+
+            <a class="fancybox add fancybox.iframe" href="SalesOrderList.php?link=generateInvoice.php" ><?= GENERATE_INVOICE ?></a>
+            <? if ($num > 0) { ?>
+                <input type="button" class="export_button"  name="exp" value="Export To Excel" onclick="Javascript:window.location = 'export_invoice.php?<?= $QueryString ?>';" />
+                <!--<input type="button" class="print_button"  name="exp" value="Print" onclick="Javascript:window.print();"/>-->
+            <? } ?>
+
+<? if ($_GET['search'] != '') { ?>
+                <a href="<?= $RedirectURL ?>" class="grey_bt">View All</a>
+<? } ?>
+
+
+        </td>
+    </tr>
+
+ <? if($num > 0 && $ModifyLabel==1){ ?> 	 
+<tr>
+	  <td  valign="top" align="right">
+ <input type="submit" class="button" name="Post_to_GL" id="Post_to_GL" value="Post to GL" style="font-weight: normal; height: 22px;">
+
+
+	</td>
+      </tr>
+ 
+
+
+<tr id="gldaterow"  style="display:none">
+        
+                  
+ <td align="right" valign="top"><span class="posttogl">Post to GL Date: </span><script>
+$(function() {
+$( "#PostToGLDate" ).datepicker({ 
+		
+	
+		showOn: "both",
+	yearRange: '<?=date("Y")-10?>:<?=date("Y")?>', 
+
+
+	dateFormat: 'yy-mm-dd',
+
+	changeMonth: true,
+	changeYear: true
+	
+	});
+});
+</script>
+<? 
+$todatdate=$Config['TodayDate'];
+$todatdate = explode(" ", $todatdate);
+//echo $todatdate[0];exit;
+
+?>
+   
+<input id="PostToGLDate" name="PostToGLDate" readonly="" class="datebig" value="<?=$todatdate[0]?>"  type="text" >
+               
+                  
+        
+          
+              
+                      </td>
+        </tr>
+
+<? }
+
+
+
+
+
+?>
+
+
+
+    <tr>
+        <td  valign="top">
+
+
+          
+                <div id="prv_msg_div" style="display:none"><img src="<?= $MainPrefix ?>images/loading.gif">&nbsp;Searching..............</div>
+                <div id="preview_div">
+
+                    <table <?= $table_bg ?>>
+
+                        <tr align="left"  >
+				<? if ($_GET["customview"] == 'All') { ?>
+                            
+                                <td width="10%" class="head1" >Invoice Date</td>
+				<td width="12%" class="head1" >GL Posting Date</td>
+                                <td width="8%"  class="head1" >Invoice #</td>
+                                <td width="11%"  class="head1" >SO/Reference #</td>
+                                <td class="head1">Customer</td>
+				 <td width="10%"   class="head1" >Posted By</td>
+                                <!--td class="head1">Sales Person</td-->
+                                <td width="8%" align="center" class="head1">Amount</td>
+             
+                                <td width="6%" align="center" class="head1">Currency</td>
+                                <td width="6%"  align="center" class="head1">Status</td>  
+                           
+			<? } else {                 
+                                foreach ($arryColVal as $key => $values) { ?>
+                                    <td class="head1" ><?= $values['colname'] ?></td>
+    			<?	} 
+                           
+                        } ?>
+
+				<td width="12%"  align="center" class="head1 head1_action" >Action</td>
+			 	<? if($ModifyLabel==1){ ?> <td width="1%" align="center" class="head1">
+<input type="checkbox" name="SelectAll" id="SelectAll" onclick="Javascript:SelectCheck('SelectAll', 'posttogl');" /></td>
+				<? } ?>
+
+			 </tr>
+
+                        <?php
+
+$NotPosted = '<img src="' . $Config['Url'] . 'admin/images/error-icon.png"  border="0"  onMouseover="ddrivetip(\'<center>'.NOT_POSTED_TOGL.'</center>\', 125,\'\')"; onMouseout="hideddrivetip()" >';
+
+$arryTime = explode(" ",$Config['TodayDate']);
+$TodayDate = $arryTime[0];
+
+                        if (is_array($arrySale) && $num > 0) {
+                            $flag = true;
+                            $Line = 0;
+				$CountCheck=0;
+                            foreach ($arrySale as $key => $values) {
+                                $flag = !$flag;                           
+                                $Line++;
+
+				if($values['PostToGL'] == "1" && $separator!=1 && $CountCheck>0) {
+					echo '<tr align="center"><td  colspan="11" class="selectedbg">&nbsp;</td></tr>';
+					$separator=1;
+				}
+
+						
+
+								$BatchStatus=$objSale->GetBatchStatusById($values['batchId']); 
+								if($BatchStatus == 'Closed'){
+											$style = 1;
+								}else{
+											$style = 0;
+								}
+
+						
+
+
+				$EmailIcon = ($values['MailSend']!=1)?('emailgreen.png'):('emailred.png');
+			 	$sendemail = '<img src="' . $Config['Url'] . 'admin/images/'.$EmailIcon.'" border="0"  onMouseover="ddrivetip(\'<center>Send Invoice</center>\', 120,\'\')"; onMouseout="hideddrivetip()" >';
+
+
+                                ?>
+                                <tr align="left"  >
+														<? 
+															if ($style == 1  ) {
+																			if ($_GET["customview"] == 'All') {
+														?>   
+                                     
+                                        <td height="20">
+                                            <?
+                                            if ($values['InvoiceDate'] > 0)
+                                                echo date($Config['DateFormat'], strtotime($values['InvoiceDate']));
+                                            ?>
+
+                                        </td>
+
+<td>
+            <?
+            if ($values['PostToGLDate'] > 0)
+                echo date($Config['DateFormat'], strtotime($values['PostToGLDate']));
+            ?>
+
+        </td>
+
+                                        <td><?=$values["InvoiceID"]?></td>
+                                        <td>
+                                            <?php if ($values['InvoiceEntry'] == "1") { ?>
+                                                <a href="vInvoice.php?pop=1&amp;view=<?= $values['OrderID'] ?>&IE=<?= $values['InvoiceEntry']; ?>" class="fancybox po fancybox.iframe"><?= $values['SaleID'] ?></a>
+            <?php } else { ?>
+                                                <a href="../sales/vSalesQuoteOrder.php?module=Order&amp;pop=1&amp;so=<?= $values['SaleID'] ?>" class="fancybox po fancybox.iframe"><?= $values['SaleID'] ?></a>
+            <?php } ?>
+                                        </td>
+                                        <td>
+<? if(!empty($values["CustomerName"])){?>
+<a class="fancybox fancybox.iframe" href="../custInfo.php?view=<?= $values['CustCode'] ?>" ><?= stripslashes($values["CustomerName"]) ?></a>
+<? }else{ echo $values["OrderCustomerName"]; } ?>
+
+
+</td> 
+
+<td >
+<?  
+if($values["AdminType"]=='employee') {
+	echo '<a class="fancybox fancybox.iframe" href="../userInfo.php?view='.$values['AdminID'].'" >'.stripslashes($values["PostedBy"]).'</a>';
+}else {
+	echo $values["PostedBy"];
+}
+ ?>  
+</td>
+
+                                        <!--td><?= stripslashes($values['SalesPerson']) ?></td-->
+                                        <td align="center"><?= $values['TotalInvoiceAmount'] ?></td>
+                                        
+                                        <td align="center"><?= $values['CustomerCurrency'] ?></td>
+                                        <td align="center">
+                                            <?
+                                            if ($values['InvoicePaid'] == 'Paid') {
+                                                $StatusCls = 'green';
+                                            } else {
+                                                $StatusCls = 'red';
+                                            }
+
+                                            echo '<span class="' . $StatusCls . '">' . $values['InvoicePaid'] . '</span>';
+                                            ?>
+
+                                        </td>
+                                        <?
+                                    } else {
+
+                                        foreach ($arryColVal as $key => $cusValue) {
+                                            echo '<td>';
+
+                                            if ($cusValue['colvalue'] == 'CustomerName') {
+                                                echo '<a class="fancybox fancybox.iframe" href="../custInfo.php?view=' . $values['CustCode'] . '" >' . stripslashes($values["CustomerName"]) . '</a>';
+                                            } elseif ($cusValue['colvalue'] == 'SalesPerson') {
+                                                echo '<a class="fancybox fancybox.iframe" href="../userInfo.php?view=' . $values['SalesPersonID'] . '" >' . stripslashes($values["SalesPerson"]) . '</a>';
+                                            } elseif ($cusValue['colvalue'] == 'InvoicePaid') {
+                                                #echo '<a class="fancybox fancybox.iframe" href="../userInfo.php?view=' . $values['SalesPersonID'] . '" >' . stripslashes($values["SalesPerson"]) . '</a>';
+
+                                                if ($values['InvoicePaid'] == 'Paid') {
+                                                    $StatusCls = 'green';
+                                                } else {
+                                                    $StatusCls = 'red';
+                                                }
+
+                                                echo '<span class="' . $StatusCls . '">' . $values['InvoicePaid'] . '</span>';
+
+                                                echo '<span class="' . $StatusCls . '">' . $Status . '</span>';
+                                            } elseif ($cusValue['colvalue'] == 'OrderDate' || $cusValue['colvalue'] == 'DeliveryDate' || $cusValue['colvalue'] == 'InvoiceDate') {
+                                                if ($values[$cusValue['colvalue']] > 0)
+                                                    echo date($Config['DateFormat'], strtotime($values[$cusValue['colvalue']]));
+                                            } elseif ($cusValue['colvalue'] == 'EntryType') {
+                                                if ($values[$cusValue['colvalue']] == 'one_time') {
+
+                                                    $Entry = explode('_', $values[$cusValue['colvalue']]);
+
+                                                    $EntryType = ucfirst($Entry[0]) . " " . ucfirst($Entry[1]);
+                                                    ?>
+                                                    <?= (!empty($values[$cusValue['colvalue']])) ? (stripslashes($EntryType)) : (NOT_SPECIFIED) ?>
+
+                                                <? } else { ?>
+
+                                                    <?= (!empty($values[$cusValue['colvalue']])) ? (stripslashes(ucfirst($values[$cusValue['colvalue']]))) : (NOT_SPECIFIED) ?>
+
+                                                <? }
+                                            } else {
+                                                ?>
+
+                                                <?= (!empty($values[$cusValue['colvalue']])) ? (stripslashes($values[$cusValue['colvalue']])) : (NOT_SPECIFIED) ?> 
+                                                <?
+                                            }
+
+                                            echo '</td>';
+                                        }
+                                    }
+                                    ?>
+
+                                  
+                                    <td  align="center" class="head1_inner">
+
+
+
+<?php if($values['InvoiceEntry'] == "2" || $values['InvoiceEntry'] == "3"){?>
+<a href="vInvoiceGl.php?curP=<?=$_GET['curP']?>&view=<?=$values['OrderID']?>" ><?=$view?></a>
+<? }else{ ?>
+<a href="vInvoice.php?curP=<?=$_GET['curP']?>&view=<?=$values['OrderID']?>&IE=<?=$values['InvoiceEntry']?>" ><?=$view?></a>
+<? } ?>
+
+<? if ($values['InvoicePaid'] == 'Unpaid' && $values['PostToGL'] != "1") { ?>
+
+	
+	<?php if($values['InvoiceEntry']>0){?>
+	<a href="editInvoiceEntry.php?edit=<?=$values['OrderID']?>&curP=<?=$_GET['curP']?>"><?=$edit?></a>
+	<?php } else {?>
+	<a href="editInvoice.php?edit=<?=$values['OrderID']?>&curP=<?=$_GET['curP']?>"><?=$edit?></a>
+	<?php }?>
+	
+
+        <a href="<?=$EditUrl.'&del_id='.$values['OrderID']?>" onclick="return confirmDialog(this, 'Invoice')"><?=$delete?></a> 
+<? } ?>
+
+
+<? if($values['InvoiceEntry']<2){ ?>
+<!--<a target="_blank" href="pdfInvoice.php?IN=<?= $values['OrderID']; ?>&amp;module=Invoice"><?=$download?></a>-->
+<a target="_blank" href="../pdfCommonhtml.php?o=<?= $values['OrderID']; ?>&amp;ModuleDepName=SalesInvoice"><?=$download?></a>
+
+ <a onclick="makepdffile('../pdfCommonhtml.php?o=<?= $values['OrderID']; ?>&amp;ModuleDepName=SalesInvoice&amp;attachfile=1&amp;module=Invoice')" class="fancybox fancybox.iframe" href="<?= $SendUrl . '&view=' . $values['OrderID'] ?>" ><?=$sendemail?></a>
+<? } ?>
+
+                                    </td>
+                               
+
+
+<? if($ModifyLabel==1){ ?> 
+ <td align="center">
+<?php if($values['PostToGL'] != "1") { 
+	//if($values['InvoiceDate']<=$TodayDate){
+	$CountCheck++; ?>
+    <input type="checkbox" name="posttogl[]" id="posttogl<?=$CountCheck?>" onchange="return ChangePostToGlDate();" class="posttogl" value="<?php echo $values['OrderID']; ?>">
+<?php /*}else{
+		echo $NotPosted;
+      }*/
+
+} ?>
+ </td>
+<? } } ?>
+
+
+ </tr>
+
+    <?php } // foreach end // ?>
+
+                        <?php } else { ?>
+                            <tr align="center" >
+                                <td  colspan="11" class="no_record"><?= NO_RECORD ?> </td>
+                            </tr>
+                                <?php } ?>
+
+                        <tr>  <td  colspan="11"  id="td_pager">Total Record(s) : &nbsp;<?php echo $num; ?>      <?php if (count($arrySale) > 0) { ?>
+                                    &nbsp;&nbsp;&nbsp;     Page(s) :&nbsp; <?php echo $pagerLink;
+                                }
+                                ?></td>
+                        </tr>
+                    </table>
+
+                </div> 
+
+
+                <input type="hidden" name="CurrentPage" id="CurrentPage" value="<?php echo $_GET['curP']; ?>">
+                <input type="hidden" name="opt" id="opt" value="<?php echo $ModuleName; ?>">
+  <input type="hidden" name="CountCheck" id="CountCheck" value="<?php echo $CountCheck; ?>">
+            
+        </td>
+    </tr>
+</form>
+</table>
+<script language="JavaScript1.2" type="text/javascript">
+
+    $(document).ready(function() {
+        $(".po").fancybox({
+            'width': 900
+        });
+
+    });
+
+</script>

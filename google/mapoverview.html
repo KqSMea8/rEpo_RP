@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Google Maps</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAPDUET0Qt7p2VcSk6JNU1sBRRwPhutbWBmyj82Go_H6JlE7EvFBSKFFFHFePAwvib9UM0geoA3Pgafw" type="text/javascript"></script>
+  </head>
+  <body onunload="GUnload()">
+
+
+    <div id="map" style="width: 550px; height: 450px"></div>
+    <a href="http://www.econym.demon.co.uk/googlemaps/basic13.htm">Back to the tutorial page</a>
+
+
+    <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b> 
+      However, it seems JavaScript is either disabled or not supported by your browser. 
+      To view Google Maps, enable JavaScript by changing your browser options, and then 
+      try again.
+    </noscript>
+ 
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    if (GBrowserIsCompatible()) { 
+
+      function createMarker(point,html) {
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(html);
+        });
+        return marker;
+      }
+
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(43.907787,-79.359741),8);
+    
+      var point = new GLatLng(43.65654,-79.90138);
+      var marker = createMarker(point,'Some stuff to display in the<br>First Info Window.')
+      map.addOverlay(marker);
+
+      var point = new GLatLng(43.91892,-78.89231);
+      var marker = createMarker(point,'Some stuff to display in the<br>Second Info Window')
+      map.addOverlay(marker);
+
+      var point = new GLatLng(43.82589,-79.10040);
+      var marker = createMarker(point,'Some stuff to display in the<br>Third Info Window')
+      map.addOverlay(marker);
+      
+
+      //  ======== Add a map overview ==========
+      map.addControl(new GOverviewMapControl(new GSize(200,200)));
+
+      //  ======== A function to adjust the positioning of the overview ========
+      function positionOverview(x,y) {
+        var omap=document.getElementById("map_overview");
+        omap.style.left = x+"px";
+        omap.style.top = y+"px";
+        
+        // == restyling ==
+        omap.firstChild.style.border = "1px solid gray";
+
+        omap.firstChild.firstChild.style.left="4px";
+        omap.firstChild.firstChild.style.top="4px";
+        omap.firstChild.firstChild.style.width="190px";
+        omap.firstChild.firstChild.style.height="190px";
+      }
+
+      //  ======== Cause the overview to be positioned AFTER IE sets its initial position ======== 
+      setTimeout("positionOverview(558,254)",1);
+
+    }
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+      
+
+    // This Javascript is based on code provided by the
+    // Blackpool Community Church Javascript Team
+    // http://www.commchurch.freeserve.co.uk/   
+    // http://www.econym.demon.co.uk/googlemaps/
+
+    //]]>
+    </script>
+  </body>
+
+</html>
+
+
+
+

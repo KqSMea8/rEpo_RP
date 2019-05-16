@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html moznomarginboxes mozdisallowselectionprint xmlns="http://www.w3.org/1999/xhtml">
+
+<TITLE>vStacks Infotech &raquo; Admin Panel</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+<link href="../../css/admin.css?1469682586" rel="stylesheet" type="text/css">
+<link href="../../css/admin-style.css" type="text/css" rel="stylesheet"  />
+<link href="../../css/admin-ecom-style.css" type="text/css" rel="stylesheet"  />
+<link rel="print stylesheet" type="text/css" href="../../css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<script type="text/javascript" src="../../fancybox/lib/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../../fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="../../fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.fancybox').fancybox();
+	});
+</script>
+
+
+
+<link rel="stylesheet" href="../../fancybox/jquery_calender/jquery-ui_Backup.css" />
+<link rel="stylesheet"  href="css/crmpopup.css"/><!--By chetan 4DEC-->
+
+
+<script src="../../fancybox/jquery_calender/jquery-ui.js"></script>
+<link rel="stylesheet" href="../../fancybox/timepicker/jquery.timepicker.css" />
+<script src="../../fancybox/timepicker/jquery.timepicker.js"></script>
+<script type="text/JavaScript">
+var GlobalSiteUrl = 'https://www.eznetcrm.com/erp/';
+</script>
+
+<script language="javascript" src="../../includes/validate.js"></script>
+<script language="javascript" src="../../includes/global.js?1469682586"></script>
+<script language="javascript" src="../../includes/ajax.js"></script>
+
+<script language="javascript" src="../../includes/tooltip.js"></script>
+<script language="javascript" src="includes/warehouse.js?1469682586"></script>
+<script language="javascript" src="../js/common.js"></script>
+
+
+
+
+
+
+
+
+</HEAD>
+<body >
+
+
+
+<div class="wrapper">
+
+<div id="main_table_nav" align="center" >
+  <div class="header-container">
+    <div class="logo" id="logo" ><a href="../dashboard.php"><img src="../../images/logo.png" border="0" alt="vStacks Infotech" title="vStacks Infotech"/></a></div>
+        <div class="top-right-nav">
+      <ul class="clearfix log_link">
+	  
+			
+		<li class="logout"><a href="../logout.php" onclick="Javascript:ShowHideLoader('2','P');"><span>Log Out</span></a></li>
+		<li class="chpassword"><a class="fancybox fancybox.iframe" href="../chPassword.php"><span>Change Password</span></a></li>
+
+   <li class="help"><a class="fancybox fancybox.iframe" href="../help.php?depID=3"><span>Help</span></a></li>
+
+
+
+
+<li><span>Total Storage :</span> 5 TB&nbsp;&nbsp;&nbsp;&nbsp;<span>Storage Used :</span> 147.4 MB&nbsp;&nbsp;<a href="https://www.eznetcrm.com/pricing-signup" style="color:#D40503" target="_blank">Upgrade</a><li><span>Account Expires in </span>2737 days</li></li>
+
+
+
+
+	</ul>
+	
+	<ul class="clearfix">	
+		<li class="welcome">Welcome <span>sakshay!</span></li>
+
+	  		 <li class="dash-back"><a href="../dashboard.php">Back to <span>Main Dashboard</span></a></li>
+        <li class="location"><span>Location:</span> Noida, Uttar Pradesh, India</li>
+       
+		        
+
+
+      </ul>
+
+	
+
+
+
+
+    </div>
+</div>
+
+<SCRIPT LANGUAGE=JAVASCRIPT>
+function TopSearch()
+{
+	if(ValidateForSimpleBlank(document.getElementById("k"),"Search Keyword")){
+		location.href="search.php?k="+document.getElementById("k").value;
+		LoaderSearch();	
+	}
+}
+
+function enterSub(inField, e) 
+{ 
+        var charCode;
+
+        if(e && e.which)
+        {
+            charCode = e.which;
+        }
+        else if (window.event)
+        {
+            e = window.event;
+            charCode = e.keyCode;
+        }
+
+        if (charCode == 13) 
+        {
+            TopSearch(); // My Main action
+        }
+ }
+
+$(document).ready(function() {
+		$(".help a").fancybox({
+			'width'         : 1000
+		 });
+
+});
+</SCRIPT>
+
+<div class="nav-container" id="main_menu">
+    <ul>
+		  <li class="dept_head" >Warehouse</li><li class="" ><a href="home.php" >Home</a></li><li class=""><a href="viewWarehouse.php">Warehouse</a></li><li class=""><a href="viewPoReceipt.php">Inbound Order</a></li><li class=""><a href="viewShipment.php">Outbound Order</a></li><li class=""><a href="viewAttrib.php?att=1">Settings</a></li>	</ul>
+</div>
+
+
+
+</div>
+
+<div id="main_table_list" class="main-container clearfix">
+	<div id="mid" class="main" >
+	
+
+				<div id="load_div" align="center" style="color:#d40503;"><img src="../images/loadr.gif">&nbsp;Loading.......</div>
+	
+
+
+
+
+
+
+
+
+<div id="session_div" style="display:none;width:550px;border:none;background:none"  >
+<table width="100%" border="0" cellpadding="5" cellspacing="0" >	 
+	<tr>
+		 <td colspan="2" align="left" class="head" >Your session is about to expire...</td>
+	</tr>
+	<tr>
+		 <td   align="center" >&nbsp;</td>
+	</tr>
+	<tr>
+		 <td colspan="2" align="center"><b>Please renew session to continue.</b></td>
+	</tr>
+<tr>
+		 <td   align="center" >&nbsp;</td>
+	</tr>
+	<tr>
+		 <td colspan="2" align="center" ><div id="defaultCountdown" ></div> </td>
+	</tr>
+	<tr>
+		 <td   align="center" >&nbsp;</td>
+	</tr>
+	<tr>
+		 <td colspan="2" align="center"><input type="button" name="RenewSession" id="RenewSession"  class="button" value="Renew Session">&nbsp;&nbsp;&nbsp;<input type="button" name="CancelSession" id="CancelSession" class="button" value="Cancel">
+
+
+
+</td>
+	</tr>
+	<tr>
+		 <td colspan="2" >&nbsp;</td>
+	</tr>
+</table>
+</div>
+
+<link rel="stylesheet" href="../../countdown/jquery.countdown.css">
+ 
+<script src="../../countdown/jquery.plugin.js"></script>
+<script src="../../countdown/jquery.countdown.js"></script>
+ <script>
+$(function () {
+	var austDay = new Date(1469684386000);
+	 
+	 
+	//austDay.setTime( austDay.getTime() + austDay.getTimezoneOffset()*60*1000 );
+
+	$('#defaultCountdown').countdown({until: austDay});
+	$('#year').text(austDay.getFullYear());
+});
+</script>
+
+<script language="JavaScript1.2" type="text/javascript">
+var SessionExpiry  = 0 ;
+	function session_checking(){
+	    $.post( "../session_expiry.php", function( data ) {
+		if(data == "-1")
+		{
+			SessionExpiry  = 1 ;
+		   $("#session_div").fancybox({  'closeBtn': false }).click(
+		
+		   );
+		   //alert("Your session is about to expire. Please click ok to renew session.");
+		   //location.reload();         
+		}
+	    });
+	}
+
+	$(document).ready(function(){	
+		window.setTimeout(session_checking, 1680000);   
+		setInterval(CheckExpiryTime, 2000);   
+	});
+
+
+
+	$('#RenewSession').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();		
+		//$.fancybox.close();
+		location.reload(); 
+	});
+
+
+	$('#CancelSession').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();		
+		//$.fancybox.close();
+		location.href = "../logout.php";
+	});
+
+
+	function CheckExpiryTime(){
+		var Hour = $('#defaultCountdown .countdown-section .countdown-amount')[0].innerHTML;
+		var Min = $('#defaultCountdown .countdown-section .countdown-amount')[1].innerHTML;
+		var Sec = $('#defaultCountdown .countdown-section .countdown-amount')[2].innerHTML;
+		if(SessionExpiry==1 && Min==0 && Sec==0){
+			location.href = "../logout.php";
+		}	
+	}
+
+</script>
+ 
+Binid	Warehouse Code	Warehouse Name	Bin Location	Note/Comments	Status
+
+1	W00001	Default Warehouse	Default Bin	&nbsp;hello	1
+62	W001	Steel warehouse	Container	&nbsp;3000 Qty Capecity jdhfckzjsdkfmck.	0
+63	W001	Steel warehouse	Pallet	&nbsp;5000 Qty	1
+73	W75	GAS Godam	Godam	<br type="_moz" />	1
+74	P001	Patanjli Vidhya Peeth	Rurkee Peeth	&nbsp;Yoga aurvedic center	1
+76	W0011	Mobile Warehouse	delhi	<br type="_moz" />	1
+79	ewew221	Steel	Noida	<div>
+<div>Lorem ipsum dolor sit amet, cu nec fuisset singulis, liber salutandi prodesset ea his, ad saperet mentitum probatus vel. Ad vero atomorum intellegat mea, pro posse imperdiet sententiae id. Mea ad numquam officiis, te elitr albucius nec. Mea ei quas causae, ei eos tota legere, eu dicunt admodum mediocrem est. An duo liber animal, vivendo alienum ne mei, ut vel affert lobortis voluptatibus. Mandamus sapientem qualisque eu vim, in eum soleat meliore.</div>
+<div>&nbsp;</div>
+<div>Semper virtute ad mel, eros ridens numquam id nec. Mel te iudico noluisse signiferumque, mea simul tacimates no. Case definitionem eu cum, cibo debet vitae in eos. Nam inani torquatos intellegat ad. Per ex epicurei dissentiunt, inimicus mnesarchum an vim.</div>
+<div>&nbsp;</div>
+<div>Ne diam sensibus adversarium per, ut ius oportere intellegat, novum aeque deterruisset vel cu. No duo cibo putent option. Illud aliquam alienum an sit, nominavi delicatissimi ne per. Habeo solum porro mea at, eos ei copiosae voluptatum posidonium.</div>
+<div>&nbsp;</div>
+<div>Duo appetere signiferumque ea, ea nam mucius iisque persequeris. Sed te quod justo aliquando, no postea offendit has. Vix an eros mucius singulis, tempor blandit vel ut. Ceteros albucius contentiones in sit. Te unum aliquid est, nec odio complectitur in. Qui amet inani et.</div>
+<div>&nbsp;</div>
+<div>Placerat mandamus instructior sea id, ipsum facer salutandi te usu. Mel an malis vivendum. Id has ridens essent, eu per probo disputando. Duo minim scaevola postulant ei, cu his alia aperiam efficiendi, ea eam senserit appellantur.</div>
+</div>
+<div><br />
+<br />
+&nbsp;</div>	0
+82	P001	Patanjli Vidhya Peeth	New delhi	&nbsp;	1
+85	W0011	Mobile Warehouse	noida	&nbsp;
+<h4 style="margin: 0px; padding: 1px 0px 0px; font-size: 14px; color: rgb(17, 17, 17); font-family: " open="" none="">Creating Dummy Content</h4>
+<p style="margin: 0px 0px 22px; padding: 0px; clear: left; font-size: 13px; color: rgb(68, 68, 68); font-family: " open=""><span style="color: rgb(119, 119, 119); font-family: &quot;Droid Sans&quot;, sans-serif; font-size: 15px; line-height: 25px;">This is some dummy copy. You&rsquo;re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.</span></p>	1
+87	mk890	mk warehouse	delhi	<strong style="margin: 0px; padding: 0px; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;">Lorem Ipsum</strong><span style="font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;">&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>	1
+88	k12345	steelwarehouse	W00001	&nbsp;test	0
+89	W00001	Default Warehouse	W001	TEST&nbsp;	1
+90	W0005	Common Warehouse	W001	&nbsp;TEST	1
+91	W003	Production Warehouse	W0012	&nbsp;TEST1	1

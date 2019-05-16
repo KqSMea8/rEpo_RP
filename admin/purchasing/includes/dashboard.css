@@ -1,0 +1,94 @@
+/********************  Purchasing Start ********************/
+.my-dashboard-nav ul li a{background:url("../../images/mydashboard_icons.png") no-repeat 0 0;}
+.my-dashboard-nav ul li.vendor a {
+  background-position:-414px -1315px;
+}
+.my-dashboard-nav ul li.vendor a:hover {
+  background-position:-414px -1427px;
+}
+.my-dashboard-nav ul li.add_vendor a {
+   background-position:-303px -1316px;
+}
+.my-dashboard-nav ul li.add_vendor a:hover {
+   background-position:-303px -1428px;
+}
+.my-dashboard-nav ul li.purchase_quote a {
+   background-position:35px -1759px;
+}
+.my-dashboard-nav ul li.purchase_quote a:hover {
+   background-position:35px -1871px;
+}
+.my-dashboard-nav ul li.add_quote a {
+   background-position:31px -423px;
+}
+.my-dashboard-nav ul li.add_quote a:hover {
+   background-position:31px -535px;
+}
+.my-dashboard-nav ul li.purchase_order a {
+   background-position:-81px -647px;
+}
+.my-dashboard-nav ul li.purchase_order a:hover {
+   background-position:-81px -759px;
+}
+.my-dashboard-nav ul li.add_po a {
+   background-position:-192px -647px;
+}
+.my-dashboard-nav ul li.add_po a:hover {
+   background-position:-192px -759px;
+}
+.my-dashboard-nav ul li.invoices a {
+   background-position:30px -646px;
+}
+.my-dashboard-nav ul li.invoices a:hover {
+   background-position:30px -758px;
+}
+.my-dashboard-nav ul li.receive_order a {
+   background-position:-191px -868px;
+}
+.my-dashboard-nav ul li.receive_order a:hover {
+   background-position:-191px -980px;
+}
+.my-dashboard-nav ul li.rma a {
+   background-position:-189px 23px;
+}
+.my-dashboard-nav ul li.rma a:hover {
+   background-position:-189px -89px;
+}
+.my-dashboard-nav ul li.add_return a {
+   background-position:-300px 23px;
+}
+.my-dashboard-nav ul li.add_return a:hover {
+   background-position:-300px -89px;
+}
+.my-dashboard-nav ul li.credit_note a {
+   background-position:-81px -422px;
+}
+.my-dashboard-nav ul li.credit_note a:hover {
+   background-position:-81px -534px;
+}
+.my-dashboard-nav ul li.add_credit_note a {
+   background-position:-191px -422px;
+}
+.my-dashboard-nav ul li.add_credit_note a:hover {
+   background-position:-191px -534px;
+}
+.my-dashboard-nav ul li.po_report a {
+   background-position:-414px -869px;
+}
+.my-dashboard-nav ul li.po_report a:hover {
+   background-position:-414px -981px;
+}
+.my-dashboard-nav ul li.invoice_report a {
+   background-position:-410px -1759px;
+}
+.my-dashboard-nav ul li.invoice_report a:hover {
+   background-position:-410px -1871px;
+}
+.my-dashboard-nav ul li.payment_history a {
+   background-position:-303px -1538px;
+}
+.my-dashboard-nav ul li.payment_history a:hover {
+   background-position:-303px -1650px;
+}
+
+/********************  End ********************/

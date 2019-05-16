@@ -1,0 +1,88 @@
+/********************  Finance Start ********************/
+.my-dashboard-nav ul li a{background:url("../../images/mydashboard_icons.png") no-repeat 0 0;}
+
+.my-dashboard-nav ul li.chart_of_accounts a {
+  background-position:-414px -1092px;
+}
+.my-dashboard-nav ul li.chart_of_accounts a:hover {
+  background-position:-414px -1204px;
+}
+.my-dashboard-nav ul li.ar_cash_receipt2 a {
+   background-position:-189px 23px;
+}
+.my-dashboard-nav ul li.ar_cash_receipt2 a:hover {
+   background-position:-189px -89px;
+}
+.my-dashboard-nav ul li.ar_cash_receipt a {
+   background-position:30px -646px;
+}
+.my-dashboard-nav ul li.ar_cash_receipt a:hover {
+   background-position:30px -758px;
+}
+.my-dashboard-nav ul li.ap_payments a {
+   background-position:-410px -1759px;
+}
+.my-dashboard-nav ul li.ap_payments a:hover {
+   background-position:-410px -1871px;
+}
+.my-dashboard-nav ul li.journal_entry a {
+   background-position:35px -1759px;
+}
+.my-dashboard-nav ul li.journal_entry a:hover {
+   background-position:35px -1871px;
+}
+.my-dashboard-nav ul li.profit_and_loss a {
+   background-position:-303px -1538px;
+}
+.my-dashboard-nav ul li.profit_and_loss a:hover {
+   background-position:-303px -1650px;
+}
+.my-dashboard-nav ul li.balance_sheet a {
+   background-position:-414px -869px;
+}
+.my-dashboard-nav ul li.balance_sheet a:hover {
+   background-position:-414px -981px;
+}
+.my-dashboard-nav ul li.customer a {
+  background-position:30px -1538px;
+}
+.my-dashboard-nav ul li.customer a:hover {
+  background-position:30px -1650px;
+}
+.my-dashboard-nav ul li.ar_invoices a {
+   background-position:-81px -647px;
+}
+.my-dashboard-nav ul li.ar_invoices a:hover {
+    background-position:-81px -759px;
+}
+.my-dashboard-nav ul li.sales_commission a {
+  background-position:30px -1094px;
+}
+.my-dashboard-nav ul li.sales_commission a:hover {
+  background-position: 30px -1206px;
+}
+.my-dashboard-nav ul li.vendor a {
+  background-position:-414px -1315px;
+}
+.my-dashboard-nav ul li.vendor a:hover {
+  background-position:-414px -1427px;
+}
+.my-dashboard-nav ul li.ap_invoices a {
+   background-position:-81px -647px;
+}
+.my-dashboard-nav ul li.ap_invoices a:hover {
+    background-position:-81px -759px;
+}
+.my-dashboard-nav ul li.receive_payment a {
+   background-position:-300px 23px;
+}
+.my-dashboard-nav ul li.receive_payment a:hover {
+   background-position:-300px -89px;
+}
+.my-dashboard-nav ul li.pay_vendor a {
+   background-position:-302px -869px;
+}
+.my-dashboard-nav ul li.pay_vendor a:hover {
+   background-position:-302px -981px;
+}
+/********************  End ********************/

@@ -1,0 +1,7 @@
+Sku	Item Description	Track Inventory	Valuation Method	Item Type	Qty on Hand	Status
+						
+SKU777	Software of computer	No	Serialized		55	Active
+SKU666	Hardware parts of computer	No	Serialized		60	Active
+SKU555	Software parts of computer	No	Serialized		70	Active
+SKU444	Hardware parts of computer	No	Serialized		80	Active
+SKU333	Hardware parts of computer	No	Serialized		100	Active

@@ -1,0 +1,23 @@
+- <markers>
+- <!-- 
+ Dont use copy and paste on this XML file, use "View Source" or "Save As"
+       What the browser displays is *interpreted* XML, not XML source. 
+
+  --> 
+  <marker lat="43.65654" lng="-79.90138" html="Some stuff to display in the<br>First Info Window" label="Marker One" /> 
+  <marker lat="43.91892" lng="-78.89231" html="Some stuff to display in the<br>Second Info Window" label="Marker Two" /> 
+  <marker lat="43.82589" lng="-79.10040" html="Some stuff to display in the<br>Third Info Window" label="Marker Three" /> 
+- <line colour="#FF0000" width="2">
+  <point lat="43.65654" lng="-79.90138" /> 
+  <point lat="43.91892" lng="-78.89231" /> 
+  <point lat="43.82589" lng="-79.10040" /> 
+  </line>
+- <line colour="#008800" width="4">
+  <point lat="43.9078" lng="-79.0264" /> 
+  <point lat="44.1037" lng="-79.6294" /> 
+  <point lat="43.5908" lng="-79.2567" /> 
+  <point lat="44.2248" lng="-79.2567" /> 
+  <point lat="43.7119" lng="-79.6294" /> 
+  <point lat="43.9078" lng="-79.0264" /> 
+  </line>
+  </markers>

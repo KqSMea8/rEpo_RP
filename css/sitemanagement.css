@@ -1,0 +1,7 @@
+.site-cl{  padding: 0;list-style: none;width:100%;margin:0 auto;}
+.site-cl li{float: left;width: 174px;text-align: center;position:relative;}
+.site-cl li a{display: block; padding: 5px 10px;color: black;font-size:13px;font-weight:bold;background: #f2f2f2;text-decoration: none; }
+ .site-cl li a:hover{ color: #fff; background: #939393;}
+ .site-cl li ul{display: none;position:absolute;}
+.site-cl li:hover ul{display: block;}
+.clear{clear:both;}

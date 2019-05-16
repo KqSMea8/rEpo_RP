@@ -1,0 +1,96 @@
+
+
+
+<script language="JavaScript1.2" type="text/javascript">
+function CheckFancyReferer(){	
+	var test = window.parent.document.getElementById("footer");
+	if(test!=null){
+		//alert('yes');
+	}else{
+		window.location.href="home.php";
+	}
+}
+CheckFancyReferer();
+</script>
+
+Report Name	quote
+Report Desc	quote
+Type	Quote Stage	Assigned To	Subject	Valid Till	Tax Rate	Payment Term
+"c"	"Reviewed"	""	"DEVELOPING"	"31 Jul, 2014 12:00:00 am"	""	""
+""	"Reviewed"	""	"Quote for Lead"	"30 Jul, 2014 12:00:00 am"	""	""
+"c"	"Accepted"	""	"Product campaign event 2014"	"31 Oct, 2014 12:00:00 am"	""	""
+"o"	"Delivered"	""	"Ticket Testing"	""	""	""
+"c"	"Reviewed"	""	"Offered Quote"	""	""	""
+"o"	"Delivered"	""	"New Quote"	""	""	""
+"o"	"Delivered"	""	"Dell"	""	""	""
+"c"	"Rejected"	""	"research"	"31 Oct, 2014 12:00:00 am"	""	""
+"o"	"Accepted"	""	"Visual Quote"	"31 Oct, 2014 12:00:00 am"	""	""
+""	"Accepted"	""	"harsha"	"13 Nov, 2050 12:00:00 am"	""	""
+"c"	"Delivered"	""	"shashank Crm"	""	""	""
+"o"	"Reviewed"	""	"nikhil "	"9 Dec, 2115 12:00:00 am"	""	""
+"o"	"Created"	""	"test quate13"	""	""	""
+"c"	"Created"	""	"test quate131"	"26 Nov, 2014 12:00:00 am"	""	""
+"c"	"Created"	""	"13SAK188"	"28 Nov, 2014 12:00:00 am"	"2:VAT:10.00"	""
+"c"	"Reviewed"	""	"Formal Quote"	"26 Nov, 2014 12:00:00 am"	"6:VAT-2:25.00"	""
+"c"	"Created"	""	"test 17nov test"	"26 Nov, 2014 12:00:00 am"	""	""
+""	"Reviewed"	""	"crm subject"	""	""	""
+"o"	"Accepted"	""	"subject for crm"	""	""	""
+"c"	"Reviewed"	""	"shashank subject for CRM and ERP subject"	"18 Nov, 2022 12:00:00 am"	""	""
+"o"	"Created"	""	"test sub19Nov"	"26 Nov, 2014 12:00:00 am"	""	""
+"o"	"Created"	""	"test sub24Nov"	"25 Nov, 2014 12:00:00 am"	""	""
+"c"	"Reviewed"	""	"mohit crm"	"18 Nov, 2022 12:00:00 am"	""	""
+"o"	"Created"	""	"test 25Nov Quote"	"27 Nov, 2014 12:00:00 am"	""	""
+"c"	"Reviewed"	""	"shashank subject for CRM and ERP subject"	"18 Nov, 2022 12:00:00 am"	""	""
+"c"	"Reviewed"	""	"shashank subject for CRM and ERP subject"	"18 Nov, 2022 12:00:00 am"	""	""
+"c"	"Created"	""	"test 25nov price subject"	"28 Nov, 2014 12:00:00 am"	""	""
+"c"	"Delivered"	""	"nike"	""	""	""
+""	"Delivered"	""	"Harsha"	""	""	""
+"o"	"Delivered"	""	"bmb"	""	""	""
+"o"	"Delivered"	""	"jaksksksk dkdks sksk dkdks dkdnd dkd dod dodd od d"	"3 Dec, 2015 12:00:00 am"	""	""
+"o"	"Accepted"	""	"Dec Quote"	""	""	""
+"o"	"Reviewed"	""	"gggghhjhh"	""	""	""
+"o"	"Created"	""	"Dec Quote"	""	""	""
+"o"	"Created"	""	"test 25Nov Quote"	"27 Nov, 2014 12:00:00 am"	""	""
+"o"	"Accepted"	""	"Quote Sub"	""	""	""
+"c"	"Delivered"	""	"dgdf"	""	""	""
+"c"	"Created"	""	"test 17nov test"	"26 Nov, 2014 12:00:00 am"	""	""
+"o"	"Accepted"	""	"dummy subject"	"15 Dec, 2016 12:00:00 am"	""	""
+"o"	"Created"	""	"Dec Quote"	""	""	""
+""	"Created"	""	"test 25Nov Quote"	"27 Nov, 2014 12:00:00 am"	""	""
+"c"	"Reviewed"	""	"dummy subject"	"24 Dec, 2047 12:00:00 am"	""	""
+"o"	"Reviewed"	""	"Harsha"	""	""	""
+"o"	"Reviewed"	""	"test QA"	""	""	""
+"o"	"Accepted"	""	"hariom"	"28 Jan, 2015 12:00:00 am"	""	""
+"c"	"Delivered"	""	"Hi kaush"	""	""	""
+"c"	"Reviewed"	""	"Hi"	"27 Aug, 2015 12:00:00 am"	""	""
+"o"	"Delivered"	""	"hi hlo"	"31 Dec, 1969 12:00:00 am"	""	""
+"o"	"Delivered"	""	"hi kauahal"	"31 Dec, 1969 12:00:00 am"	""	""
+"o"	"Delivered"	""	"test"	"2 Apr, 2016 12:00:00 am"	""	""
+"o"	"Accepted"	""	"Test Quote-4"	""	""	""
+"c"	"Created"	""	"parwez"	""	""	"Net15 - 15"
+"c"	"Delivered"	""	"hhhh dfddfd"	""	""	""
+"c"	"Delivered"	""	"test me"	""	""	"Net10 - 10"
+"c"	"Delivered"	""	"test me"	""	""	"Net10 - 10"
+"c"	"Created"	""	"test 17nov test"	"26 Nov, 2014 12:00:00 am"	""	""
+"o"	"Created"	""	"Attendance machine"	""	""	"Net10 - 10"
+""	"Created"	""	"TestG"	"20 Jul, 2015 12:00:00 am"	""	""
+""	"Reviewed"	""	"bhoodev 56000 uuuu"	"30 Jul, 2015 12:00:00 am"	""	""
+"o"	"Created"	""	"bhoodev 56000 high"	"31 Jul, 2015 12:00:00 am"	""	""
+"o"	"Created"	""	"shyam"	"30 Jul, 2015 12:00:00 am"	""	""
+"o"	"Created"	""	"TestQuotes"	"31 Jul, 2015 12:00:00 am"	""	"Net10 - 10"
+"o"	"Created"	""	"Test"	"6 Aug, 2015 12:00:00 am"	""	"Net10 - 10"
+"o"	"Created"	"Tanveer Khan"	"TestG11test"	"7 Aug, 2015 12:00:00 am"	""	"Net10 - 10"
+"o"	"Created"	"Tanveer Khan"	"QACompQuoteRec"	"7 Aug, 2015 12:00:00 am"	""	"Net10 - 10"
+"o"	"Created"	"Amit Aggarwal"	"MyOneTimeQuote"	"28 Aug, 2015 12:00:00 am"	""	"Net10 - 10"
+"o"	"Created"	"Amit Aggarwal"	"TestG11111"	"25 Aug, 2015 12:00:00 am"	""	"Net10 - 10"
+"c"	"Delivered"	""	"shyam"	"19 Aug, 2015 12:00:00 am"	""	"Net15 - 15"
+"o"	"Created"	"Amit Aggarwal"	"test12345678"	""	""	"Net15 - 15"
+"o"	"Created"	"Amit Aggarwal"	"shyam 345"	"20 Aug, 2015 12:00:00 am"	""	"Net10 - 10"
+"c"	"Delivered"	""	"tytryrtyy"	""	""	""
+"c"	"Delivered"	""	"tytryrtyy"	""	""	""
+	
+	
+
+
+
+	

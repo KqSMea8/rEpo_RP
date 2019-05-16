@@ -1,0 +1,23 @@
+RewriteEngine on
+
+RewriteBase /erp/
+#RewriteBase /
+
+#IndexIgnore *
+
+Options -Indexes
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+#RewriteRule ^phpinfo.html$ phpinfo.php
+
+
+RewriteRule ^(.*)/(.*) $2?c=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-/_]+).html$ page.php?url=$1 [QSA,L]
+
+
+
+#RewriteRule ^microsite/([0-9]+)/([A-Za-z0-9_]+)/ home.php?Cmp=$1
+
+

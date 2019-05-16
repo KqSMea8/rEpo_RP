@@ -1,0 +1,84 @@
+<?php
+
+/* Developer Name: Niraj Gupta
+ * Date : 29-06-15
+ * 
+ * Description: For User class
+ * @param: 
+ * @return: 
+ */
+class user extends dbClass {
+/*
+ * Name: user
+ * Description: For Superadmin  company user managements
+ * @param: 
+ * @return: 
+ */
+	
+ function getUser($arg = array(), $userID) {      
+        if (!empty($userID)) {
+            $sql = "SELECT * FROM `users` where userID='" . $userID . "'";
+            
+
+            return $this->get_row($sql);
+        } else {
+        $where='WHERE 1=1';
+        if(!empty($arg['userRoleID']))
+      		$where .=' AND userRoleID="'.$arg['userRoleID'].'"';
+            $sql = "SELECT * FROM `users` $where";           
+            return $this->get_results($sql);
+        }
+    }
+
+
+  function AddUserdata($arryDetails) {
+        extract($arryDetails);
+        $result = $this->insert('users', $arryDetails);
+        $pckgID = $this->insert_id;
+        return $pckgID;
+    }
+
+    
+function UpdateUserdata($arryDetails,$userID)
+                {   
+			extract($arryDetails);
+			if(!empty($userID)){
+			$this->update('users',$arryDetails,array('userID'=>$userID));
+			}
+			return 1;
+		}
+
+    
+    function DeleteUser($userID) {
+        $this->delete('users', array('userID' => $userID));
+        return 1;
+    }
+    
+    
+function changeUserStatus($arryDetails,$userID)
+ {   
+                    if(!empty($arryDetails)){
+					if($arryDetails['status']==1)
+						$arryDetails['status']=0;
+					else
+						$arryDetails['status']=1;
+					$this->update('users',$arryDetails,array('userID'=>$userID));					
+                                 }
+			return true;
+
+		}
+		
+		function ChangePassword($arryDetails,$userID)
+		{  //echo $userID;
+			//print_r($arryDetails);die(test);
+			extract($arryDetails);
+			if(!empty($userID)){
+			$this->update('users',$arryDetails,array('userID'=>$userID));
+			}
+			return 1;
+		}		
+		
+	
+}
+
+?>

@@ -1,0 +1,162 @@
+.eznetchat-box {
+    background: #fff none repeat scroll 0 0;
+    bottom: 30px;
+    opacity: 1;
+    text-align: center;
+    z-index: 9999;
+}
+.eznetchat-box  .eznetchat-iframe{
+ border: medium none;
+}
+.eznetchat-box.eznetchat-close-box {    
+    height: auto;
+    width: auto;
+    bottom: 30px;
+}
+.eznetchat-initialization {
+    border-radius: 40px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+}
+.eznetchat-opener {
+    /*background: rgba(0, 0, 0, 0) url("../img/top_icon.png") repeat scroll 0 0;
+    display: inline-block;
+    float: right;
+    height: 14px;
+    margin-right: 5%;
+    margin-top: 3%;
+    width: 28px;*/
+}
+
+ .eznetchat-close-box .eznetchat-initialization{
+ display:block;
+ }
+.bluetheme .eznetchat-initialization{
+	background: #358AD9 none repeat scroll 0 0;    
+}
+.eznetchat-box .eznetchat-minimize{
+	background: rgba(0, 0, 0, 0) url("http://www.eznetchat.com/images/minimize.png") no-repeat scroll 0 0;   
+    cursor: pointer;
+    height: 120px;
+    position: absolute;
+    right: 0px;
+    text-indent: -99999px;
+    top: 0px;
+    width: 120px;
+    border-radius: 40px;
+    z-index: 99;
+    background: transparent;
+    bottom: 0px;
+}
+.eznetchat-box.eznetchat-close-box .eznetchat-minimize{
+	display:none;
+}
+.chat-icon {
+    position: relative;
+}
+.chat-icon a {
+    position: relative;
+    display: block;
+    background: #089ce6;
+    padding: 25px;
+    border-radius: 40px;
+}
+.eznetchat-box .chat-icon a img {
+    display: inline-block;
+    margin-bottom: -12px;
+    width: 70px;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+    -o-transition: ease-in-out .5s;
+    transition: ease-in-out .5s;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    opacity: 0;
+}
+.eznetchat-box.eznetchat-close-box .chat-icon a img {
+    display: inline-block;
+    margin-bottom: -12px;
+    width: 70px;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+    -o-transition: ease-in-out .5s;
+    transition: ease-in-out .5s;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 1;
+}
+.eznetchat-box.eznetchat-close-box .chat-icon a:before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 77px;
+    background: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    opacity: 0;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+    -o-transition: ease-in-out .5s;
+    transition: ease-in-out .5s;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.eznetchat-box .chat-icon a:before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 77px;
+    background: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    opacity: 0;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+    -o-transition: ease-in-out .5s;
+    transition: ease-in-out .5s;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    opacity: 1;
+}
+iframe {
+    width: 450px;
+    height: 462px;
+    position: fixed;
+    bottom: -510px;
+    right: 180px;
+    box-shadow: 0px 3px 10px hsla(0, 0%, 0%, 0.4);
+    border-radius: 9px;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    opacity: 0;
+}
+iframe.active {
+    bottom: 40px;
+    opacity: 1;
+}
+.eznetchat-box.active iframe {
+    bottom: 40px;
+    opacity: 1;
+}

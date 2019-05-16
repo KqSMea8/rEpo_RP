@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Google Maps</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAPDUET0Qt7p2VcSk6JNU1sBRRwPhutbWBmyj82Go_H6JlE7EvFBSKFFFHFePAwvib9UM0geoA3Pgafw" type="text/javascript"></script>
+  </head>
+  <body onunload="GUnload()">
+
+
+    <!-- the div where the map will be displayed -->
+    <div id="map" style="width: 550px; height: 450px"></div>
+    <a href="http://www.econym.demon.co.uk/googlemaps/basic4.htm">Back to the tutorial page</a>
+    
+    <!-- fail nicely if the browser has no Javascript -->
+    <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b> 
+      However, it seems JavaScript is either disabled or not supported by your browser. 
+      To view Google Maps, enable JavaScript by changing your browser options, and then 
+      try again.
+    </noscript>
+
+
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    // Check to see if this browser can run the Google API
+    if (GBrowserIsCompatible()) {
+
+      var gmarkers = [];
+      var htmls = [];
+      var to_htmls = [];
+      var from_htmls = [];
+      var i=0;
+
+      // A function to create the marker and set up the event window
+      function createMarker(point,name,html) {
+        var marker = new GMarker(point);
+
+        // The info window version with the "to here" form open
+        to_htmls[i] = html + '<br>Directions: <b>To here</b> - <a href="javascript:fromhere(' + i + ')">From here</a>' +
+           '<br>Start address:<form action="http://maps.google.com/maps" method="get" target="_blank">' +
+           '<input type="text" SIZE=40 MAXLENGTH=40 name="saddr" id="saddr" value="" /><br>' +
+           '<INPUT value="Get Directions" TYPE="SUBMIT">' +
+           '<input type="hidden" name="daddr" value="' + point.lat() + ',' + point.lng() + 
+                  // "(" + name + ")" + 
+           '"/>';
+        // The info window version with the "to here" form open
+        from_htmls[i] = html + '<br>Directions: <a href="javascript:tohere(' + i + ')">To here</a> - <b>From here</b>' +
+           '<br>End address:<form action="http://maps.google.com/maps" method="get"" target="_blank">' +
+           '<input type="text" SIZE=40 MAXLENGTH=40 name="daddr" id="daddr" value="" /><br>' +
+           '<INPUT value="Get Directions" TYPE="SUBMIT">' +
+           '<input type="hidden" name="saddr" value="' + point.lat() + ',' + point.lng() +
+                  // "(" + name + ")" + 
+           '"/>';
+        // The inactive version of the direction info
+        html = html + '<br>Directions: <a href="javascript:tohere('+i+')">To here</a> - <a href="javascript:fromhere('+i+')">From here</a>';
+
+        GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(html);
+        });
+        gmarkers[i] = marker;
+        htmls[i] = html;
+        i++;
+        return marker;
+      }
+
+      // functions that open the directions forms
+      function tohere(i) {
+        gmarkers[i].openInfoWindowHtml(to_htmls[i]);
+      }
+      function fromhere(i) {
+        gmarkers[i].openInfoWindowHtml(from_htmls[i]);
+      }
+
+      // Display the map, with some controls and set the initial location 
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng( 43.907787,-79.359741), 9);
+    
+      // Set up three markers with info windows 
+    
+      var point = new GLatLng( 43.65654,-79.90138);
+      var marker = createMarker(point,'Elm Street','Some stuff to display in the<br>First Info Window <br>With a <a href="http://www.econym.demon.co.uk">Link</a> to my home page')
+      map.addOverlay(marker);
+
+      var point = new GLatLng( 43.91892,-78.89231);
+      var marker = createMarker(point,'The Bates Motel','Some stuff to display in the<br>Second Info Window')
+      map.addOverlay(marker);
+
+      var point = new GLatLng(43.82589,-79.10040);
+      var marker = createMarker(point,'Here be dragons','Some stuff to display in the<br>Third Info Window')
+      map.addOverlay(marker);
+    }
+
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    // This Javascript is based on code provided by the
+    // Blackpool Community Church Javascript Team
+    // http://www.commchurch.freeserve.co.uk/   
+    // http://www.econym.demon.co.uk/googlemaps/
+
+    //]]>
+    </script>
+  </body>
+
+</html>
+
+
+
+

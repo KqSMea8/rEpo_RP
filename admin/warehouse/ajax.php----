@@ -1,0 +1,458 @@
+<?
+
+session_start();
+$Prefix = "../../";
+require_once($Prefix . "includes/config.php");
+require_once($Prefix . "includes/function.php");
+require_once($Prefix . "classes/dbClass.php");
+require_once($Prefix . "classes/region.class.php");
+require_once($Prefix . "classes/admin.class.php");
+require_once($Prefix . "classes/leave.class.php");
+require_once($Prefix . "classes/time.class.php");
+require_once($Prefix . "classes/warehouse.class.php");
+require_once($Prefix."classes/rma.sales.class.php"); //by ravi 26-01-17
+$objrmasale = new rmasale();                        //by ravi 26-01-17
+$objConfig = new admin();
+if(empty($_SERVER['HTTP_REFERER'])){
+		echo 'Protected.';exit;
+	}
+/* * ******Connecting to main database******** */
+$Config['DbName'] = $Config['DbMain'];
+$objConfig->dbName = $Config['DbName'];
+$objConfig->connect();
+/* * **************************************** */
+
+/* if($_GET['ware_name']){
+  $objWarehouse = new warehouse();
+  $order_data = $objWarehouse->getOrderData($_GET['ware_name']);
+  //echo $_GET['ware_name'];
+  $htmldata = '<select id="oderdata">';
+  foreach($order_data as $odata):
+  echo '<option value="'.$odata[''].'"></option>';
+  endforeach;
+
+  } */
+
+CleanGet();
+
+
+switch ($_GET['action']) {
+    case 'delete_file':
+        if ($_GET['file_path'] != '') {
+            unlink($_GET['file_path']);
+            echo "1";
+        } else {
+            echo "0";
+        }
+        break;
+        exit;
+    case 'currency':
+        $objRegion = new region();
+        $arryCurrency = $objRegion->getCurrency($_GET['currency_id'], '');
+        echo $StoreCurrency = $arryCurrency[0]['symbol_left'] . $arryCurrency[0]['symbol_right'];
+        break;
+        exit;
+
+     case 'state':
+			$objRegion=new region();
+			if($_GET['country_id']>0){
+				$arryState = $objRegion->getStateByCountry($_GET['country_id']);
+				$NumState = sizeof($arryState);
+			}
+			
+				$AjaxHtml  = '<select name="state_id" class="inputbox" id="state_id"  onchange="Javascript: SetMainStateId();">';
+				
+				if($_GET['select']==1 && $NumState>0){
+					$AjaxHtml  .= '<option value="">--- Select ---</option>';
+				}
+
+				$StateSelected = (!empty($_GET['current_state']))?($_GET['current_state']):($arryState[0]['state_id']);
+				
+				for($i=0;$i<sizeof($arryState);$i++) {
+				
+					$Selected = ($_GET['current_state'] == $arryState[$i]['state_id'])?(" Selected"):("");
+					
+					$AjaxHtml  .= '<option value="'.$arryState[$i]['state_id'].'" '.$Selected.'>'.stripslashes($arryState[$i]['name']).'</option>';
+					
+				}
+
+				$Selected = ($_GET['current_state'] == '0')?(" Selected"):("");
+				if($NumState<=0){
+					$AjaxHtml  .= '<option value="">No state found.</option>';
+				}else if($_GET['other']==1){
+					$AjaxHtml  .= '<option value="0" '.$Selected.'>Other</option>';
+				} 
+				$AjaxHtml  .= '</select>';
+			
+			
+				
+			$AjaxHtml  .= '<input type="hidden" name="ajax_state_id" id="ajax_state_id" value="'.$StateSelected.'">';
+							
+			break;
+			
+			
+	case 'city':
+			$objRegion=new region();
+			if($_GET['country_id']>0){ 
+				if($_GET['ByCountry']==1){
+					$arryCity = $objRegion->getCityList('', $_GET['country_id']);
+				}else if($_GET['state_id']>0){ 
+					$arryCity = $objRegion->getCityList($_GET['state_id'], $_GET['country_id']);
+				}
+			} 
+
+				$AjaxHtml  = '<select name="city_id" class="inputbox" id="city_id" onchange="Javascript: SetMainCityId();">';
+				
+				if($_GET['select']==1){
+					$AjaxHtml  .= '<option value="">--- Select ---</option>';
+				}
+
+
+				$CitySelected = (!empty($_GET['current_city']))?($_GET['current_city']):($arryCity[0]['city_id']);
+				
+				for($i=0;$i<sizeof($arryCity);$i++) {
+				
+					$Selected = ($_GET['current_city'] == $arryCity[$i]['city_id'])?(" Selected"):("");
+					
+					$AjaxHtml  .= '<option value="'.$arryCity[$i]['city_id'].'" '.$Selected.'>'.htmlentities($arryCity[$i]['name'], ENT_IGNORE).'</option>';
+					
+				}
+
+				$Selected = ($_GET['current_city'] == '0')?(" Selected"):("");
+				if($_GET['other']==1){
+					$AjaxHtml  .= '<option value="0" '.$Selected.'>Other</option>';
+				}else if(sizeof($arryCity)<=0){
+					$AjaxHtml  .= '<option value="">No city found.</option>';
+				}
+
+				$AjaxHtml  .= '</select>';
+			
+				
+			$AjaxHtml  .= '<input type="hidden" name="ajax_city_id" id="ajax_city_id" value="'.$CitySelected.'">';
+							
+			break;
+
+
+    case 'shippingstate':
+        $objRegion = new region();
+        if ($_GET['country_id'] == "0") {
+            $AjaxHtml = '<select name="State" id="state_id"  onclick="Javascript: GetStateId();" class="multiselect" multiple size="7">';
+
+            $AjaxHtml .= '<option value="0">All States</option>';
+
+            $AjaxHtml .= '</select>';
+        } else {
+            $arryState = $objRegion->getStateByCountry($_GET['country_id']);
+
+            $AjaxHtml = '<select name="State" id="state_id" class="multiselect" multiple size="7"  onclick="Javascript: GetStateId();">';
+
+            if ($_GET['select'] == 1) {
+                $AjaxHtml .= '<option value="0">All States</option>';
+            }
+
+            $StateSelected = (!empty($_GET['current_state'])) ? ($_GET['current_state']) : ($arryState[0]['state_id']);
+
+            for ($i = 0; $i < sizeof($arryState); $i++) {
+
+                $Selected = ($_GET['current_state'] == $arryState[$i]['state_id']) ? (" Selected") : ("");
+
+                $AjaxHtml .= '<option value="' . $arryState[$i]['state_id'] . '" ' . $Selected . '>' . stripslashes($arryState[$i]['name']) . '</option>';
+            }
+
+            $Selected = ($_GET['current_state'] == '0') ? (" Selected") : ("");
+            if ($_GET['other'] == 1) {
+                $AjaxHtml .= '<option value="0" ' . $Selected . '>Other</option>';
+            } else if (sizeof($arryState) <= 0) {
+                $AjaxHtml .= '<option value="">No state found.</option>';
+            }
+
+            $AjaxHtml .= '</select>';
+        }
+
+
+
+
+        break;
+
+
+    case 'zipSearch':
+        $objRegion = new region();
+        if (!empty($_GET['city_id'])) {
+            $arryZipcode = $objRegion->getZipCodeByCity($_GET['city_id']);
+            for ($i = 0; $i < sizeof($arryZipcode); $i++) {
+                $AjaxHtml .= '<li onclick="set_zip(\'' . stripslashes($arryZipcode[$i]['zip_code']) . '\')">' . stripslashes($arryZipcode[$i]['zip_code']) . '</li>';
+            }
+        }
+        break;
+
+
+
+    case 'taxstate':
+        $objRegion = new region();
+
+        $arryState = $objRegion->getStateByCountry($_GET['country_id']);
+
+        $AjaxHtml = '<select name="State" id="state_id" class="inputbox"   onclick="Javascript: SetMainStateId();">';
+
+        if ($_GET['select'] == 1) {
+            $AjaxHtml .= '<option value="0">All States</option>';
+        }
+
+        $StateSelected = (!empty($_GET['current_state'])) ? ($_GET['current_state']) : ($arryState[0]['state_id']);
+
+        for ($i = 0; $i < sizeof($arryState); $i++) {
+
+            $Selected = ($_GET['current_state'] == $arryState[$i]['state_id']) ? (" Selected") : ("");
+
+            $AjaxHtml .= '<option value="' . $arryState[$i]['state_id'] . '" ' . $Selected . '>' . stripslashes($arryState[$i]['name']) . '</option>';
+        }
+
+        $Selected = ($_GET['current_state'] == '0') ? (" Selected") : ("");
+        if ($_GET['other'] == 1) {
+            $AjaxHtml .= '<option value="0" ' . $Selected . '>Other</option>';
+        } else if (sizeof($arryState) <= 0) {
+            $AjaxHtml .= '<option value="">No state found.</option>';
+        }
+
+        $AjaxHtml .= '</select>';
+
+
+        break;
+}
+
+if (!empty($AjaxHtml)) {
+    echo $AjaxHtml;
+    exit;
+}
+
+
+/* * ******Connecting to main database******** */
+$Config['DbName'] = $_SESSION['CmpDatabase'];
+$objConfig->dbName = $Config['DbName'];
+$objConfig->connect();
+/* * **************************************** */
+
+
+
+
+switch ($_GET['action']) {
+    case 'WarehouseInfo':
+        $objWarehouse = new warehouse();
+        $arryWarehouse = $objWarehouse->GetWarehouse($_GET['WID']);
+        echo json_encode($arryWarehouse[0]);
+        exit;
+
+        break;
+        exit;
+
+
+
+    case 'BinInfo':
+        $objWarehouse = new warehouse();
+        $arryWarehouse = $objWarehouse->GetWarehouseBin($_GET['WID']);
+        echo json_encode($arryWarehouse[0]);
+        exit;
+
+        break;
+        exit;
+
+    case 'ItemInfo':
+        $objItem = new items();
+        $_GET['Status'] = 1;
+        $arryProduct = $objItem->GetItemsView($_GET);
+        if ($_GET['proc'] == 'Purchase') {
+            $arryProduct[0]['price'] = $arryProduct[0]['purchase_cost'];
+        } else if ($_GET['proc'] == 'Sale') {
+            $arryProduct[0]['price'] = $arryProduct[0]['sell_price'];
+        } else {
+            $arryProduct[0]['price'] = 0;
+        }
+        $arryRequired = $objItem->GetRequiredItem($_GET['ItemID'], '');
+        $NumRequiredItem = sizeof($arryRequired);
+        $RequiredItem = '';
+        if ($NumRequiredItem > 0) {
+            foreach ($arryRequired as $key => $values) {
+                $RequiredItem .= stripslashes($values["item_id"]) . '|' . stripslashes($values["sku"]) . '|' . stripslashes($values["description"]) . '|' . stripslashes($values["qty"]) . '#';
+            }
+            $RequiredItem = rtrim($RequiredItem, "#");
+        }
+        $arryProduct[0]['RequiredItem'] = $RequiredItem;
+        $arryProduct[0]['NumRequiredItem'] = $NumRequiredItem;
+        echo json_encode($arryProduct[0]);
+        exit;
+
+        break;
+        exit;
+
+    case 'bin':
+
+        $objWarehouse = new warehouse();
+
+        $arryBin = $objWarehouse->getBinByWarehouse($_GET['warehouse_id']);
+
+        $AjaxHtml = '<select name="Bin" id="bin_id" class="inputbox"   onclick="Javascript: SetMainBinId();">';
+
+        if ($_GET['select'] == 1) {
+            $AjaxHtml .= '<option value="">Select Bin Location</option>';
+        }
+
+        $StateSelected = (!empty($_GET['current_bin'])) ? ($_GET['current_bin']) : ($arryState[0]['bin_id']);
+
+        for ($i = 0; $i < sizeof($arryBin); $i++) {
+
+            $Selected = ($_GET['current_bin'] == $arryBin[$i]['binid']) ? (" Selected") : ("");
+            $AjaxHtml .= '<option value="' . $arryBin[$i]['binid'] . '" ' . $Selected . '>' . stripslashes($arryBin[$i]['binlocation_name']) . '</option>';
+        }
+
+        $Selected = ($_GET['current_bin'] == '0') ? (" Selected") : ("");
+        if ($_GET['other'] == 1) {
+            $AjaxHtml .= '<option value="0" ' . $Selected . '>Other</option>';
+        } else if (sizeof($arryBin) <= 0) {
+            $AjaxHtml .= '<option value=""><span class="no_record">No Bin Location found.</span></option>';
+        }
+
+        $AjaxHtml .= '</select>';
+
+
+        break;
+ case 'checkSerialNumber':  
+                    $objWarehouse = new warehouse();                    
+                    $allserials = stripslashes($_GET['allSerialNo']);
+                    $exist = '';
+                    if($allserials!='')
+                    {
+                        if(strstr($allserials,','))
+                        {
+                            $arr = explode(',',$allserials);
+                            foreach($arr as $str)
+                            {
+                                $res = $objWarehouse->checktoExistSerialno($str,$_GET['Sku']);
+                                if($res)
+                                {
+                                    $exist.=$str.',';
+                                }    
+                            }    
+                        }else{
+                            $res = $objWarehouse->checktoExistSerialno($allserials,$_GET['Sku']);
+                            if($res)
+                            {
+                                $exist.=$allserials.',';
+                            }    
+                        }
+                    $exist = array_filter(explode(',',$exist));
+                    $AjaxHtml = implode(',',$exist);    
+                    break;
+                    }
+        //End///
+
+
+case 'checkSelSerialNo':  
+		$objWarehouse = new warehouse();     
+		#echo $_GET['SelSerialNo']; exit;    
+		$allserials = stripslashes($_GET['SelSerialNo']);
+		$exist = '';
+		/*********Update Delete serial by bhoodev 18jan2016 *************/
+						if($_GET['delSer']!=''){
+								$objWarehouse->UpdateSerialno($_GET['delSer'],$_GET['Sku'],$_GET['Condition'],0);
+						}
+
+					if($_GET['addSer']!=''){
+							$resSr = $objWarehouse->GetSerialno($_GET['addSer'],$_GET['Sku'],$_GET['Condition']);
+							if($resSr[0]['UsedSerial']!=1 ){
+									//$objWarehouse->UpdateSerialno($_GET['addSer'],$_GET['Sku'],$_GET['Condition'],1);
+							}else{
+								 $rest[0]['Used'] =1;
+							}
+					}
+		/*******************End*******************************************/
+		/*if($allserials!=''){
+				$SelSerialNo = explode(',',$_GET['SelSerialNo']); 
+				for($i=0; $i<sizeof($SelSerialNo); $i++){
+					$res = $objWarehouse->GetSerialno($SelSerialNo[$i],$_GET['Sku'],$_GET['Condition']);
+					#echo $res[0]['UnitCost']."+=";
+					$reslt += $res[0]['UnitCost'];
+				}
+
+				#print_r( $res); exit;
+				$rest[0]['UnitCost'] = $reslt;        
+		}*/
+
+/*Update by ravi 6 feb2017*/
+
+if($allserials!=''){
+			$SelSerialNo = explode(',',$_GET['SelSerialNo']); 
+			//print_R($SelSerialNo);die;
+			$reslt= $objWarehouse->GetSerialnoArray($SelSerialNo,$_GET['Sku'],$_GET['Condition']);									
+			$reslt=$reslt[0]['sum'];						
+	$rest[0]['UnitCost'] = $reslt;        
+	}
+/*End*/
+
+		echo json_encode($rest[0]);
+		exit;
+ 
+case 'addSelSerialNo':
+$data=array();
+$responce=array();
+
+$detail=$objrmasale->getSerialDetails($_GET['Sku'],$_GET['condition'],array($_GET['refserial']));
+
+if(!empty($detail[0])){
+$data=$detail[0];
+$data['ReceiptDate']='';
+$data['type']='';
+$data['adjustment_no']='';
+$data['serialNumber']=$_GET['SelSerialNo'];
+$data['UsedSerial']=0;
+$objrmasale->SaveItemSerial($data);
+$responce=$data;
+
+}
+
+ echo json_encode($responce);
+        exit;
+
+break;
+case 'clearSelSerialNo':  
+		$objWarehouse = new warehouse();     
+		#echo $_GET['SelSerialNo']; exit;    
+		$allserials = stripslashes($_GET['SelSerialNo']);
+		$exist = '';
+		
+		if($allserials!=''){
+				$SelSerialNo = explode(',',$_GET['SelSerialNo']); 
+				for($i=0; $i<sizeof($SelSerialNo); $i++){
+					//$res = $objWarehouse->GetSerialno($SelSerialNo[$i],$_GET['Sku'],$_GET['Condition']);
+					#echo $res[0]['UnitCost']."+=";
+					$objWarehouse->UpdateSerialno($SelSerialNo[$i],$_GET['Sku'],$_GET['Condition'],0);
+					//$reslt += $res[0]['UnitCost'];
+				}
+
+				#print_r( $res); exit;
+				$rest[0]['res'] = 'true';        
+		}
+		echo json_encode($rest[0]);
+		exit;
+
+
+        break;
+        exit;
+        //End///
+
+
+
+
+}
+
+
+
+
+
+
+
+
+if (!empty($AjaxHtml)) {
+    echo $AjaxHtml;
+    exit;
+}
+?>

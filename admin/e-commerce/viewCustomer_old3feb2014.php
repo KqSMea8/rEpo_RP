@@ -1,0 +1,27 @@
+<?php 
+ 	include_once("../includes/header.php");
+	require_once($Prefix."classes/customer.class.php");
+        
+                (!$_GET['curP'])?($_GET['curP']=1):(""); // current page number
+                           if (class_exists(customer)) {
+	  	$objCustomer=new Customer();
+	} else {
+  		echo "Class Not Found Error !! Cart Settings Class Not Found !";
+		exit;
+  	}
+	
+ 	  
+	 if (is_object($objCustomer)) {
+	 	$arryCustomer=$objCustomer->getCustomers($id,$status,$_GET['key'],$_GET['sortby'],$_GET['asc']);
+		$num=$objCustomer->numRows();
+	
+                for($i=0;$i<$num;$i++) {
+                   $arryCustomer[$i]['GroupName'] =  $objCustomer->getCustomerGroupName($arryCustomer[$i]['GroupID']);
+                   
+                }
+                  
+  }
+  
+  require_once("../includes/footer.php");
+  
+?>

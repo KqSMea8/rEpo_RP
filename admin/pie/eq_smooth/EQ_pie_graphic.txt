@@ -1,0 +1,28 @@
+EQ Smooth 3D Pie Graph
+
+Written by ellardus (C)2005
+for more info look at www.eq-home.com
+or email at ellardus@eq-home.com
+Feel free to use it, a reference to me would be nice.
+Thank you and good luck!
+
+-----------------------------------------------------------------------------------------------------------
+
+The 'trick' if find in this pie program is the smooth edges it displays.
+Many other (pie) grapics made with GD even thou in true color have rough edges.
+
+EQ Smooth 3D Pie Graph is adjustable in many (easy) way's. Of cource Height, Width and colors, but also the 
+Thickness of the 3D and background color.
+I choose to use a background color to make the edges after resampling more smooth than with transperancy.
+
+In this code we focussed on the graphics and not on retrieving the data. 
+Use any data array as source (see layout in the code). 
+Probably you like to retrieve it from a DB of any kind.
+
+Please create a directory 'images' with proper rights to store the created pie graphics.
+ 
+Many thanks to www.phpclasses.org and their members for all the samplecodes and their sharing.
+
+-----------------------------------------------------------------------------------------------------------
+
+ellardus.

@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20151211T180000Z
+DTEND:20151211T182000Z
+DTSTAMP:20151204T021847Z
+ORGANIZER;CN=melissa.robinson@execrank.com:mailto:melissa.robinson@execrank
+ .com
+UID:7afuqup0fs8inrd305pmbvgb9s@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=mahir@virtualstacks.com;X-NUM-GUESTS=0:mailto:mahir@virtualstacks.com
+CREATED:20151204T021846Z
+DESCRIPTION:Attendee:\nmahir abdi (mahir@virtualstacks.com)\n\nService:\nSp
+ eak with Our Team\n\nTeam Member::\nMelissaRobinson\n\nCustomer's cancel/re
+ schedule link: https://secure.scheduleonce.com/execrank&Params=IPLa6BkbZ-Sw
+ soYscL7aQFAL*maDG8ZM1nvQ6vqA9EA!\n\nTracking ID:\n03A00053\n\nPhone:\n407\n
+ \n\n\nView your event at https://www.google.com/calendar/event?action=VIEW&
+ eid=N2FmdXF1cDBmczhpbnJkMzA1cG1idmdiOXMgbWFoaXJAdmlydHVhbHN0YWNrcy5jb20&tok
+ =MjkjbWVsaXNzYS5yb2JpbnNvbkBleGVjcmFuay5jb20xMjY2YWYwY2FiYzFhMzQ1Y2QyMmY1OD
+ kwNGIyOTNkNjA4NTdhNWUw&ctz=UTC&hl=en.
+LAST-MODIFIED:20151204T021847Z
+LOCATION:407
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:mahir abdi - Speak with Our Team
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,95 @@
+ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
+
+PUBLICATION NAME: Metrovista website-3.indd
+
+PACKAGE DATE: 7/7/15 11:23 AM
+Creation Date: 7/7/15
+Modification Date: 7/7/15
+
+CONTACT INFORMATION
+
+Company Name: 
+Contact: 
+Address: 
+
+
+
+
+
+Phone: 
+Fax: 
+Email: 
+
+SPECIAL INSTRUCTIONS AND OTHER NOTES
+
+
+
+
+
+
+External Plug-ins 0
+Non Opaque Objects :On Page1
+
+FONTS
+6 Fonts Used; 0 Missing, 1 Embedded, 0 Incomplete, 0 Protected
+
+Fonts Packaged
+- Name: Calibri; Type: OpenType TrueType, Status: OK
+- Name: Calibri-Bold; Type: OpenType TrueType, Status: OK
+- Name: Calibri-Italic; Type: OpenType TrueType, Status: OK
+- Name: Calibri-Light; Type: OpenType TrueType, Status: OK
+- Name: Dense-Regular; Type: Type 1, Status: Embedded
+- Name: Dense-Regular; Type: OpenType Type 1, Status: OK
+
+
+COLORS AND INKS
+4 Process Inks; 1 Spot Inks
+
+- Name and Type: Process Cyan; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Magenta; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Yellow; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Black; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: PANTONE Cool Gray 10 U; Angle: 0.000; Lines/Inch: 0.000
+
+
+LINKS AND IMAGES
+(Missing & Embedded Links Only)
+Links and Images: 3 Links Found; 0 Modified, 0 Missing 0 Inaccessible
+Images: 0 Embedded, 1 use RGB color space
+
+
+PRINT SETTINGS
+PPD: N/A, (Brother HL-2270DW series)
+Printing To: Printer
+Number of Copies: 1
+Reader Spreads: No
+Even/Odd Pages: Both
+Pages: All
+Proof: No
+Tiling: None
+Scale: 100%, 100%
+Page Position: Upper Left
+Print Layers: Visible & Printable Layers
+Printer's Marks: None
+Bleed: 0 px, 0 px, 0 px, 0 px
+Color: Composite RGB
+Trapping Mode: None
+Send Image Data: Optimized Subsampling
+OPI/DCS Image Replacement: No
+Page Size: Custom: 1440 px x 900 px
+Paper Dimensions: 612 px x 792 px
+Orientation: Landscape
+Negative: No
+Flip Mode: Off
+
+
+FILE PACKAGE LIST
+
+1. Metrovista website-3.indd; type: Adobe InDesign publication; size: 1440K
+2. Metrovista website-3.idml; type: InDesign Markup Document; size: 91K
+3. Metrovista website-3.pdf; type: Adobe Acrobat Document; size: 504K
+4. Calibri.ttf; type: Font file; size: 761K
+5. Calibri-Bold.ttf; type: Font file; size: 798K
+6. Calibri-Italic.ttf; type: Font file; size: 802K
+7. Calibri-Light.ttf; type: Font file; size: 239K
+8. Dense-Regular.otf; type: Font file; size: 56K

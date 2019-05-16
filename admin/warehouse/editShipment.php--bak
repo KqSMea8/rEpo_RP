@@ -1,0 +1,298 @@
+<?php 
+	/**************************************************/
+	$ThisPageName = "viewShipment.php";	$EditPage = 1; $SetFullPage = 1;
+	/**************************************************/
+
+	include_once("../includes/header.php");
+require_once($Prefix."classes/item.class.php");
+	require_once($Prefix."classes/sales.quote.order.class.php");
+	require_once($Prefix."classes/inv_tax.class.php");
+    require_once($Prefix."classes/warehouse.shipment.class.php");
+require_once($Prefix."classes/inv.condition.class.php");
+require_once($Prefix."classes/warehouse.class.php");
+	$objSale = new sale();
+	$objTax=new tax();
+    $objShipment = new shipment();
+$objCondition=new condition();
+$objWarehouse=new warehouse();
+
+	$Module = "Shipment";
+	$ModuleIDTitle = "Shipment Number"; $ModuleID = "ShippedID"; $PrefixSale = "SHIP";  $NotExist = NOT_EXIST_ORDER;
+	$RedirectURL = "viewShipment.php?curP=".$_GET['curP'];
+
+	if($_GET['del_id'] && !empty($_GET['del_id'])){
+		$_SESSION['mess_ship'] = SHIP_REMOVED;
+		$objShipment->RemoveShipment($_REQUEST['del_id']);
+if($_SESSION['batchmgmt'] ==1){
+header("location:viewbatchmgmt.php");
+}else{
+		header("Location:".$RedirectURL);
+}
+		exit;
+	}
+	 
+	 //print_r($_POST);die;
+ if($_POST){
+ //echo "<pre>"; print_r($_POST);die;
+	if(!empty($_POST['ShippedOrderID'])){
+		$_POST['file_name']=$_SESSION['file_name'];
+		$_POST['freigh']=$_SESSION['freigh'];
+		$_POST['totalFreight']=$_SESSION['totalFreight'];
+		$_POST['tracking_id']=$_SESSION['tracking_id'];
+		$_POST['COD']= $_SESSION['COD'];
+		$_POST['sendingLabel']= $_SESSION['sendingLabel'];
+		$_POST['ShipType']= $_SESSION['ShipType'];
+		$OrderID = $objShipment->ShipOrder($_POST);
+$_POST['OrderID'] = $OrderID ;
+		$_SESSION['mess_ship'] = SHIP_ADDED;
+
+
+
+//$objShipment->addShipmentDetail($_SESSION['file_name'],$_SESSION['freigh'],$_SESSION['totalFreight'],$_SESSION['tracking_id'],$_GET['edit']);		
+
+		//header("Location:".$RedirectURL);
+		//exit;
+	}else if(!empty($_POST['shipID']) && ($_POST['Submit'] == "Save")){  
+		$objShipment->UpdateShip($_POST);
+		$_SESSION['mess_ship'] = SHIP_UPDATED;
+    $OrderID = $_POST['OrderID'];
+		//header("Location:".$RedirectURL);
+		//exit;
+	}
+        
+
+if($_POST['GenrateShipInvoice'] == 1 &&  $_POST['ShipStatus']=='Shipped'){
+
+
+$InvoiceData['OrderID'] =$OrderID;
+$InvoiceData['InvoiceID'] = '';
+$InvoiceData['TotalAmount'] = $_POST['TotalAmount'];
+$InvoiceData['Freight'] = $_POST['Freight'];
+$InvoiceData['taxAmnt'] ='';
+$InvoiceData['ShippedDate']=$_POST['ShippedDate'];
+$InvoiceData['wCode'] = $_POST['WarehouseCode'];
+$InvoiceData['wName'] = $_POST['WarehouseName'];
+$InvoiceData['InvoiceComment'] = $_POST['ShipmentComment'];
+/*$InvoiceData['EntryType'] = '';
+$InvoiceData['EntryFrom'] = '';
+$InvoiceData['EntryTo'] = '';
+$InvoiceData['EntryDate'] = '';
+$InvoiceData['EntryInterval'] = '';
+$InvoiceData['EntryMonth'] = '';
+$InvoiceData['EntryWeekly'] = '';*/
+
+$arrysalItem = $objSale->GetSaleItem($_POST['OrderID']);
+/*echo "<pre>";
+print_r($arrysalItem);
+exit;*/
+
+$line =0;
+			foreach($arrysalItem as $key => $value) {   
+			$line++; 
+					/*$_POST['sku'.$line] = $value['sku']; 
+					$_POST['item_id'.$line] = $value['item_id'];
+					$_POST['description'.$line]  =$value['description'];
+					$_POST['price'.$line] = $value['price'];
+					$_POST['qty'.$line]  = $value['qty'];
+					$_POST['DropshipCheck'.$line] = $value['DropshipCheck'];
+					$_POST['serial_value'.$line] = $value['SerialNumbers'];
+					$_POST['amount'.$line]  = $value['amount'];
+					*/
+
+						$_POST['sku'.$line] = $value['sku']; 
+						$_POST['id'.$line] = $value['ref_id'];
+						$_POST['item_id'.$line] = $value['item_id'];
+						$_POST['description'.$line]  =$value['description'];
+						$_POST['price'.$line] = $value['price'];
+						$_POST['qty'.$line]  = $value['qty_shipped']; //$value['qty'];
+						$_POST['qty_invoiced'.$line]  = $value['qty_shipped'];
+						
+						$_POST['oldqty'.$line]  = $value['oldqty'];
+						$_POST['DropshipCheck'.$line] = $value['DropshipCheck'];
+						$_POST['DropshipCost'.$line] = $value['DropshipCost'];
+						$_POST['serial_value'.$line] = $value['SerialNumbers'];
+						$_POST['amount'.$line]  = $value['amount'];
+						$_POST['freight_cost'.$line]  = $value['freight_cost'];
+						$_POST['item_taxable'.$line]  = $value['Taxable'];
+						$_POST['Condition'.$line]  = $value['Condition'];
+						$_POST['discount'.$line]  = $value['discount'];
+						$_POST['tax'.$line]  = $value['tax'];
+						$_POST['on_hand_qty'.$line]  = $value['on_hand_qty'];
+						$_POST['RecurringCheck'.$line]  = $value['RecurringCheck'];
+						$_POST['EntryType'.$line]  = $value['EntryType'];
+						$_POST['EntryFrom'.$line]  = $value['EntryFrom'];
+						$_POST['EntryTo'.$line]  = $value['EntryTo'];
+						$_POST['EntryInterval'.$line]  = $value['EntryInterval'];
+						$_POST['EntryMonth'.$line]  = $value['EntryMonth'];
+						$_POST['EntryWeekly'.$line]  = $value['EntryWeekly'];
+
+
+
+
+				}
+						$_POST['NumLine'] = sizeof($arrysalItem);
+
+$order_inv_id = $objSale->GenerateInVoice($InvoiceData);
+if($order_inv_id>0){
+
+$_POST['order_id'] = $order_inv_id;
+$objSale->AddInvoiceItem($order_inv_id, $_POST);
+$objSale->UpdateInvoiceIDInShip($order_inv_id,$OrderID);
+}
+
+
+
+
+}
+header("Location:".$RedirectURL);
+		exit;
+
+
+
+
+         /********************UPDATE SERIAL NUMBER*******************************************/
+                
+                     /*   for($k=1;$k<=$_POST['NumLine'];$k++){
+
+                               $serial_value = $_POST['serial_value'.$k];
+
+                               $explodeSerialVal = explode(",",$serial_value);
+                               $SerailSize = sizeof($explodeSerialVal);
+
+                               for($j=0;$j<$SerailSize;$j++){
+
+                                   $arraySerailData['serialNumber'] = trim($explodeSerialVal[$j]);
+                                   $arraySerailData['warehouse'] = $_POST['wCode'];
+                                   $arraySerailData['Sku'] = $_POST['sku'.$k];
+
+                                   if($arraySerailData['serialNumber'] != ""){
+                                       $objSale->addSerailNumberForReturn($arraySerailData);
+                                   }
+                               }
+
+
+
+                       }*/
+                
+        /***********************END SERIAL NUMBER****************************************************/
+        
+        
+        
+        }
+		
+	if(!empty($_GET['edit']) && !empty($_GET['SaleID'])){
+		//$arrySale = $objSale->GetInvoice($_GET['edit'],$_GET['SaleID'],'Order');
+		$module = 'Order';
+		$arrySale = $objSale->GetSale($_GET['edit'],'',$module);
+		$OrderID   = $arrySale[0]['OrderID'];
+
+		/*****************/
+		if($Config['vAllRecord']!=1){	
+			if($arrySale[0]['SalesPersonID'] != $_SESSION['AdminID'] && $arrySale[0]['AdminID'] != $_SESSION['AdminID']){
+			header('location:'.$RedirectURL);
+			exit;
+			}
+		}
+		/*****************/
+
+		if($OrderID>0){
+			$arrySaleItem = $objSale->GetSaleItem($OrderID);
+
+			$NumLine = sizeof($arrySaleItem);
+
+			$SaleID = $arrySale[0]['SaleID'];
+			#$arryInvoiceOrder = $objSale->GetInvoiceOrder($SaleID);
+			$TotalGenerateReturn = $objShipment->GetQtyShipped($OrderID);
+			if($TotalGenerateReturn[0]['QtyInvoiced'] == $TotalGenerateReturn[0]['QtyShipped']){
+		           $HideSubmit = 1;
+			   $RtnInvoiceMess = SO_ITEM_TO_NO_SHIP;
+			}
+			
+		}else{
+			$ErrorMSG = NOT_EXIST_ORDER;
+		}
+
+		$ModuleName = "Add ".$Module;
+
+	}else if(!empty($_GET['edit']) && !empty($_GET['ship'])){
+		$arrySale = $objShipment->GetShipment($_GET['edit'],$_GET['ship'],'Shipment');
+                $arryShip = $objShipment->GetWarehouseShip('',$_GET['edit']);
+			if(empty($arrySale[0]['InvoiceID'])){
+			$arrySale[0]['InvoiceID'] = $arryShip[0]['RefID'];
+
+			}
+		$OrderID   = $arrySale[0]['OrderID'];	
+		$SaleID = $arrySale[0]['SaleID'];
+$arrySale[0]['GenrateShipInvoice'] = $arryShip[0]['GenrateShipInvoice'];
+
+
+		/*****************/
+		if($Config['vAllRecord']!=1){	
+			if($arrySale[0]['SalesPersonID'] != $_SESSION['AdminID'] && $arrySale[0]['AdminID'] != $_SESSION['AdminID']){
+			header('location:'.$RedirectURL);
+			exit;
+			}
+		}
+		/*****************/
+
+
+		if($OrderID>0){
+			$arrySaleItem = $objSale->GetSaleItem($OrderID);
+			$NumLine = sizeof($arrySaleItem);
+			
+			$TotalGenerateReturn = $objShipment->GetQtyShipped($OrderID);
+			if($TotalGenerateReturn[0]['QtyInvoiced'] == $TotalGenerateReturn[0]['QtyShipped']){
+		      $HideSubmit = 1;
+			  $RtnInvoiceMess = SO_ITEM_TO_NO_SHIP;
+			}
+			
+		}else{
+			$ErrorMSG = NOT_EXIST_SHIP;
+		}
+		$ModuleName = "Edit ".$Module;
+		$HideSubmit = 1;
+	}else{
+		$ErrorMSG = SELECT_SO_FIRST;
+		$ModuleName = "Add ".$Module;
+	}
+				
+
+	
+	if(empty($NumLine)) $NumLine = 1;	
+	$arrySaleTax = $objTax->GetTaxRate('1');
+	
+	$NextModuleID = $objConfigure->GetNextModuleID('s_order','Shipment');
+	$NextInvModuleID = $objConfigure->GetNextModuleID('s_order','Invoice');
+	//$BcounrtyCd=$objShipment->countryCode($arrySale[0]['Country']);
+	//$ScountryCd=$objShipment->countryCode($arrySale[0]['ShippingCountry']);
+
+	//Added by chetan 6May//        
+/*if($_GET['batch']!="")
+{
+        $setBatchId = $objSale -> setBatchIdToSaleOrder($_GET['SaleID'],$_GET['batch']);
+    if($setBatchId === false)
+    {    
+        $errMsg = "<strong>This Order Already in a Batch</strong>";
+    }    
+}*/
+//End// 
+	unset($_SESSION["file_name"]);
+	unset($_SESSION["freigh"]);
+	unset($_SESSION["totalFreight"]);
+	unset($_SESSION["tracking_id"]);
+	unset($_SESSION["COD"]);
+	unset($_SESSION["sendingLabel"]);
+  unset($_SESSION["ShipType"]);
+	if($arryShip[0]['WarehouseCode']=='' && $arryShip[0]['WarehouseName'] =='' && $arryShip[0]['WID'] =='' ){
+$defultware = $objWarehouse->GetDefaultWarehouseBrief(1);
+
+$arryShip[0]['WarehouseCode'] = $defultware[0]['warehouse_code'];
+$arryShip[0]['WarehouseName'] = $defultware[0]['warehouse_name'];
+$arryShip[0]['WID']   =         $defultware[0]['WID'];
+
+}
+	require_once("../includes/footer.php"); 	 
+
+
+
+?>

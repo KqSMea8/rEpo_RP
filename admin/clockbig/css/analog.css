@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.analog {
+background: url("../images/clockface.png") no-repeat scroll center center #F4F4F4;
+border: 2px solid #aaa;
+border-radius: 9px;
+box-shadow: 3px 3px 2px #999999;
+height: 254px;
+list-style: none outside none;
+margin: auto;
+padding: 0;
+position: absolute;
+right: 15px;
+top: 14px;
+width: 250px;
+}
+
+.analog55 {
+	position: relative;
+	width: 150px;
+  	margin: auto;
+	background: url(../images/clockface.png);
+	list-style: none;
+}
+
+.analog,.analog .hour,.analog .min,.analog .sec {
+	
+}
+
+.analog .hour,.analog .min,.analog .sec {
+	position: absolute;
+	width: 25px;
+	top: 0px;
+	left: 114px;
+  	padding: 0;
+
+}
+
+.analog .sec {
+	background: url(../images/sechand.png);
+	z-index: 3;
+	height: 254px;
+}
+
+.analog .min {
+	background: url(../images/minhand.png);
+	z-index: 2;
+	height: 254px;
+}
+
+.analog .hour {
+	background: url(../images/hourhand.png);
+	z-index: 1;
+	height: 254px;
+}
+
+.title {
+	font-size: 11px;
+	font-weight: bold;
+	color: #333;
+}
+
+.analog .meridiem {
+	margin-left: 113px;
+	margin-top: 172px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #333333;
+  display: inline-block;
+}

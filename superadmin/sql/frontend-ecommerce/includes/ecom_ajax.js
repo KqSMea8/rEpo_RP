@@ -1,0 +1,891 @@
+
+	var httpObj = false;
+		try {
+			  httpObj = new XMLHttpRequest();
+		} catch (trymicrosoft) {
+		  try {
+				httpObj = new ActiveXObject("Msxml2.XMLHTTP");
+		  } catch (othermicrosoft) {
+			try {
+			  httpObj = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (failed) {
+			  httpObj = false;
+			}
+	  }
+
+	}
+
+
+	var httpObj2 = false;
+		try {
+			  httpObj2 = new XMLHttpRequest();
+		} catch (trymicrosoft) {
+		  try {
+				httpObj2 = new ActiveXObject("Msxml2.XMLHTTP");
+		  } catch (othermicrosoft) {
+			try {
+			  httpObj2 = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (failed) {
+			  httpObj2 = false;
+			}
+	  }
+	}
+
+	function SendExistRequest(Url,FieldName,Title){
+		var SendUrl = Url+"&r="+Math.random(); 
+		httpObj.open("GET", SendUrl, true);
+		httpObj.onreadystatechange = function RecieveExistRequest(){
+			if (httpObj.readyState == 4) {
+				if(httpObj.responseText==1) {
+					if(Title == 'Email'){
+						alert("This "+Title+" Address is already registered with us. Please enter another "+Title+" Address.");
+					}else{
+						alert(Title + " already exists in database. Please enter another.");
+					}
+					document.getElementById(FieldName).select();
+					return false;
+				} else if(httpObj.responseText==0) {	 
+					document.forms[0].submit();
+				}else {
+					alert("Error occur : " + httpObj.responseText);
+					return false;
+				}
+			}
+		};
+		httpObj.send(null);
+	}
+	
+	function SendMultipleExistRequest(Url,FieldName,Title,FieldName2,Title2){
+		var SendUrl = Url+"&Multiple=1&r="+Math.random(); 
+		httpObj.open("GET", SendUrl, true);
+		httpObj.onreadystatechange = function RecieveMultipleExistRequest(){
+			if (httpObj.readyState == 4) {
+				
+				if(httpObj.responseText==1) {
+					if(Title == 'Email'){
+						alert("This "+Title+" Address is already registered with us. Please enter another "+Title+" Address.");
+					}else{
+						alert(Title + " already exists in database. Please enter another.");
+					}
+					document.getElementById(FieldName).select();
+					return false;
+				}else if(httpObj.responseText==2) {
+					alert(Title2+" already exists in database. Please enter another.");
+					document.getElementById(FieldName2).select();
+					return false;
+				} else if(httpObj.responseText==0) {	 
+					document.forms[0].submit();
+				}else {
+					alert("Error occur : " + httpObj.responseText);
+					return false;
+				}
+			}
+		};
+		httpObj.send(null);
+	}
+
+
+function ClearAvail(MSG_SPAN){
+		document.getElementById(MSG_SPAN).innerHTML="";
+	}
+
+
+	function CheckAvail(MSG_SPAN,FieldType,editID){
+	
+		document.getElementById(MSG_SPAN).innerHTML="";
+
+		if(document.getElementById("Email").value!=''){
+
+		   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		   var address = document.getElementById("Email").value;
+		   if(reg.test(address) == false) {
+			document.getElementById(MSG_SPAN).innerHTML="<span class=redmsg>Invalid Email Address.</span>";
+			document.getElementById("Email").select();
+		   }else{
+					var Url = "isRecordExists.php?Email="+escape(document.getElementById("Email").value)+"&editID="+editID+"&Type="+FieldType;
+					var SendUrl = Url+"&r="+Math.random(); 
+	
+					httpObj.open("GET", SendUrl, true);
+					httpObj.onreadystatechange = function RecieveAvailRequest(){
+						if (httpObj.readyState == 4) {
+								if(httpObj.responseText==1) {	 
+									document.getElementById(MSG_SPAN).innerHTML="<span class=redmsg>Already registered!</span>";
+								}else if(httpObj.responseText==0) {	 
+									document.getElementById(MSG_SPAN).innerHTML="<span class=greenmsg>Available!</span>";
+								}else {
+									alert("Error occur : " + httpObj.responseText);
+								}
+						}
+					};
+					httpObj.send(null);
+		   }
+
+		}
+
+	}
+
+
+	function CheckAvailField(MSG_SPAN,FieldName,editID){
+	
+		document.getElementById(MSG_SPAN).innerHTML="";
+
+		FieldLength = document.getElementById(FieldName).value.length;
+
+		if(FieldLength>=3){
+
+			var Url = "isRecordExists.php?"+FieldName+"="+escape(document.getElementById(FieldName).value)+"&editID="+editID;
+			var SendUrl = Url+"&r="+Math.random(); 
+
+			httpObj.open("GET", SendUrl, true);
+			httpObj.onreadystatechange = function RecieveAvailFieldRequest(){
+				if (httpObj.readyState == 4) {
+					if(httpObj.responseText==1) {	 
+						document.getElementById(MSG_SPAN).innerHTML="<span class=redmsg>Already exist!</span>";
+					}else if(httpObj.responseText==0) {	 
+						document.getElementById(MSG_SPAN).innerHTML="<span class=greenmsg>Available!</span>";
+					}else {
+						alert("Error occur : " + httpObj.responseText);
+					}
+				}
+			};
+			httpObj.send(null);
+
+		}else{
+			document.getElementById(MSG_SPAN).innerHTML="<span class=redmsg>It should be minimum of 3 characters long.</span>";
+		}
+
+	}
+
+	function SendMenuPositionExistRequest(Url,FieldName,Title){
+		var SendUrl = Url+"&r="+Math.random(); 
+		
+		httpObj.open("GET", SendUrl, true);
+		httpObj.onreadystatechange = function PositionExistRequest(){
+			if (httpObj.readyState == 4) {
+				if(httpObj.responseText==1) {	 
+					alert(Title + " already exists in database. Please enter another.");
+					document.getElementById(FieldName).select();
+					return false;
+				} else if(httpObj.responseText==0) {	 
+					var Url = "isRecordExists.php?PageHeading="+document.getElementById("title").value+"&editID="+ document.getElementById("editID").value;
+					SendExistRequest(Url,"title","Page Title");
+					return false;	
+				}else {
+					alert("Error occur : " + httpObj.responseText);
+					return false;
+				}
+			}
+		};
+		httpObj.send(null);
+	}
+
+	function LoginSend(Url){
+		var SendUrl = Url+"&r="+Math.random(); 
+		document.getElementById("ReturnValue").value = '';
+		httpObj.open("GET", SendUrl, true);
+		httpObj.onreadystatechange = function LoginRecieve(){
+			if (httpObj.readyState == 4) {
+				//alert(httpObj.responseText);
+				document.getElementById("ReturnValue").value = httpObj.responseText;
+				//return false;
+				/*
+				if(document.getElementById("redUrl").value != ''){
+					location.href = document.getElementById("redUrl").value;
+					return false;
+				}
+				*/
+				
+				 if(httpObj.responseText==10) {	 
+					alert("Someone is already logged in with this Email Address, Please try again later.");
+					document.getElementById("Email").value='';
+					document.getElementById("Password").value='';
+					return false;
+				 } else if(httpObj.responseText==1) {	 
+					//location.href = 'index.php';
+					document.forms[0].submit();
+					return false;
+				}  else if(httpObj.responseText==5) {	 
+					//alert("Your account has been de-activated as you didn't upgraded your membership. Please contact the administrator.");
+					//location.href = 'accountSucc.php';
+					document.forms[0].submit();
+					return false;
+				}else if(httpObj.responseText==6) {	 
+					//alert("Your account is expired, Please upgrade your membership.");
+					//location.href = 'accountSucc.php';
+					document.forms[0].submit();
+					return false;
+				}else if(httpObj.responseText==7) {	 
+					//alert("Your account is about to expire, Please upgrade your membership within few days.");
+					//location.href = 'accountSucc.php';
+					document.forms[0].submit();
+					return false;
+				}else if(httpObj.responseText==0) {	 
+					alert("Invalid Email/Password.");
+					document.getElementById("Password").focus();
+					return false;
+				}else {
+					alert("Error occur : " + httpObj.responseText);
+					return false;
+				}
+			}
+		};
+		httpObj.send(null);
+	}
+	
+	
+
+	function ForgotPasswordQuestion(frm){
+		if( ValidateForEmail(frm.forgotEmail, "Email")
+			&& isEmail(frm.forgotEmail)
+		){
+			var SendUrl = 'forgot.php?action=1&forgotEmail='+document.getElementById("forgotEmail").value+"&r="+Math.random(); 
+			httpObj.open("GET", SendUrl, true);
+			httpObj.onreadystatechange = function ForgotQuestionRecieve(){
+				if (httpObj.readyState == 4) {
+					if(httpObj.responseText==0) {	 
+						alert("This Email Address is not registred with us.");
+					}else {
+						//alert("Error occur : " + httpObj.responseText);
+						document.getElementById("QuestionTitle").innerHTML = httpObj.responseText+'?';
+						document.getElementById("MainDiv").style.display = 'none';
+						document.getElementById("QuestionDiv").style.display = 'inline';
+						httpObj.responseText
+					}
+					return false;
+				}
+			};
+			httpObj.send(null);
+			return false;
+		}else{
+			return false;
+		}
+	}
+
+	function ForgotPasswordSend(frm){
+		if( ValidateForBlank(frm.Answer, "Answer to the Security Question")
+		){
+			var SendUrl = 'forgot.php?action=2&Answer='+document.getElementById("Answer").value+'&forgotEmail='+document.getElementById("forgotEmail").value+'&r='+Math.random(); 
+			httpObj.open("GET", SendUrl, true);
+			httpObj.onreadystatechange = function ForgotPasswordRecieve(){
+				if (httpObj.readyState == 4) {
+					if(httpObj.responseText==1) {	 
+						document.getElementById("QuestionDiv").innerHTML = '<Div class="greentxt">Your new password has been sent successfully.</Div>';
+					} else if(httpObj.responseText==0) {	 
+						alert("Wrong Answer, Please Enter the Correct Answer.");
+					}else {
+						alert("Error occur : " + httpObj.responseText);
+					}
+					return false;
+				}
+			};
+			httpObj.send(null);
+			return false;
+		}else{
+			return false;
+		}
+	}
+
+
+	////////// Get StateList Functions ////////////////
+
+
+	function StateListSend(opt){
+		if(opt==1){
+			document.getElementById("main_state_id").value='';
+		}
+		if(document.getElementById("city_td") != null){
+			document.getElementById("MainCityTitleDiv").style.display = 'none';
+                        document.getElementById("CityBill_Div").style.display = 'none';
+			document.getElementById("city_td").innerHTML = '';
+		}
+
+		var OtherOption = '';
+		if(document.getElementById("OtherState") != null){
+			OtherOption = '&other=1';
+		}
+		var SelectOption = '';
+		if(document.getElementById("SelectOption") != null){
+			SelectOption = '&select=1';
+		}
+
+		if(document.getElementById("ListingRecords") != null){
+			document.getElementById("ListingRecords").style.display = 'none';
+		}
+
+
+                ShowHideLoader('1','L');
+           
+		document.getElementById("state_td").innerHTML = '<select name="state_id" class="inputbox" id="state_id" ><option value="">Loading...</option></select>';
+		var SendUrl = 'ajax.php?action=state&country_id='+document.getElementById("country_ids").value+'&current_state='+document.getElementById("main_state_id").value+SelectOption+OtherOption+'&r='+Math.random()+'&select=1'; 
+                   
+		httpObj.open("GET", SendUrl, true);
+		httpObj.onreadystatechange = function StateListRecieve(){
+			if (httpObj.readyState == 4) {
+				document.getElementById("billing_state").style.display = '';
+				document.getElementById("StateBillOther_Div").style.display = '';
+				document.getElementById("state_td").innerHTML  = httpObj.responseText;
+                                ShowHideLoader('');
+                                document.getElementById("billcountry_id").value  = document.getElementById("country_ids").value;
+				if(document.getElementById("state_id").value != '' ){
+					document.getElementById("main_state_id").value = document.getElementById("ajax_state_id").value;
+					if(document.getElementById("city_td") != null){
+						CityListSend(); 	
+
+					}
+				}else{
+					document.getElementById("main_state_id").value   = '';
+						
+				}
+				
+
+			}
+		};
+		httpObj.send(null);
+	}
+        
+        
+        function StateListSendR(opt){
+		if(opt==1){
+			document.getElementById("main_state_id").value='';
+		}
+		if(document.getElementById("city_tdr") != null){
+			document.getElementById("MainCityTitleDiv").style.display = 'none';
+			document.getElementById("city_tdr").innerHTML = '';
+		}
+
+		var OtherOption = '';
+		if(document.getElementById("OtherState") != null){
+			OtherOption = '&other=1';
+		}
+		var SelectOption = '';
+		if(document.getElementById("SelectOption") != null){
+			SelectOption = '&select=1';
+		}
+
+		if(document.getElementById("AllOption") != null){
+			SelectOption = '&all=1';
+		}
+
+		if(document.getElementById("ListingRecords") != null){
+			document.getElementById("ListingRecords").style.display = 'none';
+		}
+
+		
+		ShowHideLoader('1','L');
+		document.getElementById("billcountry_id").value  = document.getElementById("country_id").value;
+		document.getElementById("state_tdr").innerHTML = '<select name="state_id" class="inputbox" id="state_id" ><option value="">Loading...</option></select>';
+		var SendUrl = 'ajax.php?action=stater&country_id='+document.getElementById("country_id").value+'&current_state='+document.getElementById("main_state_id").value+SelectOption+OtherOption+'&r='+Math.random()+'&select=1'; 
+		httpObj.open("GET", SendUrl, true);
+		
+		httpObj.onreadystatechange = function StateListRecieve(){
+			if (httpObj.readyState == 4) {
+				document.getElementById("State_Div").style.display = '';
+				document.getElementById("StateBillOther_Div").style.display = '';
+				document.getElementById("state_tdr").innerHTML  = httpObj.responseText;
+				ShowHideLoader('');
+				if(document.getElementById("state_id").value != '' ){
+					document.getElementById("main_state_id").value = document.getElementById("ajax_state_id").value;
+					if(document.getElementById("city_tdr") != null){
+						CityListSend(); 	
+
+					}
+				}else{
+					document.getElementById("main_state_id").value   = '';
+						
+				}
+				
+
+			}
+		};
+		httpObj.send(null);
+	}   
+              
+
+	function SetMainStateId(){
+		document.getElementById("main_state_id").value = document.getElementById("state_id").value;
+		if(document.getElementById("ListingRecords") != null){
+			document.getElementById("ListingRecords").style.display = 'none';
+		}
+
+		if(document.getElementById("main_city_id") != null){
+			CityListSend();
+		}
+	}
+        
+       function SetMainStateIdR(){
+		document.getElementById("main_state_id").value = document.getElementById("state_id").value;
+		if(document.getElementById("ListingRecords") != null){
+			document.getElementById("ListingRecords").style.display = 'none';
+		}
+
+		if(document.getElementById("main_city_id") != null){
+			CityListSendR();
+		}
+	}
+	
+	function CityListSendR(){
+		var OtherOption = '';
+		if(document.getElementById("OtherCity") != null){
+			OtherOption = '&other=1';
+		}
+		var SelectOption = '';
+		if(document.getElementById("SelectOption") != null){
+			SelectOption = '&select=1';
+		}
+
+		document.getElementById("MainCityTitleDiv").style.display = 'inline';
+                document.getElementById("CityBill_Div").style.display = 'block';
+                
+                ShowHideLoader('1','L');
+                
+		document.getElementById("city_tdr").innerHTML = '<select name="city_id" class="inputbox" id="city_id" ><option value="">Loading...</option></select>';
+		if(document.getElementById("state_id") != null){
+			
+		     var SendUrl = 'ajax.php?action=city&state_id='+document.getElementById("state_id").value+'&current_city='+document.getElementById("main_city_id").value+SelectOption+OtherOption+'&r='+Math.random()+'&select=1';
+
+			httpObj.open("GET", SendUrl, true);
+			httpObj.onreadystatechange = function CityListRecieve(){
+				if (httpObj.readyState == 4) {
+					document.getElementById("CityBill_Div").style.display = '';
+					document.getElementById("CityBillOther_Div").style.display = '';
+					document.getElementById("city_tdr").innerHTML  = httpObj.responseText;
+                                        ShowHideLoader('');
+					
+					if(document.getElementById("city_id").value != '' ){
+						document.getElementById("main_city_id").value = document.getElementById("ajax_city_id").value;
+					
+					}else{
+						document.getElementById("main_city_id").value   = '';
+					}		
+
+					SetMainCityId();
+				}
+			};
+			httpObj.send(null);
+			
+		}
+
+	}
+
+	////////// Get City Functions ////////////////
+
+	function CityListSend(){
+		var OtherOption = '';
+		if(document.getElementById("OtherCity") != null){
+			OtherOption = '&other=1';
+		}
+		var SelectOption = '';
+		if(document.getElementById("SelectOption") != null){
+			SelectOption = '&select=1';
+		}
+
+		document.getElementById("MainCityTitleDiv").style.display = 'inline';
+                document.getElementById("CityBill_Div").style.display = 'block';
+                
+                ShowHideLoader('1','L');
+                
+		document.getElementById("city_td").innerHTML = '<select name="city_id" class="inputbox" id="city_id" ><option value="">Loading...</option></select>';
+		if(document.getElementById("state_id") != null){
+			
+		     var SendUrl = 'ajax.php?action=city&state_id='+document.getElementById("state_id").value+'&current_city='+document.getElementById("main_city_id").value+SelectOption+OtherOption+'&r='+Math.random()+'&select=1';
+
+			httpObj.open("GET", SendUrl, true);
+			httpObj.onreadystatechange = function CityListRecieve(){
+				if (httpObj.readyState == 4) {
+					
+					document.getElementById("city_td").innerHTML  = httpObj.responseText;
+                                        ShowHideLoader('');
+					
+					if(document.getElementById("city_id").value != '' ){
+						document.getElementById("main_city_id").value = document.getElementById("ajax_city_id").value;
+					
+					}else{
+						document.getElementById("main_city_id").value   = '';
+					}		
+
+					SetMainCityId();
+				}
+			};
+			httpObj.send(null);
+			
+		}
+
+	}
+
+	function SetMainCityId(){
+		document.getElementById("main_city_id").value = document.getElementById("city_id").value;
+		
+		//LocalityListSend(); 	// use below instead of LocalityListSend
+		
+		if(document.getElementById("OtherState") != null){
+			if(document.getElementById("state_id").value > 0 ){
+				document.getElementById("StateTitleDiv").style.display = 'none';
+				document.getElementById("StateValueDiv").style.display = 'none';
+                                document.getElementById("StateBillOther_Div").style.display = 'none';
+			}else{
+				document.getElementById("StateTitleDiv").style.display = 'inline';
+				document.getElementById("StateValueDiv").style.display = 'inline';
+                                document.getElementById("StateBillOther_Div").style.display = 'inline';
+
+			}
+		}
+
+
+		if(document.getElementById("OtherCity") != null){
+			if(document.getElementById("city_id").value > 0 ){
+				document.getElementById("CityTitleDiv").style.display = 'none';
+				document.getElementById("CityValueDiv").style.display = 'none';
+                                document.getElementById("CityBillOther_Div").style.display = 'none';
+			}else{
+				document.getElementById("CityTitleDiv").style.display = 'inline';
+				document.getElementById("CityValueDiv").style.display = 'inline';
+                                document.getElementById("CityBillOther_Div").style.display = 'block';
+
+			}
+		}
+
+
+	}
+
+
+
+	////////// Get SubCategory Functions ////////////////
+
+	function SubCategoryListSend(opt){
+		if(document.getElementById("Category").value > 0){
+			document.getElementById("SubCatTd").innerHTML = '<img src="images/loading.gif">';
+
+			var OldCategoryID = document.getElementById("OldCategoryID").value;
+			if(opt>0)
+				OldCategoryID = '';
+
+			var SendUrl = 'ajax.php?action=subcategory&Category='+document.getElementById("Category").value+'&OldCategoryID='+OldCategoryID+'&r='+Math.random(); 
+			
+			httpObj2.open("GET", SendUrl, true);
+			httpObj2.onreadystatechange = function SubCategoryRecieve(){
+				
+				if (httpObj2.readyState == 4) {
+					
+					document.getElementById("SubCatTd").innerHTML  = httpObj2.responseText;
+					if(document.getElementById("ajax_category_id").value > 0 ){
+						document.getElementById("SubCatTitle").innerHTML = 'Sub Classification <span class="red">*</span> ';
+						document.getElementById("CategoryID").value = document.getElementById("ajax_category_id").value;
+					}else{
+						document.getElementById("SubCatTitle").innerHTML = '';
+						document.getElementById("CategoryID").value = document.getElementById("Category").value;
+					}
+					StoreCategoryListSend();
+				}
+			};
+			httpObj2.send(null);
+		}else{
+			document.getElementById("CategoryID").value = '';
+			document.getElementById("SubCatTd").innerHTML = '';
+			document.getElementById("SubCatTitle").innerHTML = '';
+			document.getElementById("StoreCatTd").innerHTML = '';
+			document.getElementById("StoreCatTitle").innerHTML = '';
+		}
+	}
+
+	function SetMainCategoryID(){
+		document.getElementById("CategoryID").value = document.getElementById("SubCategory").value;
+		if(document.getElementById("OldStoreCategoryID") != null){
+			StoreCategoryListSend();
+		}
+	}
+
+
+	function StoreCategoryListSend(){
+		if(document.getElementById("CategoryID").value>0){
+
+			var SendUrl = 'ajax.php?action=store_subcategory&CategoryID='+document.getElementById("CategoryID").value+'&PostedByID='+document.getElementById("PostedByID").value+'&OldStoreCategoryID='+document.getElementById("OldStoreCategoryID").value+'&r='+Math.random(); 
+			
+			
+			httpObj2.open("GET", SendUrl, true);
+			httpObj2.onreadystatechange = function StoreCategoryRecieve(){
+				
+				if (httpObj2.readyState == 4) {
+					
+					document.getElementById("StoreCatTd").innerHTML  = httpObj2.responseText;
+					
+					if(document.getElementById("ajax_store_category_id").value > 0 ){
+						document.getElementById("StoreCatTitle").innerHTML = 'Product Category <span class="red">*</span> ';
+						document.getElementById("MainStoreCategoryID").value = document.getElementById("ajax_store_category_id").value;
+					}else{
+						document.getElementById("StoreCatTd").innerHTML = '';
+						document.getElementById("StoreCatTitle").innerHTML = '';
+						document.getElementById("MainStoreCategoryID").value = '';
+					}
+				}
+			};
+			httpObj2.send(null);
+		}else{
+			document.getElementById("StoreCatTd").innerHTML = '';
+			document.getElementById("StoreCatTitle").innerHTML = '';
+		}
+	}
+	//////////////////////////////////////////
+
+	function UnsubscribeSend(frm){
+		if( ValidateForEmail(frm.UnsubscribeEmail, "Email")
+			&& isEmail(frm.UnsubscribeEmail)
+		){
+			var S_Type = frm.S_Type.value;
+
+			if(S_Type != '') {
+				SubscriptionMsg = 'Your have been subscribed for newsletters successfully.';
+			}else{
+				SubscriptionMsg = 'Your have been unsubscribed successfully.';
+			}
+
+			var SendUrl = 'ajax_member.php?UnsubscribeEmail='+frm.UnsubscribeEmail.value+"&S_Type="+S_Type+"&r="+Math.random(); 
+			httpObj.open("GET", SendUrl, true);
+			httpObj.onreadystatechange = function UnsubscribeRecieve(){
+				if (httpObj.readyState == 4) {
+					if(httpObj.responseText==1) {	 
+						document.getElementById("MainDiv").innerHTML = '<Div class="greentxt">'+SubscriptionMsg+'</Div>';
+					} else if(httpObj.responseText==0) {	 
+						alert("Invalid Email, Please Enter a registered Email Address.");
+					}else {
+						alert("Error occur : " + httpObj.responseText);
+					}
+					return false;
+				}
+			};
+			httpObj.send(null);
+			return false;
+		}else{
+			return false;
+		}
+	}
+
+
+	function SetDeliveryCurrency(){
+		var SendUrl = "ajax.php?action=currency&currency_id="+document.getElementById("currency_id").value+"&r="+Math.random(); 
+		var NumDeliveryOption = document.getElementById("currency_id").value;
+		httpObj.open("GET", SendUrl, true);
+
+		httpObj.onreadystatechange = function ListCurrencyRequest(){
+
+			if (httpObj.readyState == 4) {
+				for(var i=1;i<=document.getElementById('NumDeliveryOption').value;i++){
+					document.getElementById("DeliverySpanCurrency"+i).innerHTML = httpObj.responseText;
+				}
+			}
+
+		};
+
+		httpObj.send(null);
+
+}
+
+/*****************************************/
+	function GetLeaveBalance(){
+		if(document.getElementById("EmpID").value>0){
+			var SendUrl = "ajax.php?action=leave_balance&EmpID="+document.getElementById("EmpID").value+"&LeaveType="+document.getElementById("LeaveType").value+"&r="+Math.random(); 
+			httpObj.open("GET", SendUrl, true);
+			httpObj.onreadystatechange = function ListLeaveBalance(){
+				if (httpObj.readyState == 4) {
+					document.getElementById("LeaveBalance").innerHTML = httpObj.responseText;
+				}
+
+			};
+
+			httpObj.send(null);
+		}else{
+					document.getElementById("LeaveBalance").innerHTML = "0";
+		}
+
+}
+
+/*****************************************/
+function DeleteFile(file_path,file_div){
+	if(confirm("Are you sure you want to delete?")){
+
+			document.getElementById(file_div).innerHTML = '<img src="images/loading.gif">&nbsp;Deleting......';
+
+			var Url = "ajax.php?action=delete_file&file_path="+escape(file_path)+"&r="+Math.random(); 
+			
+			httpObj.open("GET", Url, true);
+			httpObj.onreadystatechange = function DeleteFileRecieve(){
+				if (httpObj.readyState == 4) {
+					if(httpObj.responseText == 1){
+						document.getElementById(file_div).innerHTML = '';
+					}else if(httpObj.responseText == 0){
+						alert("Deletion failed. Please try again later.");
+					}else {
+						alert("Error:" + httpObj.responseText);
+					}
+				return false;	
+				}
+			};
+			httpObj.send(null);
+
+	}
+}
+
+
+//Code for Check out Page
+
+ function StateListSendCheckout(opt){ 
+		if(opt==1){
+			document.getElementById("main_state_id_shipp").value='';
+		}
+		if(document.getElementById("city_td_shipp") != null){
+			document.getElementById("MainCityTitleDiv_shipp").style.display = 'none';
+			document.getElementById("city_td_shipp").innerHTML = '';
+		}
+                
+		var OtherOption = '';
+		if(document.getElementById("OtherState_shipp") != null){
+			OtherOption = '&other=1';
+		}
+		var SelectOption = '';
+		if(document.getElementById("SelectOption") != null){
+			SelectOption = '&select=1';
+		}
+
+		if(document.getElementById("ListingRecords") != null){
+			document.getElementById("ListingRecords").style.display = 'none';
+		}
+
+
+		document.getElementById("state_td_shipp").innerHTML = '<select name="state_id_shipp" class="inputbox" id="state_id_shipp" ><option value="">Loading...</option></select>';
+		var SendUrl = 'e_ajax.php?action=shippstate&country_id='+document.getElementById("country_id_shipp").value+'&current_state='+document.getElementById("main_state_id_shipp").value+SelectOption+OtherOption+'&r='+Math.random()+'&select=1'; 
+           
+		httpObj2.open("GET", SendUrl, true);
+		httpObj2.onreadystatechange = function StateListRecieve(){
+			if (httpObj2.readyState == 4) {
+				document.getElementById("state_td_shipp").innerHTML  = httpObj2.responseText;
+
+				if(document.getElementById("state_id_shipp").value != '' ){
+					document.getElementById("main_state_id_shipp").value = document.getElementById("ajax_state_id_shipp").value;
+					if(document.getElementById("city_td_shipp") != null){
+						CityListSendCheckout(); 	
+
+					}
+				}else{
+					document.getElementById("main_state_id_shipp").value   = '';
+						
+				}
+				
+
+			}
+		};
+		httpObj2.send(null);
+	}
+        
+          function CityListSendCheckout(){
+		var OtherOption = '';
+		if(document.getElementById("OtherCity_shipp") != null){
+			OtherOption = '&other=1';
+		}
+		var SelectOption = '';
+		if(document.getElementById("SelectOption") != null){
+			SelectOption = '&select=1';
+		}
+
+		document.getElementById("MainCityTitleDiv_shipp").style.display = 'inline';
+
+		document.getElementById("city_td_shipp").innerHTML = '<select name="city_id_shipp" class="inputbox" id="city_id_shipp" ><option value="">Loading...</option></select>';
+		if(document.getElementById("state_id_shipp") != null){
+			
+			var SendUrl = 'e_ajax.php?action=shippcity&state_id_shipp='+document.getElementById("state_id_shipp").value+'&current_city='+document.getElementById("main_city_id_shipp").value+SelectOption+OtherOption+'&r='+Math.random()+'&select=1';
+
+			httpObj2.open("GET", SendUrl, true);
+			httpObj2.onreadystatechange = function CityListRecieve(){
+				if (httpObj2.readyState == 4) {
+					
+					document.getElementById("city_td_shipp").innerHTML  = httpObj2.responseText;
+					
+					if(document.getElementById("city_id_shipp").value != '' ){
+						document.getElementById("main_city_id_shipp").value = document.getElementById("ajax_city_id_shipp").value;
+					
+					}else{
+						document.getElementById("main_city_id_shipp").value   = '';
+					}		
+
+					SetMainCityIdCheckout();
+				}
+			};
+			httpObj2.send(null);
+			
+		}
+
+	}
+        
+        function SetMainStateIdCheckout(){
+		document.getElementById("main_state_id_shipp").value = document.getElementById("state_id_shipp").value;
+		if(document.getElementById("ListingRecords") != null){
+			document.getElementById("ListingRecords").style.display = 'none';
+		}
+
+		if(document.getElementById("main_city_id_shipp") != null){
+			CityListSendCheckout();
+		}
+	}
+        
+       function SetMainCityIdCheckout(){
+		document.getElementById("main_city_id_shipp").value = document.getElementById("city_id_shipp").value;
+		
+		//LocalityListSend(); 	// use below instead of LocalityListSend
+		
+		if(document.getElementById("OtherState_shipp") != null){
+			if(document.getElementById("state_id_shipp").value > 0 ){
+				document.getElementById("StateTitleDiv_shipp").style.display = 'none';
+				document.getElementById("StateValueDiv_shipp").style.display = 'none';
+                                document.getElementById("StateShippOther_Div").style.display = 'none';
+			}else{
+				document.getElementById("StateTitleDiv_shipp").style.display = 'inline';
+				document.getElementById("StateValueDiv_shipp").style.display = 'inline';
+                                 document.getElementById("StateShippOther_Div").style.display = 'inline';
+
+			}
+		}
+
+		if(document.getElementById("OtherCity_shipp") != null){
+			if(document.getElementById("city_id_shipp").value > 0 ){
+				document.getElementById("CityTitleDiv_shipp").style.display = 'none';
+				document.getElementById("CityValueDiv_shipp").style.display = 'none';
+                                document.getElementById("CityShippOther_Div").style.display = 'none';
+			}else{
+				document.getElementById("CityTitleDiv_shipp").style.display = 'inline';
+				document.getElementById("CityValueDiv_shipp").style.display = 'inline';
+                                document.getElementById("CityShippOther_Div").style.display = 'inline';
+
+			}
+		}
+
+
+	}
+       function ShowHideLoader(opt,DivID){
+    		if(document.getElementById("footer") != null){
+    				if(opt==1){
+    						document.getElementById('PopLoader_L').style.display='none';
+    						document.getElementById('PopLoader_F').style.display='none';
+    						document.getElementById('PopLoader_S').style.display='none';
+    						document.getElementById('PopLoader_P').style.display='none';
+    	                                        document.getElementById('PopLoader_A').style.display='none';
+
+
+    						document.getElementById('PopLoader_'+DivID).style.display='block';
+    						var FooterTop = FindYPosition(document.getElementById("footer"))+200;
+    						
+    						document.getElementById('fade_home').style.height = FooterTop+'px';
+
+    						document.getElementById('fade_home').style.width = '100%';
+    						
+    						document.getElementById('light_home').style.left = '40%';
+    						document.getElementById('light_home').style.top = '40%';
+    						document.getElementById('light_home').style.display='block';
+    						document.getElementById('fade_home').style.display='block';
+    				}else{
+    					document.getElementById('light_home').style.display='none';
+    					document.getElementById('fade_home').style.display='none';
+    				}
+
+    		}
+
+    	}   
+       
+        

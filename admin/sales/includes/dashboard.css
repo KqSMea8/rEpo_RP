@@ -1,0 +1,69 @@
+/*******************************************************/
+
+.my-dashboard-nav ul li a{background:url("../../images/mydashboard_icons.png") no-repeat 0 0;}
+.my-dashboard-nav ul li.customer a {
+  background-position:30px -1538px;
+}
+.my-dashboard-nav ul li.customer a:hover {
+  background-position:30px -1650px;
+}
+.my-dashboard-nav ul li.add_customer a {
+   background-position:-80px -1538px;
+}
+.my-dashboard-nav ul li.add_customer a:hover {
+   background-position:-80px -1650px;
+}
+.my-dashboard-nav ul li.sales_quote a {
+   background-position:35px -1759px;
+}
+.my-dashboard-nav ul li.sales_quote a:hover {
+   background-position:35px -1871px;
+}
+.my-dashboard-nav ul li.add_quote a {
+   background-position:31px -423px;
+}
+.my-dashboard-nav ul li.add_quote a:hover {
+   background-position:31px -535px;
+}
+.my-dashboard-nav ul li.sales_order a {
+   background-position:-81px -647px;
+}
+.my-dashboard-nav ul li.sales_order a:hover {
+   background-position:-81px -759px;
+}
+.my-dashboard-nav ul li.add_so a {
+   background-position:-192px -647px;
+}
+.my-dashboard-nav ul li.add_so a:hover {
+   background-position:-192px -759px;
+}
+.my-dashboard-nav ul li.invoices a {
+   background-position:30px -646px;
+}
+.my-dashboard-nav ul li.invoices a:hover {
+   background-position:30px -758px;
+}
+.my-dashboard-nav ul li.report a {
+   background-position:-303px -1538px;
+}
+.my-dashboard-nav ul li.report a:hover {
+   background-position:-303px -1650px;
+}
+.my-dashboard-nav ul li.rma a {
+   background-position:-189px 23px;
+}
+.my-dashboard-nav ul li.rma a:hover {
+   background-position:-189px -89px;
+}
+.my-dashboard-nav ul li.add_return a {
+   background-position:-300px 23px;
+}
+.my-dashboard-nav ul li.add_return a:hover {
+   background-position:-300px -89px;
+}
+.my-dashboard-nav ul li.sales_statistics a {
+   background-position:31px -869px;
+}
+.my-dashboard-nav ul li.sales_statistics a:hover {
+   background-position:31px -981px;
+}

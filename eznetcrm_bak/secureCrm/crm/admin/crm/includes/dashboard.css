@@ -1,0 +1,56 @@
+/**********************  CRM Start *******************/
+
+.my-dashboard-nav ul li.lead a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -81px -647px;}
+.my-dashboard-nav ul li.lead.active a, .my-dashboard-nav ul li.lead a:hover{background-position: -81px -759px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_lead a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -192px -647px;}
+.my-dashboard-nav ul li.add_lead.active a, .my-dashboard-nav ul li.add_lead a:hover{background-position: -192px -759px; color:#d33f3e;}
+.my-dashboard-nav ul li.opportunities a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -303px -422px;}
+.my-dashboard-nav ul li.opportunities.active a, .my-dashboard-nav ul li.opportunities a:hover{background-position: -303px -534px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_opportunity a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -414px -422px}
+.my-dashboard-nav ul li.add_opportunity.active a, .my-dashboard-nav ul li.add_opportunity a:hover{background-position: -414px -534px; color:#d33f3e;}
+.my-dashboard-nav ul li.tickets a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -81px -422px;}
+.my-dashboard-nav ul li.tickets.active a, .my-dashboard-nav ul li.tickets a:hover{background-position: -81px -534px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_ticket a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -191px -422px;}
+.my-dashboard-nav ul li.add_ticket.active a, .my-dashboard-nav ul li.add_ticket a:hover{background-position: -191px -534px; color:#d33f3e;}
+.my-dashboard-nav ul li.documents a{background: url("../../images/mydashboard_icons.png") no-repeat scroll 35px -1759px;}
+.my-dashboard-nav ul li.documents.active a, .my-dashboard-nav ul li.documents a:hover{background-position: 35px -1871px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_document a{background: url("../../images/mydashboard_icons.png") no-repeat scroll 31px -423px;}
+.my-dashboard-nav ul li.add_document.active a, .my-dashboard-nav ul li.add_document a:hover{background-position:31px -535px; color:#d33f3e;}
+.my-dashboard-nav ul li.campaign a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -302px -202px;}
+.my-dashboard-nav ul li.campaign.active a, .my-dashboard-nav ul li.campaign a:hover{background-position:-302px -314px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_campaign a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -411px -201px;}
+.my-dashboard-nav ul li.add_campaign.active a, .my-dashboard-nav ul li.add_campaign a:hover{background-position: -411px -313px; color:#d33f3e;}
+.my-dashboard-nav ul li.quotes a{background: url("../../images/mydashboard_icons.png") no-repeat scroll  -81px -200px;}
+.my-dashboard-nav ul li.quotes.active a, .my-dashboard-nav ul li.quotes a:hover{background-position: -81px -312px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_quote a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -190px -200px;}
+.my-dashboard-nav ul li.add_quote.active a, .my-dashboard-nav ul li.add_quote a:hover{background-position: -190px -312px; color:#d33f3e;}
+.my-dashboard-nav ul li.calendar a{background: url("../../images/mydashboard_icons.png") no-repeat scroll 31px -201px;}
+.my-dashboard-nav ul li.calendar.active a, .my-dashboard-nav ul li.calendar a:hover{background-position: 31px -313px; color:#d33f3e;}
+.my-dashboard-nav ul li.events__tasks a{background: url("../../images/mydashboard_icons.png") no-repeat scroll -191px -1094px;}
+.my-dashboard-nav ul li.events__tasks.active a, .my-dashboard-nav ul li.events__tasks a:hover{background-position: -191px -1206px; color:#d33f3e;}
+
+/**********************  CRM End *******************/
+.my-dashboard-nav ul li.users a{background: url("../../images/mydashboard_icons.png") no-repeat -75px -1981px;}
+.my-dashboard-nav ul li.users.active a, .my-dashboard-nav ul li.users a:hover{background-position:-75px -2093px;color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_user a{background: url("../../images/mydashboard_icons.png") no-repeat 30px -1981px;}
+.my-dashboard-nav ul li.add_user.active a, .my-dashboard-nav ul li.add_user a:hover{background-position:29px -2094px; color:#d33f3e;}
+
+
+.my-dashboard-nav ul li.items a{background: url("../../images/mydashboard_icons.png") no-repeat -414px -647px;}
+.my-dashboard-nav ul li.items.active a, .my-dashboard-nav ul li.items a:hover{background-position:-414px -759px;color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_item a{background: url("../../images/mydashboard_icons.png") no-repeat -81px -1761px;}
+.my-dashboard-nav ul li.add_item.active a, .my-dashboard-nav ul li.add_item a:hover{background-position:-81px -1873px; color:#d33f3e;}
+
+
+
+.my-dashboard-nav ul li.customer a{background: url("../../images/mydashboard_icons.png") no-repeat 30px -1538px;}
+.my-dashboard-nav ul li.customer.active a, .my-dashboard-nav ul li.customer a:hover{background-position:30px -1650px;color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_customer a{background: url("../../images/mydashboard_icons.png") no-repeat -80px -1538px;}
+.my-dashboard-nav ul li.add_customer.active a, .my-dashboard-nav ul li.add_customer a:hover{background-position:-80px -1650px; color:#d33f3e;}
+
+

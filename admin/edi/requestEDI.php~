@@ -1,0 +1,51 @@
+<?php
+include_once("../includes/header.php");
+require_once($Prefix."classes/edi.class.php");
+require_once($Prefix."classes/sales.customer.class.php");
+require_once($Prefix."classes/supplier.class.php");
+
+
+$ediObj=new edi();
+ 
+if (is_object($ediObj)) {
+	
+	
+	if(!empty($_GET['type'])){
+		 
+		$arryCompanies=$ediObj->getEDICompaniesByStatus($_GET['type']);
+		$num=count($arryCompanies);
+		$ListUrl    = "requestEDI.php?type=".$_GET['type'];
+		 
+	}elseif($_POST['search_str']){
+		
+		$arryCompanies=$ediObj->getEDICompanies($_POST['search_str']);
+		$num=count($arryCompanies);
+		$ListUrl    = "requestEDI.php";
+	}
+	
+	
+	
+	$ModuleName = 'Request For EDI ';
+	if(!empty($_POST['request_CmpID'])){
+		$ListUrl    = "requestEDI.php"; 
+		$_SESSION['mess_Page'] = $ModuleName.' Request Send Successfully.';
+		$ediObj->sendRequestforedi($_POST['request_CmpID'],$_POST['name'],$_POST['EDITypeSelected']);
+		header("location:".$ListUrl);
+		exit;
+		 
+	}
+	
+	if(!empty($_GET['ID'])){
+		$ListUrl    = "requestEDI.php"; 
+		$_SESSION['mess_Page'] = $ModuleName.' '.$_GET['mod'].' Successfully.';
+		$ediObj->acceptrejectEDI($_GET['ID'],$_GET['mod'],$_GET['ComName']);
+		header("location:".$ListUrl);
+		exit;
+		 
+	}
+
+}
+
+require_once("../includes/footer.php");
+
+?>

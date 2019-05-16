@@ -1,0 +1,34 @@
+Order Date	PO Number#	Order Type	Sales Order #	Vendor	Amount	Currency	Status	Approved
+
+13/04/2018	PO30	Standard		Lucknow_Branch	1210.00	INR	Completed	Yes
+13/04/2018	PO29	Standard		AVAYA INDIA	1210.00	INR	Completed	Yes
+13/04/2018	PO28	Standard		Lucknow_Branch	2420.00	INR	Completed	Yes
+13/04/2018	PO27	Standard		vstacks	6050.00	INR	Completed	Yes
+13/04/2018	PO26	Standard		Lucknow_Branch	1210.00	INR	Completed	Yes
+13/04/2018	PO25	Standard		vstacks11	3630.00	INR	Completed	Yes
+13/04/2018	PO23	Standard		Lucknow_Branch	605.00	INR	Draft	No
+13/04/2018	PO22	Standard		vstacks11	2420.00	INR	Draft	No
+13/04/2018	PO24	Standard		Lucknow_Branch	605.00	INR	Draft	Yes
+13/04/2018	PO24	Standard		vstacks11	1815.00	INR	Invoicing	Yes
+10/04/2018	PO21	Standard		Noida_Branch	0.00	INR	Draft	Yes
+10/04/2018	PO20	Standard		vstacks11	900.00	INR	Draft	Yes
+10/04/2018	PO20	Standard		vstacks11	900.00	INR	Receiving	Yes
+10/04/2018	PO19	Standard		vstacks	5.00	INR	Draft	Yes
+10/04/2018	PO20	Standard		Noida_Branch	0.00	INR	Draft	Yes
+09/04/2018	PO18	Standard		vstacks	1.00	INR	Draft	Yes
+09/04/2018	PO17	Standard		vstacks	250.00	INR	Draft	Yes
+09/04/2018	PO16	Standard		vstacks11	145.20	INR	Draft	No
+28/03/2018	PO15	Standard		test	291.61	INR	Draft	No
+28/03/2018	PO14	Standard		test	291.61	INR	Draft	No
+28/03/2018	PO13	Standard		North East Delhi_Branch	121.00	INR	Draft	No
+28/03/2018	PO12	Standard		vstacks	150.00	INR	Completed	Yes
+28/03/2018	PO8	Standard		Gurgaon_Branch	60.00	INR	Draft	Yes
+27/03/2018	PO8	Standard		Gurgaon_Branch	42.10	INR	Draft	Yes
+27/03/2018	PO8	Standard		Lucknow_Branch	393.60	INR	Draft	Yes
+21/03/2018	PO7	Standard		AVAYA INDIA	1210.00	INR	Completed	Yes
+20/03/2018	PO4	Standard		testvstacksjohn1	1000.00	INR	Invoicing	Yes
+20/03/2018	PO4	Standard		testvstacksjohn1	1000.00	INR	Invoicing	Yes
+20/03/2018	PO4	Standard		testvstacksjohn1	120.00	INR	Completed	Yes
+20/03/2018	PO3	Standard		testvstacksjohn1	450.00	INR	Completed	Yes
+20/03/2018	PO2	Standard		testvstacksjohn1	100.00	INR	Completed	Yes
+06/02/2018	PO1	Standard		AVAYA INDIA	100.00	INR	Completed	Yes

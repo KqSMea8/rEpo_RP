@@ -1,0 +1,75 @@
+/********************  Start ********************/
+.my-dashboard-nav ul li a{background:url("../../images/mydashboard_icons.png") no-repeat 0 0;}
+.my-dashboard-nav ul li.items a {
+  background-position:-414px -647px;
+}
+.my-dashboard-nav ul li.items a:hover {
+  background-position:-414px -759px;
+}
+.my-dashboard-nav ul li.add_item a {
+   background-position:-81px -1761px;
+}
+.my-dashboard-nav ul li.add_item a:hover {
+   background-position:-81px -1873px;
+}
+.my-dashboard-nav ul li.categories a {
+   background-position:31px -869px;
+}
+.my-dashboard-nav ul li.categories a:hover {
+   background-position:31px -981px;
+}
+.my-dashboard-nav ul li.add_category a {
+   background-position:31px -423px;
+}
+.my-dashboard-nav ul li.add_category a:hover {
+   background-position:31px -535px;
+}
+.my-dashboard-nav ul li.price_list a {
+   background-position:30px -646px;
+}
+.my-dashboard-nav ul li.price_list a:hover {
+   background-position:30px -758px;
+}
+.my-dashboard-nav ul li.stock_adjustment a {
+   background-position:-191px -422px;
+}
+.my-dashboard-nav ul li.stock_adjustment a:hover {
+   background-position:-191px -534px;
+}
+.my-dashboard-nav ul li.stock_transfers a {
+   background-position:-189px 23px;
+}
+.my-dashboard-nav ul li.stock_transfers a:hover {
+   background-position:-189px -89px;
+}
+.my-dashboard-nav ul li.bom a {
+   background-position:-414px -1089px;
+}
+.my-dashboard-nav ul li.bom a:hover {
+   background-position:-414px -1201px;
+}
+
+/********************  End ********************/
+
+.my-dashboard-nav ul li.users a {
+  background-position:-75px -1981px;
+}
+.my-dashboard-nav ul li.users a:hover {
+  background-position:-75px -2093px;
+}
+.my-dashboard-nav ul li.add_user a {
+   background-position:30px -1981px;
+}
+.my-dashboard-nav ul li.add_user a:hover {
+   background-position:29px -2094px;
+}
+
+.my-dashboard-nav ul li.stock_search a {
+  background-position:-80px -1316px;
+}
+.my-dashboard-nav ul li.stock_search a:hover {
+  background-position:-80px -1428px;
+}
+
+
+

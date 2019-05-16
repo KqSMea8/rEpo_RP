@@ -1,0 +1,285 @@
+/********************  Employee Start ********************/
+.my-dashboard-nav ul li.employee a{background: url("../admin/images/mydashboard_icons.png") no-repeat -75px -1981px;}
+.my-dashboard-nav ul li.employee.active a, .my-dashboard-nav ul li.employee a:hover{background-position:-75px -2093px;color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_employee a{background: url("../admin/images/mydashboard_icons.png") no-repeat 30px -1981px;}
+.my-dashboard-nav ul li.add_employee.active a, .my-dashboard-nav ul li.add_employee a:hover{background-position:29px -2094px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.manage_leave a{background: url("../admin/images/mydashboard_icons.png") no-repeat -189px 23px;}
+.my-dashboard-nav ul li.manage_leave.active a, .my-dashboard-nav ul li.manage_leave a:hover{background-position: -189px -89px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.assign_leave a{background: url("../admin/images/mydashboard_icons.png") no-repeat -300px 23px;}
+.my-dashboard-nav ul li.assign_leave.active a, .my-dashboard-nav ul li.assign_leave a:hover{background-position: -300px -89px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.vacancies a{background: url("../admin/images/mydashboard_icons.png") no-repeat 30px -1538px;}
+.my-dashboard-nav ul li.vacancies.active a, .my-dashboard-nav ul li.vacancies a:hover{background-position: 30px -1650px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_vacancy a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -80px -1538px;}
+.my-dashboard-nav ul li.add_vacancy.active a, .my-dashboard-nav ul li.add_vacancy a:hover{background-position: -80px -1650px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.candidates a{background: url("../admin/images/mydashboard_icons.png") no-repeat -414px -1315px;}
+.my-dashboard-nav ul li.candidates.active a, .my-dashboard-nav ul li.candidates a:hover{background-position: -414px -1427px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_candidate a{background: url("../admin/images/mydashboard_icons.png") no-repeat -303px -1316px;}
+.my-dashboard-nav ul li.add_candidate.active a, .my-dashboard-nav ul li.add_candidate a:hover{background-position: -303px -1428px; color:#d33f3e;}
+.my-dashboard-nav ul li.timesheet a{background: url("../admin/images/mydashboard_icons.png") no-repeat -77px 22px;}
+.my-dashboard-nav ul li.timesheet.active a, .my-dashboard-nav ul li.timesheet a:hover{background-position: -77px -90px; color:#d33f3e;}
+.my-dashboard-nav ul li.attendance a{background: url("../admin/images/mydashboard_icons.png") no-repeat -187px -1985px;}
+.my-dashboard-nav ul li.attendance.active a, .my-dashboard-nav ul li.attendance a:hover{background-position: -189px -2097px; color:#d33f3e;}
+.my-dashboard-nav ul li.payroll a{background: url("../admin/images/mydashboard_icons.png") no-repeat -414px -1092px;}
+.my-dashboard-nav ul li.payroll.active a, .my-dashboard-nav ul li.payroll a:hover{background-position: -414px -1204px; color:#d33f3e;}
+.my-dashboard-nav ul li.generate_salary a{background: url("../admin/images/mydashboard_icons.png") no-repeat 30px -646px;}
+.my-dashboard-nav ul li.generate_salary.active a, .my-dashboard-nav ul li.generate_salary a:hover{background-position: 30px -758px; color:#d33f3e;}
+.my-dashboard-nav ul li.kra a{background: url("../admin/images/mydashboard_icons.png") no-repeat -410px -1759px;}
+.my-dashboard-nav ul li.kra.active a, .my-dashboard-nav ul li.kra a:hover{background-position: -410px -1871px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.review a{background: url("../admin/images/mydashboard_icons.png") no-repeat -80px -1316px;}
+.my-dashboard-nav ul li.review.active a, .my-dashboard-nav ul li.review a:hover{background-position: -80px -1428px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.training a{background: url("../admin/images/mydashboard_icons.png") no-repeat -302px -645px;}
+.my-dashboard-nav ul li.training.active a, .my-dashboard-nav ul li.training a:hover{background-position: -302px -757px; color:#d33f3e;}
+.my-dashboard-nav ul li.report a{background: url("../admin/images/mydashboard_icons.png") no-repeat -303px -1538px;}
+.my-dashboard-nav ul li.report.active a, .my-dashboard-nav ul li.report a:hover{background-position: -303px -1650px; color:#d33f3e;}
+.my-dashboard-nav ul li.directory a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -193px -1538px;}
+.my-dashboard-nav ul li.directory.active a, .my-dashboard-nav ul li.directory a:hover{background-position: -193px -1650px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.apply_for_leave a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -300px 23px;}
+.my-dashboard-nav ul li.apply_for_leave.active a, .my-dashboard-nav ul li.apply_for_leave a:hover{background-position: -300px -89px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_timesheet a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -77px 22px;}
+.my-dashboard-nav ul li.my_timesheet.active a, .my-dashboard-nav ul li.my_timesheet a:hover{background-position: -77px -90px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_attendance a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -187px -1985px;}
+.my-dashboard-nav ul li.my_attendance.active a, .my-dashboard-nav ul li.my_attendance a:hover{background-position:  -189px -2097px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_leaves a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -189px 23px;}
+.my-dashboard-nav ul li.my_leaves.active a, .my-dashboard-nav ul li.my_leaves a:hover{background-position: -189px -89px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_profile a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll 29px -1317px;}
+.my-dashboard-nav ul li.my_profile.active a, .my-dashboard-nav ul li.my_profile a:hover{background-position: 29px -1429px; color:#d33f3e;}
+.my-dashboard-nav ul li.my_declaration a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -192px -1319px;}
+.my-dashboard-nav ul li.my_declaration.active a, .my-dashboard-nav ul li.my_declaration a:hover{background-position: -192px -1431px; color:#d33f3e;}
+.my-dashboard-nav ul li.holidays a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll 29px 22px;}
+.my-dashboard-nav ul li.holidays.active a, .my-dashboard-nav ul li.holidays a:hover{background-position: 29px -90px; color:#d33f3e;}
+.my-dashboard-nav ul li.punch_inout a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -416px -1539px;}
+.my-dashboard-nav ul li.punch_inout.active a, .my-dashboard-nav ul li.punch_inout a:hover{background-position: -416px -1651px; color:#d33f3e;}
+
+/********************  Employee End ********************/
+/*******************************************************/
+/*******************  E-commerce Start *****************/
+
+.my-dashboard-nav ul li.products a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -414px -647px;}
+.my-dashboard-nav ul li.products.active a, .my-dashboard-nav ul li.products a:hover{background-position: -414px -759px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_product a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -81px -1761px;}
+.my-dashboard-nav ul li.add_product.active a, .my-dashboard-nav ul li.add_product a:hover{background-position: -81px -1873px; color:#d33f3e;}
+.my-dashboard-nav ul li.categories a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll 31px -869px;}
+.my-dashboard-nav ul li.categories.active a, .my-dashboard-nav ul li.categories a:hover{background-position: 31px -981px; color:#d33f3e;}
+.my-dashboard-nav ul li.store_settings a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -191px -868px;}
+.my-dashboard-nav ul li.store_settings.active a, .my-dashboard-nav ul li.store_settings a:hover{background-position: -191px -980px; color:#d33f3e;}
+.my-dashboard-nav ul li.orders a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -79px -1093px;}
+.my-dashboard-nav ul li.orders.active a, .my-dashboard-nav ul li.orders a:hover{background-position:-79px -1205px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.customers a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -302px -1092px;}
+.my-dashboard-nav ul li.customers.active a, .my-dashboard-nav ul li.customers a:hover{background-position:-302px -1204px; color:#d33f3e;}
+.my-dashboard-nav ul li.manufacturers a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -81px -870px;}
+.my-dashboard-nav ul li.manufacturers.active a, .my-dashboard-nav ul li.manufacturers a:hover{background-position: -81px -982px; color:#d33f3e;}
+.my-dashboard-nav ul li.send_newsletter a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -302px -869px;}
+.my-dashboard-nav ul li.send_newsletter.active a, .my-dashboard-nav ul li.send_newsletter a:hover{background-position: -302px -981px; color:#d33f3e;}
+.my-dashboard-nav ul li.manage_pages a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -414px -869px;}
+.my-dashboard-nav ul li.manage_pages.active a, .my-dashboard-nav ul li.manage_pages a:hover{background-position: -414px -981px; color:#d33f3e;}
+.my-dashboard-nav ul li.tax_class a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll 30px -1094px;}
+.my-dashboard-nav ul li.tax_class.active a, .my-dashboard-nav ul li.tax_class a:hover{background-position: 30px -1206px; color:#d33f3e;}
+
+/*******************  E-commerce End *****************/
+/*******************************************************/
+/**********************  CRM Start *******************/
+
+.my-dashboard-nav ul li.lead a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -81px -647px;}
+.my-dashboard-nav ul li.lead.active a, .my-dashboard-nav ul li.lead a:hover{background-position: -81px -759px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_lead a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -192px -647px;}
+.my-dashboard-nav ul li.add_lead.active a, .my-dashboard-nav ul li.add_lead a:hover{background-position: -192px -759px; color:#d33f3e;}
+.my-dashboard-nav ul li.opportunities a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -303px -422px;}
+.my-dashboard-nav ul li.opportunities.active a, .my-dashboard-nav ul li.opportunities a:hover{background-position: -303px -534px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_opportunity a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -414px -422px}
+.my-dashboard-nav ul li.add_opportunity.active a, .my-dashboard-nav ul li.add_opportunity a:hover{background-position: -414px -534px; color:#d33f3e;}
+.my-dashboard-nav ul li.tickets a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -81px -422px;}
+.my-dashboard-nav ul li.tickets.active a, .my-dashboard-nav ul li.tickets a:hover{background-position: -81px -534px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_ticket a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -191px -422px;}
+.my-dashboard-nav ul li.add_ticket.active a, .my-dashboard-nav ul li.add_ticket a:hover{background-position: -191px -534px; color:#d33f3e;}
+.my-dashboard-nav ul li.documents a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll 35px -1759px;}
+.my-dashboard-nav ul li.documents.active a, .my-dashboard-nav ul li.documents a:hover{background-position: 35px -1871px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_document a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll 31px -423px;}
+.my-dashboard-nav ul li.add_document.active a, .my-dashboard-nav ul li.add_document a:hover{background-position:31px -535px; color:#d33f3e;}
+.my-dashboard-nav ul li.campaigns a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -302px -202px;}
+.my-dashboard-nav ul li.campaigns.active a, .my-dashboard-nav ul li.campaigns a:hover{background-position:-302px -314px; color:#d33f3e;}
+.my-dashboard-nav ul li.add_campaign a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -411px -201px;}
+.my-dashboard-nav ul li.add_campaign.active a, .my-dashboard-nav ul li.add_campaign a:hover{background-position: -411px -313px; color:#d33f3e;}
+.my-dashboard-nav ul li.quotes a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll  -81px -200px;}
+.my-dashboard-nav ul li.quotes.active a, .my-dashboard-nav ul li.quotes a:hover{background-position: -81px -312px; color:#d33f3e;}
+
+.my-dashboard-nav ul li.add_quote a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -190px -200px;}
+.my-dashboard-nav ul li.add_quote.active a, .my-dashboard-nav ul li.add_quote a:hover{background-position: -190px -312px; color:#d33f3e;}
+.my-dashboard-nav ul li.calender a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll 31px -201px;}
+.my-dashboard-nav ul li.calender.active a, .my-dashboard-nav ul li.calender a:hover{background-position: 31px -313px; color:#d33f3e;}
+.my-dashboard-nav ul li.events__tasks a{background: url("../admin/images/mydashboard_icons.png") no-repeat scroll -191px -1094px;}
+.my-dashboard-nav ul li.events__tasks.active a, .my-dashboard-nav ul li.events__tasks a:hover{background-position: -191px -1206px; color:#d33f3e;}
+
+/**********************  CRM End *******************/
+/*******************************************************/
+/********************  Purchasing Start ********************/
+.my-dashboard-nav ul.purchasing li a{background:url("../admin/images/mydashboard_icons.png") no-repeat 0 0;}
+.my-dashboard-nav ul.purchasing li.supplier a {
+  background-position:-414px -1315px;
+}
+.my-dashboard-nav ul.purchasing li.supplier a:hover {
+  background-position:-414px -1427px;
+}
+.my-dashboard-nav ul.purchasing li.add_supplier a {
+   background-position:-303px -1316px;
+}
+.my-dashboard-nav ul.purchasing li.add_supplier a:hover {
+   background-position:-303px -1428px;
+}
+.my-dashboard-nav ul.purchasing li.purchase_quote a {
+   background-position:35px -1759px;
+}
+.my-dashboard-nav ul.purchasing li.purchase_quote a:hover {
+   background-position:35px -1871px;
+}
+.my-dashboard-nav ul.purchasing li.add_quote a {
+   background-position:31px -423px;
+}
+.my-dashboard-nav ul.purchasing li.add_quote a:hover {
+   background-position:31px -535px;
+}
+.my-dashboard-nav ul.purchasing li.purchase_order a {
+   background-position:-81px -647px;
+}
+.my-dashboard-nav ul.purchasing li.purchase_order a:hover {
+   background-position:-81px -759px;
+}
+.my-dashboard-nav ul.purchasing li.add_po a {
+   background-position:-192px -647px;
+}
+.my-dashboard-nav ul.purchasing li.add_po a:hover {
+   background-position:-192px -759px;
+}
+.my-dashboard-nav ul.purchasing li.invoices a {
+   background-position:30px -646px;
+}
+.my-dashboard-nav ul.purchasing li.invoices a:hover {
+   background-position:30px -758px;
+}
+.my-dashboard-nav ul.purchasing li.receive_order a {
+   background-position:-191px -868px;
+}
+.my-dashboard-nav ul.purchasing li.receive_order a:hover {
+   background-position:-191px -980px;
+}
+.my-dashboard-nav ul.purchasing li.returns a {
+   background-position:-189px 23px;
+}
+.my-dashboard-nav ul.purchasing li.returns a:hover {
+   background-position:-189px -89px;
+}
+.my-dashboard-nav ul.purchasing li.add_return a {
+   background-position:-300px 23px;
+}
+.my-dashboard-nav ul.purchasing li.add_return a:hover {
+   background-position:-300px -89px;
+}
+.my-dashboard-nav ul.purchasing li.credit_note a {
+   background-position:-81px -422px;
+}
+.my-dashboard-nav ul.purchasing li.credit_note a:hover {
+   background-position:-81px -534px;
+}
+.my-dashboard-nav ul.purchasing li.add_credit_note a {
+   background-position:-191px -422px;
+}
+.my-dashboard-nav ul.purchasing li.add_credit_note a:hover {
+   background-position:-191px -534px;
+}
+.my-dashboard-nav ul.purchasing li.po_report a {
+   background-position:-414px -869px;
+}
+.my-dashboard-nav ul.purchasing li.po_report a:hover {
+   background-position:-414px -981px;
+}
+.my-dashboard-nav ul.purchasing li.invoice_report a {
+   background-position:-410px -1759px;
+}
+.my-dashboard-nav ul.purchasing li.invoice_report a:hover {
+   background-position:-410px -1871px;
+}
+.my-dashboard-nav ul.purchasing li.payment_history a {
+   background-position:-303px -1538px;
+}
+.my-dashboard-nav ul.purchasing li.payment_history a:hover {
+   background-position:-303px -1650px;
+}
+
+/********************  sales End ********************/
+.my-dashboard-nav ul.sales li a{background:url("../admin/images/mydashboard_icons.png") no-repeat 0 0;}
+.my-dashboard-nav ul.sales li.customer a {
+  background-position:30px -1538px;
+}
+.my-dashboard-nav ul.sales li.customer a:hover {
+  background-position:30px -1650px;
+}
+.my-dashboard-nav ul.sales li.add_customer a {
+   background-position:-80px -1538px;
+}
+.my-dashboard-nav ul.sales li.add_customer a:hover {
+   background-position:-80px -1650px;
+}
+.my-dashboard-nav ul.sales li.sales_quote a {
+   background-position:35px -1759px;
+}
+.my-dashboard-nav ul.sales li.sales_quote a:hover {
+   background-position:35px -1871px;
+}
+.my-dashboard-nav ul.sales li.add_quote a {
+   background-position:31px -423px;
+}
+.my-dashboard-nav ul.sales li.add_quote a:hover {
+   background-position:31px -535px;
+}
+.my-dashboard-nav ul.sales li.sales_order a {
+   background-position:-81px -647px;
+}
+.my-dashboard-nav ul.sales li.sales_order a:hover {
+   background-position:-81px -759px;
+}
+.my-dashboard-nav ul.sales li.add_so a {
+   background-position:-192px -647px;
+}
+.my-dashboard-nav ul.sales li.add_so a:hover {
+   background-position:-192px -759px;
+}
+.my-dashboard-nav ul.sales li.invoices a {
+   background-position:30px -646px;
+}
+.my-dashboard-nav ul.sales li.invoices a:hover {
+   background-position:30px -758px;
+}
+.my-dashboard-nav ul.sales li.report a {
+   background-position:-303px -1538px;
+}
+.my-dashboard-nav ul.sales li.report a:hover {
+   background-position:-303px -1650px;
+}
+.my-dashboard-nav ul.sales li.returns a {
+   background-position:-189px 23px;
+}
+.my-dashboard-nav ul.sales li.returns a:hover {
+   background-position:-189px -89px;
+}
+.my-dashboard-nav ul.sales li.add_return a {
+   background-position:-300px 23px;
+}
+.my-dashboard-nav ul.sales li.add_return a:hover {
+   background-position:-300px -89px;
+}
+.my-dashboard-nav ul.sales li.sales_statistics a {
+   background-position:31px -869px;
+}
+.my-dashboard-nav ul.sales li.sales_statistics a:hover {
+   background-position:31px -981px;
+}

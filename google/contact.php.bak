@@ -1,0 +1,178 @@
+<? 
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title><?=$SITE_NAME?></title>
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+<link href="css/homerun.css" rel="stylesheet" type="text/css">
+
+    <!--<script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAU1_kUFMV45zBa8T1md3LShTcyTBaKMmwi780-Sh78Ay3Pg36mBREMonrd9EYWI0BmoJnS7-1NFAozw&q=2918+Jog+Rd++Greenacres,+FL+33467" type="text/javascript"></script>
+    <script src="http://www.google.com/uds/api?file=uds.js&v=1.0&key=ABQIAAAAU1_kUFMV45zBa8T1md3LShTcyTBaKMmwi780-Sh78Ay3Pg36mBREMonrd9EYWI0BmoJnS7-1NFAozw&q=2918+Jog+Rd++Greenacres,+FL+33467" type="text/javascript"></script>
+   --> <script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAA7CLNY_Mc8AIJLe6LyKkLdBQj2_hmbLIwCt5RvMbJ0WKoEHJWihQXPpU2TOLA8UK_myysQ0PxiG51QA&q=2918+Jog+Rd++Greenacres,+FL+33467" type="text/javascript"></script>
+    <script src="http://www.google.com/uds/api?file=uds.js&v=1.0&key=ABQIAAAAU1_kUFMV45zBa8T1md3LShTcyTBaKMmwi780-Sh78Ay3Pg36mBREMonrd9EYWI0BmoJnS7-1NFAozw&q=2918+Jog+Rd++Greenacres,+FL+33467" type="text/javascript"></script>
+   
+    <script src="http://www.google.com/uds/solutions/localsearch/gmlocalsearch.js" type="text/javascript"></script>
+    
+    <style type="text/css">
+      @import url("http://www.google.com/uds/css/gsearch.css");
+      @import url("http://www.google.com/uds/solutions/localsearch/gmlocalsearch.css");
+
+      #map {
+        border : 1px solid #979797;
+        width : 100%;
+        height : 600px;
+      }
+    </style>
+
+    <script type="text/javascript">
+      //<![CDATA[
+      function load() {
+        if (GBrowserIsCompatible()) {
+        
+          // Create and Center a Map
+          var map = new GMap2(document.getElementById("map"));
+          map.setCenter(new GLatLng(26.633441,-80.146004), 13);
+          map.addControl(new GLargeMapControl());
+          map.addControl(new GMapTypeControl());
+
+          // bind a search control to the map, suppress result list
+          map.addControl(new google.maps.LocalSearch());
+			
+
+					  // Creates a marker whose info window displays the given number 
+		  function createMarker(point, number) {
+			var marker = new GMarker(point);
+		  
+			// Show this marker's index in the info window when it is clicked
+			var html = '<div align="center"><a href="http://www.google.com/maps?source=uds&q=2918+Jog+Rd%2C+Greenacres+%2C+FL+33467" target="_blank">2918 Jog Rd</a><br></br>2918 Jog Rd<br>Lake Worth, FL 33467</div>';
+			GEvent.addListener(marker, "click", function() {
+			  marker.openInfoWindowHtml(html);
+			});
+		  
+			return marker;
+		  }
+//26.633441,-80.146004
+			var point = new GPoint(-80.146004, 26.633441);
+			var marker = createMarker(point,1);
+			map.addOverlay(marker);
+
+        }
+      }
+      GSearch.setOnLoadCallback(load);
+      //]]>
+    </script>
+	<script language="javascript" src="../includes/DropDownMenu.js"></script>
+  </head>
+  <body onunload="GUnload()">
+  <script language="JavaScript1.2">mmLoadMenus();</script>
+ <table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="112">&nbsp;</td>
+    <td width="775" align="center">
+	<table width="775" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+	<tr>
+        <td width="112" valign="top" background="../images/homerun_01.jpg"><img src="../images/homerun_02.jpg" width="775" height="5" alt="" /></td>
+      </tr>
+	  <tr>
+	  <td>
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="241" valign="top"><a href="index.php"><img src="../images/homerun_04.jpg" width="241" height="52" alt="" border="0" /></a></td>
+            <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="25" align="right" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="25" align="right" valign="middle" bgcolor="#D8D2CC" class="textt" style="padding-right:8px;">
+					<!--<a href="login.php" class="navigation">LOGIN</a> / <a href="singup.php" class="navigation">REGISTER</a> --><a href="cms.php?id=1" class="navigation">ABOUT HRRE</a> 
+					<a href="cms.php?id=2" class="navigation">CAREERS</a> <a href="cms.php?id=3" class="navigation">HRRE CARES</a>
+					 <a href="contact.php" class="navigation">CONTACT
+                      US</a></td>
+                    <td width="5" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td valign="top" bgcolor="#6D8E59"><table width="100%" border="0" cellpadding="0" cellspacing="0"  >
+                  <tr>
+                    <td width="81" valign="top" style="Cursor: pointer;"><img src="../images/homerun_06.jpg" alt="" name="image1" width="81" height="27" id="image1" onmouseover="MM_showMenu(window.mm_menu_0712112636_0,0,27,null,'image1')" onmouseout="MM_startTimeout();"  border="0"/></td>
+                    <td width="95" valign="top" style="Cursor: pointer;"><img src="../images/homerun_07.jpg" alt="" name="image2" width="95" height="27" id="image2" onmouseover="MM_showMenu(window.mm_menu_0712114557_0,0,27,null,'image2')" onmouseout="MM_startTimeout();" border="0"/></td>
+                    <td width="105" valign="top" style="Cursor: pointer;"><img src="../images/homerun_08.jpg" alt="" name="image3" width="105" height="27" id="image3" onmouseover="MM_showMenu(window.mm_menu_0712114818_0,0,27,null,'image3')" onmouseout="MM_startTimeout();" border="0"/></td>
+                    <td width="86" valign="top" style="Cursor: pointer;"><img src="../images/homerun_09.jpg" alt="" name="image4" width="86" height="27" id="image4" onmouseover="MM_showMenu(window.mm_menu_0712115000_0,0,27,null,'image4')" onmouseout="MM_startTimeout();" border="0"/></td>
+                    <td width="77" valign="top" style="Cursor: pointer;"><img src="../images/homerun_10.jpg" alt="" name="image5" width="77" height="27" id="image5" onmouseover="MM_showMenu(window.mm_menu_0712115311_0,0,27,null,'image5')" onmouseout="MM_startTimeout();" border="0"/></td>
+                    <td width="90" valign="top" style="Cursor: pointer;"><img src="../images/homerun_11.jpg" alt="" name="image6" width="90" height="27" id="image6" onmouseover="MM_showMenu(window.mm_menu_0712115543_0,0,27,null,'image6')" onmouseout="MM_startTimeout();" border="0"/></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table>
+	  </td>
+	  </tr>
+	</table>
+	</td>
+    <td width="113" >&nbsp;</td>
+  </tr>
+</table> 
+<table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="112">&nbsp;</td>
+    <td width="775" align="center">
+	
+			<table width="100%" border="0" cellspacing="4" cellpadding="0">
+						  <tr height=40>
+				<td align="left" valign='top' colspan=2 class="h1"><?=$res['title']?></td>
+			  </tr>
+
+			  <tr>
+				<td align="left" valign='top'><?=$res['data']?></td>
+				<td width="505px" align="center"><div id="map" style="width: 500px; height: 300px;"></div></td>
+			  </tr>
+			</table>
+	
+	</td>
+    <td width="113">&nbsp;</td>
+  </tr>
+</table>
+
+ <table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="112" >&nbsp;</td>
+    <td width="775" align="center"><table width="775"  border="0" cellspacing="0" cellpadding="0" align="center">
+ <tr>
+        <td valign="top"><img src="../images/line.jpg" width="775" height="7" /></td>
+      </tr>
+      <tr>
+        <td valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="67%" valign="top" class="textt" style="padding-left:8px;">&copy; 2007 HomeRun Real Estate, Inc. All rights
+              reserved. Equal Housing Opportunity, Equal Housing Lender. Unauthorized
+              duplication, use, or linkage is prohibited.</td>
+            <td width="33%" align="right" valign="top" style="padding-right:8px"><a href="cms.php?id=5" class="navigation">Site Map</a>
+			<span class="textt"> |
+                <a href="cms.php?id=6" class="navigation">Terms of Use</a> | <a href="cms.php?id=7" class="navigation">Privacy Policy</a></span></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" class="textt"><a href="#" class="navigation">Palm Beach
+            Real Estate</a> | <a href="#" class="navigation">Broward Real Estate</a> | <a href="#" class="navigation">Miami
+          Real Estate</a> | <a href="#" class="navigation">Orlando Real Estate</a> | <a href="#" class="navigation">Tampa Real Estate</a> </td>
+      </tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+      </tr>
+</table></td>
+    <td width="113">&nbsp;</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+

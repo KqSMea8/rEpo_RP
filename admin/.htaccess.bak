@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteBase /erp/
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+

@@ -1,0 +1,83 @@
+
+ #Back 
+{ 
+	 left: -97px; 
+	 top: -3px; 
+	 position: absolute; 
+	 width: 790px;
+	 height: 198px;
+	 z-index:1;
+} 
+
+ #Pattern 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 600px;
+	 height: 194px;
+	 z-index:2;
+} 
+
+ #Forma3copy 
+{ 
+	 left: 133px; 
+	 top: 73px; 
+	 position: absolute; 
+	 width: 329px;
+	 height: 51px;
+	 z-index:3;
+} 
+
+ #Forma3copia 
+{ 
+	 left: 133px; 
+	 top: 69px; 
+	 position: absolute; 
+	 width: 329px;
+	 height: 51px;
+	 z-index:4;
+} 
+
+ #Shape3 
+{ 
+	  height: 66px;
+    left: 398px;
+    position: absolute;
+    top: 71px;
+    width: 64px;
+    z-index: 5;
+}
+
+
+
+ #Typeyoursearchhere 
+{ 
+	 left: 155px; 
+	 top: 89px; 
+	 position: absolute; 
+	 width: 170px;
+	 height: 12px;
+	 z-index:6;
+} 
+
+ #Circle 
+{ 
+	 left: 413px; 
+	 top: 78px; 
+	 position: absolute; 
+	 width: 32px;
+	 height: 32px;
+	 z-index:7;
+} 
+
+ #Shape4 
+{ 
+	 left: 420px; 
+	 top: 84px; 
+	 position: absolute; 
+	 width: 21px;
+	 height: 18px;
+	 z-index:8;
+} 
+

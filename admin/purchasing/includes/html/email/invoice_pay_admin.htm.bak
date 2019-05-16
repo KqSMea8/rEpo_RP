@@ -1,0 +1,64 @@
+<link href="[URL]css/mail.css" rel="stylesheet" type="text/css">
+<Div class="divnormal">
+<table border="0" cellspacing="5" cellpadding="5" class="tablenormal">
+  <!--<tr>
+	<td   bgcolor="#1D4D95"><img src="[URL]images/logo.gif" border="0" /></td>
+  </tr>-->
+  <tr>
+	<td class="blacknormal" >
+
+Payment has been received for Invoice #[InvoiceID] on <a href="[COMPNAY_URL]" target="_blank" class="normallink">[SITENAME]</a>: <BR><BR>
+
+<table border="0" cellspacing="2" cellpadding="2" width="450" class="blacknormal">
+ <tr>
+	<td align="right" width="30%">Invoice # : </td>
+	<td align="left">[InvoiceID]</td>
+  </tr>
+ <tr>
+	<td align="right">PO Number # : </td>
+	<td align="left">[PurchaseID]</td>
+  </tr>  <tr>
+	<td align="right">Invoice Date : </td>
+	<td align="left">[PostedDate]</td>
+  </tr>
+ <tr>
+	<td align="right">Item Received Date : </td>
+	<td align="left">[ReceivedDate]</td>
+  </tr>
+ <tr>
+	<td align="left" ><strong>Payment Details</strong>  </td>
+  </tr>
+
+ <tr>
+	<td align="right" >Total Amount Paid :  </td>
+	<td align="left">[TotalAmount] [Currency]</td>
+  </tr>
+ <tr>
+	<td align="right">Payment Date : </td>
+	<td align="left">[PaymentDate]</td>
+  </tr> 
+  
+  <tr>
+	<td align="right">Payment Method : </td>
+	<td align="left">[InvPaymentMethod]</td>
+  </tr>
+ <tr>
+	<td align="right">Payment Ref # : </td>
+	<td align="left">[PaymentRef]</td>
+  </tr>
+
+
+
+
+</table>
+
+	</td>
+  </tr>
+   <tr>
+	<td class="blackbold">
+	
+		[FOOTER_MESSAGE]
+	</td>
+  </tr>
+</table>
+</Div>

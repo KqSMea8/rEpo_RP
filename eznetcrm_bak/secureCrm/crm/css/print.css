@@ -1,0 +1,81 @@
+ @page 
+    {
+        size: auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+td{font-size: 11px;font-weight: normal;color:#333;text-decoration: none;}
+.had {
+	font-size:18px;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: left;
+	padding-left:3px;
+	margin-bottom: 8px;
+	color:#333;
+}
+.head3 {
+	font-size:14px;
+	text-decoration:none;
+	border-top:1px solid #aaa;
+	border-bottom:1px solid #aaa;
+	font-weight:bold;
+	height: 22px;
+}
+.borderall {
+    border: 1px solid #333;
+    border-radius: 2px;
+}
+.header-container .top-right-nav{display:none;}
+.left-main-nav{display:none;}
+#main_menu{
+	display:none;
+}
+#sub_menu{
+	display:none;
+}
+.right-search{
+	display:none;
+}
+.print_button{display:none;}
+.export_button{display:none;}
+.view_button{display:none;}
+.dwn_button{display:none;}
+.add_button{display:none;}
+.add{display:none;}
+.action_bt{display:none;}
+.grey_bt{display:none;}
+#td_pager{
+	display:none;
+}
+.head1_action{
+	display:none;
+}
+.head1_inner{
+	display:none;
+}
+.search_button{
+	display:none;
+}
+
+.footer-container{
+	display:none;
+}
+a.edit{display:none;}
+a.back{display:none;}
+a.red_bt{display:none;}
+.bar-search{display:none;}
+
+.button{display:none;}
+.textbox{border:none;}
+.inputbox{border:none;}
+.datebox{border:none;}
+.message{display:none;}
+.hideprint{display:none;}
+.download{display:none;}
+.ui-datepicker-trigger{display:none;}
+.main-container .main .mid-continent {
+    background:#FFFFFF;
+    border: none;
+    padding: 10px;
+    width: 100%;
+}

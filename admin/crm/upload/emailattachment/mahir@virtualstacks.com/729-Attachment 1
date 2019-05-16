@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+</head>
+<body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; color: rgb(0, 0, 0); font-size: 14px; font-family: Calibri, sans-serif;">
+<div>
+<div>Mahir,</div>
+<div><br>
+</div>
+<div>Do you have an estimate on the costs to implement PDFTron?</div>
+<div><br>
+</div>
+<div>Best,&nbsp;</div>
+<div>
+<p class="MsoNormal" style="margin: 0in 0in 3pt; font-size: 11pt; line-height: 17px; page-break-after: avoid;">
+<b><span style="font-size: 16pt; line-height: 24px; font-family: Cambria, serif;">Kevin C. Flanigan<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">President/CEO<o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;"><img border="0" width="184" height="36" id="Picture_x0020_1" src="cid:96C8BD39-77E6-420F-BDB1-3E1127016395" type="image/png"><o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">Marlborough, Ma. 01752<o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">Phone: 508-787-9800 Ext. 111<o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">Email:&nbsp;<a href="mailto:kflanigan@docuserve.com" style="color: purple;">kflanigan@docuserve.com</a><o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;">Website:&nbsp;<a href="http://www.docuserve.com/" style="color: purple;">www.docuserve.com</a><o:p></o:p></p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;"><br>
+</p>
+<p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 11pt;"><b><i>Your Content is Now Secure.</i></b></p>
+</div>
+</div>
+<div><br>
+</div>
+<span id="OLK_SRC_BODY_SECTION">
+<div style="font-family:Calibri; font-size:11pt; text-align:left; color:black; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BORDER-TOP: #b5c4df 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 3pt">
+<span style="font-weight:bold">From: </span>Mahir Abdi &lt;<a href="mailto:mahir@virtualstacks.com">mahir@virtualstacks.com</a>&gt;<br>
+<span style="font-weight:bold">Reply-To: </span>&quot;<a href="mailto:mahir@virtualstacks.com">mahir@virtualstacks.com</a>&quot; &lt;<a href="mailto:mahir@virtualstacks.com">mahir@virtualstacks.com</a>&gt;<br>
+<span style="font-weight:bold">Date: </span>Tuesday, October 13, 2015 at 9:50 AM<br>
+<span style="font-weight:bold">To: </span>Kevin Flanigan &lt;<a href="mailto:kflanigan@docuserve.com">kflanigan@docuserve.com</a>&gt;, Sylvester Campagna &lt;<a href="mailto:scampagna@docuserve.com">scampagna@docuserve.com</a>&gt;<br>
+<span style="font-weight:bold">Subject: </span>Fwd: FW: Query<br>
+</div>
+<div><br>
+</div>
+<div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: 12px;">
+<div>&nbsp;</div>
+<div>
+<div dir="ltr">
+<div class="gmail_quote">
+<div>Below is the response we got from pdf tron so you know on analytics.</div>
+<div>&nbsp;</div>
+<div>If we want to implement pdf tron the way is is will take 2 weeks into your xmpie platform.</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>regards</div>
+<div lang="EN-US" link="blue" vlink="purple">
+<p class="MsoNormal"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">&nbsp;</span></p>
+<p class="MsoNormal"><b><span style="font-size: 11pt; font-family: Calibri, sans-serif;">From:</span></b><span style="font-size: 11pt; font-family: Calibri, sans-serif;"> Ryan Barr [mailto:<a href="mailto:rbarr@pdftron.com" target="_blank">rbarr@pdftron.com</a>]<br>
+<b>Sent:</b> Saturday, October 10, 2015 2:19 AM<br>
+<b>Cc:</b> Support &lt;<a href="mailto:support@pdftron.com" target="_blank">support@pdftron.com</a>&gt;<br>
+<b>Subject:</b> Re: Query</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<div>
+<div>
+<div>
+<div>
+<div>
+<p class="MsoNormal" style="margin-bottom:12.0pt">Hello,</p>
+</div>
+<p class="MsoNormal" style="margin-bottom:12.0pt">Thank you for your interest in our technologies.</p>
+</div>
+<p class="MsoNormal" style="margin-bottom:12.0pt">It is not entirely clear from your question which of our technologies &quot;pdftron viewer&quot; you are asking about, but I assume it is our WebViewer product.<br>
+<br>
+Since analytics requirements vary widely from one client to another WebViewer does not offer built-in integration with these services. At the same time it should be very simple to include JS snippets in WebViewer to connect it with Google Analytics etc. You
+ can track any aspect of viewing experience such as which/when document is viewed, what pages were accessed, how long, etc.</p>
+</div>
+<p class="MsoNormal">Our WebViewer is designed to be highly modifiable, so customers can easily make changes that they need to, without having to worry about the core of viewing the document.</p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;</p>
+<div>
+<div>
+<p class="MsoNormal">Please let me know if this works for you, and if you have any further questions.</p>
+</div>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+<div>
+<div>
+<div>
+<div>
+<p class="MsoNormal">Regards,</p>
+</div>
+<p class="MsoNormal">&nbsp;</p>
+<div>
+<div>
+<p class="MsoNormal"><span style="font-family: Arial, sans-serif;">Ryan Barr</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-family: Arial, sans-serif;">Software Developer | PDFTron Systems, Inc.</span></p>
+</div>
+<p class="MsoNormal"><a href="http://blog.pdftron.com/" target="_blank"><span style="color:#1155cc">blog.pdftron.com</span></a> |
+<a href="http://stackoverflow.com/questions/tagged/pdftron&#43;or&#43;pdfnet" target="_blank">
+PDFTron on Stackoverflow</a> | <a href="https://www.pdftron.com/pdfnet/faq.html" target="_blank">
+PDFNet FAQ</a> | <a href="https://groups.google.com/forum/?fromgroups#%21forum/pdfnet-sdk" target="_blank">
+PDFNet Forum</a> | <a href="https://groups.google.com/forum/#%21forum/pdfnet-webviewer" target="_blank">
+WebViewer Forum</a></p>
+</div>
+</div>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+</div>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;</p>
+<div>
+<blockquote style="border:none;border-left:solid #cccccc 1.0pt;padding:0in 0in 0in 6.0pt;margin-left:4.8pt;margin-right:0in">
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">Hi,</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">We would like to inform you that, we are planing to use your product on our website.</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">we have some query related to your pdftron viewer.</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">1) Is there any API or SDK those provide us Analytic &nbsp;Tracking .?<br>
+&nbsp; &nbsp; i) how many pages read by user.?</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">&nbsp; &nbsp; ii) how time spent on specific page.?&nbsp;</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">&nbsp;</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">Further we are waiting for your response to proceed &nbsp;.</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">&nbsp;</span></p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif;">Thanks</span></p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9pt; font-family: Arial, sans-serif; color: rgb(136, 136, 136);">&nbsp;</span></p>
+</div>
+</blockquote>
+</div>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</span></div>
+</div>
+</span>
+</body>
+</html>

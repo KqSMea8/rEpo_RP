@@ -1,0 +1,136 @@
+<? if($_GET['pop']!=1){?>
+<a class="back" href="<?=$RedirectURL?>">Back</a> 
+<div class="had">
+     <?=$MainModuleName?>   &raquo; <span>View Details</span>
+
+</div>
+
+<? }?>
+
+<h2><font color="darkred"> Batch : <?php echo stripslashes($batchArr[0]['batchname']); ?>          </h2>
+  
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+   <tr>
+    <td  align="center" valign="top" >
+	
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="borderall">
+<tr>
+	 <td colspan="4" align="left" class="head">Batch Details</td>
+</tr>
+
+<tr>
+	<td  align="right"   class="blackbold" > Batch Name  : </td>
+	<td   align="left" ><?php echo stripslashes($batchArr[0]['batchname']); ?></td>
+	</tr>
+<tr>
+	<td  align="right"   class="blackbold"> No of Sales Entries  : </td>
+	<td   align="left" ><?php echo stripslashes($batchArr[0]['salesEntries']); ?>      </td>
+
+	<td  align="right"   class="blackbold">No of Invoice Entries  : </td>
+	<td   align="left" ><?php echo stripslashes($batchArr[0]['invoiceEntries']); ?>    </td>
+</tr>
+
+<tr>
+	<td  align="right"   class="blackbold"> Created On : </td>
+	<td   align="left" ><?php echo date($Config['DateFormat'], strtotime($batchArr[0]['createdon']));?>  </td>
+
+	<td  align="right"   class="blackbold"> Created By : </td>
+	<td   align="left" ><?php echo stripslashes($batchArr[0]['createdby']); ?> <td>
+</tr>
+ 
+<tr>
+	<td align="right"   class="blackbold" >Modified  On :</td>
+	<td  align="left" ><?php echo date($Config['DateFormat'], strtotime($batchArr[0]['modifiedon']));?> </td>
+
+	<td  align="right"   class="blackbold"> Modified  by  :</td>
+	<td   align="left" ><?php echo stripslashes($batchArr[0]['modifiedby']); ?></td>
+</tr>
+<tr>
+	<td  align="right" class="blackbold"> status  :</td>
+	<td  align="left" class="blacknormal"><?php echo stripslashes($batchArr[0]['status']); ?></td>
+</tr>
+      
+	
+ <table <?=$table_bg?>>
+    <tr>
+	 <td colspan="8" align="left" class="head">Entries Listing</td>
+    </tr>
+    
+    <tr align="left"  >
+      <td width="10%"  class="head1">Order Date</td>
+      <td class="head1" width="10%"> Order No</td>
+      <td class="head1" width="10%">Invoice No</td>
+      <td class="head1" width="10%"> Order Type</td>
+      <td class="head1" width="15%"> Customer Name</td>
+      <td width="15%"  align="center" class="head1" > Sales Person</td>
+      <td width="10%"  align="center" class="head1" >Amount</td>
+      <td width="15%"  align="center" class="head1" >Currency</td>
+    </tr>
+   
+    <?php 
+    $total = '';
+    if(is_array($EntriesArr) && count($EntriesArr)>0){
+          $flag=true;
+          $Line=0;
+          foreach($EntriesArr as $key=>$values){
+          $flag=!$flag;
+          $bgcolor=($flag)?("#FAFAFA"):("#FFFFFF");
+          $Line++;
+    ?>
+    <tr align="left"  bgcolor="<?=$bgcolor?>">
+        <td > <?php  if ($values['OrderDate'] > 0) echo date($Config['DateFormat'], strtotime($values['OrderDate'])); ?></td>
+        <td > <?php echo $values['SaleID'] ?></td>
+        <td > <?php echo  stripslashes($values["InvoiceID"]); ?></td>
+        <td > <?php if($values["OrderType"] != '') echo $values["OrderType"]; else echo 'Standard';?></td>
+        <td ><?= stripslashes($values["CustomerName"]) ?></td>
+        <td align="center"> <?= $values['SalesPerson'] ?></td>
+        <td align="center">
+        
+            <?php if($values['CustomerCurrency']!=$Config['Currency']){ ?>
+            <?php $ConversionPrice = round($values['TotalAmount']*$values['ConversionRate'],2); 
+                    $total += $ConversionPrice;
+            ?>
+            <span class="red"> (<?php echo $ConversionPrice." ".$Config['Currency'];?>)</span>
+            <?php }else{ 
+                $total += $values['TotalAmount'];
+                echo $values['TotalAmount'] ;  }  ?>
+
+        
+        
+        </td>
+        <td align="center" ><?= $values['CustomerCurrency'] ?></td>
+    </tr>
+    <?php } // foreach end //?>
+    <tr><td  colspan="8" align="right">Total Amount :- <?php echo $total.' '.$Config['Currency'];?> </td></tr>
+    
+  
+    <?php }else{?>
+    <tr align="center" >
+      <td  colspan="8" class="no_record">No record found. </td>
+    </tr>
+    <?php } ?>
+  
+	
+  </table>
+</table>	
+  
+
+
+
+
+	
+	  
+	
+	</td>
+   </tr>
+
+   <tr>
+	<td align="left" valign="top">&nbsp;
+	
+</td>
+   </tr>
+
+
+   </form>
+</table>

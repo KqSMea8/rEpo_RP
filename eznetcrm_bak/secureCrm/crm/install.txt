@@ -1,0 +1,46 @@
+			
+			eZnetCRM Installation Manual
+			----------------------------
+			----------------------------
+
+
+Thank you for installing eZnetCRM.
+
+Please take a moment to review the installation steps here before exploring the 
+application further.
+
+====================================================================================
+
+1) Unzip the folder you have downloaded.
+
+2) Now, upload the folder to the server.
+
+3) Please set permission 0777 to following folders : 
+
+	a) [ROOT_FOLDER]/includes/
+
+	b) [ROOT_FOLDER]/upload/
+
+	c) [ROOT_FOLDER]/admin/upload/
+	
+	d) [ROOT_FOLDER]/admin/crm/upload/
+
+	e) [ROOT_FOLDER]/admin/hrms/upload/
+
+	f) [ROOT_FOLDER]/admin/inventory/upload/
+
+
+4) Open the following link in the browser:
+   http://[DOMAIN_NAME]/[CRM_FOLDER]/intall/
+
+   -[DOMAIN_NAME] is the domain name or ip address of your server where you unzipped the folder.
+   -[CRM_FOLDER] is the downloaded folder name.
+
+5) Follow the intallation steps to complete the intallation process.
+
+
+IMPORTANT - You must have a valid license key for intallation before using the application. 
+This Application may not be redistributed to any third party.
+====================================================================================
+We hope you enjoy using and evaluating the application, 
+and please contact us if you need assistance.

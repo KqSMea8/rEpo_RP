@@ -1,0 +1,40 @@
+<div class="main-container container completed">
+
+  <div class="mid_wraper clearfix">
+    <div class="full_layout">
+   
+      <div class="cart_page checkout payment">
+      <?php if(!empty($_SESSION['OrderID']) || 1==1){?>
+        <h1><?=COMPLETED_ORDER?></h1>
+        <div class="layout-zone-content layout-zone clearfix "id="content">
+          <div class="page-completed wrap ">    
+             <p><b> <?=THANK_YOU_ORDER_MSG?></b><br>
+            </p>        
+            <p><b>Your Order is # <?php echo str_pad($OrderId, 7, 0, STR_PAD_LEFT);?></b><br>
+            </p>
+             <p><b>You will receive an order confirmation email with detail of your order.</b><br>
+            </p>
+              <br>
+              <br>
+             <ul style="padding:0px;padding-left:26px;margin:0px;">
+              <li><a href="index.php"><?=GO_TO_HOME_PAGE?></a></li>
+            </ul>
+            <br>
+            
+          </div>
+        </div>
+        <?php }else{
+        
+        echo '<a href="index.php">'.GO_TO_HOME_PAGE.'</a>';
+        }?>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<?php   unset($_SESSION['OrderID']);?>
+<style>
+.container.completed {
+    margin-top: 138px;
+}
+</style>

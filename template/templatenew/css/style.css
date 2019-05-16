@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700); //Ait Singh
+body h1,h2,h3,h4,h5,h6,span,p{margin:0px; padding:0px;}
+body{margin:0px!important; padding:0px!important;} 
+.navbar-brand{padding:0px!important; margin-bottom:15px; }
+.top-menu li a:hover{color:#337ab7!important; text-decoration:none!important;}
+.footer h3{color:#fff!important;}
+.btn:hover, .btn:focus, .btn.focus{color:#337ab7!important; text-decoration:none!important;}
+.btn-link{margin:0px!important; }
+.top-menu li+li a{border-left: 1px solid #337ab7!important;}
+.crm-menu > ul > li > a{font-family:'Open Sans', sans-serif!important;}
+.crm-menu ul li a{font-family:'Open Sans', sans-serif!important;}
+.crmdrop-submenu-col-1-list span{font-family:'Open Sans', sans-serif!important;}
+.crmdrop-submenu-col-1{background:none!important;}
+.crmdrop-submenu-col-3{background:none!important;}
+.crmdrop-submenu-col-5{background:none!important;}
+a.btn.btn-success.btn-block {color: #fff!important;}
+button#btnSubcribe:hover{color: #fff!important; text-decoration:underline!important;}
+form#searchForm > .input-group-btn .btn-group button.btn.btn-primary{background:#0052a8!important;}
+.btn-primary{background:#0052a8!important;}
+.model-dialog .modal-content .modal-header{background:#db3d16!important;}
+.modal-content .modal-header .modal-title{font-family:'Open Sans', sans-serif;}
+span.glyphicon.glyphicon-chevron-left{background:url("../img/eoption-arrow-left.png") no-repeat; width:43px; height:74px;}
+span.glyphicon.glyphicon-chevron-right{background:url("../img/eoption-arrow-right.png") no-repeat; width:43px; height:74px;}
+.carousel-control{opacity:100;}
+div#eoptionmenu_widget{background:#db3c15!important;}
+.crm-menu > ul > li > a:hover{background:#db3d16!important;}
+.thumbnail .caption a.btn{background:#db3d16!important; border:none!important;}
+.thumbnail .caption a.btn:hover{background:#db3d16!important; opacity:100!important;}
+p.lead{text-shadow: 0px 0px 0px #db3d16!important; c}
+button#btnSubcribe{background:#db3d16!important;}
+.footer h3:before{background:#db3d16!important;}
+#floatingSocialShare .google-plus{background:#db3d16!important;}
+#floatingSocialShare .pinterest{background:#db3d16!important;}
+.feature-catagory-col-1 {position:relative; width: calc(25% - 20px);margin: 0px 10px; margin-bottom:20px; background: rgba(223, 223, 223, 0.34); float: left;
+height:180px; background-image: -ms-linear-gradient(right, #f1f1f1 50%, #dfdfdf 100%);
+background-image: -moz-linear-gradient(right, #f1f1f1 50%, #dfdfdf 100%);
+background-image: -o-linear-gradient(right, #f1f1f1 50%, #dfdfdf 100%);
+background-image: -webkit-gradient(linear, right top, left top, color-stop(50, #f1f1f1), color-stop(100, #dfdfdf));
+background-image: -webkit-linear-gradient(right, #FFFFFF 50%, #dfdfdf 100%);
+background-image: linear-gradient(to left, #f1f1f1 50%, #dfdfdf 100%);}
+.product-single h2:after{background:#db3d16!important;}
+.free-shiping-catagory{background-image:url(../images/free-shiping-pic.png);  }
+.free-shiping-catagory p{font-family:'Raleway', sans-serif;  font-weight:normal; font-size:13px; color:#fff; text-align:center; display:block; padding-top:10px;}
+.free-shiping-catagory h3{font-family:'Raleway', sans-serif; font-weight:normal; font-size:36px; color:#cc3300; text-align:center; margin:0px; display:block; padding-top:10px;}
+.free-shiping-catagory h4{font-family:'Raleway', sans-serif; font-weight:normal; font-size:24px; color:#fff; text-align:center; margin:0px; padding:0px; line-height:40px;}
+.feature-catagory-col-1 h2{font-family:'Raleway', sans-serif; font-weight:bold; font-size:24px; color:#006699; margin:20px 0 0 15px; padding:0px;}
+.feature-catagory-col-1 span{font-family:'Raleway', sans-serif; font-weight:normal; font-size:12px; color:#666666; margin:10px 0 0 15px; display:block; text-transform:uppercase; width:105px; height:70px; overflow:hidden;}
+.feature-catagory-col-1 a{background:#db3d16; font-family:'Raleway', sans-serif; font-weight:normal; font-size:12px; color:#fff; text-align:center; width:80px;  display:block; margin:10px 0 0 15px; height:25px; border-radius:4px; line-height:26px; }
+.feature-catagory-col-1 img{position:absolute; top:60px; right:0px; }
+.row {margin-right: -10px!important; margin-left: -10px!important;}
+.btn-primary{border-color:#0052a8!important;}
+.btn-warning{background-color:#db3c15!important; border-color:#db3c15!important;}
+.btn-info{background-color:#0052a8!important; border-color:#0052a8!important;}
+.btn:hover, .btn:focus, .btn.focus {color: #fff!important; text-decoration: none!important;}
+.emailto_f{ margin-left:5px!important;}
+.feature-catagory-col-1.product-box-listing {width: calc(32% - 10px);}
+.footer-bottom{width:100%; float:left; padding:0px!important; background-color:#000!important; border-top:none!important; }
+#footer{background-color:#000!important; padding:0px; padding-bottom: 20px;}
+.footer h3{padding-top:10px; width:90%;}
+.crm-menu ul li{border-left:1px solid #f45b36;}
+.crm-menu ul li.submenu-col-1-list-headmenu{border:none!important;}
+.right_pen p{line-height:24px!important;}
+.page-content p{line-height:24px!important;}
+.page-content table td{vertical-align:top; color:#333;}
+.userInfo a#btnRegister{margin-bottom:20px;}
+.container-folio.row{min-height:180px;}
+.pull-right{margin-right:8px;}
+.pull-right.paymentMethodImg {margin-right:160px;}
+.input-append.newsLatterBox.text-center {width: 90%;}
+.paginationpro{width:auto;}
+.table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+    font-family: 'Raleway', sans-serif;
+}
+input[type="text"], input[type="password"], input[type="email"]{padding:10px;}
+.tab-content a.btn{background:#0052a8; border-radius:4px; padding: 2px 5px;}
+a.deleteProduct{color:#337ab7!important;}
+.register_form_profile .form-group label{width:100%;}
+textarea#message {width: 100%; height: 100px;}
+input.btn.btn-info.submit{margin-bottom:20px;} 

@@ -1,0 +1,102 @@
+
+<table WIDTH="100%" BORDER=0 align="center" CELLPADDING=0 CELLSPACING=0>
+    <tr>
+        <td valign="top">
+        <form action="" method="post" name="form1">
+      
+        <div id="preview_div">
+ 
+            <table <?=$table_bg?>>
+                <tr align="left">
+                     <td  class="head1">SN</td>
+                      <td  class="head1">Order No.</td>
+                      <td  class="head1">Transection ID</td>
+                      <td  class="head1">Payment Date</td>
+                      <td class="head1">Plan</td>
+                      <td class="head1">Extra Doc</td>
+                      <td  class="head1">Extra Page</td>
+                      <td  class="head1">Extra Video</td>
+                      <td  class="head1">Extra Video Size</td>
+                      <td  class="head1">Extra User</td>
+                      <td  class="head1">Total</td>
+                      <td  class="head1">Action</td>
+                </tr>
+<!--                <tr align="left">
+                        <td width="15%" class="head1">Payment Type</td>
+                        <td width="15%" class="head1">Transection ID</td>
+                        <td class="head1" width="8%">Amount</td>
+                        <td width="6%" align="center" class="head1">Allow Users</td>
+                </tr>-->
+
+                <?php
+                $num =0;
+                $sn = 0;
+                if(!empty($arryOrderHis)){
+                        
+                        foreach($arryOrderHis as $val){
+                                $num++;
+             
+ $totalAmount = $val->amount + $val->DocCost + $val->PageCost + $val->VideoCost + $val->VideoSizeCost + $val->UserCost;
+                                ?>
+                                <tr align="left" bgcolor="<?=$bgcolor?>">
+                                    <td><?= ++$sn; ?></td>
+                                    <td ><?= $val->orderid; ?></td>
+                                    <td ><?= $val->txnId; ?></td>
+                                    <td><?= date("Y-m-d", strtotime($val->recordInsertedDate)); ?></td>
+                                    <td >$<?= $val->amount; ?></td>
+                                    <td>$<?= $val->DocCost; ?></td>
+                                    <td>$<?= $val->PageCost; ?></td>
+                                    <td>$<?= $val->VideoCost; ?></td>
+                                    <td>$<?= $val->VideoSizeCost; ?></td>
+                                    <td>$<?= $val->UserCost; ?></td>
+                                    <td>$<?= $totalAmount; ?></td>
+                                    <td height="50"> <a href="paymentview.php?<?=$val->id?>" >view </a></td>
+                                    
+                                </tr>
+<!--                <tr align="left" bgcolor="<?=$bgcolor?>">
+                        <td height="50"><strong> Online </strong></td>
+                        <td><?=$values->txnId;?></td>
+                        <td><?="$ ".$values->amount; ?></td>
+                        <td><?=$values->allow_user;?></td>
+
+                </tr>-->
+                <?php } // foreach end //?>
+
+                <?php }else{?>
+                <tr align="center">
+                        <td colspan="9" class="no_record">No record found.</td>
+                </tr>
+                <?php } ?>
+
+                <tr>
+                        <td colspan="9">Total Record(s) : &nbsp;<?php echo $num;?> 
+                            <?php /*if(count($arrycompUser)>0){?>
+                            &nbsp;&nbsp;&nbsp; Page(s) :&nbsp; <?php echo $pagerLink;
+                            }*/?>
+                        </td>
+                </tr>
+            </table>
+        </div>
+	<?php /*if(sizeof($arryUser)){ ?>
+            <table width="100%" align="center" cellpadding="3" cellspacing="0"
+                    style="display: none">
+                    <tr align="center">
+                            <td height="30" align="left"><input type="button"
+                                    name="DeleteButton" class="button" value="Delete"
+                                    onclick="javascript: ValidateMultipleAction('<?=$ModuleName?>','delete','<?=$Line?>','userID','addCompany.php?curP=<?=$_GET[curP]?>&opt=<?=$_GET[opt]?>');">
+                            <input type="button" name="ActiveButton" class="button"
+                                    value="Active"
+                                    onclick="javascript: ValidateMultipleAction('<?=$ModuleName?>','active','<?=$Line?>','userID','addCompany.php?curP=<?=$_GET[curP]?>&opt=<?=$_GET[opt]?>');" />
+                            <input type="button" name="InActiveButton" class="button"
+                                    value="InActive"
+                                    onclick="javascript: ValidateMultipleAction('<?=$ModuleName?>','inactive','<?=$Line?>','userID','addCompany.php?curP=<?=$_GET[curP]?>&opt=<?=$_GET[opt]?>');" /></td>
+                    </tr>
+            </table>
+        <? } */?> 
+            <input type="hidden" name="CurrentPage" id="CurrentPage"
+            value="<?php echo $_GET['curP']; ?>"> <input type="hidden" name="opt"
+            id="opt" value="<?php echo $ModuleName; ?>">
+        </form>
+        </td>
+    </tr>
+</table>

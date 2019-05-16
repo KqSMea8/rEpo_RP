@@ -1,0 +1,76 @@
+
+ <table width="100%" id="myTable" class="order-list"  cellpadding="0" cellspacing="1">
+<thead>
+    <tr align="left"  >
+		<td class="heading" width="30%" >&nbsp;&nbsp;&nbsp;SKU</td>
+		<td  class="heading" >Description</td>
+		
+		<td width="12%" class="heading" >Qty</td>
+                
+		
+		
+    </tr>
+</thead>
+<tbody>
+	<? $TotalQty=0;
+	
+	for($Line=1;$Line<=$NumLine;$Line++) { 
+		$Count=$Line-1;	
+		
+	?>
+     <tr class="itembg">
+		<td><?=($Line>1)?('<img src="../images/delete.png" id="ibtnDel">'):("&nbsp;&nbsp;&nbsp;")?>
+		<input type="text" name="sku<?=$Line?>" id="sku<?=$Line?>" onblur="return SearchOptionComponent(this.value,'<?=$Line?>');" class="textbox"  size="10" maxlength="10"  value="<?=stripslashes($arryBomItem[$Count]["sku"])?>"/>&nbsp;<a class="fancybox fancybox.iframe" href="OptionComItem.php?id=<?=$Line?>" ><img src="../images/view.gif" border="0"></a>
+		<input type="hidden" name="item_id<?=$Line?>" id="item_id<?=$Line?>" value="<?=stripslashes($arryBomItem[$Count]["item_id"])?>" readonly maxlength="20"  />
+		<input type="hidden" name="id<?=$Line?>" id="id<?=$Line?>" value="<?=stripslashes($arryBomItem[$Count]["id"])?>" readonly maxlength="20"  />
+		</td>
+        <td><input type="text" name="description<?=$Line?>" id="description<?=$Line?>" class="disabled" style="width:350px;"  maxlength="50" readonly onkeypress="return isAlphaKey(event);" value="<?=stripslashes($arryBomItem[$Count]["description"])?>"/></td>
+        <td><input type="text" name="qty<?=$Line?>" id="qty<?=$Line?>" class="textbox"  size="5"  value="<?=stripslashes($arryBomItem[$Count]["bom_qty"])?>"/>
+<input type="hidden" name="Condition<?=$Line?>" id="Condition<?=$Line?>" class="textbox" style="width:200px;"  maxlength="50" onkeypress="return isAlphaKey(event);" value="<?=stripslashes($arryBomItem[$Count]["Condition"])?>"/>
+<input type="hidden" name="price<?=$Line?>" id="price<?=$Line?>" class="textbox" size="15" maxlength="10" onkeypress="return isDecimalKey(event);" value="<?=stripslashes($arryBomItem[$Count]["unit_cost"])?>"/>
+<input type="hidden" align="right" name="amount<?=$Line?>" id="amount<?=$Line?>" class="disabled" readonly size="15" maxlength="10" onkeypress="return isDecimalKey(event);" style="text-align:right;" value="<?=stripslashes($arryBomItem[$Count]["total_bom_cost"])?>"/>
+</td>
+       
+       
+       
+    </tr>
+	<? 
+		//$TotalQty += $arryBomItem[$Count]["bom_qty"];
+                $Total_bom_cost += $arryBomItem[$Count]["total_bom_cost"];
+	} ?>
+</tbody>
+<tfoot>
+
+    <tr class="itembg">
+        <td colspan="8" align="right">
+
+		 <a href="Javascript:void(0);"  id="addrowoption" class="add_row" style="float:left">Add Row</a>
+         <input type="hidden" name="NumLine" id="NumLine" value="<?=$NumLine?>" readonly maxlength="20"  />
+         <input type="hidden" name="DelItem" id="DelItem" value="" class="inputbox" readonly />
+
+
+		<?	
+		$TotalQty =$TotalQty;
+		
+		$TotalValue = $arryBOM[0]['total_cost'];
+		?>
+		
+		
+	<input type="hidden" align="right" name="TotalValue" id="TotalValue" class="disabled" readonly value="<?=$Total_bom_cost?>" size="15" style="text-align:right;"/>
+		<br><br>
+        </td>
+    </tr>
+</tfoot>
+</table>
+
+<? //echo '<script>SetInnerWidth();</script>'; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+                $("#addItemBackup").click(function() {                   
+                    var TotQty = $("#qty1").val();                   
+                    $(this).attr("href", "editSerial.php?id=1&total="+TotQty);
+                    $('.fancybox').fancybox();
+                })
+		
+	});
+</script>

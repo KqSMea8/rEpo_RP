@@ -1,0 +1,229 @@
+<table cellspacing="1" cellpadding="3"  width="70%" align="center"><tr>
+        <td  colspan = "4" align="center">
+         
+            <span class="font18" >VSTACKS INFOTECH</span><br>
+            <span class="font16">Balance Sheet</span><br>
+            <span class="font16">For June, 2017</span>
+            
+         </td>		
+    </tr>
+    
+    <tr><td class="border_bottom" colspan = "4">&nbsp;</td></tr><tr>
+	 <td>&nbsp;</td>       
+        <td colspan="3" height="30" align="left" ><b>All amounts stated in USD</b></td>
+ </tr>
+ <tr>
+        <td  width="10%">&nbsp;</td>       
+        <td align="right" colspan="2"><b>Net Balance</b></td>
+	<td  width="20%">&nbsp;</td>
+ </tr><tr align="left"> 
+	 <td>&nbsp;</td>
+    <td height="30" class="font15" colspan="3"  ><b>Assets </b></td>
+      
+  </tr><tr align="left"> 
+        <td height="20">1055-00  </td>
+        <td>TEST MULTIPLE</td>
+ 
+        <td align="right">(53,806.21)</td>
+	<td>&nbsp;</td>
+    </tr><tr align="left"> 
+        <td height="20">1200-34  </td>
+        <td>SALES TAX ACCOUNT</td>
+ 
+        <td align="right">1,130.78</td>
+	<td>&nbsp;</td>
+    </tr><tr align="left"> 
+        <td height="20">1246-56  </td>
+        <td>EUROACCOUNT</td>
+ 
+        <td align="right">303.36</td>
+	<td>&nbsp;</td>
+    </tr><tr align="left"> 
+	<td>&nbsp;</td>
+        <td height="20" ><b>Current Assets</b></td>
+       <td colspan="2">&nbsp;</td>
+    </tr><tr align="left"> 
+
+		<td height="20" >1010-00</td>
+		<td>CASH ON HAND</td>
+
+
+		<td align="right">722,148.28</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr align="left"> 
+
+		<td height="20" >1022-00</td>
+		<td>CURRENT</td>
+
+
+		<td align="right">88,038.59</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr align="left"> 
+
+		<td height="20" >1023-00</td>
+		<td>SAVINGS</td>
+
+
+		<td align="right">(7,182.66)</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr align="left"> 
+
+		<td height="20" >1030-00</td>
+		<td>CREDIT CARD</td>
+
+
+		<td align="right">(112,711.23)</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr align="left"> 
+
+		<td height="20" >1051-00</td>
+		<td>PAYPAL</td>
+
+
+		<td align="right">(9,612.36)</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr align="left"> 
+
+		<td height="20" >1200-00</td>
+		<td>ACCOUNTS RECEIVABLE</td>
+
+
+		<td align="right">204,733.60</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr align="left"> 
+
+		<td height="20" >1510-00</td>
+		<td>COMPUTER</td>
+
+
+		<td align="right">52,316.30</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr align="left"> 
+
+		<td height="20" >1520-00</td>
+		<td>BUILDING</td>
+
+
+		<td align="right">96,309.67</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr>
+	<td class="border_top_bottom">&nbsp;</td>
+        <td height="20" align="left" class="border_top_bottom"><b>Total Current Assets</b></td>
+       <td class="border_top_bottom">&nbsp;</td>
+        <td align="right" class="border_top_bottom">
+<b>1,034,040.19</b>
+	</td>
+    </tr>
+
+ <tr><td colspan="4">&nbsp;</td></tr><tr>
+	<td class="border_top_bottom">&nbsp;</td>
+        <td height="20" align="left"  class="border_top_bottom font15"  ><b>Total Assets</b></td>
+        <td class="border_top_bottom">&nbsp;</td>
+        <td align="right" class="border_top_bottom font15">
+
+<b>$981,668.12</b>
+
+
+</td>
+    </tr>
+    <tr><td colspan="4">&nbsp;</td></tr><tr>
+	<td>&nbsp;</td>
+        <td height="30"  class="font15" colspan="3" align="left"><b>Liabilities and Stockholders' Equity</b></td>
+     
+    </tr><tr align="left"> 
+	 <td>&nbsp;</td>
+    <td height="30" class="font13 hidetr" colspan="3"  ><b> </b></td>
+      
+  </tr><tr align="left"> 
+	<td>&nbsp;</td>
+        <td height="20" ><b>Current Liabilities</b></td>
+       <td colspan="2">&nbsp;</td>
+    </tr><tr align="left"> 
+
+		<td height="20" >2000-00</td>
+		<td>ACCOUNTS PAYABLE</td>
+
+
+		<td align="right">91,809.29</td>
+		<td colspan="2">&nbsp;</td>
+		</tr><tr>
+	<td class="border_top_bottom">&nbsp;</td>
+        <td height="20" align="left" class="border_top_bottom"><b>Total Current Liabilities</b></td>
+       <td class="border_top_bottom">&nbsp;</td>
+        <td align="right" class="border_top_bottom">
+<b>91,809.29</b>
+	</td>
+    </tr>
+
+ <tr><td colspan="4">&nbsp;</td></tr><tr>
+	<td class="border_top_bottom">&nbsp;</td>
+        <td height="20" align="left"  class="border_top_bottom font15"  ><b>Total Liabilities</b></td>
+        <td class="border_top_bottom">&nbsp;</td>
+        <td align="right" class="border_top_bottom font15">
+
+<b>$91,809.29</b>
+
+
+</td>
+    </tr>
+    <tr><td colspan="4">&nbsp;</td></tr><tr align="left"> 
+	 <td>&nbsp;</td>
+    <td height="30" class="font13" colspan="3"  ><b>Stockholders' Equity </b></td>
+      
+  </tr><tr align="left"> 
+        <td height="20">3000-00  </td>
+        <td>CAPITAL STOCK</td>
+ 
+        <td align="right">(21,265.51)</td>
+	<td>&nbsp;</td>
+    </tr> <tr align="left"> 
+				<td height="20"> 3200-00</td>
+				<td>CURRENT YEAR RETAINED EARNINGS</td>
+				<td align="right">315,026.35</td> 
+				<td></td>
+				</tr><tr align="left"> 
+        <td height="20">3200-00  </td>
+        <td>RETAINED EARNINGS</td>
+ 
+        <td align="right">(1,963,774.54)</td>
+	<td>&nbsp;</td>
+    </tr><tr align="left"> 
+        <td height="20">3232-23  </td>
+        <td>SAVING</td>
+ 
+        <td align="right">(22,391.09)</td>
+	<td>&nbsp;</td>
+    </tr><tr align="left"> 
+        <td height="20">3434-34  </td>
+        <td>TESTING</td>
+ 
+        <td align="right">(18,799.72)</td>
+	<td>&nbsp;</td>
+    </tr><tr align="left"> 
+        <td height="20">3454-35  </td>
+        <td>INVENTORY</td>
+ 
+        <td align="right">(115,560.38)</td>
+	<td>&nbsp;</td>
+    </tr><tr>
+	<td class="border_top_bottom">&nbsp;</td>
+        <td height="20" align="left"  class="border_top_bottom font15"  ><b>Total Stockholders' Equity</b></td>
+        <td class="border_top_bottom">&nbsp;</td>
+        <td align="right" class="border_top_bottom font15">
+
+<b>$(1,826,764.89)</b>
+
+
+</td>
+    </tr>
+    <tr><td colspan="4">&nbsp;</td></tr><tr style="padding-bottom: 30px;">
+	<td class="border_top_bottom">&nbsp;</td>
+        <td height="20" align="left" class="border_top_bottom font15"><b>Total Liabilities and Stockholders' Equity</b></td>
+       <td class="border_top_bottom">&nbsp;</td>
+        <td align="right" class="border_top_bottom font15">
+
+<b>$1,734,955.60</b>
+
+
+</td>
+    </tr></table>
